@@ -3058,7 +3058,7 @@
           "value": 1
         }
       },
-      "label": "Modified_HYL -> DiabeticNephropathy HYL"
+      "label": "Combined_HYL -> DiabeticNephropathy HYL"
     },
     {
       "id": "Lt1hg93D",
@@ -3090,7 +3090,7 @@
           "value": 1
         }
       },
-      "label": "Modified_HYL -> DiabeticNephropathy HYL"
+      "label": "Combined_HYL -> LowerExtrmAmpt HYL"
     },
     {
       "id": "00HJkwE1",
@@ -3125,7 +3125,7 @@
           "value": 1
         }
       },
-      "label": "DiabeticNephropathy_HYL -> Combined_HYL"
+      "label": "LowerExtrmAmpt_HYL -> Combined_HYL"
     },
     {
       "id": "VwJ2mVwl",
@@ -3195,7 +3195,7 @@
           "value": 1
         }
       },
-      "label": "Modified_HYL -> DiabeticNephropathy HYL"
+      "label": "Combined_HYL -> DiabeticRetinopathy HYL"
     },
     {
       "id": "QSfSmTPD",
@@ -3211,7 +3211,7 @@
           "value": 1
         }
       },
-      "label": "DiabeticNephropathy_HYL -> Combined_HYL"
+      "label": "DiabeticRetinopathy_HYL -> Combined_HYL"
     },
     {
       "id": "SIGfXEtC",
@@ -3243,7 +3243,7 @@
           "value": 1
         }
       },
-      "label": "Modified_HYL -> DiabeticNephropathy HYL"
+      "label": "Combined_HYL -> DiabetesEpsd HYL"
     },
     {
       "id": "RXJmhwXv",
@@ -3259,7 +3259,7 @@
           "value": 1
         }
       },
-      "label": "DiabeticNephropathy_HYL -> Combined_HYL"
+      "label": "DiabetesEpsd"
     },
     {
       "id": "LzXYrpyL",
@@ -3389,6 +3389,7 @@
         "ls9t13d8",
         "ls9t1x51"
       ]
+    },
     }
   ],
   "subgraph_routines": [
