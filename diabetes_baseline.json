@@ -1533,7 +1533,7 @@
         }
       },
       "order": 4,
-      "label": "DsFreeSus -> DiabetesEpsd"
+      "label": "Incidence DsFreeSus -> DiabetesEpsd"
     },
     {
       "id": "bqt9e1Hu",
@@ -1593,7 +1593,7 @@
         }
       },
       "order": 3,
-      "label": "DsFreeSus -> DiabetesEpsd"
+      "label": "Prevalence DsFreeSus -> DiabetesEpsd"
     },
     {
       "id": "0sNrINie",
@@ -3277,5 +3277,6 @@
       },
       "label": "Healthy_HYL -> DsFreeSus HYL"
     }
+  ],
   ]
 }
