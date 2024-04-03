@@ -1,0 +1,46 @@
+[
+    {
+        "country": "AFG",
+        "timestamp": "20240401T105216",
+        "scenarios": {
+            "baseline": {
+                "STATUS_CODE": 200,
+                "HYL": 22893178.72333333
+            },
+            "null": {
+                "STATUS_CODE": 200,
+                "HYL": 22893178.72333333
+            },
+            "cr2": {
+                "STATUS_CODE": 200,
+                "HYL": 22893178.72333333
+            },
+            "cr4": {
+                "STATUS_CODE": 200,
+                "HYL": 22893178.72333333
+            }
+        }
+    },
+    {
+        "country": "DZA",
+        "timestamp": "20240401T105218",
+        "scenarios": {
+            "baseline": {
+                "STATUS_CODE": 200,
+                "HYL": 25270717.600000005
+            },
+            "null": {
+                "STATUS_CODE": 200,
+                "HYL": 25270717.600000005
+            },
+            "cr2": {
+                "STATUS_CODE": 200,
+                "HYL": 25270717.600000005
+            },
+            "cr4": {
+                "STATUS_CODE": 200,
+                "HYL": 25270717.600000005
+            }
+        }
+    }
+]
