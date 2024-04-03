@@ -13,8 +13,8 @@
   "nodes": [
     {
       "id": "ls9rc6e6",
-      "x": 212.97,
-      "y": 27.54,
+      "x": 213,
+      "y": 27.55,
       "label": "DiabeticNephropathy Mortality",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -32,8 +32,8 @@
     },
     {
       "id": "lrstce6u",
-      "x": 156.68,
-      "y": 43.62,
+      "x": 156.71,
+      "y": 43.63,
       "label": "DiabetesEpsd Mortality",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -51,8 +51,8 @@
     },
     {
       "id": "ls9rbfxn",
-      "x": 212.11,
-      "y": 10.47,
+      "x": 212.14,
+      "y": 10.48,
       "label": "LowerExtrmAmpt Mortality",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -70,8 +70,8 @@
     },
     {
       "id": "lrso81aw",
-      "x": 211.17,
-      "y": 43.43,
+      "x": 211.2,
+      "y": 43.44,
       "label": "DiabetesEpsd_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -90,8 +90,8 @@
     },
     {
       "id": "ls9rae7a",
-      "x": 212.85,
-      "y": -6.42,
+      "x": 212.88,
+      "y": -6.41,
       "label": "DiabeticRetinopathy Mortality",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -109,8 +109,8 @@
     },
     {
       "id": "Deceased",
-      "x": 212.08,
-      "y": -27.81,
+      "x": 212.11,
+      "y": -27.8,
       "label": "Deceased",
       "description": "The state of being dead",
       "node_type": "state",
@@ -123,8 +123,8 @@
     },
     {
       "id": "ls9qwy72",
-      "x": 158.25,
-      "y": 25.78,
+      "x": 155.76,
+      "y": 24.79,
       "label": "DiabeticNephropathy",
       "color": "#E5EF73",
       "ageing": true,
@@ -134,8 +134,8 @@
     },
     {
       "id": "ls9qwy35",
-      "x": 158.47,
-      "y": 12.89,
+      "x": 158.5,
+      "y": 12.9,
       "label": "LowerExtrmAmpt",
       "color": "#E5EF73",
       "ageing": true,
@@ -145,8 +145,8 @@
     },
     {
       "id": "ls9qw5uh",
-      "x": 157.96,
-      "y": -4.33,
+      "x": 157.99,
+      "y": -4.32,
       "label": "DiabeticRetinopathy",
       "color": "#E5EF73",
       "ageing": true,
@@ -156,8 +156,8 @@
     },
     {
       "id": "Disability",
-      "x": 177.4,
-      "y": -103.62,
+      "x": 177.43,
+      "y": -103.61,
       "label": "Healthy Years Lived",
       "description": "A store of disability adjusted life years",
       "node_type": "state",
@@ -170,8 +170,8 @@
     },
     {
       "id": "ls9reknk",
-      "x": 123.03,
-      "y": -125.91,
+      "x": 123.06,
+      "y": -125.9,
       "label": "DiabeticNephropathy HYL",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -189,8 +189,8 @@
     },
     {
       "id": "ls9re0t3",
-      "x": 119.09,
-      "y": -120.2,
+      "x": 119.12,
+      "y": -120.19,
       "label": "LowerExtrmAmpt HYL",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -208,8 +208,8 @@
     },
     {
       "id": "ls9rdcin",
-      "x": 122,
-      "y": -111.56,
+      "x": 122.04,
+      "y": -111.55,
       "label": "DiabeticRetinopathy HYL",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -227,8 +227,8 @@
     },
     {
       "id": "lrwzsau5",
-      "x": 117.86,
-      "y": -99.09,
+      "x": 117.89,
+      "y": -99.07,
       "label": "DiabetesEpsd HYL",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -246,8 +246,8 @@
     },
     {
       "id": "ls9r1is1",
-      "x": 103.57,
-      "y": 23.74,
+      "x": 103.6,
+      "y": 23.75,
       "label": "DiabeticNephropathy Incidence",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -265,8 +265,8 @@
     },
     {
       "id": "ls9r1ind",
-      "x": 103.69,
-      "y": 11.08,
+      "x": 103.72,
+      "y": 11.09,
       "label": "LowerExtrmAmpt Incidence",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -284,8 +284,8 @@
     },
     {
       "id": "ls9r0u95",
-      "x": 103.96,
-      "y": -3.62,
+      "x": 103.99,
+      "y": -3.61,
       "label": "DiabeticRetinopathy Incidence",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -303,8 +303,8 @@
     },
     {
       "id": "lrste7nj",
-      "x": 117.71,
-      "y": -83.44,
+      "x": 117.74,
+      "y": -83.42,
       "label": "DsFreeSus HYL",
       "node_type": "surrogate",
       "color": "#7038E1",
@@ -322,8 +322,8 @@
     },
     {
       "id": "DsFreeSus",
-      "x": 103.37,
-      "y": -55.49,
+      "x": 103.4,
+      "y": -55.48,
       "label": "DsFreeSus",
       "description": "State holding the balance of the healthy population",
       "node_type": "state",
@@ -345,8 +345,8 @@
     },
     {
       "id": "Births",
-      "x": 75.3,
-      "y": -55.3,
+      "x": 75.33,
+      "y": -55.29,
       "label": "Births",
       "description": "Store of the number of births in the population",
       "balance_type": "array",
@@ -359,8 +359,8 @@
     },
     {
       "id": "AsthmaEpsd",
-      "x": 88.74,
-      "y": -24.12,
+      "x": 88.77,
+      "y": -24.11,
       "label": "DiabetesEpsd",
       "ageing": true,
       "color": "#E5EF73",
@@ -371,8 +371,8 @@
     },
     {
       "id": "lrso71jf",
-      "x": -40.5,
-      "y": -89.72,
+      "x": -40.47,
+      "y": -89.71,
       "label": "Healthy_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -389,8 +389,8 @@
     },
     {
       "id": "lrwz1ikj",
-      "x": 27.85,
-      "y": 53.79,
+      "x": 27.88,
+      "y": 53.8,
       "label": "DiabeticNephropathy_Transform",
       "description": "Removing each effect from 1",
       "color": "#06B4E1",
@@ -407,8 +407,8 @@
     },
     {
       "id": "lrso7mga",
-      "x": -45.68,
-      "y": -100.02,
+      "x": -45.64,
+      "y": -100.01,
       "label": "DiabetesEpsd_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -426,8 +426,8 @@
     },
     {
       "id": "lrst79uc",
-      "x": -69.93,
-      "y": 24.27,
+      "x": -69.9,
+      "y": 24.28,
       "color": "#06B4E1",
       "flush": true,
       "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect",
@@ -443,8 +443,8 @@
     },
     {
       "id": "lrst0woc",
-      "x": -66.19,
-      "y": 93.29,
+      "x": -66.16,
+      "y": 93.3,
       "label": "RetinopathyScrn_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -460,8 +460,8 @@
     },
     {
       "id": "lrsnjkmt",
-      "x": -72.19,
-      "y": -45.07,
+      "x": -72.16,
+      "y": -45.06,
       "color": "#06B4E1",
       "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Impact",
       "generate_array": {
@@ -477,8 +477,8 @@
     },
     {
       "id": "lrsnalk2",
-      "x": -218.75,
-      "y": 92.78,
+      "x": -218.72,
+      "y": 92.79,
       "label": "RetinopathyScrn_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -494,8 +494,8 @@
     },
     {
       "id": "lrso22do",
-      "x": -151.62,
-      "y": 92.95,
+      "x": -151.59,
+      "y": 92.96,
       "label": "RetinopathyScrn_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -511,8 +511,8 @@
     },
     {
       "id": "lrsnavq2",
-      "x": -188.77,
-      "y": 22.75,
+      "x": -188.74,
+      "y": 22.76,
       "label": "StdGlycControl_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -528,8 +528,8 @@
     },
     {
       "id": "ls9rkzfi",
-      "x": 278.92,
-      "y": 27.52,
+      "x": 278.95,
+      "y": 27.53,
       "label": "DiabeticNephropathy_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -547,8 +547,8 @@
     },
     {
       "id": "ls9rlprb",
-      "x": 277.65,
-      "y": 10.75,
+      "x": 277.68,
+      "y": 10.76,
       "label": "LowerExtrmAmpt_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -566,8 +566,8 @@
     },
     {
       "id": "ls9rmh3c",
-      "x": 278.25,
-      "y": -5.43,
+      "x": 278.28,
+      "y": -5.42,
       "label": "DiabeticRetinopathy_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -585,8 +585,8 @@
     },
     {
       "id": "ls9rs1ih",
-      "x": -52.26,
-      "y": -109.71,
+      "x": -52.23,
+      "y": -109.7,
       "label": "DiabeticRetinopathy_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -604,8 +604,8 @@
     },
     {
       "id": "ls9rvbes",
-      "x": -48.28,
-      "y": -119.84,
+      "x": -48.25,
+      "y": -119.83,
       "label": "LowerExtrmAmpt_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -623,8 +623,8 @@
     },
     {
       "id": "ls9t0ml2",
-      "x": 103.71,
-      "y": 53.47,
+      "x": 103.74,
+      "y": 53.48,
       "label": "DiabeticNephropathy_Incidence_Rate",
       "color": "#06B4E1",
       "generate_array": {
@@ -642,8 +642,8 @@
     },
     {
       "id": "ls9t13d8",
-      "x": 104.28,
-      "y": 63.52,
+      "x": 104.31,
+      "y": 63.53,
       "label": "LowerExtrmAmpt_Incidence_Rate",
       "color": "#06B4E1",
       "generate_array": {
@@ -661,8 +661,8 @@
     },
     {
       "id": "ls9t1x51",
-      "x": 104,
-      "y": 73.84,
+      "x": 104.03,
+      "y": 73.85,
       "label": "DiabeticRetinopathy_Incidence_Rate",
       "color": "#06B4E1",
       "generate_array": {
@@ -680,8 +680,8 @@
     },
     {
       "id": "ls9t4fk3",
-      "x": 29.2,
-      "y": 37.08,
+      "x": 29.23,
+      "y": 37.09,
       "label": "LowerExtrmAmpt_Transform",
       "description": "Removing each effect from 1",
       "color": "#06B4E1",
@@ -698,8 +698,8 @@
     },
     {
       "id": "ls9t522j",
-      "x": 29.66,
-      "y": 19.37,
+      "x": 29.69,
+      "y": 19.38,
       "label": "DiabeticRetinopathy_Transform",
       "description": "Removing each effect from 1",
       "color": "#06B4E1",
@@ -716,8 +716,8 @@
     },
     {
       "id": "ls9tdixs",
-      "x": -70.86,
-      "y": 62.79,
+      "x": -70.83,
+      "y": 62.8,
       "color": "#06B4E1",
       "flush": true,
       "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Effect",
@@ -733,8 +733,8 @@
     },
     {
       "id": "ls9tdxgx",
-      "x": -71.12,
-      "y": -11.47,
+      "x": -71.09,
+      "y": -11.46,
       "color": "#06B4E1",
       "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Impact",
       "generate_array": {
@@ -750,8 +750,8 @@
     },
     {
       "id": "ls9tftfr",
-      "x": -69.55,
-      "y": 42.2,
+      "x": -69.52,
+      "y": 42.21,
       "color": "#06B4E1",
       "flush": true,
       "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect",
@@ -767,8 +767,8 @@
     },
     {
       "id": "ls9tgf2u",
-      "x": -71.92,
-      "y": -28.71,
+      "x": -71.89,
+      "y": -28.7,
       "color": "#06B4E1",
       "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Impact",
       "generate_array": {
@@ -784,8 +784,8 @@
     },
     {
       "id": "ls9tli5c",
-      "x": -72.38,
-      "y": -39.69,
+      "x": -72.35,
+      "y": -39.68,
       "color": "#06B4E1",
       "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Impact",
       "generate_array": {
@@ -801,8 +801,8 @@
     },
     {
       "id": "ls9tllxv",
-      "x": -73.01,
-      "y": -23.06,
+      "x": -72.98,
+      "y": -23.05,
       "color": "#06B4E1",
       "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Impact",
       "generate_array": {
@@ -818,8 +818,8 @@
     },
     {
       "id": "ls9tloqj",
-      "x": -71.61,
-      "y": -5.25,
+      "x": -71.58,
+      "y": -5.24,
       "color": "#06B4E1",
       "label": "StdGlycControl_DiabeticNephropathy_Incidence_Impact",
       "generate_array": {
@@ -835,8 +835,8 @@
     },
     {
       "id": "ls9tlsbv",
-      "x": -188.1,
-      "y": 41.35,
+      "x": -188.07,
+      "y": 41.36,
       "label": "IntsvGlycControl_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -852,8 +852,8 @@
     },
     {
       "id": "ls9tlxvf",
-      "x": -70.2,
-      "y": 19.06,
+      "x": -70.17,
+      "y": 19.07,
       "color": "#06B4E1",
       "flush": true,
       "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Effect",
@@ -869,8 +869,8 @@
     },
     {
       "id": "ls9tm2qi",
-      "x": -70.24,
-      "y": 36.55,
+      "x": -70.21,
+      "y": 36.56,
       "color": "#06B4E1",
       "flush": true,
       "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Effect",
@@ -886,8 +886,8 @@
     },
     {
       "id": "ls9tm6nt",
-      "x": -70.34,
-      "y": 56.44,
+      "x": -70.31,
+      "y": 56.45,
       "color": "#06B4E1",
       "flush": true,
       "label": "StdGlycControl_DiabeticNephropathy_Incidence_Effect",
@@ -903,8 +903,8 @@
     },
     {
       "id": "ls9tmepe",
-      "x": -220.19,
-      "y": 114.09,
+      "x": -220.16,
+      "y": 114.1,
       "label": "IntsvGlycControl_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -920,8 +920,8 @@
     },
     {
       "id": "ls9tmgwr",
-      "x": -150.49,
-      "y": 114.02,
+      "x": -150.46,
+      "y": 114.03,
       "label": "IntsvGlycControl_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -937,8 +937,8 @@
     },
     {
       "id": "ls9tmkpe",
-      "x": -68.11,
-      "y": 112.77,
+      "x": -68.08,
+      "y": 112.78,
       "label": "IntsvGlycControl_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -954,8 +954,8 @@
     },
     {
       "id": "ls9tsmp3",
-      "x": -72.96,
-      "y": -50.28,
+      "x": -72.93,
+      "y": -50.27,
       "color": "#06B4E1",
       "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Impact",
       "generate_array": {
@@ -971,8 +971,8 @@
     },
     {
       "id": "ls9tsrav",
-      "x": -68.48,
-      "y": 13.59,
+      "x": -68.45,
+      "y": 13.6,
       "color": "#06B4E1",
       "flush": true,
       "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect",
@@ -988,8 +988,8 @@
     },
     {
       "id": "ls9tsvuf",
-      "x": -188.81,
-      "y": 13.82,
+      "x": -188.78,
+      "y": 13.83,
       "label": "RetinopathyScrn_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -1005,8 +1005,8 @@
     },
     {
       "id": "ls9ttf2m",
-      "x": -65.88,
-      "y": 120.88,
+      "x": -65.85,
+      "y": 120.89,
       "label": "StdGlycControl_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1022,8 +1022,8 @@
     },
     {
       "id": "ls9ttil2",
-      "x": -152.2,
-      "y": 120.52,
+      "x": -152.17,
+      "y": 120.53,
       "label": "StdGlycControl_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -1039,8 +1039,8 @@
     },
     {
       "id": "ls9ttm0m",
-      "x": -220.37,
-      "y": 119.83,
+      "x": -220.34,
+      "y": 119.84,
       "label": "StdGlycControl_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1056,8 +1056,8 @@
     },
     {
       "id": "ls9tx5l9",
-      "x": -72.42,
-      "y": -34.24,
+      "x": -72.39,
+      "y": -34.23,
       "color": "#06B4E1",
       "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Impact",
       "generate_array": {
@@ -1073,8 +1073,8 @@
     },
     {
       "id": "ls9txa8s",
-      "x": -69.93,
-      "y": 31.63,
+      "x": -69.9,
+      "y": 31.64,
       "color": "#06B4E1",
       "flush": true,
       "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Effect",
@@ -1090,8 +1090,8 @@
     },
     {
       "id": "ls9txmx1",
-      "x": -189.62,
-      "y": 31.51,
+      "x": -189.59,
+      "y": 31.52,
       "label": "NeuropathyScr_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -1107,8 +1107,8 @@
     },
     {
       "id": "ls9txte5",
-      "x": -66.79,
-      "y": 99.72,
+      "x": -66.76,
+      "y": 99.73,
       "label": "NeuropathyScr_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1124,8 +1124,8 @@
     },
     {
       "id": "ls9txz8o",
-      "x": -151.1,
-      "y": 99.79,
+      "x": -151.07,
+      "y": 99.8,
       "label": "NeuropathyScr_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -1141,8 +1141,8 @@
     },
     {
       "id": "ls9ty2u5",
-      "x": -222.22,
-      "y": 98.93,
+      "x": -222.19,
+      "y": 98.94,
       "label": "NeuropathyScr_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1158,8 +1158,8 @@
     },
     {
       "id": "ls9u3agu",
-      "x": -71.52,
-      "y": -17.04,
+      "x": -71.49,
+      "y": -17.03,
       "color": "#06B4E1",
       "label": "NephropathyScr_DiabeticNephropathy_Incidence_Impact",
       "generate_array": {
@@ -1175,8 +1175,8 @@
     },
     {
       "id": "ls9u3pq6",
-      "x": -70.41,
-      "y": 50.32,
+      "x": -70.38,
+      "y": 50.33,
       "color": "#06B4E1",
       "flush": true,
       "label": "NephropathyScr_DiabeticNephropathy_Incidence_Effect",
@@ -1192,8 +1192,8 @@
     },
     {
       "id": "ls9u41gm",
-      "x": -189.03,
-      "y": 49.7,
+      "x": -189,
+      "y": 49.71,
       "label": "NephropathyScr_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -1209,8 +1209,8 @@
     },
     {
       "id": "ls9u4cw6",
-      "x": -222.46,
-      "y": 106.23,
+      "x": -222.43,
+      "y": 106.24,
       "label": "NephropathyScr_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1226,8 +1226,8 @@
     },
     {
       "id": "ls9u4iq6",
-      "x": -67.62,
-      "y": 106.21,
+      "x": -67.59,
+      "y": 106.22,
       "label": "NephropathyScr_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1243,8 +1243,8 @@
     },
     {
       "id": "ls9u9aty",
-      "x": -150.18,
-      "y": 106.67,
+      "x": -150.15,
+      "y": 106.68,
       "label": "NephropathyScr_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -1260,8 +1260,8 @@
     },
     {
       "id": "ls9y3aia",
-      "x": -51.49,
-      "y": -129.59,
+      "x": -51.46,
+      "y": -129.58,
       "label": "DiabeticNephropathy_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -1279,8 +1279,8 @@
     },
     {
       "id": "8UDk1pwr",
-      "x": 19.19,
-      "y": -128.47,
+      "x": 19.22,
+      "y": -128.46,
       "color": "#06B4E1",
       "generate_array": {
         "method": "single_value",
@@ -1293,8 +1293,8 @@
     },
     {
       "id": "UZumScoj",
-      "x": 23.22,
-      "y": -85.11,
+      "x": 23.25,
+      "y": -85.1,
       "label": "Healthy_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1307,8 +1307,8 @@
     },
     {
       "id": "8t0hevNa",
-      "x": 67.57,
-      "y": -127.92,
+      "x": 67.6,
+      "y": -127.91,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1321,8 +1321,8 @@
     },
     {
       "id": "33IvsrBr",
-      "x": 67.57,
-      "y": -120.37,
+      "x": 67.6,
+      "y": -120.36,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1335,8 +1335,8 @@
     },
     {
       "id": "3A5mnu49",
-      "x": 19.77,
-      "y": -120.43,
+      "x": 19.8,
+      "y": -120.42,
       "color": "#06B4E1",
       "generate_array": {
         "method": "single_value",
@@ -1349,8 +1349,8 @@
     },
     {
       "id": "bUNNX19G",
-      "x": 22.53,
-      "y": -109.54,
+      "x": 22.56,
+      "y": -109.53,
       "color": "#06B4E1",
       "generate_array": {
         "method": "single_value",
@@ -1363,8 +1363,8 @@
     },
     {
       "id": "cATgSiig",
-      "x": 20.18,
-      "y": -101.45,
+      "x": 20.21,
+      "y": -101.43,
       "color": "#06B4E1",
       "generate_array": {
         "method": "single_value",
@@ -1377,8 +1377,8 @@
     },
     {
       "id": "NHHJ4xJa",
-      "x": 67.23,
-      "y": -109.35,
+      "x": 67.26,
+      "y": -109.34,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1391,8 +1391,8 @@
     },
     {
       "id": "jNnbhWqn",
-      "x": 66.71,
-      "y": -99.94,
+      "x": 66.74,
+      "y": -99.93,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1979,7 +1979,7 @@
       "requires_source_balance": true,
       "remove_value_from_source": false,
       "value_to_target_operator": "add",
-      "label": "DiabeticNephropathy -> DiabeticNephropathy Disability"
+      "label": "DiabeticNephropathy -> DiabeticNephropathy HYL"
     },
     {
       "id": "LZfmJlni",
@@ -3526,6 +3526,101 @@
         "dQQesT37",
         "EgBBwjCV"
       ]
+    },
+    {
+      "batch": false
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Record births into the birth node",
+      "included_edges": [
+        "BLsXt2Md",
+        "bqt9e1Hu",
+        "uQdxASQ8",
+        "iB5A8VDc",
+        "UFw5HQql"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Main routine - diabetes incidence",
+      "included_edges": [
+        "PmszSxyR"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Main Routine - Distribute Diabetes to Effects",
+      "included_edges": [
+        "qwfuA7jx",
+        "nyZHiO9K",
+        "91C8HO8E"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Record HYL",
+      "included_edges": [
+        "g3h855iV",
+        "4LTJKWna",
+        "bWI3nekk",
+        "bJws4SbB",
+        "LFelEnpu"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Migration of Populations",
+      "included_edges": [
+        "PwZT0fUg",
+        "Sr9wD5iX",
+        "oDZJAqIc",
+        "P0YMn6Zi",
+        "Qo1iIBKh"
+      ]
+    },
+    {
+      "method": "age",
+      "batch": false,
+      "narration": "Ageing the populations",
+      "included_source_nodes": [
+        "DsFreeSus",
+        "AsthmaEpsd",
+        "ls9qw5uh",
+        "ls9qwy35",
+        "ls9qwy72"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Mortality is recorded",
+      "included_edges": [
+        "itKEGsJa",
+        "nU0Snw08",
+        "cdXO88Jz",
+        "SOdrw9IV",
+        "OyW7kOSM"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Women give birth",
+      "included_edges": [
+        "mlkMPtza",
+        "6ONEDRqf"
+      ]
+    },
+    {
+      "method": "flush",
+      "batch": false,
+      "narration": "Nodes are flushed"
     }
   ],
   "subgraph_routines": [
