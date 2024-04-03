@@ -344,7 +344,6 @@
       "y": -61.05,
       "label": "Births",
       "description": "Store of the number of births in the population",
-      "node_type": "function",
       "balance_type": "array",
       "order": 2,
       "flush": true,
