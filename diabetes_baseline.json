@@ -75,7 +75,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "disease": "Diabetes",
           "measure": "deaths"
         }
@@ -329,7 +329,7 @@
         "data_fetcher_label": "fhdb",
         "method": "population",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         },
         "fetch_once": true
       },
@@ -392,7 +392,7 @@
         "data_fetcher_label": "fhdb",
         "method": "healthy_disability",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       },
       "tags": [
@@ -445,7 +445,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "Diabetes -> Disability"
         }
       },
@@ -566,7 +566,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "DiabeticNephropathy -> Deceased"
         }
       },
@@ -585,7 +585,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "LowerExtrmAmpt -> Deceased"
         }
       },
@@ -604,7 +604,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "DiabeticRetinopathy -> Deceased"
         }
       },
@@ -657,7 +657,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "DiabeticRetinopathy -> Disability"
         }
       },
@@ -710,7 +710,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "LowerExtrmAmpt -> Disability"
         }
       },
@@ -729,7 +729,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "Diabetes -> DiabeticNephropathy"
         }
       },
@@ -748,7 +748,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "Diabetes -> LowerExtrmAmpt"
         }
       },
@@ -767,7 +767,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "Diabetes -> DiabeticRetinopathy"
         }
       },
@@ -1366,7 +1366,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "DiabeticNephropathy -> Disability"
         }
       },
@@ -1422,7 +1422,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       },
       "order": 0
@@ -1456,7 +1456,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       }
     },
@@ -1472,7 +1472,7 @@
         "data_fetcher_label": "fhdb",
         "method": "sex_ratio",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "sex": "m"
         }
       },
@@ -1496,7 +1496,7 @@
         "data_fetcher_label": "fhdb",
         "method": "sex_ratio",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "sex": "f"
         }
       },
@@ -1521,7 +1521,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       }
     },
@@ -1537,7 +1537,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "disease": "Diabetes",
           "measure": "incidence"
         }
@@ -1557,7 +1557,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       }
     },
@@ -1573,7 +1573,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       },
       "order": 0
@@ -1591,7 +1591,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "disease": "Diabetes",
           "measure": "prevalence"
         }
@@ -1803,7 +1803,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "Prevalence -> LowerExtrmAmpt"
         }
       },
@@ -2941,7 +2941,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "Prevalence -> DiabeticRetinopathy"
         }
       },
@@ -2959,7 +2959,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "ARG",
+          "country": "AFG",
           "observation": "Prevalence -> DiabeticNephropathy"
         }
       },
@@ -2977,7 +2977,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       },
       "order": 0
@@ -2994,7 +2994,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       },
       "order": 0
@@ -3011,7 +3011,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       },
       "order": 0
@@ -3029,7 +3029,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       }
     },
@@ -3046,7 +3046,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       }
     },
@@ -3063,7 +3063,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "ARG"
+          "country": "AFG"
         }
       }
     },
