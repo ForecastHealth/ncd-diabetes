@@ -3390,6 +3390,111 @@
         "ls9t1x51"
       ]
     },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Coverage",
+      "included_edges": [
+        "0sNrINie",
+        "DpbeQSDG",
+        "GIO8Zqnr",
+        "nzOokZh1",
+        "Lj3bcZuO",
+        "5gBcBgTW",
+        "qu8pPoSm",
+        "52WhrAvq",
+        "qbyP50ke",
+        "vQLBS8Sq"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Incidence Effects",
+      "included_edges": [
+        "6639U130",
+        "C2wz72kw",
+        "bCK3mo5k",
+        "buyFQ9xf",
+        "9aJfgle7",
+        "9tTZgCDD",
+        "LiUZyeb0",
+        "b4vzlUDn",
+        "aVWHHSy4",
+        "z1m3GYLt",
+        "Jcm0Uifx",
+        "I57hxswd",
+        "wV38kTvv",
+        "cthZMNMp",
+        "fRGMIszq",
+        "w9BRjqe9",
+        "gw9hRmLU",
+        "0knE2kOo",
+        "0dJueyZ9",
+        "QKqrBdcq",
+        "Z9NqaNOW",
+        "EekVBjNo",
+        "9ZgCQsuo",
+        "GbzW3kMT",
+        "DtPYA0O5",
+        "ZYE5gJtS",
+        "rN4Pg02x"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Remove Incidence Effects from 1.0",
+      "included_edges": [
+        "1cZxEYv5",
+        "HhEKmgNQ",
+        "jDiXa3eA",
+        "tgY6yM6H",
+        "u5m7NUok",
+        "gpFbIsTS",
+        "hmfi5cDT",
+        "CAZBesnu",
+        "BajENLf8"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Healthy and Disease Healthy Years Lived Weights",
+      "included_edges": [
+        "z4OkkZSs",
+        "zb88Hz9j",
+        "00HJkwE1",
+        "VwJ2mVwl",
+        "j054FI5X"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculated Combined HYLs",
+      "included_edges": [
+        "gKDTeFTF",
+        "Lt1hg93D",
+        "ZmOdIzg9",
+        "SIGfXEtC",
+        "lnCDwNha",
+        "PCn0x5Rq",
+        "QSfSmTPD",
+        "RXJmhwXv"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Disability Surrogats",
+      "included_edges": [
+        "LzXYrpyL",
+        "NlBimlu7",
+        "AZRSbuz1",
+        "Iot6gtQ5",
+        "fKUbIdOO"
+      ]
     }
   ],
   "subgraph_routines": [
