@@ -3460,6 +3460,26 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "narration": "Add Incidence Rate constants to surrogate",
+      "included_edges": [
+        "YIz69wxx",
+        "CBO3f2cM",
+        "Ridysv4o"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Modify incidence rate with intervention effects",
+      "included_edges": [
+        "XKtgbA5d",
+        "kjuVDJeo",
+        "2AG3i3pr"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
       "narration": "Calculate Healthy and Disease Healthy Years Lived Weights",
       "included_edges": [
         "z4OkkZSs",
@@ -3487,13 +3507,24 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
-      "narration": "Calculate Disability Surrogats",
+      "narration": "Calculate Disability Surrogates",
       "included_edges": [
         "LzXYrpyL",
         "NlBimlu7",
         "AZRSbuz1",
         "Iot6gtQ5",
         "fKUbIdOO"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Push CFRs to Mortality Surrogates",
+      "included_edges": [
+        "QNP1gYuf",
+        "mnnbDhXX",
+        "dQQesT37",
+        "EgBBwjCV"
       ]
     }
   ],
