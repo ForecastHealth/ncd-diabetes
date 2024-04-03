@@ -3,8 +3,10 @@ import {
     INTERVENTIONS,
     DEFAULT_COVERAGE,
     NULL_COVERAGE_CHANGES,
-    CR2_COVERAGE_CHANGES,
-    CR4_COVERAGE_CHANGES,
+    D1_COVERAGE_CHANGES,
+    D2_COVERAGE_CHANGES,
+    D3_COVERAGE_CHANGES,
+    D5_COVERAGE_CHANGES,
     RESULTS_QUERY
 } from './constants.js'
 
@@ -51,10 +53,14 @@ function handleInterventionChange() {
     resetCoverages();
     if (interventionSelection == "NULL") {
         applyCoverageChanges(NULL_COVERAGE_CHANGES);
-    } else if (interventionSelection === 'CR2') {
-        applyCoverageChanges(CR2_COVERAGE_CHANGES);
-    } else if (interventionSelection === 'CR4') {
-        applyCoverageChanges(CR4_COVERAGE_CHANGES);
+    } else if (interventionSelection === 'D1') {
+        applyCoverageChanges(D1_COVERAGE_CHANGES);
+    } else if (interventionSelection === 'D2') {
+        applyCoverageChanges(D2_COVERAGE_CHANGES);
+    } else if (interventionSelection === 'D3') {
+        applyCoverageChanges(D3_COVERAGE_CHANGES);
+    } else if (interventionSelection === 'D5') {
+        applyCoverageChanges(D5_COVERAGE_CHANGES);
     };
     toggleFormDisable();
 }
@@ -91,7 +97,7 @@ function applyCoverageChanges(changes) {
 
 window.runModel = function() {
     const iso3 = document.getElementById('selectCountry').value
-    fetch('copd_baseline.json')
+    fetch('diabetes_baseline.json')
         .then(response => response.json())
         .then(data => {
             const botech = data;

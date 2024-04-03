@@ -12,8 +12,8 @@ import pandas as pd
 
 RUN_ENDPOINT = "https://api.forecasthealth.org/run/appendix_3"
 QUERY_ENDPOINT = "https://api.forecasthealth.org/query"
-MODEL_FILEPATH = "copd_baseline.json"
-SCENARIOS = ["baseline", "null", "cr2", "cr4"]
+MODEL_FILEPATH = "diabetes_baseline.json"
+SCENARIOS = ["baseline", "null", "d1", "d2", "d3", "d5"]
 RESULTS_FILEPATH = "results.json"
 QUERY = """
 SELECT strftime("%Y", timestamp) AS year,
@@ -46,40 +46,81 @@ def change_country(botech: dict, iso3: str):
 def convert_scenario(botech: dict, scenario: str):
     if scenario == "baseline":
         for node in botech["nodes"]:
-            if node["label"] == "InhaledSalbutamol_Coverage":
+            if node["label"] == "RetinopathyScrn_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.05
-            if node["label"] == "IpratropiumInhaler_Coverage":
+            if node["label"] == "NeuropathyScr_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.05
-            if node["label"] == "OralPrednisolone_Coverage":
+            if node["label"] == "NephropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "IntsvGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "StdGlycControl_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.05
 
     elif scenario == "null":
         for node in botech["nodes"]:
-            if node["label"] == "InhaledSalbutamol_Coverage":
+            if node["label"] == "RetinopathyScrn_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.00
-            if node["label"] == "IpratropiumInhaler_Coverage":
+            if node["label"] == "NeuropathyScr_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.00
-            if node["label"] == "OralPrednisolone_Coverage":
+            if node["label"] == "NephropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.00
+            if node["label"] == "IntsvGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.00
+            if node["label"] == "StdGlycControl_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.00
 
-    elif scenario == "cr2":
+    elif scenario == "d1":
         for node in botech["nodes"]:
-            if node["label"] == "InhaledSalbutamol_Coverage":
+            if node["label"] == "RetinopathyScrn_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.05
-            if node["label"] == "IpratropiumInhaler_Coverage":
-                node["generate_array"]["parameters"]["value"] = 0.05
-            if node["label"] == "OralPrednisolone_Coverage":
+            if node["label"] == "NeuropathyScr_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.95
+            if node["label"] == "NephropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "IntsvGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "StdGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
 
-    elif scenario == "cr4":
+    elif scenario == "d2":
         for node in botech["nodes"]:
-            if node["label"] == "InhaledSalbutamol_Coverage":
+            if node["label"] == "RetinopathyScrn_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.95
-            if node["label"] == "IpratropiumInhaler_Coverage":
-                node["generate_array"]["parameters"]["value"] = 0.95
-            if node["label"] == "OralPrednisolone_Coverage":
+            if node["label"] == "NeuropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "NephropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "IntsvGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "StdGlycControl_Coverage":
                 node["generate_array"]["parameters"]["value"] = 0.05
 
+    elif scenario == "d3":
+        for node in botech["nodes"]:
+            if node["label"] == "RetinopathyScrn_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "NeuropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "NephropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "IntsvGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.95
+            if node["label"] == "StdGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.95
+
+    elif scenario == "d5":
+        for node in botech["nodes"]:
+            if node["label"] == "RetinopathyScrn_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "NeuropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "NephropathyScr_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.95
+            if node["label"] == "IntsvGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
+            if node["label"] == "StdGlycControl_Coverage":
+                node["generate_array"]["parameters"]["value"] = 0.05
     else:
         raise KeyError(f"{scenario} is not recognised")
 
