@@ -1,21 +1,23 @@
 import pandas as pd
 
-DISEASE = "copd"
+DISEASE = "diabetes"
 INPUT_FILEPATH = f"./data/{DISEASE}_avenir_results.csv"
 OUTPUT_FILEPATH = f"./data/{DISEASE}_avenir_results_formatted.json"
 SCENARIO_NAME_MAP = {
-    "Null": "null",
-    "CR2": "cr2",
-    "CR4": "cr4"
+    "DNull": "null",
+    "D1": "d1",
+    "D2": "d2",
+    "D3": "d3",
+    "D5": "d5",
 }
 
 
 def main():
     df = pd.read_csv(INPUT_FILEPATH, skiprows=[0])
-    required_columns = [2, 13, 14, 15]
+    required_columns = [2, 27, 28, 29, 30, 31]
 
     records = []
-    scenarios = ['Null', 'CR2', 'CR4']
+    scenarios = ['DNull', 'D1', 'D2', 'D3', 'D5']
 
     for _, row in df.iterrows():
         if not isinstance(row[2], float):

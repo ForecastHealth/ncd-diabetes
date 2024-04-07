@@ -1,0 +1,3717 @@
+{
+  "metadata": {
+    "user": "appendix_3",
+    "intervention": "diabetes",
+    "scenario": "baseline",
+    "country": "AFG",
+    "version": "1.0"
+  },
+  "runtime": {
+    "startYear": 2020,
+    "endYear": 2120
+  },
+  "nodes": [
+    {
+      "id": "ls9rc6e6",
+      "x": 213.07,
+      "y": 27.57,
+      "label": "DiabeticNephropathy Mortality",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "tags": [
+        "function",
+        "state"
+      ],
+      "flush": true
+    },
+    {
+      "id": "lrstce6u",
+      "x": 156.78,
+      "y": 43.65,
+      "label": "DiabetesEpsd Mortality",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "tags": [
+        "function",
+        "state"
+      ],
+      "flush": true
+    },
+    {
+      "id": "ls9rbfxn",
+      "x": 212.21,
+      "y": 10.5,
+      "label": "LowerExtrmAmpt Mortality",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "tags": [
+        "function",
+        "state"
+      ],
+      "flush": true
+    },
+    {
+      "id": "lrso81aw",
+      "x": 211.27,
+      "y": 43.46,
+      "label": "DiabetesEpsd_CFR",
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Diabetes",
+          "measure": "deaths"
+        }
+      },
+      "tags": [
+        "function"
+      ],
+      "flush": true
+    },
+    {
+      "id": "ls9rae7a",
+      "x": 212.95,
+      "y": -6.39,
+      "label": "DiabeticRetinopathy Mortality",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "tags": [
+        "function",
+        "state"
+      ],
+      "flush": true
+    },
+    {
+      "id": "Deceased",
+      "x": 212.18,
+      "y": -27.78,
+      "label": "Deceased",
+      "description": "The state of being dead",
+      "node_type": "state",
+      "balance_type": "array",
+      "color": "#FB6375",
+      "order": 3,
+      "tags": [
+        "state"
+      ],
+      "flush": true
+    },
+    {
+      "id": "ls9qwy72",
+      "x": 155.83,
+      "y": 24.81,
+      "label": "DiabeticNephropathy",
+      "color": "#E5EF73",
+      "ageing": true,
+      "tags": [
+        "state"
+      ]
+    },
+    {
+      "id": "ls9qwy35",
+      "x": 158.57,
+      "y": 12.92,
+      "label": "LowerExtrmAmpt",
+      "color": "#E5EF73",
+      "ageing": true,
+      "tags": [
+        "state"
+      ]
+    },
+    {
+      "id": "ls9qw5uh",
+      "x": 158.06,
+      "y": -4.3,
+      "label": "DiabeticRetinopathy",
+      "color": "#E5EF73",
+      "ageing": true,
+      "tags": [
+        "state"
+      ]
+    },
+    {
+      "id": "Disability",
+      "x": 177.5,
+      "y": -103.59,
+      "label": "Healthy Years Lived",
+      "description": "A store of disability adjusted life years",
+      "node_type": "state",
+      "balance_type": "array",
+      "color": "#FFB255",
+      "flush": true,
+      "tags": [
+        "state"
+      ]
+    },
+    {
+      "id": "ls9reknk",
+      "x": 123.13,
+      "y": -125.88,
+      "label": "DiabeticNephropathy HYL",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true,
+      "tags": [
+        "function",
+        "state"
+      ]
+    },
+    {
+      "id": "ls9re0t3",
+      "x": 119.19,
+      "y": -120.17,
+      "label": "LowerExtrmAmpt HYL",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true,
+      "tags": [
+        "function",
+        "state"
+      ]
+    },
+    {
+      "id": "ls9rdcin",
+      "x": 122.11,
+      "y": -111.53,
+      "label": "DiabeticRetinopathy HYL",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true,
+      "tags": [
+        "function",
+        "state"
+      ]
+    },
+    {
+      "id": "lrwzsau5",
+      "x": 117.96,
+      "y": -99.05,
+      "label": "DiabetesEpsd HYL",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true,
+      "tags": [
+        "function",
+        "state"
+      ]
+    },
+    {
+      "id": "ls9r1is1",
+      "x": 103.67,
+      "y": 23.77,
+      "label": "DiabeticNephropathy Incidence",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true,
+      "tags": [
+        "function",
+        "state"
+      ]
+    },
+    {
+      "id": "ls9r1ind",
+      "x": 103.79,
+      "y": 11.11,
+      "label": "LowerExtrmAmpt Incidence",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true,
+      "tags": [
+        "function",
+        "state"
+      ]
+    },
+    {
+      "id": "ls9r0u95",
+      "x": 104.06,
+      "y": -3.59,
+      "label": "DiabeticRetinopathy Incidence",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true,
+      "tags": [
+        "function",
+        "state"
+      ]
+    },
+    {
+      "id": "lrste7nj",
+      "x": 117.81,
+      "y": -83.4,
+      "label": "DsFreeSus HYL",
+      "node_type": "surrogate",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "tags": [
+        "function",
+        "state"
+      ]
+    },
+    {
+      "id": "DsFreeSus",
+      "x": 103.47,
+      "y": -55.46,
+      "label": "DsFreeSus",
+      "description": "State holding the balance of the healthy population",
+      "node_type": "state",
+      "balance_type": "array",
+      "order": 0,
+      "ageing": true,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "population",
+        "parameters": {
+          "country": "AFG"
+        },
+        "fetch_once": true
+      },
+      "color": "#3CD009",
+      "tags": [
+        "state"
+      ]
+    },
+    {
+      "id": "Births",
+      "x": 75.4,
+      "y": -55.27,
+      "label": "Births",
+      "description": "Store of the number of births in the population",
+      "balance_type": "array",
+      "order": 2,
+      "flush": true,
+      "color": "#EB7FEF",
+      "tags": [
+        "state"
+      ]
+    },
+    {
+      "id": "AsthmaEpsd",
+      "x": 83.11,
+      "y": -25.44,
+      "label": "DiabetesEpsd",
+      "ageing": true,
+      "color": "#E5EF73",
+      "order": 1,
+      "tags": [
+        "state"
+      ]
+    },
+    {
+      "id": "lrso71jf",
+      "x": -40.4,
+      "y": -89.69,
+      "label": "Healthy_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "fhdb",
+        "method": "healthy_disability",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "lrwz1ikj",
+      "x": 27.95,
+      "y": 53.82,
+      "label": "DiabeticNephropathy_Transform",
+      "description": "Removing each effect from 1",
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "lrso7mga",
+      "x": -45.57,
+      "y": -99.99,
+      "label": "DiabetesEpsd_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "Diabetes -> Disability"
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "lrst79uc",
+      "x": -69.83,
+      "y": 24.3,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "lrst0woc",
+      "x": -66.09,
+      "y": 93.32,
+      "label": "RetinopathyScrn_Calculated_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "lrsnjkmt",
+      "x": -72.09,
+      "y": -45.04,
+      "color": "#06B4E1",
+      "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.65
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "lrsnalk2",
+      "x": -218.65,
+      "y": 92.81,
+      "label": "RetinopathyScrn_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "lrso22do",
+      "x": -151.52,
+      "y": 92.98,
+      "label": "RetinopathyScrn_StartingCoverage",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.05
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "lrsnavq2",
+      "x": -188.67,
+      "y": 22.78,
+      "label": "StdGlycControl_PIN",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.9
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9rkzfi",
+      "x": 279.02,
+      "y": 27.55,
+      "label": "DiabeticNephropathy_CFR",
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "DiabeticNephropathy -> Deceased"
+        }
+      },
+      "tags": [
+        "function"
+      ],
+      "flush": true
+    },
+    {
+      "id": "ls9rlprb",
+      "x": 277.75,
+      "y": 10.78,
+      "label": "LowerExtrmAmpt_CFR",
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "LowerExtrmAmpt -> Deceased"
+        }
+      },
+      "tags": [
+        "function"
+      ],
+      "flush": true
+    },
+    {
+      "id": "ls9rmh3c",
+      "x": 278.35,
+      "y": -5.4,
+      "label": "DiabeticRetinopathy_CFR",
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "DiabeticRetinopathy -> Deceased"
+        }
+      },
+      "tags": [
+        "function"
+      ],
+      "flush": true
+    },
+    {
+      "id": "ls9rs1ih",
+      "x": -52.16,
+      "y": -109.68,
+      "label": "DiabeticRetinopathy_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "DiabeticRetinopathy -> Disability"
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9rvbes",
+      "x": -48.18,
+      "y": -119.81,
+      "label": "LowerExtrmAmpt_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "LowerExtrmAmpt -> Disability"
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9t0ml2",
+      "x": 103.81,
+      "y": 53.5,
+      "label": "DiabeticNephropathy_Incidence_Rate",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "Diabetes -> DiabeticNephropathy"
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9t13d8",
+      "x": 104.38,
+      "y": 63.55,
+      "label": "LowerExtrmAmpt_Incidence_Rate",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "Diabetes -> LowerExtrmAmpt"
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9t1x51",
+      "x": 104.1,
+      "y": 73.87,
+      "label": "DiabeticRetinopathy_Incidence_Rate",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "Diabetes -> DiabeticRetinopathy"
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9t4fk3",
+      "x": 29.3,
+      "y": 37.11,
+      "label": "LowerExtrmAmpt_Transform",
+      "description": "Removing each effect from 1",
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9t522j",
+      "x": 29.76,
+      "y": 19.4,
+      "label": "DiabeticRetinopathy_Transform",
+      "description": "Removing each effect from 1",
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tdixs",
+      "x": -70.76,
+      "y": 62.82,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tdxgx",
+      "x": -71.02,
+      "y": -11.44,
+      "color": "#06B4E1",
+      "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.39
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tftfr",
+      "x": -69.45,
+      "y": 42.23,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tgf2u",
+      "x": -71.82,
+      "y": -28.68,
+      "color": "#06B4E1",
+      "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.151
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tli5c",
+      "x": -72.28,
+      "y": -39.66,
+      "color": "#06B4E1",
+      "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.75
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tllxv",
+      "x": -72.91,
+      "y": -23.03,
+      "color": "#06B4E1",
+      "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.286
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tloqj",
+      "x": -71.51,
+      "y": -5.22,
+      "color": "#06B4E1",
+      "label": "StdGlycControl_DiabeticNephropathy_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.39
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tlsbv",
+      "x": -188,
+      "y": 41.38,
+      "label": "IntsvGlycControl_PIN",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.1
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tlxvf",
+      "x": -70.1,
+      "y": 19.09,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tm2qi",
+      "x": -70.14,
+      "y": 36.58,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tm6nt",
+      "x": -70.24,
+      "y": 56.47,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "StdGlycControl_DiabeticNephropathy_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tmepe",
+      "x": -220.09,
+      "y": 114.12,
+      "label": "IntsvGlycControl_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tmgwr",
+      "x": -150.39,
+      "y": 114.05,
+      "label": "IntsvGlycControl_StartingCoverage",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.05
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tmkpe",
+      "x": -68.01,
+      "y": 112.8,
+      "label": "IntsvGlycControl_Calculated_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tsmp3",
+      "x": -72.86,
+      "y": -50.25,
+      "color": "#06B4E1",
+      "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.2
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tsrav",
+      "x": -68.38,
+      "y": 13.62,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tsvuf",
+      "x": -188.71,
+      "y": 13.85,
+      "label": "RetinopathyScrn_PIN",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9ttf2m",
+      "x": -65.78,
+      "y": 120.91,
+      "label": "StdGlycControl_Calculated_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9ttil2",
+      "x": -152.1,
+      "y": 120.55,
+      "label": "StdGlycControl_StartingCoverage",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.05
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9ttm0m",
+      "x": -220.27,
+      "y": 119.86,
+      "label": "StdGlycControl_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9tx5l9",
+      "x": -72.32,
+      "y": -34.21,
+      "color": "#06B4E1",
+      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.35
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9txa8s",
+      "x": -69.83,
+      "y": 31.66,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9txmx1",
+      "x": -189.52,
+      "y": 31.54,
+      "label": "NeuropathyScr_PIN",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9txte5",
+      "x": -66.69,
+      "y": 99.75,
+      "label": "NeuropathyScr_Calculated_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9txz8o",
+      "x": -151,
+      "y": 99.82,
+      "label": "NeuropathyScr_StartingCoverage",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.05
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9ty2u5",
+      "x": -222.12,
+      "y": 98.96,
+      "label": "NeuropathyScr_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9u3agu",
+      "x": -71.42,
+      "y": -17.01,
+      "color": "#06B4E1",
+      "label": "NephropathyScr_DiabeticNephropathy_Incidence_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.24
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9u3pq6",
+      "x": -70.31,
+      "y": 50.35,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "NephropathyScr_DiabeticNephropathy_Incidence_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9u41gm",
+      "x": -188.93,
+      "y": 49.73,
+      "label": "NephropathyScr_PIN",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9u4cw6",
+      "x": -222.36,
+      "y": 106.26,
+      "label": "NephropathyScr_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9u4iq6",
+      "x": -67.52,
+      "y": 106.24,
+      "label": "NephropathyScr_Calculated_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9u9aty",
+      "x": -150.08,
+      "y": 106.7,
+      "label": "NephropathyScr_StartingCoverage",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": -0.05
+        }
+      },
+      "color": "#06B4E1",
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "ls9y3aia",
+      "x": -51.39,
+      "y": -129.56,
+      "label": "DiabeticNephropathy_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "DiabeticNephropathy -> Disability"
+        }
+      },
+      "tags": [
+        "function"
+      ]
+    },
+    {
+      "id": "8UDk1pwr",
+      "x": 19.29,
+      "y": -128.44,
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "label": "DiabeticNephropathy_HYL"
+    },
+    {
+      "id": "UZumScoj",
+      "x": 23.32,
+      "y": -85.08,
+      "label": "Healthy_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "8t0hevNa",
+      "x": 67.67,
+      "y": -127.89,
+      "label": "Combined_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "33IvsrBr",
+      "x": 67.67,
+      "y": -120.34,
+      "label": "Combined_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "3A5mnu49",
+      "x": 19.87,
+      "y": -120.4,
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "label": "LowerExtrmAmpt_HYL"
+    },
+    {
+      "id": "bUNNX19G",
+      "x": 22.63,
+      "y": -109.51,
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "label": "DiabeticRetinopathy_HYL"
+    },
+    {
+      "id": "cATgSiig",
+      "x": 20.28,
+      "y": -101.41,
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "label": "DiabetesEpsd_HYL"
+    },
+    {
+      "id": "NHHJ4xJa",
+      "x": 67.33,
+      "y": -109.32,
+      "label": "Combined_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "jNnbhWqn",
+      "x": 66.81,
+      "y": -99.91,
+      "label": "Combined_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true
+    }
+  ],
+  "links": [
+    {
+      "id": "PwZT0fUg",
+      "source": "DsFreeSus",
+      "target": "DsFreeSus",
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "value_to_target_operator": "add",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "order": 0,
+      "label": "DsFreeSus -> DsFreeSus"
+    },
+    {
+      "id": "BLsXt2Md",
+      "source": "DsFreeSus",
+      "target": "Births",
+      "order": 1,
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DsFreeSus -> Births"
+    },
+    {
+      "id": "mlkMPtza",
+      "source": "Births",
+      "target": "DsFreeSus",
+      "description": "Male births into the population",
+      "edge_type": "modifier",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "sex_ratio",
+        "parameters": {
+          "country": "AFG",
+          "sex": "m"
+        }
+      },
+      "weighted_balance_postprocessing": {
+        "into": [
+          0,
+          0
+        ]
+      },
+      "order": 0,
+      "label": "Births -> DsFreeSus"
+    },
+    {
+      "id": "6ONEDRqf",
+      "source": "Births",
+      "target": "DsFreeSus",
+      "description": "Female births into the population",
+      "edge_type": "modifier",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "sex_ratio",
+        "parameters": {
+          "country": "AFG",
+          "sex": "f"
+        }
+      },
+      "weighted_balance_postprocessing": {
+        "into": [
+          1,
+          0
+        ]
+      },
+      "order": 0,
+      "label": "Births -> DsFreeSus"
+    },
+    {
+      "id": "itKEGsJa",
+      "source": "DsFreeSus",
+      "target": "Deceased",
+      "order": 2,
+      "description": "Transition people into the mortality state",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DsFreeSus -> Deceased"
+    },
+    {
+      "id": "PmszSxyR",
+      "source": "DsFreeSus",
+      "target": "AsthmaEpsd",
+      "description": "Progression of asthma episode",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Diabetes",
+          "measure": "incidence"
+        }
+      },
+      "order": 4,
+      "label": "Incidence DsFreeSus -> DiabetesEpsd"
+    },
+    {
+      "id": "bqt9e1Hu",
+      "source": "AsthmaEpsd",
+      "target": "Births",
+      "order": 1,
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DiabetesEpsd -> Births"
+    },
+    {
+      "id": "Sr9wD5iX",
+      "source": "AsthmaEpsd",
+      "target": "AsthmaEpsd",
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "value_to_target_operator": "add",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "order": 0,
+      "label": "DiabetesEpsd -> DiabetesEpsd"
+    },
+    {
+      "id": "XERAn3eI",
+      "source": "DsFreeSus",
+      "target": "AsthmaEpsd",
+      "description": "Progression of asthma episode",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Diabetes",
+          "measure": "prevalence"
+        }
+      },
+      "order": 3,
+      "label": "Prevalence DsFreeSus -> DiabetesEpsd"
+    },
+    {
+      "id": "0sNrINie",
+      "source": "lrsnalk2",
+      "target": "lrst0woc",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "RetinopathyScrn_Coverage -> RetinopathyScrn_Calculated_Coverage"
+    },
+    {
+      "id": "5gBcBgTW",
+      "source": "lrso22do",
+      "target": "lrst0woc",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "RetinopathyScrn_StartingCoverage -> RetinopathyScrn_Calculated_Coverage"
+    },
+    {
+      "id": "z1m3GYLt",
+      "source": "lrsnjkmt",
+      "target": "lrst79uc",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Impact -> IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "QNP1gYuf",
+      "source": "lrso81aw",
+      "target": "lrstce6u",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabetesEpsd_CFR -> DiabetesEpsd Mortality"
+    },
+    {
+      "id": "XKtgbA5d",
+      "source": "lrwz1ikj",
+      "target": "ls9r1is1",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticNephropathy_Transform -> DiabeticNephropathy Incidence"
+    },
+    {
+      "id": "g3h855iV",
+      "source": "DsFreeSus",
+      "target": "lrste7nj",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "label": "DsFreeSus -> DsFreeSus HYL"
+    },
+    {
+      "id": "S2Dkmt7a",
+      "source": "lrste7nj",
+      "target": "Disability",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DsFreeSus HYL -> Healthy Years Lived"
+    },
+    {
+      "id": "4LTJKWna",
+      "source": "AsthmaEpsd",
+      "target": "lrwzsau5",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "label": "DiabetesEpsd -> DiabetesEpsd HYL"
+    },
+    {
+      "id": "qdo9097P",
+      "source": "lrwzsau5",
+      "target": "Disability",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabetesEpsd HYL -> Healthy Years Lived"
+    },
+    {
+      "id": "jafkA6il",
+      "source": "DsFreeSus",
+      "target": "ls9qwy35",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "Prevalence -> LowerExtrmAmpt"
+        }
+      },
+      "order": 3,
+      "label": "DsFreeSus -> LowerExtrmAmpt"
+    },
+    {
+      "id": "QDm89Xb6",
+      "source": "lrstce6u",
+      "target": "Deceased",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabetesEpsd Mortality -> Deceased"
+    },
+    {
+      "id": "qwfuA7jx",
+      "source": "AsthmaEpsd",
+      "target": "ls9r0u95",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "label": "DiabetesEpsd -> DiabeticRetinopathy Incidence"
+    },
+    {
+      "id": "nyZHiO9K",
+      "source": "AsthmaEpsd",
+      "target": "ls9r1ind",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "label": "DiabetesEpsd -> LowerExtrmAmpt Incidence"
+    },
+    {
+      "id": "91C8HO8E",
+      "source": "AsthmaEpsd",
+      "target": "ls9r1is1",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "label": "DiabetesEpsd -> DiabeticNephropathy Incidence"
+    },
+    {
+      "id": "PzOtBRht",
+      "source": "ls9r0u95",
+      "target": "ls9qw5uh",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticRetinopathy Incidence -> DiabeticRetinopathy"
+    },
+    {
+      "id": "wbb442ft",
+      "source": "ls9r1ind",
+      "target": "ls9qwy35",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowerExtrmAmpt Incidence -> LowerExtrmAmpt"
+    },
+    {
+      "id": "FhZgetai",
+      "source": "ls9r1is1",
+      "target": "ls9qwy72",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticNephropathy Incidence -> DiabeticNephropathy"
+    },
+    {
+      "id": "nU0Snw08",
+      "source": "ls9qw5uh",
+      "target": "ls9rae7a",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "label": "DiabeticRetinopathy -> DiabeticRetinopathy Mortality"
+    },
+    {
+      "id": "vGe8pycW",
+      "source": "ls9rae7a",
+      "target": "Deceased",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticRetinopathy Mortality -> Deceased"
+    },
+    {
+      "id": "cdXO88Jz",
+      "source": "ls9qwy35",
+      "target": "ls9rbfxn",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "label": "LowerExtrmAmpt -> LowerExtrmAmpt Mortality"
+    },
+    {
+      "id": "VoklmMiX",
+      "source": "ls9rbfxn",
+      "target": "Deceased",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowerExtrmAmpt Mortality -> Deceased"
+    },
+    {
+      "id": "SOdrw9IV",
+      "source": "ls9qwy72",
+      "target": "ls9rc6e6",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "label": "DiabeticNephropathy -> DiabeticNephropathy Mortality"
+    },
+    {
+      "id": "pVw1itPe",
+      "source": "ls9rc6e6",
+      "target": "Deceased",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticNephropathy Mortality -> Deceased"
+    },
+    {
+      "id": "bWI3nekk",
+      "source": "ls9qw5uh",
+      "target": "ls9rdcin",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "label": "DiabeticRetinopathy -> DiabeticRetinopathy HYL"
+    },
+    {
+      "id": "zRxdTWxm",
+      "source": "ls9rdcin",
+      "target": "Disability",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticRetinopathy HYL -> Healthy Years Lived"
+    },
+    {
+      "id": "bJws4SbB",
+      "source": "ls9qwy35",
+      "target": "ls9re0t3",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "label": "LowerExtrmAmpt -> LowerExtrmAmpt HYL"
+    },
+    {
+      "id": "fW8x2B3C",
+      "source": "ls9re0t3",
+      "target": "Disability",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowerExtrmAmpt HYL -> Healthy Years Lived"
+    },
+    {
+      "id": "LFelEnpu",
+      "source": "ls9qwy72",
+      "target": "ls9reknk",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "label": "DiabeticNephropathy -> DiabeticNephropathy HYL"
+    },
+    {
+      "id": "LZfmJlni",
+      "source": "ls9reknk",
+      "target": "Disability",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticNephropathy HYL -> Healthy Years Lived"
+    },
+    {
+      "id": "mnnbDhXX",
+      "source": "ls9rkzfi",
+      "target": "ls9rc6e6",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticNephropathy_CFR -> DiabeticNephropathy Mortality"
+    },
+    {
+      "id": "dQQesT37",
+      "source": "ls9rlprb",
+      "target": "ls9rbfxn",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowerExtrmAmpt_CFR -> LowerExtrmAmpt Mortality"
+    },
+    {
+      "id": "EgBBwjCV",
+      "source": "ls9rmh3c",
+      "target": "ls9rae7a",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticRetinopathy_CFR -> DiabeticRetinopathy Mortality"
+    },
+    {
+      "id": "YIz69wxx",
+      "source": "ls9t0ml2",
+      "target": "ls9r1is1",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticNephropathy_Incidence_Rate -> DiabeticNephropathy Incidence"
+    },
+    {
+      "id": "CBO3f2cM",
+      "source": "ls9t13d8",
+      "target": "ls9r1ind",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowerExtrmAmpt_Incidence_Rate -> LowerExtrmAmpt Incidence"
+    },
+    {
+      "id": "Ridysv4o",
+      "source": "ls9t1x51",
+      "target": "ls9r0u95",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticRetinopathy_Incidence_Rate -> DiabeticRetinopathy Incidence"
+    },
+    {
+      "id": "kjuVDJeo",
+      "source": "ls9t4fk3",
+      "target": "ls9r1ind",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowerExtrmAmpt_Transform -> LowerExtrmAmpt Incidence"
+    },
+    {
+      "id": "1cZxEYv5",
+      "source": "lrst79uc",
+      "target": "ls9t522j",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform"
+    },
+    {
+      "id": "2AG3i3pr",
+      "source": "ls9t522j",
+      "target": "ls9r0u95",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticRetinopathy_Transform -> DiabeticRetinopathy Incidence"
+    },
+    {
+      "id": "HhEKmgNQ",
+      "source": "ls9tdixs",
+      "target": "lrwz1ikj",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform"
+    },
+    {
+      "id": "Jcm0Uifx",
+      "source": "ls9tdxgx",
+      "target": "ls9tdixs",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Impact -> IntsvGlycControl_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "jDiXa3eA",
+      "source": "ls9tftfr",
+      "target": "ls9t4fk3",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform"
+    },
+    {
+      "id": "I57hxswd",
+      "source": "ls9tgf2u",
+      "target": "ls9tftfr",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Impact -> IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "6639U130",
+      "source": "ls9tlsbv",
+      "target": "lrst79uc",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_PIN -> IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "C2wz72kw",
+      "source": "ls9tlsbv",
+      "target": "ls9tdixs",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_PIN -> IntsvGlycControl_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "bCK3mo5k",
+      "source": "ls9tlsbv",
+      "target": "ls9tftfr",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_PIN -> IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "buyFQ9xf",
+      "source": "lrsnavq2",
+      "target": "ls9tlxvf",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_PIN -> StdGlycControl_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "tgY6yM6H",
+      "source": "ls9tlxvf",
+      "target": "ls9t522j",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform"
+    },
+    {
+      "id": "wV38kTvv",
+      "source": "ls9tli5c",
+      "target": "ls9tlxvf",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Impact -> StdGlycControl_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "9aJfgle7",
+      "source": "lrsnavq2",
+      "target": "ls9tm2qi",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_PIN -> StdGlycControl_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "u5m7NUok",
+      "source": "ls9tm2qi",
+      "target": "ls9t4fk3",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform"
+    },
+    {
+      "id": "cthZMNMp",
+      "source": "ls9tllxv",
+      "target": "ls9tm2qi",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Impact -> StdGlycControl_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "9tTZgCDD",
+      "source": "lrsnavq2",
+      "target": "ls9tm6nt",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_PIN -> StdGlycControl_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "gpFbIsTS",
+      "source": "ls9tm6nt",
+      "target": "lrwz1ikj",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform"
+    },
+    {
+      "id": "fRGMIszq",
+      "source": "ls9tloqj",
+      "target": "ls9tm6nt",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_DiabeticNephropathy_Incidence_Impact -> StdGlycControl_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "0dJueyZ9",
+      "source": "ls9tmkpe",
+      "target": "lrst79uc",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_Calculated_Coverage -> IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "Z9NqaNOW",
+      "source": "ls9tmkpe",
+      "target": "ls9tdixs",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_Calculated_Coverage -> IntsvGlycControl_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "EekVBjNo",
+      "source": "ls9tmkpe",
+      "target": "ls9tftfr",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_Calculated_Coverage -> IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "DpbeQSDG",
+      "source": "ls9tmepe",
+      "target": "ls9tmkpe",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_Coverage -> IntsvGlycControl_Calculated_Coverage"
+    },
+    {
+      "id": "qu8pPoSm",
+      "source": "ls9tmgwr",
+      "target": "ls9tmkpe",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "IntsvGlycControl_StartingCoverage -> IntsvGlycControl_Calculated_Coverage"
+    },
+    {
+      "id": "QKqrBdcq",
+      "source": "lrst0woc",
+      "target": "ls9tsrav",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "RetinopathyScrn_Calculated_Coverage -> RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "hmfi5cDT",
+      "source": "ls9tsrav",
+      "target": "ls9t522j",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform"
+    },
+    {
+      "id": "w9BRjqe9",
+      "source": "ls9tsmp3",
+      "target": "ls9tsrav",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Impact -> RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "LiUZyeb0",
+      "source": "ls9tsvuf",
+      "target": "ls9tsrav",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "RetinopathyScrn_PIN -> RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "9ZgCQsuo",
+      "source": "ls9ttf2m",
+      "target": "ls9tlxvf",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_Calculated_Coverage -> StdGlycControl_DiabeticRetinopathy_Incidence_Effect"
+    },
+    {
+      "id": "GbzW3kMT",
+      "source": "ls9ttf2m",
+      "target": "ls9tm2qi",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_Calculated_Coverage -> StdGlycControl_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "ZYE5gJtS",
+      "source": "ls9ttf2m",
+      "target": "ls9tm6nt",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_Calculated_Coverage -> StdGlycControl_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "52WhrAvq",
+      "source": "ls9ttil2",
+      "target": "ls9ttf2m",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_StartingCoverage -> StdGlycControl_Calculated_Coverage"
+    },
+    {
+      "id": "GIO8Zqnr",
+      "source": "ls9ttm0m",
+      "target": "ls9ttf2m",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "StdGlycControl_Coverage -> StdGlycControl_Calculated_Coverage"
+    },
+    {
+      "id": "CAZBesnu",
+      "source": "ls9txa8s",
+      "target": "ls9t4fk3",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform"
+    },
+    {
+      "id": "gw9hRmLU",
+      "source": "ls9tx5l9",
+      "target": "ls9txa8s",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Impact -> NeuropathyScr_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "b4vzlUDn",
+      "source": "ls9txmx1",
+      "target": "ls9txa8s",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NeuropathyScr_PIN -> NeuropathyScr_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "rN4Pg02x",
+      "source": "ls9txte5",
+      "target": "ls9txa8s",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NeuropathyScr_Calculated_Coverage -> NeuropathyScr_LowerExtrmAmpt_Incidence_Effect"
+    },
+    {
+      "id": "qbyP50ke",
+      "source": "ls9txz8o",
+      "target": "ls9txte5",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NeuropathyScr_StartingCoverage -> NeuropathyScr_Calculated_Coverage"
+    },
+    {
+      "id": "nzOokZh1",
+      "source": "ls9ty2u5",
+      "target": "ls9txte5",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NeuropathyScr_Coverage -> NeuropathyScr_Calculated_Coverage"
+    },
+    {
+      "id": "BajENLf8",
+      "source": "ls9u3pq6",
+      "target": "lrwz1ikj",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NephropathyScr_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform"
+    },
+    {
+      "id": "0knE2kOo",
+      "source": "ls9u3agu",
+      "target": "ls9u3pq6",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NephropathyScr_DiabeticNephropathy_Incidence_Impact -> NephropathyScr_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "aVWHHSy4",
+      "source": "ls9u41gm",
+      "target": "ls9u3pq6",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NephropathyScr_PIN -> NephropathyScr_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "DtPYA0O5",
+      "source": "ls9u4iq6",
+      "target": "ls9u3pq6",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NephropathyScr_Calculated_Coverage -> NephropathyScr_DiabeticNephropathy_Incidence_Effect"
+    },
+    {
+      "id": "Lj3bcZuO",
+      "source": "ls9u4cw6",
+      "target": "ls9u4iq6",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NephropathyScr_Coverage -> NephropathyScr_Calculated_Coverage"
+    },
+    {
+      "id": "vQLBS8Sq",
+      "source": "ls9u9aty",
+      "target": "ls9u4iq6",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "NephropathyScr_StartingCoverage -> NephropathyScr_Calculated_Coverage"
+    },
+    {
+      "id": "AaIqu3Sh",
+      "source": "DsFreeSus",
+      "target": "ls9qw5uh",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "Prevalence -> DiabeticRetinopathy"
+        }
+      },
+      "order": 3,
+      "label": "DsFreeSus -> DiabeticRetinopathy"
+    },
+    {
+      "id": "OhC9gSTP",
+      "source": "DsFreeSus",
+      "target": "ls9qwy72",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "diabetes",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "Prevalence -> DiabeticNephropathy"
+        }
+      },
+      "order": 3,
+      "label": "DsFreeSus -> DiabeticNephropathy"
+    },
+    {
+      "id": "Qo1iIBKh",
+      "source": "ls9qw5uh",
+      "target": "ls9qw5uh",
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "value_to_target_operator": "add",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "order": 0,
+      "label": "DiabeticRetinopathy -> DiabeticRetinopathy"
+    },
+    {
+      "id": "P0YMn6Zi",
+      "source": "ls9qwy35",
+      "target": "ls9qwy35",
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "value_to_target_operator": "add",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "order": 0,
+      "label": "LowerExtrmAmpt -> LowerExtrmAmpt"
+    },
+    {
+      "id": "oDZJAqIc",
+      "source": "ls9qwy72",
+      "target": "ls9qwy72",
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "value_to_target_operator": "add",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "order": 0,
+      "label": "DiabeticNephropathy -> DiabeticNephropathy"
+    },
+    {
+      "id": "uQdxASQ8",
+      "source": "ls9qw5uh",
+      "target": "Births",
+      "order": 1,
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DiabeticRetinopathy -> Births"
+    },
+    {
+      "id": "iB5A8VDc",
+      "source": "ls9qwy35",
+      "target": "Births",
+      "order": 1,
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "LowerExtrmAmpt -> Births"
+    },
+    {
+      "id": "UFw5HQql",
+      "source": "ls9qwy72",
+      "target": "Births",
+      "order": 1,
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DiabeticNephropathy -> Births"
+    },
+    {
+      "id": "OyW7kOSM",
+      "source": "AsthmaEpsd",
+      "target": "lrstce6u",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "label": "DiabetesEpsd -> DiabetesEpsd Mortality"
+    },
+    {
+      "id": "zb88Hz9j",
+      "source": "ls9y3aia",
+      "target": "8UDk1pwr",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "DiabeticNephropathy_Disability_Weight -> DiabeticNephropathy_HYL"
+    },
+    {
+      "id": "z4OkkZSs",
+      "source": "lrso71jf",
+      "target": "UZumScoj",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "Healthy_Disability_Weight -> Healthy_HYL"
+    },
+    {
+      "id": "lnCDwNha",
+      "source": "8UDk1pwr",
+      "target": "8t0hevNa",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticNephropathy_HYL -> Combined_HYL"
+    },
+    {
+      "id": "gKDTeFTF",
+      "source": "UZumScoj",
+      "target": "8t0hevNa",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Healthy_HYL -> Combined_HYL"
+    },
+    {
+      "id": "NlBimlu7",
+      "source": "8t0hevNa",
+      "target": "ls9reknk",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Combined_HYL -> DiabeticNephropathy HYL"
+    },
+    {
+      "id": "Lt1hg93D",
+      "source": "UZumScoj",
+      "target": "33IvsrBr",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Healthy_HYL -> Combined_HYL"
+    },
+    {
+      "id": "AZRSbuz1",
+      "source": "33IvsrBr",
+      "target": "ls9re0t3",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Combined_HYL -> LowerExtrmAmpt HYL"
+    },
+    {
+      "id": "00HJkwE1",
+      "source": "ls9rvbes",
+      "target": "3A5mnu49",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "DiabeticNephropathy_Disability_Weight -> DiabeticNephropathy_HYL"
+    },
+    {
+      "id": "PCn0x5Rq",
+      "source": "3A5mnu49",
+      "target": "33IvsrBr",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowerExtrmAmpt_HYL -> Combined_HYL"
+    },
+    {
+      "id": "VwJ2mVwl",
+      "source": "ls9rs1ih",
+      "target": "bUNNX19G",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "DiabeticNephropathy_Disability_Weight -> DiabeticNephropathy_HYL"
+    },
+    {
+      "id": "j054FI5X",
+      "source": "lrso7mga",
+      "target": "cATgSiig",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "DiabeticNephropathy_Disability_Weight -> DiabeticNephropathy_HYL"
+    },
+    {
+      "id": "ZmOdIzg9",
+      "source": "UZumScoj",
+      "target": "NHHJ4xJa",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Healthy_HYL -> Combined_HYL"
+    },
+    {
+      "id": "Iot6gtQ5",
+      "source": "NHHJ4xJa",
+      "target": "ls9rdcin",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Combined_HYL -> DiabeticRetinopathy HYL"
+    },
+    {
+      "id": "QSfSmTPD",
+      "source": "bUNNX19G",
+      "target": "NHHJ4xJa",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabeticRetinopathy_HYL -> Combined_HYL"
+    },
+    {
+      "id": "SIGfXEtC",
+      "source": "UZumScoj",
+      "target": "jNnbhWqn",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Healthy_HYL -> Combined_HYL"
+    },
+    {
+      "id": "fKUbIdOO",
+      "source": "jNnbhWqn",
+      "target": "lrwzsau5",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Combined_HYL -> DiabetesEpsd HYL"
+    },
+    {
+      "id": "RXJmhwXv",
+      "source": "cATgSiig",
+      "target": "jNnbhWqn",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DiabetesEpsd"
+    },
+    {
+      "id": "LzXYrpyL",
+      "source": "UZumScoj",
+      "target": "lrste7nj",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Healthy_HYL -> DsFreeSus HYL"
+    },
+    {
+      "id": "9lHjCUmt",
+      "source": "AsthmaEpsd",
+      "target": "Deceased",
+      "description": "Background Mortality",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DiabetesEpsd -> Deceased"
+    },
+    {
+      "id": "tJOW1hhc",
+      "source": "ls9qw5uh",
+      "target": "Deceased",
+      "description": "Background Mortality",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DiabeticRetinopathy -> Deceased"
+    },
+    {
+      "id": "STz4wrnX",
+      "source": "ls9qwy35",
+      "target": "Deceased",
+      "description": "Background Mortality",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "LowerExtrmAmpt -> Deceased"
+    },
+    {
+      "id": "BJGaPBZg",
+      "source": "ls9qwy72",
+      "target": "Deceased",
+      "description": "Background Mortality",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DiabeticNephropathy -> Deceased"
+    }
+  ],
+  "subroutines": [
+    {
+      "method": "generate_balance",
+      "batch": false,
+      "narration": "Generate the population",
+      "included_source_nodes": [
+        "DsFreeSus"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Allocate prevalence",
+      "included_edges": [
+        "XERAn3eI",
+        "jafkA6il",
+        "AaIqu3Sh",
+        "OhC9gSTP"
+      ]
+    },
+    {
+      "method": "generate_balance",
+      "batch": false,
+      "narration": "Generate the base values of the surrogate nodes",
+      "included_source_nodes": [
+        "ls9rc6e6",
+        "lrstce6u",
+        "ls9rbfxn",
+        "ls9rae7a",
+        "ls9reknk",
+        "ls9re0t3",
+        "ls9rdcin",
+        "lrwzsau5",
+        "ls9r1is1",
+        "ls9r1ind",
+        "ls9r0u95",
+        "lrste7nj"
+      ]
+    },
+    {
+      "method": "generate_balance",
+      "batch": false,
+      "narration": "Generate the base values of the function nodes for constants",
+      "included_source_nodes": [
+        "lrst0woc",
+        "ls9tmkpe",
+        "ls9ttf2m",
+        "ls9txte5",
+        "ls9u4iq6",
+        "lrst79uc",
+        "ls9tdixs",
+        "ls9tftfr",
+        "ls9tlxvf",
+        "ls9tm2qi",
+        "ls9tm6nt",
+        "ls9tsrav",
+        "ls9txa8s",
+        "ls9u3pq6",
+        "lrwz1ikj",
+        "ls9t4fk3",
+        "ls9t522j",
+        "8UDk1pwr",
+        "UZumScoj",
+        "3A5mnu49",
+        "bUNNX19G",
+        "cATgSiig",
+        "33IvsrBr",
+        "8t0hevNa",
+        "NHHJ4xJa",
+        "jNnbhWqn"
+      ]
+    },
+    {
+      "method": "generate_balance",
+      "batch": false,
+      "narration": "Generate the balance of the constants",
+      "included_source_nodes": [
+        "lrsnavq2",
+        "ls9tlsbv",
+        "ls9tsvuf",
+        "ls9txmx1",
+        "ls9u41gm",
+        "lrso22do",
+        "ls9tmgwr",
+        "ls9ttil2",
+        "ls9txz8o",
+        "ls9u9aty",
+        "lrsnalk2",
+        "ls9tmepe",
+        "ls9ttm0m",
+        "ls9ty2u5",
+        "ls9u4cw6",
+        "lrsnjkmt",
+        "ls9tdxgx",
+        "ls9tgf2u",
+        "ls9tli5c",
+        "ls9tllxv",
+        "ls9tloqj",
+        "ls9tsmp3",
+        "ls9tx5l9",
+        "ls9u3agu",
+        "lrso71jf",
+        "lrso7mga",
+        "ls9rs1ih",
+        "ls9rvbes",
+        "ls9y3aia",
+        "lrso81aw",
+        "ls9rkzfi",
+        "ls9rlprb",
+        "ls9rmh3c",
+        "ls9t0ml2",
+        "ls9t13d8",
+        "ls9t1x51"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Coverage",
+      "included_edges": [
+        "0sNrINie",
+        "DpbeQSDG",
+        "GIO8Zqnr",
+        "nzOokZh1",
+        "Lj3bcZuO",
+        "5gBcBgTW",
+        "qu8pPoSm",
+        "52WhrAvq",
+        "qbyP50ke",
+        "vQLBS8Sq"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Incidence Effects",
+      "included_edges": [
+        "6639U130",
+        "C2wz72kw",
+        "bCK3mo5k",
+        "buyFQ9xf",
+        "9aJfgle7",
+        "9tTZgCDD",
+        "LiUZyeb0",
+        "b4vzlUDn",
+        "aVWHHSy4",
+        "z1m3GYLt",
+        "Jcm0Uifx",
+        "I57hxswd",
+        "wV38kTvv",
+        "cthZMNMp",
+        "fRGMIszq",
+        "w9BRjqe9",
+        "gw9hRmLU",
+        "0knE2kOo",
+        "0dJueyZ9",
+        "QKqrBdcq",
+        "Z9NqaNOW",
+        "EekVBjNo",
+        "9ZgCQsuo",
+        "GbzW3kMT",
+        "DtPYA0O5",
+        "ZYE5gJtS",
+        "rN4Pg02x"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Remove Incidence Effects from 1.0",
+      "included_edges": [
+        "1cZxEYv5",
+        "HhEKmgNQ",
+        "jDiXa3eA",
+        "tgY6yM6H",
+        "u5m7NUok",
+        "gpFbIsTS",
+        "hmfi5cDT",
+        "CAZBesnu",
+        "BajENLf8"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Add Incidence Rate constants to surrogate",
+      "included_edges": [
+        "YIz69wxx",
+        "CBO3f2cM",
+        "Ridysv4o"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Modify incidence rate with intervention effects",
+      "included_edges": [
+        "XKtgbA5d",
+        "kjuVDJeo",
+        "2AG3i3pr"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Healthy and Disease Healthy Years Lived Weights",
+      "included_edges": [
+        "z4OkkZSs",
+        "zb88Hz9j",
+        "00HJkwE1",
+        "VwJ2mVwl",
+        "j054FI5X"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculated Combined HYLs",
+      "included_edges": [
+        "gKDTeFTF",
+        "Lt1hg93D",
+        "ZmOdIzg9",
+        "SIGfXEtC",
+        "lnCDwNha",
+        "PCn0x5Rq",
+        "QSfSmTPD",
+        "RXJmhwXv"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Disability Surrogates",
+      "included_edges": [
+        "LzXYrpyL",
+        "NlBimlu7",
+        "AZRSbuz1",
+        "Iot6gtQ5",
+        "fKUbIdOO"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Push CFRs to Mortality Surrogates",
+      "included_edges": [
+        "QNP1gYuf",
+        "mnnbDhXX",
+        "dQQesT37",
+        "EgBBwjCV"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Record births into the birth node",
+      "included_edges": [
+        "BLsXt2Md",
+        "bqt9e1Hu",
+        "uQdxASQ8",
+        "iB5A8VDc",
+        "UFw5HQql"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Main routine - diabetes incidence",
+      "included_edges": [
+        "PmszSxyR"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Main Routine - Distribute Diabetes to Effects",
+      "included_edges": [
+        "qwfuA7jx",
+        "nyZHiO9K",
+        "91C8HO8E"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Record HYL",
+      "included_edges": [
+        "g3h855iV",
+        "4LTJKWna",
+        "bWI3nekk",
+        "bJws4SbB",
+        "LFelEnpu"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Migration of Populations",
+      "included_edges": [
+        "PwZT0fUg",
+        "Sr9wD5iX",
+        "oDZJAqIc",
+        "P0YMn6Zi",
+        "Qo1iIBKh"
+      ]
+    },
+    {
+      "method": "age",
+      "batch": false,
+      "narration": "Ageing the populations",
+      "included_source_nodes": [
+        "DsFreeSus",
+        "AsthmaEpsd",
+        "ls9qw5uh",
+        "ls9qwy35",
+        "ls9qwy72"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Mortality is recorded",
+      "included_edges": [
+        "itKEGsJa",
+        "nU0Snw08",
+        "cdXO88Jz",
+        "SOdrw9IV",
+        "OyW7kOSM",
+        "9lHjCUmt",
+        "tJOW1hhc",
+        "STz4wrnX",
+        "BJGaPBZg"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Women give birth",
+      "included_edges": [
+        "mlkMPtza",
+        "6ONEDRqf"
+      ]
+    },
+    {
+      "method": "flush",
+      "batch": false,
+      "narration": "Nodes are flushed"
+    }
+  ],
+  "equilibrium": {
+    "index": 20,
+    "node_with_population": "DsFreeSus",
+    "nodes_to_receive_population": [
+      "AsthmaEpsd",
+      "ls9qw5uh",
+      "ls9qwy35",
+      "ls9qwy72"
+    ],
+    "subroutine_to_appear_after": "Generate the population",
+    "subroutines_to_remove": [
+      "Allocate prevalence"
+    ]
+  }
+}
