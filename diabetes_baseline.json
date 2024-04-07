@@ -3545,9 +3545,6 @@
       ]
     },
     {
-      "batch": false
-    },
-    {
       "method": "push_balance_to_edges",
       "batch": false,
       "narration": "Record births into the birth node",
