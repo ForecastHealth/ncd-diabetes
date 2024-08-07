@@ -1,0 +1,27 @@
+{
+    "total_population": {
+        "label": "Total Population",
+        "description": "Displays the total population for each year in the selected period.",
+        "query": "SELECT * FROM results"
+    },
+    "cancer_incidence": {
+        "label": "Cancer Incidence",
+        "description": "Shows the number of new cancer cases diagnosed each year.",
+        "query": ""
+    },
+    "mortality_rate": {
+        "label": "Mortality Rate",
+        "description": "Presents the annual mortality rate due to cancer per 100,000 population.",
+        "query": ""
+    },
+    "treatment_costs": {
+        "label": "Treatment Costs",
+        "description": "Estimates the total annual costs associated with cancer treatment.",
+        "query": ""
+    },
+    "survival_rates": {
+        "label": "5-Year Survival Rates",
+        "description": "Displays the percentage of patients surviving 5 years after diagnosis for different cancer types.",
+        "query": ""
+    }
+}
