@@ -8,6 +8,7 @@ mkdir -p docs/models/ docs/scenarios/
 ./generate_scenarios.sh
 
 # Copy JSON files to docs directory
+cp ./pages_config.json ./docs/
 cp ./list_of_countries.json ./docs/
 cp ./list_of_models.json ./docs/
 cp ./list_of_scenarios.json ./docs/
