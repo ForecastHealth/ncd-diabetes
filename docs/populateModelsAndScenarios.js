@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Fetch description for the first scenario if available
                 if (scenarios.length > 0) {
                     fetchScenarioDescription(scenarios[0].path);
+                    handleScenarioLockYears(scenarios[0].path);
                 }
             })
             .catch(error => console.error('Error fetching scenario list:', error));
@@ -202,6 +203,27 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error fetching model list:', error));
     }
 
+    function handleScenarioLockYears(scenarioPath) {
+        if (scenarioPath === 'custom') {
+            startYearInput.disabled = false;
+            endYearInput.disabled = false;
+            return;
+        }
+
+        fetch(scenarioPath)
+            .then(response => response.json())
+            .then(data => {
+                const lockYears = data.lock_years || false;
+                startYearInput.disabled = lockYears;
+                endYearInput.disabled = lockYears;
+            })
+            .catch(error => {
+                console.error('Error fetching scenario data:', error);
+                startYearInput.disabled = false;
+                endYearInput.disabled = false;
+            });
+    }
+
     // Add event listener for model selection change
     if (modelSelect) {
         modelSelect.addEventListener('change', function() {
@@ -221,6 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const selectedScenarioPath = this.value;
             fetchScenarioDescription(selectedScenarioPath);
             updateEntrypoints(modelSelect.value, selectedScenarioPath);
+            handleScenarioLockYears(selectedScenarioPath);
         });
     } else {
         console.error('Scenario select element not found in the DOM');
