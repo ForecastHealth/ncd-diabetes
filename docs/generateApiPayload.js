@@ -48,7 +48,7 @@ function generateApiPayload() {
             const payload = {
                 botech: modelData,
                 queries: selectedResults,
-                environment: "appendix_3"
+                environment: "standard"
             };
 
             return payload;
