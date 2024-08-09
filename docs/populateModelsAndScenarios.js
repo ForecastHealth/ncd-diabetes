@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const scenarioDescriptionElement = document.getElementById('scenarioDescription');
     const entrypointsSection = document.getElementById('entrypointsSection');
     const entrypointsTable = document.getElementById('entrypointsTable');
+    const startYearInput = document.getElementById('startYear');
+    const endYearInput = document.getElementById('endYear');
 
     function updateScenarios(selectedModelPath) {
         if (!scenarioSelect) {
@@ -54,6 +56,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     ? data.metadata.description 
                     : "No description available";
                 modelDescriptionElement.textContent = description;
+            })
+            .catch(error => {
+                console.error('Error fetching model description:', error);
+                modelDescriptionElement.textContent = "No description available";
+            });
+    }
+
+    function updateYears(modelPath) {
+        fetch(modelPath)
+            .then(response => response.json())
+            .then(data => {
+                const startYear = data.runtime.startYear;
+                const endYear = data.runtime.endYear;
+                startYearInput.value = startYear;
+                endYearInput.value = endYear;
             })
             .catch(error => {
                 console.error('Error fetching model description:', error);
@@ -176,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (models.length > 0) {
                     modelSelect.value = models[0].path;
+                    updateYears(models[0].path);
                     updateScenarios(models[0].path);
                     fetchModelDescription(models[0].path);
                     updateEntrypoints(models[0].path, 'custom');
@@ -188,6 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (modelSelect) {
         modelSelect.addEventListener('change', function() {
             const selectedModelPath = this.value;
+            updateYears(selectedModelPath);
             updateScenarios(selectedModelPath);
             fetchModelDescription(selectedModelPath);
             updateEntrypoints(selectedModelPath, 'custom');
