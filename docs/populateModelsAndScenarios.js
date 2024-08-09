@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (scenarios.length > 0) {
                     fetchScenarioDescription(scenarios[0].path);
                     handleScenarioLockYears(scenarios[0].path);
+                    updateEntrypoints(selectedModelPath, scenarios[0].path);
                 }
             })
             .catch(error => console.error('Error fetching scenario list:', error));
@@ -197,7 +198,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     updateYears(models[0].path);
                     updateScenarios(models[0].path);
                     fetchModelDescription(models[0].path);
-                    updateEntrypoints(models[0].path, 'custom');
                 }
             })
             .catch(error => console.error('Error fetching model list:', error));
@@ -231,7 +231,6 @@ document.addEventListener('DOMContentLoaded', function() {
             updateYears(selectedModelPath);
             updateScenarios(selectedModelPath);
             fetchModelDescription(selectedModelPath);
-            updateEntrypoints(selectedModelPath, 'custom');
         });
     } else {
         console.error('Model select element not found in the DOM');
