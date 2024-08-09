@@ -21,12 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const scenarios = data[selectedModelName] || [];
                 scenarioSelect.innerHTML = '';  // Clear existing options
                 
-                // Add Custom scenario
-                const customOption = document.createElement('option');
-                customOption.value = 'custom';
-                customOption.text = 'Custom';
-                scenarioSelect.appendChild(customOption);
-                
                 // Add other scenarios
                 scenarios.forEach(scenario => {
                     const option = document.createElement('option');
@@ -34,6 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     option.text = scenario.name;
                     scenarioSelect.appendChild(option);
                 });
+                
+                // Add Custom scenario
+                const customOption = document.createElement('option');
+                customOption.value = 'custom';
+                customOption.text = 'Custom';
+                scenarioSelect.appendChild(customOption);
 
                 // Fetch description for the first scenario if available
                 if (scenarios.length > 0) {
