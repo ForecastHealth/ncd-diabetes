@@ -55,34 +55,6 @@ function generateApiPayload() {
         });
 }
 
-function saveModel() {
-    generateApiPayload()
-        .then(payload => {
-            const modelJson = JSON.stringify(payload.botech, null, 2);
-            const blob = new Blob([modelJson], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'botech_model.json';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            showMessage('Model saved successfully!', '#');
-        })
-        .catch(error => {
-            console.error('Error saving model:', error);
-            showMessage('An error occurred while saving the model. Please try again.', '#');
-        });
-}
-
-const saveModelButton = document.getElementById('saveModel');
-if (saveModelButton) {
-    saveModelButton.addEventListener('click', saveModel);
-} else {
-    console.error('Save Model button not found in the DOM');
-}
-
 function showMessage(message, statusUrl) {
     const messageArea = document.getElementById('messageArea');
     const messageText = document.getElementById('messageText');
@@ -138,18 +110,6 @@ function showDownloadButton(downloadUrl) {
     });
 }
 
-let currentTaskId = null;
-
-function checkStatusHandler(event) {
-    event.preventDefault();
-    if (currentTaskId) {
-        const statusUrl = `https://api.forecasthealth.org/pipeline/status/${currentTaskId}`;
-        checkStatus(statusUrl);
-    } else {
-        showMessage("No job has been submitted yet. Please generate results first.", "#");
-    }
-}
-
 // Event listener for the generate button
 const generateButton = document.getElementById('generate');
 if (generateButton) {
@@ -172,31 +132,18 @@ if (generateButton) {
                 console.log('API Response:', data);
                 
                 // Extract the task_id from the response
-                currentTaskId = data.task_id;
+                const taskId = data.task_id;
                 
-                // Display message to the user
-                const message = "Your job has been submitted. Click 'Check Status' to see the progress.";
-                showMessage(message, "#");
-
-                // Reset the status link to check status
-                const statusLink = document.getElementById('statusLink');
-                statusLink.textContent = "Check Status";
-                statusLink.removeEventListener('click', checkStatusHandler);
-                statusLink.addEventListener('click', checkStatusHandler);
+                // Add the run to the RunList
+                const modelName = document.getElementById('model').options[document.getElementById('model').selectedIndex].text;
+                const countryName = document.getElementById('country').options[document.getElementById('country').selectedIndex].text;
+                runList.addRun(taskId, modelName, countryName);
             })
             .catch(error => {
                 console.error('Error:', error);
-                showMessage('An error occurred while processing your request. Please try again.', '#');
+                alert('An error occurred while processing your request. Please try again.');
             });
     });
 } else {
     console.error('Generate button not found in the DOM');
-}
-
-// Add event listener for the status link
-const statusLink = document.getElementById('statusLink');
-if (statusLink) {
-    statusLink.addEventListener('click', checkStatusHandler);
-} else {
-    console.error('Status link not found in the DOM');
 }

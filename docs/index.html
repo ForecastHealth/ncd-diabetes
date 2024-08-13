@@ -84,6 +84,30 @@
             text-decoration: none;
             border-radius: 3px;
         }
+        #runList table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        #runList th, #runList td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #runList th {
+            background-color: #f2f2f2;
+        }
+        .download-btn, .status-btn {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .status-btn {
+            background-color: #008CBA;
+        }
     </style>
 </head>
 <body>
@@ -185,20 +209,17 @@
         </ul>
     </details>
     <button id="generate">Generate Results</button>
-    <button id="saveModel">Save Model</button>
 
-    <div id="messageArea" style="display: none;">
-        <p id="messageText"></p>
-        <a id="statusLink" href="#">Check Status</a>
-    </div>
+    <div id="runList"></div>
 
+    <script src="runList.js"></script>
+    <script src="generateApiPayload.js"></script>
     <script src="allCountriesCheckbox.js"></script>
     <script src="parseConfig.js"></script>
     <script src="populateCountries.js"></script>
     <script src="populateModelsAndScenarios.js"></script>
     <script src="resourceSettings.js"></script>
     <script src="populateResults.js"></script>
-    <script src="generateApiPayload.js"></script>
 
 </body>
 </html>
