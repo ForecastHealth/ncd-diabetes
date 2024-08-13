@@ -55,34 +55,6 @@ function generateApiPayload() {
         });
 }
 
-function saveModel() {
-    generateApiPayload()
-        .then(payload => {
-            const modelJson = JSON.stringify(payload.botech, null, 2);
-            const blob = new Blob([modelJson], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'botech_model.json';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            showMessage('Model saved successfully!', '#');
-        })
-        .catch(error => {
-            console.error('Error saving model:', error);
-            showMessage('An error occurred while saving the model. Please try again.', '#');
-        });
-}
-
-const saveModelButton = document.getElementById('saveModel');
-if (saveModelButton) {
-    saveModelButton.addEventListener('click', saveModel);
-} else {
-    console.error('Save Model button not found in the DOM');
-}
-
 function showMessage(message, statusUrl) {
     const messageArea = document.getElementById('messageArea');
     const messageText = document.getElementById('messageText');
