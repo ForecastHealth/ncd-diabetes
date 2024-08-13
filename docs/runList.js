@@ -6,11 +6,12 @@ class RunList {
         this.runs = [];
     }
 
-    addRun(taskId, modelName, countryName) {
+    addRun(taskId, modelName, countryName, scenarioName) {
         const run = {
             taskId,
             modelName,
             countryName,
+            scenarioName,
             status: 'Pending',
             timestamp: new Date().toLocaleString(),
             downloadUrl: null
@@ -38,6 +39,7 @@ class RunList {
                     <th>Timestamp</th>
                     <th>Model</th>
                     <th>Country</th>
+                    <th>Scenario</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -52,6 +54,7 @@ class RunList {
                 <td>${run.timestamp}</td>
                 <td>${run.modelName}</td>
                 <td>${run.countryName}</td>
+                <td>${run.scenarioName}</td>
                 <td>${run.status}</td>
                 <td>${this.getActionButton(run)}</td>
             `;

@@ -137,7 +137,8 @@ if (generateButton) {
                 // Add the run to the RunList
                 const modelName = document.getElementById('model').options[document.getElementById('model').selectedIndex].text;
                 const countryName = document.getElementById('country').options[document.getElementById('country').selectedIndex].text;
-                runList.addRun(taskId, modelName, countryName);
+                const scenarioName = document.getElementById('scenario').options[document.getElementById('scenario').selectedIndex].text;
+                runList.addRun(taskId, modelName, countryName, scenarioName);
             })
             .catch(error => {
                 console.error('Error:', error);
