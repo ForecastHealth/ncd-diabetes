@@ -1,4 +1,3 @@
-// runList.js
 class RunList {
     constructor(containerId) {
         this.container = document.getElementById(containerId);
@@ -14,7 +13,8 @@ class RunList {
             status: 'Pending',
             timestamp: new Date().toLocaleString(),
             downloadUrl: null,
-            fileId: null
+            fileId: null,
+            customFileName: null
         };
         this.runs.unshift(run);
         this.render();
@@ -27,6 +27,12 @@ class RunList {
             run.status = status;
             run.downloadUrl = downloadUrl;
             run.fileId = fileId;
+            if (fileId) {
+                const cleanedModelName = cleanString(run.modelName);
+                const cleanedScenarioName = cleanString(run.scenarioName);
+                run.customFileName = `${run.countryName}_${cleanedModelName}_${cleanedScenarioName}_${fileId}.zip`;
+                console.log(`Generated customFileName: ${run.customFileName}`);
+            }
             this.render();
         }
     }
@@ -66,7 +72,8 @@ class RunList {
     getActionButtons(run) {
         let buttons = '';
         if (run.status === 'Success' && run.downloadUrl) {
-            buttons += `<a href="${run.downloadUrl}" download class="action-btn download-btn">Download</a>`;
+            console.log(`Setting download link for ${run.customFileName}`);
+            buttons += `<a href="${run.downloadUrl}" download="${run.customFileName}" class="action-btn download-btn">Download</a>`;
             if (run.fileId) {
                 buttons += `
                     <a href="https://api.forecasthealth.org/summary/appendix_3/${run.fileId}" target="_blank" class="action-btn download-btn">Summary</a>
@@ -104,6 +111,11 @@ class RunList {
                 this.updateRunStatus(taskId, 'Error');
             });
     }
+}
+
+// Function to clean the modelName and scenarioName
+function cleanString(str) {
+    return str.toLowerCase().replace(/\s+/g, '');
 }
 
 // Global instance
