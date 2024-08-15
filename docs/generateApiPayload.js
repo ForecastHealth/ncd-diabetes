@@ -56,7 +56,7 @@ function generateApiPayload() {
                 return {
                     botech: payload,
                     queries: selectedResults,
-                    environment: "standard"
+                    environment: "appendix_3"
                 };
             }
 
