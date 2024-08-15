@@ -73,17 +73,36 @@ class RunList {
         let buttons = '';
         if (run.status === 'Success' && run.downloadUrl) {
             console.log(`Setting download link for ${run.customFileName}`);
-            buttons += `<a href="${run.downloadUrl}" download="${run.customFileName}" class="action-btn download-btn">Download</a>`;
+            buttons += `<button onclick="runList.downloadFile('${run.downloadUrl}', '${run.customFileName}')" class="action-btn download-btn">Download</button>`;
             if (run.fileId) {
                 buttons += `
-                    <a href="https://api.forecasthealth.org/summary/appendix_3/${run.fileId}" target="_blank" class="action-btn download-btn">Summary</a>
-                    <a href="https://botech.forecasthealth.org/?userId=appendix_3&modelId=${run.fileId}" target="_blank" class="action-btn download-btn">View Model</a>
+                    <button onclick="window.open('https://api.forecasthealth.org/summary/appendix_3/${run.fileId}', '_blank')" class="action-btn download-btn">Summary</button>
+                    <button onclick="window.open('https://botech.forecasthealth.org/?userId=appendix_3&modelId=${run.fileId}', '_blank')" class="action-btn download-btn">View Model</button>
                 `;
             }
         } else if (run.status === 'Pending' || run.status === 'In Progress') {
             buttons = `<button onclick="runList.checkStatus('${run.taskId}')" class="action-btn status-btn">Check Status</button>`;
         }
         return buttons;
+    }
+
+    downloadFile(url, fileName) {
+        fetch(url)
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = fileName;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                console.error('Error downloading file:', error);
+                alert('An error occurred while downloading the file. Please try again.');
+            });
     }
 
     extractFileIdFromUrl(url) {
