@@ -1,5 +1,6 @@
 function generateApiPayload() {
     const modelSelect = document.getElementById('model');
+    const scenarioSelect = document.getElementById('scenario');  // Define scenarioSelect
     const countrySelect = document.getElementById('country');
     const allCountriesCheckbox = document.getElementById('allCountries');
     const startYearInput = document.getElementById('startYear');
