@@ -110,20 +110,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (modelData.entrypoints && modelData.entrypoints.length > 0) {
                     const entrypoints = modelData.entrypoints.filter(entry => entry.id !== "COUNTRY");
                     
-                    if (scenarioPath === 'custom') {
-                        renderEntrypoints(entrypoints);
-                    } else {
-                        fetch(scenarioPath)
-                            .then(response => response.json())
-                            .then(scenarioData => {
-                                const defaults = scenarioData.defaults || [];
-                                renderEntrypoints(entrypoints, defaults);
-                            })
-                            .catch(error => {
-                                console.error('Error fetching scenario data:', error);
-                                renderEntrypoints(entrypoints);
-                            });
-                    }
+                    fetch(scenarioPath)
+                        .then(response => response.json())
+                        .then(scenarioData => {
+                            const countrySelect = document.getElementById('country');
+                            const selectedCountry = countrySelect.value;
+                            const appliedScenario = getAppliedScenario(scenarioData, selectedCountry);
+                            renderEntrypoints(entrypoints, appliedScenario);
+                        })
+                        .catch(error => {
+                            console.error('Error fetching scenario data:', error);
+                            renderEntrypoints(entrypoints);
+                        });
                     
                     entrypointsSection.style.display = 'block';
                 } else {
@@ -136,7 +134,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    function renderEntrypoints(entrypoints, defaults = []) {
+    function getAppliedScenario(scenarioData, country) {
+        // Check country_overrides
+        if (scenarioData.country_overrides && scenarioData.country_overrides[country]) {
+            return { ...scenarioData.defaults, ...scenarioData.country_overrides[country] };
+        }
+        
+        // Check scenario_groups
+        for (const group in scenarioData.scenario_groups) {
+            if (scenarioData.scenario_groups[group].countries.includes(country)) {
+                return { ...scenarioData.defaults, ...scenarioData.scenario_groups[group].parameters };
+            }
+        }
+        
+        // Use defaults
+        return scenarioData.defaults;
+    }
+
+    function renderEntrypoints(entrypoints, appliedScenario) {
         const tbody = entrypointsTable.querySelector('tbody');
         tbody.innerHTML = ''; // Clear existing rows
 
@@ -158,13 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const valueInput = document.createElement('input');
             valueInput.type = 'text';
             
-            const defaultEntry = defaults.find(def => def.id === entry.id);
-            if (defaultEntry) {
-                valueInput.value = defaultEntry.value;
-                valueInput.disabled = true;
-            } else {
-                valueInput.value = entry.value;
-            }
+            valueInput.value = appliedScenario[entry.id] || entry.value;
+            valueInput.disabled = appliedScenario.hasOwnProperty(entry.id);
             
             valueInput.addEventListener('change', function() {
                 console.log(`Updated ${entry.id} to ${this.value}`);
@@ -174,6 +184,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
             tbody.appendChild(row);
         });
+    }
+
+    function fetchScenarioDescription(scenarioPath) {
+        if (!scenarioDescriptionElement) {
+            console.warn('Scenario description element not found in the DOM');
+            return;
+        }
+
+        if (scenarioPath === 'custom') {
+            scenarioDescriptionElement.textContent = "Custom scenario with all editable entrypoints.";
+            return;
+        }
+
+        fetch(scenarioPath)
+            .then(response => response.json())
+            .then(data => {
+                const description = data.description || "No description available";
+                scenarioDescriptionElement.textContent = description;
+            })
+            .catch(error => {
+                console.error('Error fetching scenario description:', error);
+                scenarioDescriptionElement.textContent = "No description available";
+            });
     }
 
     function fetchModelsAndScenarios() {

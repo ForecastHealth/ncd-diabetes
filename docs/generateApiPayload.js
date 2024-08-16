@@ -15,64 +15,81 @@ function generateApiPayload() {
             const runAllCountries = allCountriesCheckbox.checked;
             const selectedCountry = countrySelect.value;
 
-            // Function to generate payload for a single country
-            function generateCountryPayload(country) {
-                const payload = JSON.parse(JSON.stringify(modelData)); // Deep clone the model data
+            // Fetch the selected scenario
+            return fetch(scenarioSelect.value)
+                .then(response => response.json())
+                .then(scenarioData => {
+                    // Function to generate payload for a single country
+                    function generateCountryPayload(country) {
+                        const payload = JSON.parse(JSON.stringify(modelData)); // Deep clone the model data
+                        const appliedScenario = getAppliedScenario(scenarioData, country);
 
-                // Update country
-                const countryEntrypoint = payload.entrypoints.find(entry => entry.id === "COUNTRY");
-                if (countryEntrypoint) {
-                    countryEntrypoint.value = country;
-                }
+                        // Update country
+                        const countryEntrypoint = payload.entrypoints.find(entry => entry.id === "COUNTRY");
+                        if (countryEntrypoint) {
+                            countryEntrypoint.value = country;
+                        }
 
-                // Update start and end years
-                payload.runtime.startYear = parseInt(startYearInput.value);
-                payload.runtime.endYear = parseInt(endYearInput.value);
+                        // Update start and end years
+                        payload.runtime.startYear = parseInt(startYearInput.value);
+                        payload.runtime.endYear = parseInt(endYearInput.value);
 
-                // Update entrypoints
-                const entrypointRows = entrypointsTable.querySelectorAll('tbody tr');
-                entrypointRows.forEach(row => {
-                    const id = row.cells[0].textContent;
-                    const valueInput = row.cells[2].querySelector('input');
-                    const entrypoint = payload.entrypoints.find(entry => entry.id === id);
-                    if (entrypoint && valueInput) {
-                        // Convert to number if it's a valid number, otherwise keep as string
-                        const numValue = parseFloat(valueInput.value);
-                        entrypoint.value = isNaN(numValue) ? valueInput.value : numValue;
+                        // Update entrypoints
+                        payload.entrypoints.forEach(entrypoint => {
+                            if (appliedScenario.hasOwnProperty(entrypoint.id)) {
+                                entrypoint.value = appliedScenario[entrypoint.id];
+                            }
+                        });
+
+                        // Collect selected results
+                        const selectedResults = Array.from(resultsList.querySelectorAll('input[type="checkbox"]:checked'))
+                            .map(checkbox => {
+                                const resultData = JSON.parse(checkbox.dataset.result);
+                                return {
+                                    label: resultData.label,
+                                    query: resultData.query
+                                };
+                            });
+
+                        // Construct the final payload
+                        return {
+                            botech: payload,
+                            queries: selectedResults,
+                            environment: "appendix_3"
+                        };
+                    }
+
+                    if (runAllCountries) {
+                        // Fetch the list of all countries
+                        return fetch('./list_of_countries.json')
+                            .then(response => response.json())
+                            .then(data => {
+                                const countries = data.countries.map(country => country.iso3);
+                                return countries.map(country => generateCountryPayload(country));
+                            });
+                    } else {
+                        // Generate payload for the selected country
+                        return [generateCountryPayload(selectedCountry)];
                     }
                 });
-
-                // Collect selected results
-                const selectedResults = Array.from(resultsList.querySelectorAll('input[type="checkbox"]:checked'))
-                    .map(checkbox => {
-                        const resultData = JSON.parse(checkbox.dataset.result);
-                        return {
-                            label: resultData.label,
-                            query: resultData.query
-                        };
-                    });
-
-                // Construct the final payload
-                return {
-                    botech: payload,
-                    queries: selectedResults,
-                    environment: "appendix_3"
-                };
-            }
-
-            if (runAllCountries) {
-                // Fetch the list of all countries
-                return fetch('./list_of_countries.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const countries = data.countries.map(country => country.iso3);
-                        return countries.map(country => generateCountryPayload(country));
-                    });
-            } else {
-                // Generate payload for the selected country
-                return [generateCountryPayload(selectedCountry)];
-            }
         });
+}
+
+function getAppliedScenario(scenarioData, country) {
+    // Check country_overrides
+    if (scenarioData.country_overrides && scenarioData.country_overrides[country]) {
+        return { ...scenarioData.defaults, ...scenarioData.country_overrides[country] };
+    }
+    
+    // Check scenario_groups
+    for (const group in scenarioData.scenario_groups) {
+        if (scenarioData.scenario_groups[group].countries.includes(country)) {
+            return { ...scenarioData.defaults, ...scenarioData.scenario_groups[group].parameters };
+        }
+    }
+    
+    // Use defaults
+    return scenarioData.defaults;
 }
 
 function showMessage(message, statusUrl) {
