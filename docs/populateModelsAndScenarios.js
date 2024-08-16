@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const entrypointsTable = document.getElementById('entrypointsTable');
     const startYearInput = document.getElementById('startYear');
     const endYearInput = document.getElementById('endYear');
+    const countrySelect = document.getElementById('country');  // Country select dropdown
 
     function updateScenarios(selectedModelPath) {
         if (!scenarioSelect) {
@@ -110,20 +111,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (modelData.entrypoints && modelData.entrypoints.length > 0) {
                     const entrypoints = modelData.entrypoints.filter(entry => entry.id !== "COUNTRY");
                     
-                    if (scenarioPath === 'custom') {
-                        renderEntrypoints(entrypoints);
-                    } else {
-                        fetch(scenarioPath)
-                            .then(response => response.json())
-                            .then(scenarioData => {
-                                const defaults = scenarioData.defaults || [];
-                                renderEntrypoints(entrypoints, defaults);
-                            })
-                            .catch(error => {
-                                console.error('Error fetching scenario data:', error);
-                                renderEntrypoints(entrypoints);
-                            });
-                    }
+                    fetch(scenarioPath)
+                        .then(response => response.json())
+                        .then(scenarioData => {
+                            const selectedCountry = countrySelect ? countrySelect.value : '';
+                            const appliedScenario = getAppliedScenario(scenarioData, selectedCountry);
+                            renderEntrypoints(entrypoints, appliedScenario);
+                        })
+                        .catch(error => {
+                            console.error('Error fetching scenario data:', error);
+                            renderEntrypoints(entrypoints);
+                        });
                     
                     entrypointsSection.style.display = 'block';
                 } else {
@@ -136,7 +134,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    function renderEntrypoints(entrypoints, defaults = []) {
+    function getAppliedScenario(scenarioData, country) {
+        // Check country_overrides
+        if (scenarioData.country_overrides && scenarioData.country_overrides[country]) {
+            return { ...scenarioData.defaults, ...scenarioData.country_overrides[country] };
+        }
+        
+        // Check scenario_groups
+        for (const group in scenarioData.scenario_groups) {
+            if (scenarioData.scenario_groups[group].countries.includes(country)) {
+                return { ...scenarioData.defaults, ...scenarioData.scenario_groups[group].parameters };
+            }
+        }
+        
+        // Use defaults
+        return scenarioData.defaults;
+    }
+
+    function renderEntrypoints(entrypoints, appliedScenario) {
         const tbody = entrypointsTable.querySelector('tbody');
         tbody.innerHTML = ''; // Clear existing rows
 
@@ -158,13 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const valueInput = document.createElement('input');
             valueInput.type = 'text';
             
-            const defaultEntry = defaults.find(def => def.id === entry.id);
-            if (defaultEntry) {
-                valueInput.value = defaultEntry.value;
-                valueInput.disabled = true;
-            } else {
-                valueInput.value = entry.value;
-            }
+            valueInput.value = appliedScenario[entry.id] || entry.value;
+            valueInput.disabled = appliedScenario.hasOwnProperty(entry.id);
             
             valueInput.addEventListener('change', function() {
                 console.log(`Updated ${entry.id} to ${this.value}`);
@@ -174,6 +184,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
             tbody.appendChild(row);
         });
+    }
+
+    function handleScenarioLockYears(scenarioPath) {
+        if (scenarioPath === 'custom') {
+            startYearInput.disabled = false;
+            endYearInput.disabled = false;
+            return;
+        }
+
+        fetch(scenarioPath)
+            .then(response => response.json())
+            .then(data => {
+                const lockYears = data.lock_years || false;
+                startYearInput.disabled = lockYears;
+                endYearInput.disabled = lockYears;
+            })
+            .catch(error => {
+                console.error('Error fetching scenario data:', error);
+                startYearInput.disabled = false;
+                endYearInput.disabled = false;
+            });
     }
 
     function fetchModelsAndScenarios() {
@@ -203,28 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error fetching model list:', error));
     }
 
-    function handleScenarioLockYears(scenarioPath) {
-        if (scenarioPath === 'custom') {
-            startYearInput.disabled = false;
-            endYearInput.disabled = false;
-            return;
-        }
-
-        fetch(scenarioPath)
-            .then(response => response.json())
-            .then(data => {
-                const lockYears = data.lock_years || false;
-                startYearInput.disabled = lockYears;
-                endYearInput.disabled = lockYears;
-            })
-            .catch(error => {
-                console.error('Error fetching scenario data:', error);
-                startYearInput.disabled = false;
-                endYearInput.disabled = false;
-            });
-    }
-
-    // Add event listener for model selection change
+    // Event listener for model selection change
     if (modelSelect) {
         modelSelect.addEventListener('change', function() {
             const selectedModelPath = this.value;
@@ -236,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Model select element not found in the DOM');
     }
 
-    // Add event listener for scenario selection change
+    // Event listener for scenario selection change
     if (scenarioSelect) {
         scenarioSelect.addEventListener('change', function() {
             const selectedScenarioPath = this.value;
@@ -248,12 +258,28 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Scenario select element not found in the DOM');
     }
 
+    // Event listener for country selection change
+    if (countrySelect) {
+        countrySelect.addEventListener('change', function() {
+            const selectedModelPath = modelSelect ? modelSelect.value : '';
+            const selectedScenarioPath = scenarioSelect ? scenarioSelect.value : '';
+            
+            // Update the entrypoints based on the selected country
+            updateEntrypoints(selectedModelPath, selectedScenarioPath);
+        });
+    } else {
+        console.error('Country select element not found in the DOM');
+    }
+
     // Handle generate button click
     const generateButton = document.getElementById('generate');
     if (generateButton) {
         generateButton.addEventListener('click', function() {
             const selectedModelPath = modelSelect ? modelSelect.value : '';
             const selectedScenarioPath = scenarioSelect ? scenarioSelect.value : '';
+            console.log('Generate button clicked');
+            console.log('Selected model:', selectedModelPath);
+            console.log('Selected scenario:', selectedScenarioPath);
         });
     } else {
         console.error('Generate button not found in the DOM');
