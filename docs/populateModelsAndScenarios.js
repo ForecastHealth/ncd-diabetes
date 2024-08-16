@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const entrypointsTable = document.getElementById('entrypointsTable');
     const startYearInput = document.getElementById('startYear');
     const endYearInput = document.getElementById('endYear');
+    const countrySelect = document.getElementById('country');  // Country select dropdown
 
     function updateScenarios(selectedModelPath) {
         if (!scenarioSelect) {
@@ -113,8 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     fetch(scenarioPath)
                         .then(response => response.json())
                         .then(scenarioData => {
-                            const countrySelect = document.getElementById('country');
-                            const selectedCountry = countrySelect.value;
+                            const selectedCountry = countrySelect ? countrySelect.value : '';
                             const appliedScenario = getAppliedScenario(scenarioData, selectedCountry);
                             renderEntrypoints(entrypoints, appliedScenario);
                         })
@@ -186,26 +186,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function fetchScenarioDescription(scenarioPath) {
-        if (!scenarioDescriptionElement) {
-            console.warn('Scenario description element not found in the DOM');
-            return;
-        }
-
+    function handleScenarioLockYears(scenarioPath) {
         if (scenarioPath === 'custom') {
-            scenarioDescriptionElement.textContent = "Custom scenario with all editable entrypoints.";
+            startYearInput.disabled = false;
+            endYearInput.disabled = false;
             return;
         }
 
         fetch(scenarioPath)
             .then(response => response.json())
             .then(data => {
-                const description = data.description || "No description available";
-                scenarioDescriptionElement.textContent = description;
+                const lockYears = data.lock_years || false;
+                startYearInput.disabled = lockYears;
+                endYearInput.disabled = lockYears;
             })
             .catch(error => {
-                console.error('Error fetching scenario description:', error);
-                scenarioDescriptionElement.textContent = "No description available";
+                console.error('Error fetching scenario data:', error);
+                startYearInput.disabled = false;
+                endYearInput.disabled = false;
             });
     }
 
@@ -236,28 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error fetching model list:', error));
     }
 
-    function handleScenarioLockYears(scenarioPath) {
-        if (scenarioPath === 'custom') {
-            startYearInput.disabled = false;
-            endYearInput.disabled = false;
-            return;
-        }
-
-        fetch(scenarioPath)
-            .then(response => response.json())
-            .then(data => {
-                const lockYears = data.lock_years || false;
-                startYearInput.disabled = lockYears;
-                endYearInput.disabled = lockYears;
-            })
-            .catch(error => {
-                console.error('Error fetching scenario data:', error);
-                startYearInput.disabled = false;
-                endYearInput.disabled = false;
-            });
-    }
-
-    // Add event listener for model selection change
+    // Event listener for model selection change
     if (modelSelect) {
         modelSelect.addEventListener('change', function() {
             const selectedModelPath = this.value;
@@ -269,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Model select element not found in the DOM');
     }
 
-    // Add event listener for scenario selection change
+    // Event listener for scenario selection change
     if (scenarioSelect) {
         scenarioSelect.addEventListener('change', function() {
             const selectedScenarioPath = this.value;
@@ -281,12 +258,28 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Scenario select element not found in the DOM');
     }
 
+    // Event listener for country selection change
+    if (countrySelect) {
+        countrySelect.addEventListener('change', function() {
+            const selectedModelPath = modelSelect ? modelSelect.value : '';
+            const selectedScenarioPath = scenarioSelect ? scenarioSelect.value : '';
+            
+            // Update the entrypoints based on the selected country
+            updateEntrypoints(selectedModelPath, selectedScenarioPath);
+        });
+    } else {
+        console.error('Country select element not found in the DOM');
+    }
+
     // Handle generate button click
     const generateButton = document.getElementById('generate');
     if (generateButton) {
         generateButton.addEventListener('click', function() {
             const selectedModelPath = modelSelect ? modelSelect.value : '';
             const selectedScenarioPath = scenarioSelect ? scenarioSelect.value : '';
+            console.log('Generate button clicked');
+            console.log('Selected model:', selectedModelPath);
+            console.log('Selected scenario:', selectedScenarioPath);
         });
     } else {
         console.error('Generate button not found in the DOM');
