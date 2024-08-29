@@ -171,13 +171,8 @@
             <div class="form-group">
                 <label for="uhccWorkbook">Select UHCC Workbook</label>
                 <select id="uhccWorkbook" name="uhccWorkbook">
-                    <option value="breast_cancer.xlsx">breast_cancer.xlsx</option>
-                    <option value="cervical_cancer.xlsx">cervical_cancer.xlsx</option>
+                    <!-- Options will be populated dynamically -->
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="customWorkbook">Select Custom Workbook</label>
-                <input type="file" id="customWorkbook" name="customWorkbook" accept=".xlsx,.xls">
             </div>
         </div>
     </details>
@@ -220,6 +215,7 @@
     <script src="populateModelsAndScenarios.js"></script>
     <script src="resourceSettings.js"></script>
     <script src="populateResults.js"></script>
+    <script src="populateExcelWorkbooks.js"></script>
 
 </body>
 </html>
