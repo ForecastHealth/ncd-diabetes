@@ -2,5 +2,6 @@ models/*.json
 scenarios/*.json
 docs/models/*.json
 docs/scenarios/*.json
+docs/excel_workbooks/*.xlsx
 list_of_*.json
 pages_config.json
