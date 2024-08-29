@@ -1,6 +1,6 @@
 function generateApiPayload() {
     const modelSelect = document.getElementById('model');
-    const scenarioSelect = document.getElementById('scenario');  // Define scenarioSelect
+    const scenarioSelect = document.getElementById('scenario');
     const countrySelect = document.getElementById('country');
     const allCountriesCheckbox = document.getElementById('allCountries');
     const startYearInput = document.getElementById('startYear');
@@ -150,39 +150,59 @@ function showDownloadButton(downloadUrl) {
 
 // Event listener for the generate button
 const generateButton = document.getElementById('generate');
+const attachResourceCheckbox = document.getElementById('attachResource');
+const uhccWorkbookSelect = document.getElementById('uhccWorkbook');
 if (generateButton) {
     generateButton.addEventListener('click', function() {
         generateApiPayload()
             .then(payloads => {
                 console.log('API Payloads:', payloads);
-                
-                // Send the POST request to the API for each payload
-                return Promise.all(payloads.map(payload => 
-                    fetch('https://api.forecasthealth.org/pipeline', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(payload),
-                    })
-                    .then(response => response.json())
-                    .then(data => ({
-                        response: data,
-                        payload: payload
-                    }))
-                ));
+
+                if (attachResourceCheckbox.checked) {
+                    const selectedWorkbook = uhccWorkbookSelect.value;
+                    const workbookPath = `./excel_workbooks/${selectedWorkbook}`;
+
+                    return fetch(workbookPath)
+                        .then(response => response.arrayBuffer())
+                        .then(buffer => {
+                            const workbookBlob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+                            const formData = new FormData();
+
+                            payloads.forEach((payload, index) => {
+                                formData.append(`payload_${index}`, JSON.stringify(payload));
+                            });
+                            formData.append('workbook', workbookBlob, selectedWorkbook);
+
+                            return fetch('https://api.forecasthealth.org/attach_resources', {
+                                method: 'POST',
+                                body: formData
+                            });
+                        });
+                } else {
+                    // Original logic for non-resource case
+                    return Promise.all(payloads.map(payload => 
+                        fetch('https://api.forecasthealth.org/pipeline', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(payload),
+                        })
+                    ));
+                }
             })
+            .then(responses => Promise.all(responses.map(response => response.json())))
             .then(results => {
                 console.log('API Responses:', results);
-                
+
                 // Process each response
-                results.forEach(({ response, payload }) => {
+                results.forEach((response) => {
                     // Extract the task_id from the response
                     const taskId = response.task_id;
-                    
+
                     // Add the run to the RunList
                     const modelName = document.getElementById('model').options[document.getElementById('model').selectedIndex].text;
-                    const countryName = payload.botech.entrypoints.find(entry => entry.id === "COUNTRY").value;
+                    const countryName = response.country || 'Multiple';
                     const scenarioName = document.getElementById('scenario').options[document.getElementById('scenario').selectedIndex].text;
                     runList.addRun(taskId, modelName, countryName, scenarioName);
                 });
