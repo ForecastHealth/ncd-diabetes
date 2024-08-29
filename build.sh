@@ -19,5 +19,6 @@ cp ./list_of_excel_workbooks.json ./docs/
 # Copy model and scenario JSON files while preserving directory structure
 rsync -av --include='*/' --include='*.json' --exclude='*' ./models/ ./docs/models/
 rsync -av --include='*/' --include='*.json' --exclude='*' ./scenarios/ ./docs/scenarios/
+rsync -av --include='*/' --include='*.xlsx' --exclude='*' ./excel_workbooks/ ./docs/excel_workbooks/
 
 echo "Build process completed."
