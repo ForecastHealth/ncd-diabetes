@@ -8,6 +8,51 @@ document.addEventListener('DOMContentLoaded', function() {
     const startYearInput = document.getElementById('startYear');
     const endYearInput = document.getElementById('endYear');
     const countrySelect = document.getElementById('country');  // Country select dropdown
+    const uhccWorkbookSelect = document.getElementById('uhccWorkbook');
+
+
+    function populateExcelWorkbooks() {
+        fetch('./list_of_excel_workbooks.json')
+            .then(response => response.json())
+            .then(data => {
+                uhccWorkbookSelect.innerHTML = ''; // Clear existing options
+                Object.keys(data).forEach(workbook => {
+                    const option = document.createElement('option');
+                    option.value = workbook;
+                    option.text = workbook;
+                    uhccWorkbookSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching Excel workbook list:', error));
+    }
+
+    function updateExcelWorkbookSelection(scenarioPath) {
+        if (scenarioPath === 'custom') {
+            uhccWorkbookSelect.selectedIndex = 0; // Default to first option
+            return;
+        }
+
+        fetch(scenarioPath)
+            .then(response => response.json())
+            .then(data => {
+                const defaultWorkbook = data.default_excel_workbook;
+                if (defaultWorkbook) {
+                    const option = Array.from(uhccWorkbookSelect.options).find(opt => opt.value === defaultWorkbook);
+                    if (option) {
+                        uhccWorkbookSelect.value = defaultWorkbook;
+                    } else {
+                        console.warn(`Excel workbook ${defaultWorkbook} not found in the list. Defaulting to first option.`);
+                        uhccWorkbookSelect.selectedIndex = 0;
+                    }
+                } else {
+                    uhccWorkbookSelect.selectedIndex = 0; // Default to first option
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching scenario data:', error);
+                uhccWorkbookSelect.selectedIndex = 0; // Default to first option
+            });
+    }
 
     function updateScenarios(selectedModelPath) {
         if (!scenarioSelect) {
@@ -41,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     fetchScenarioDescription(scenarios[0].path);
                     handleScenarioLockYears(scenarios[0].path);
                     updateEntrypoints(selectedModelPath, scenarios[0].path);
+                    updateExcelWorkbookSelection(scenarios[0].path); // Add this line
                 }
             })
             .catch(error => console.error('Error fetching scenario list:', error));
@@ -253,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
             fetchScenarioDescription(selectedScenarioPath);
             updateEntrypoints(modelSelect.value, selectedScenarioPath);
             handleScenarioLockYears(selectedScenarioPath);
+            updateExcelWorkbookSelection(selectedScenarioPath); // Add this line
         });
     } else {
         console.error('Scenario select element not found in the DOM');
@@ -287,4 +334,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch models and scenarios on initial load
     fetchModelsAndScenarios();
+    populateExcelWorkbooks(); // Add this line
 });

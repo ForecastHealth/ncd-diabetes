@@ -164,20 +164,15 @@
         <div class="form-group">
             <label for="attachResource">
                 <input type="checkbox" id="attachResource" name="attachResource">
-                Attach Resource Requirements
+                Include resources and costs? (WARNING: This makes models much larger and slower to run)
             </label>
         </div>
-        <div id="resourceOptions" style="display: none;">
+        <div id="resourceOptions">
             <div class="form-group">
                 <label for="uhccWorkbook">Select UHCC Workbook</label>
                 <select id="uhccWorkbook" name="uhccWorkbook">
-                    <option value="breast_cancer.xlsx">breast_cancer.xlsx</option>
-                    <option value="cervical_cancer.xlsx">cervical_cancer.xlsx</option>
+                    <!-- Options will be populated dynamically -->
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="customWorkbook">Select Custom Workbook</label>
-                <input type="file" id="customWorkbook" name="customWorkbook" accept=".xlsx,.xls">
             </div>
         </div>
     </details>
@@ -218,8 +213,8 @@
     <script src="parseConfig.js"></script>
     <script src="populateCountries.js"></script>
     <script src="populateModelsAndScenarios.js"></script>
-    <script src="resourceSettings.js"></script>
     <script src="populateResults.js"></script>
+    <script src="populateExcelWorkbooks.js"></script>
 
 </body>
 </html>
