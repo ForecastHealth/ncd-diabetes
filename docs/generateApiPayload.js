@@ -173,7 +173,7 @@ if (generateButton) {
                             });
                             formData.append('workbook', workbookBlob, selectedWorkbook);
 
-                            return fetch('https://api.forecasthealth.org/attach_resources', {
+                            return fetch('https://api.forecasthealth.org/uhcc', {
                                 method: 'POST',
                                 body: formData
                             });
