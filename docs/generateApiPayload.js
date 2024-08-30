@@ -176,7 +176,7 @@ if (generateButton) {
                             return fetch('https://api.forecasthealth.org/uhcc', {
                                 method: 'POST',
                                 body: formData
-                            });
+                            }).then(response => response.json());
                         });
                 } else {
                     // Original logic for non-resource case
@@ -187,16 +187,18 @@ if (generateButton) {
                                 'Content-Type': 'application/json',
                             },
                             body: JSON.stringify(payload),
-                        })
+                        }).then(response => response.json())
                     ));
                 }
             })
-            .then(responses => Promise.all(responses.map(response => response.json())))
             .then(results => {
                 console.log('API Responses:', results);
 
+                // Ensure results is always an array
+                const responsesArray = Array.isArray(results) ? results : [results];
+
                 // Process each response
-                results.forEach((response) => {
+                responsesArray.forEach((response) => {
                     // Extract the task_id from the response
                     const taskId = response.task_id;
 
@@ -207,7 +209,7 @@ if (generateButton) {
                     runList.addRun(taskId, modelName, countryName, scenarioName);
                 });
 
-                console.log(`Started ${results.length} run(s). Check the Run List for status updates.`);
+                console.log(`Started ${responsesArray.length} run(s). Check the Run List for status updates.`);
             })
             .catch(error => {
                 console.error('Error:', error);
