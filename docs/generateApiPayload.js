@@ -159,25 +159,27 @@ if (generateButton) {
                 console.log('API Payloads:', payloads);
 
                 if (attachResourceCheckbox.checked) {
-                    const selectedWorkbook = uhccWorkbookSelect.value;
-                    const workbookPath = `./excel_workbooks/${selectedWorkbook}`;
+                    let workbookFile;
+                    let workbookFileName;
 
-                    return fetch(workbookPath)
-                        .then(response => response.arrayBuffer())
-                        .then(buffer => {
-                            const workbookBlob = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-                            const formData = new FormData();
+                    const customWorkbookInput = document.getElementById('customWorkbook');
+                    if (customWorkbookInput.files.length > 0) {
+                        workbookFile = customWorkbookInput.files[0];
+                        workbookFileName = workbookFile.name;
+                    } else {
+                        const selectedWorkbook = uhccWorkbookSelect.value;
+                        const workbookPath = `./excel_workbooks/${selectedWorkbook}`;
+                        workbookFileName = selectedWorkbook;
 
-                            payloads.forEach((payload, index) => {
-                                formData.append(`payload_${index}`, JSON.stringify(payload));
+                        return fetch(workbookPath)
+                            .then(response => response.arrayBuffer())
+                            .then(buffer => {
+                                workbookFile = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+                                return sendPayloadWithWorkbook(payloads, workbookFile, workbookFileName);
                             });
-                            formData.append('workbook', workbookBlob, selectedWorkbook);
+                    }
 
-                            return fetch('https://api.forecasthealth.org/uhcc', {
-                                method: 'POST',
-                                body: formData
-                            }).then(response => response.json());
-                        });
+                    return sendPayloadWithWorkbook(payloads, workbookFile, workbookFileName);
                 } else {
                     // Original logic for non-resource case
                     return Promise.all(payloads.map(payload => 
@@ -218,4 +220,18 @@ if (generateButton) {
     });
 } else {
     console.error('Generate button not found in the DOM');
+}
+
+function sendPayloadWithWorkbook(payloads, workbookFile, workbookFileName) {
+    const formData = new FormData();
+
+    payloads.forEach((payload, index) => {
+        formData.append(`payload_${index}`, JSON.stringify(payload));
+    });
+    formData.append('workbook', workbookFile, workbookFileName);
+
+    return fetch('https://api.forecasthealth.org/uhcc', {
+        method: 'POST',
+        body: formData
+    }).then(response => response.json());
 }
