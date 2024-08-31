@@ -1,0 +1,90 @@
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+.dark-mode select,
+.dark-mode input[type="number"],
+.dark-mode button {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+.dark-mode button {
+    background-color: #2c7a2e;
+}
+
+.dark-mode summary {
+    color: #f0f0f0;
+}
+
+.dark-mode .model-description {
+    color: #bbb;
+}
+
+.dark-mode .entrypoints-table th,
+.dark-mode .entrypoints-table td {
+    border-color: #555;
+}
+
+.dark-mode .entrypoints-table th {
+    background-color: #333;
+}
+
+.dark-mode #messageArea {
+    background-color: #333;
+    border-color: #555;
+}
+
+.dark-mode #statusLink {
+    background-color: #0056b3;
+}
+
+.dark-mode #runList th,
+.dark-mode #runList td {
+    border-color: #555;
+}
+
+.dark-mode #runList th {
+    background-color: #333;
+}
+
+.dark-mode .download-btn,
+.dark-mode .status-btn {
+    background-color: #2c7a2e;
+}
+
+.dark-mode .status-btn {
+    background-color: #006080;
+}
+
+.dark-mode #pageDescription {
+    color: #bbb;
+    background-color: #2a2a2a;
+    border-left-color: #555;
+}
+
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.dark-mode-toggle__checkbox {
+    display: none;
+}
+
+.dark-mode-toggle__label {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.dark-mode .dark-mode-toggle__label {
+    background-color: #333;
+}
