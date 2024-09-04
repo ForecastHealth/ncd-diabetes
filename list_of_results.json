@@ -1,27 +1,112 @@
 {
-    "total_population": {
-        "label": "Total Population",
-        "description": "Displays the total population for each year in the selected period.",
-        "query": "SELECT * FROM results"
+    "summed_all": {
+        "label": "Values of all elements over time",
+        "description": "Displays the summed value in each node or edge in each year for BALANCE_SET events",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_value FROM results GROUP BY year, element_label ORDER BY year ASC;"
     },
-    "cancer_incidence": {
-        "label": "Cancer Incidence",
-        "description": "Shows the number of new cancer cases diagnosed each year.",
-        "query": ""
+    "stock": {
+        "label": "Values in nodes over time",
+        "description": "Displays the summed value in each node each year",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_value FROM results WHERE event_type = 'BALANCE_SET' GROUP BY year, element_label ORDER BY year ASC;"
     },
-    "mortality_rate": {
-        "label": "Mortality Rate",
-        "description": "Presents the annual mortality rate due to cancer per 100,000 population.",
-        "query": ""
+    "flow": {
+        "label": "Values in edges over time",
+        "description": "Displays the summed value in each edge each year",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_value FROM results WHERE event_type = 'EDGE_VALUES_CALCULATED' GROUP BY year, element_label ORDER BY year ASC;"
     },
-    "treatment_costs": {
+    "transition_weights": {
+        "label": "Values in edges over time",
+        "description": "Displays the value of each edge weight each year",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_value FROM results WHERE event_type = 'EDGE_WEIGHTS_SET' GROUP BY year, element_label ORDER BY year ASC;"
+    },
+    "incidence": {
+        "label": "Incidence",
+        "description": "Shows the number of cases each year.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_value FROM results WHERE event_type = 'EDGE_VALUES_CALCULATED' AND element_label = 'INCIDENCE' GROUP BY year, element_label ORDER BY year ASC;"
+    },
+    "screened": {
+        "label": "Screened",
+        "description": "Shows the number of people screened each year.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_value FROM results WHERE event_type = 'EDGE_VALUES_CALCULATED' AND element_label = 'SCREENED' GROUP BY year, element_label ORDER BY year ASC;"
+    },
+    "mortality": {
+        "label": "Mortality",
+        "description": "Shows the number of deaths each year.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_value FROM results WHERE event_type = 'EDGE_VALUES_CALCULATED' AND element_label = 'MORTALITY' GROUP BY year, element_label ORDER BY year ASC;"
+    },
+    "stage_distribution": {
+        "label": "Stage Distribution",
+        "description": "Shows the distribution of cancer stages over time.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_value FROM results WHERE event_type = 'EDGE_VALUES_CALCULATED' AND element_label LIKE 'STAGE_%' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "stage_proportion": {
+        "label": "Stage Proportion",
+        "description": "Shows the proportion of each cancer stage relative to total incidence over time.",
+        "query": "WITH incidence AS (SELECT strftime('%Y', timestamp) AS year, SUM(value) AS total_incidence FROM results WHERE event_type = 'EDGE_VALUES_CALCULATED' AND element_label = 'INCIDENCE' GROUP BY year), stages AS (SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS stage_value FROM results WHERE event_type = 'EDGE_VALUES_CALCULATED' AND element_label LIKE 'STAGE_%' GROUP BY year, element_label) SELECT stages.year, stages.element_label, CAST(stages.stage_value AS FLOAT) / incidence.total_incidence AS proportion FROM stages JOIN incidence ON stages.year = incidence.year ORDER BY stages.year ASC, stages.element_label ASC;"
+    },
+    "bundles": {
+        "label": "Treatment Bundles",
+        "description": "Estimates the total annual costs associated with treatment bundles.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_BUNDLE%' AND tags NOT LIKE '%PATH_BUNDLE%PATH_%' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "visits": {
+        "label": "Treatment Visits",
+        "description": "Estimates the total annual costs associated with treatment visits.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_VISIT%' AND tags NOT LIKE '%PATH_VISIT%PATH_%' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "actions": {
+        "label": "Treatment Actions",
+        "description": "Estimates the total annual costs associated with treatment actions.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_ACTION%' AND tags NOT LIKE '%PATH_ACTION%PATH_%' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "tasks": {
+        "label": "Treatment Tasks",
+        "description": "Estimates the total annual costs associated with treatment tasks.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_TASK%' AND tags NOT LIKE '%PATH_TASK%PATH_%' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "workforce": {
+        "label": "Workforce Resources",
+        "description": "Estimates the total annual costs associated with workforce resources.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_resources FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_WORKFORCE%' AND element_label NOT LIKE '%-cost' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "products": {
+        "label": "Product Resources",
+        "description": "Estimates the total annual costs associated with product resources.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_PRODUCT%' AND element_label NOT LIKE '%-cost' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "medicine": {
+        "label": "Medicine Resources",
+        "description": "Estimates the total annual costs associated with medicine resources.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_MEDICINE%' AND element_label NOT LIKE '%-cost' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "ivd": {
+        "label": "IVD Resources",
+        "description": "Estimates the total annual costs associated with in vitro diagnostic resources.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_IVD%' AND element_label NOT LIKE '%-cost' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "medevis": {
+        "label": "MEDEVIS Resources",
+        "description": "Estimates the total annual costs associated with MEDEVIS resources.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_MEDEVIS%' AND element_label NOT LIKE '%-cost' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
+    },
+    "costs": {
         "label": "Treatment Costs",
         "description": "Estimates the total annual costs associated with cancer treatment.",
-        "query": ""
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_COST%' AND element_label LIKE '%-cost' GROUP BY year, element_label ORDER BY year ASC, element_label ASC;"
     },
-    "survival_rates": {
-        "label": "5-Year Survival Rates",
-        "description": "Displays the percentage of patients surviving 5 years after diagnosis for different cancer types.",
-        "query": ""
+    "costs_by_category": {
+        "label": "Treatment Costs by Category",
+        "description": "Estimates the total annual costs associated with cancer treatment, categorized by resource type (products, medevis, workforce, medicine, and ivd).",
+        "query": "SELECT strftime('%Y', timestamp) AS year, CASE WHEN tags LIKE '%PATH_PRODUCT%PATH_COST%' THEN 'PRODUCT' WHEN tags LIKE '%PATH_MEDEVIS%PATH_COST%' THEN 'MEDEVIS' WHEN tags LIKE '%PATH_WORKFORCE%PATH_COST%' THEN 'WORKFORCE' WHEN tags LIKE '%PATH_MEDICINE%PATH_COST%' THEN 'MEDICINE' WHEN tags LIKE '%PATH_IVD%PATH_COST%' THEN 'IVD' ELSE 'OTHER' END AS category, element_label, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_COST%' AND element_label LIKE '%-cost' AND ( tags LIKE '%PATH_PRODUCT%PATH_COST%' OR tags LIKE '%PATH_MEDEVIS%PATH_COST%' OR tags LIKE '%PATH_WORKFORCE%PATH_COST%' OR tags LIKE '%PATH_MEDICINE%PATH_COST%' OR tags LIKE '%PATH_IVD%PATH_COST%') GROUP BY year, category, element_label ORDER BY year ASC, category ASC, element_label ASC;"
+    },
+    "resource_breakdown": {
+        "label": "Resource Breakdown",
+        "description": "Provides a detailed breakdown of resources (workforce, product, medevis, ivd, medicine) categorized by bundle, visit, action, task, and resource type.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, CASE WHEN tags LIKE '%PATH_BUNDLE%' THEN substr(tags, instr(tags, 'PATH_BUNDLE'), instr(substr(tags, instr(tags, 'PATH_BUNDLE')), '|') - 1) ELSE NULL END AS bundle, CASE WHEN tags LIKE '%PATH_VISIT%' THEN substr(tags, instr(tags, 'PATH_VISIT'), instr(substr(tags, instr(tags, 'PATH_VISIT')), '|') - 1) ELSE NULL END AS visit, CASE WHEN tags LIKE '%PATH_ACTION%' THEN substr(tags, instr(tags, 'PATH_ACTION'), instr(substr(tags, instr(tags, 'PATH_ACTION')), '|') - 1) ELSE NULL END AS action, CASE WHEN tags LIKE '%PATH_TASK%' THEN substr(tags, instr(tags, 'PATH_TASK'), instr(substr(tags, instr(tags, 'PATH_TASK')), '|') - 1) ELSE NULL END AS task, CASE WHEN tags LIKE '%PATH_WORKFORCE%' THEN 'WORKFORCE' WHEN tags LIKE '%PATH_PRODUCT%' THEN 'PRODUCT' WHEN tags LIKE '%PATH_MEDEVIS%' THEN 'MEDEVIS' WHEN tags LIKE '%PATH_IVD%' THEN 'IVD' WHEN tags LIKE '%PATH_MEDICINE%' THEN 'MEDICINE' ELSE 'OTHER' END AS resource_category, SUM(value) AS total_value FROM results WHERE event_type = 'BALANCE_SET' AND (tags LIKE '%PATH_WORKFORCE%' OR tags LIKE '%PATH_PRODUCT%' OR tags LIKE '%PATH_MEDEVIS%' OR tags LIKE '%PATH_IVD%' OR tags LIKE '%PATH_MEDICINE%') AND element_label NOT LIKE '%-cost' GROUP BY year, element_label, bundle, visit, action, task, resource_category ORDER BY year ASC, resource_category ASC, bundle ASC, visit ASC, action ASC, task ASC, element_label ASC;"
+    },
+    "cost_breakdown": {
+        "label": "Cost Breakdown",
+        "description": "Provides a detailed breakdown of costs categorized by bundle, visit, action, task, and resource type.",
+        "query": "SELECT strftime('%Y', timestamp) AS year, element_label, CASE WHEN tags LIKE '%PATH_BUNDLE%' THEN substr(tags, instr(tags, 'PATH_BUNDLE'), instr(substr(tags, instr(tags, 'PATH_BUNDLE')), '|') - 1) ELSE NULL END AS bundle, CASE WHEN tags LIKE '%PATH_VISIT%' THEN substr(tags, instr(tags, 'PATH_VISIT'), instr(substr(tags, instr(tags, 'PATH_VISIT')), '|') - 1) ELSE NULL END AS visit, CASE WHEN tags LIKE '%PATH_ACTION%' THEN substr(tags, instr(tags, 'PATH_ACTION'), instr(substr(tags, instr(tags, 'PATH_ACTION')), '|') - 1) ELSE NULL END AS action, CASE WHEN tags LIKE '%PATH_TASK%' THEN substr(tags, instr(tags, 'PATH_TASK'), instr(substr(tags, instr(tags, 'PATH_TASK')), '|') - 1) ELSE NULL END AS task, CASE WHEN tags LIKE '%PATH_WORKFORCE%' THEN 'WORKFORCE' WHEN tags LIKE '%PATH_PRODUCT%' THEN 'PRODUCT' WHEN tags LIKE '%PATH_MEDEVIS%' THEN 'MEDEVIS' WHEN tags LIKE '%PATH_IVD%' THEN 'IVD' WHEN tags LIKE '%PATH_MEDICINE%' THEN 'MEDICINE' ELSE 'OTHER' END AS resource_category, SUM(value) AS total_cost FROM results WHERE event_type = 'BALANCE_SET' AND tags LIKE '%PATH_COST%' AND (tags LIKE '%PATH_WORKFORCE%' OR tags LIKE '%PATH_PRODUCT%' OR tags LIKE '%PATH_MEDEVIS%' OR tags LIKE '%PATH_IVD%' OR tags LIKE '%PATH_MEDICINE%') AND element_label LIKE '%-cost' GROUP BY year, element_label, bundle, visit, action, task, resource_category ORDER BY year ASC, resource_category ASC, bundle ASC, visit ASC, action ASC, task ASC, element_label ASC;"
     }
 }
