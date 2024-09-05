@@ -229,7 +229,8 @@ function sendPayloadWithWorkbook(payloads, workbookFile, workbookFileName) {
         // Create the kwargs dictionary
         const kwargs = {
             optimise_costs: false,
-            exclude: []
+            exclude: [],
+            start_with_trigger: true
         };
 
         // Check if Optimise Costs is selected
