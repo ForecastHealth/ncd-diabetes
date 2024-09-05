@@ -66,6 +66,37 @@ body.dark-mode {
     border-left-color: #555;
 }
 
+/* Dark mode styles for Exclude Resource Types */
+.dark-mode .resource-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dark-mode .resource-type-item {
+    background-color: #2a2a2a;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .resource-type-item:hover {
+    background-color: #3a3a3a;
+}
+
+.dark-mode .resource-type-item label {
+    color: #f0f0f0;
+}
+
+.dark-mode .resource-type-item input[type="checkbox"] {
+    /* You might want to style the checkbox itself for better visibility in dark mode */
+    filter: invert(100%) hue-rotate(180deg) brightness(1.2);
+}
+
+/* Dark mode style for Optimise Costs checkbox */
+.dark-mode #optimiseCosts + label {
+    color: #f0f0f0;
+}
+
 /* Dark mode toggle styles */
 .dark-mode-toggle {
     position: absolute;

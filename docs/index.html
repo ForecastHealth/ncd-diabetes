@@ -84,9 +84,39 @@
                 <span id="uploadedFileName"></span>
                 <button id="removeUploadedFile">Remove</button>
             </div>
+            <div class="form-group" style="display: flex; align-items: center;">
+                <input type="checkbox" id="optimiseCosts" name="optimiseCosts" style="margin-right: 5px;">
+                <label for="optimiseCosts">Optimise Costs (Model is smaller and will run quicker, but you will lose information about source of costs)</label>
+            </div>
+            <div class="form-group">
+                <label>Exclude Resource Types:</label>
+                <div class="resource-types-grid">
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeMedicine" name="excludeResourceTypes" value="medicine">
+                        <label for="excludeMedicine">Medicine</label>
+                    </div>
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeIvd" name="excludeResourceTypes" value="ivd">
+                        <label for="excludeIvd">IVD</label>
+                    </div>
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeWorkforce" name="excludeResourceTypes" value="workforce">
+                        <label for="excludeWorkforce">Workforce</label>
+                    </div>
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeProduct" name="excludeResourceTypes" value="product">
+                        <label for="excludeProduct">Product</label>
+                    </div>
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeMedevis" name="excludeResourceTypes" value="medevis">
+                        <label for="excludeMedevis">Medevis</label>
+                    </div>
+                </div>
+            </div>
         </div>
-    </details>
-    <details >
+    </div>
+</details>
+    <details>
         <summary>Advanced Settings</summary>
         <div class="form-group" style="display: flex; align-items: center;">
             <input type="checkbox" id="allCountries" name="allCountries" style="margin-right: 5px;">

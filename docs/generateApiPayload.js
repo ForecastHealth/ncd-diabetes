@@ -226,6 +226,27 @@ function sendPayloadWithWorkbook(payloads, workbookFile, workbookFileName) {
     const formData = new FormData();
 
     payloads.forEach((payload, index) => {
+        // Create the kwargs dictionary
+        const kwargs = {
+            optimise_costs: false,
+            exclude: []
+        };
+
+        // Check if Optimise Costs is selected
+        const optimiseCostsCheckbox = document.getElementById('optimiseCosts');
+        if (optimiseCostsCheckbox && optimiseCostsCheckbox.checked) {
+            kwargs.optimise_costs = true;
+        }
+
+        // Check which resource types to exclude
+        const excludeResourceTypes = document.querySelectorAll('input[name="excludeResourceTypes"]:checked');
+        excludeResourceTypes.forEach(checkbox => {
+            kwargs.exclude.push(checkbox.value.toLowerCase());
+        });
+
+        // Add kwargs to the payload
+        payload.kwargs = kwargs;
+
         formData.append(`payload_${index}`, JSON.stringify(payload));
     });
     formData.append('workbook', workbookFile, workbookFileName);
