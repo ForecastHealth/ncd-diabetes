@@ -21,4 +21,7 @@ rsync -av --include='*/' --include='*.json' --exclude='*' ./models/ ./docs/model
 rsync -av --include='*/' --include='*.json' --exclude='*' ./scenarios/ ./docs/scenarios/
 rsync -av --include='*/' --include='*.xlsx' --exclude='*' ./excel_workbooks/ ./docs/excel_workbooks/
 
+# Convert DOCUMENTATION.md to HTML
+pandoc DOCUMENTATION.md -o docs/documentation.html --standalone --template=docs/documentation_template.html
+
 echo "Build process completed."
