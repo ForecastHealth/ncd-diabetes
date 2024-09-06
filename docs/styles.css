@@ -184,3 +184,20 @@ footer a:hover {
     margin-top: 0;
     color: #333;
 }
+
+.small-button {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin: 10px auto;
+    width: 20%; /* Adjust width as needed */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+
+.small-button:hover {
+    background-color: #45a049;
+}
