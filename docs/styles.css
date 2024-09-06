@@ -168,3 +168,19 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.disclaimer {
+    font-size: 0.9em;
+    color: #666;
+    border-left: 4px solid #ccc;
+    padding: 1em;
+    margin-top: 2em;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.disclaimer h1 {
+    font-size: 1.2em;
+    margin-top: 0;
+    color: #333;
+}

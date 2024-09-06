@@ -24,4 +24,9 @@ rsync -av --include='*/' --include='*.xlsx' --exclude='*' ./excel_workbooks/ ./d
 # Convert DOCUMENTATION.md to HTML
 pandoc DOCUMENTATION.md -o docs/documentation.html --standalone --template=docs/documentation_template.html
 
+# Convert DISCLAIMER.md to HTML and insert into index.html
+pandoc DISCLAIMER.md -o disclaimer.html
+sed -i.bak '/<div id="disclaimer" class="disclaimer">/r disclaimer.html' docs/index.html && rm docs/index.html.bak
+rm disclaimer.html
+
 echo "Build process completed."
