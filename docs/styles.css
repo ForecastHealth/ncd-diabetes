@@ -136,3 +136,35 @@ summary {
     font-size: 14px;
     cursor: pointer;
 }
+
+.documentation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.documentation-content h1, 
+.documentation-content h2, 
+.documentation-content h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.documentation-content p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
