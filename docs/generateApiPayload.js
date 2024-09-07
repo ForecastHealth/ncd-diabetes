@@ -22,25 +22,16 @@ function generateApiPayload() {
                     const payload = JSON.parse(JSON.stringify(modelData)); // Deep clone the model data
                     let appliedScenario = {};
 
-                    // If it's a custom scenario, get values from the entrypoints table
-                    if (scenarioSelect.value === 'custom') {
-                        const rows = entrypointsTable.querySelectorAll('tbody tr');
-                        rows.forEach(row => {
-                            const id = row.cells[0].textContent;
-                            const value = row.querySelector('input').value;
-                            // Convert to number if possible, otherwise keep as string
-                            appliedScenario[id] = isNaN(parseFloat(value)) ? value : parseFloat(value);
-                        });
-                        resolve(finalizePayload(payload, country, appliedScenario));
-                    } else {
-                        // For non-custom scenarios, fetch the scenario data
-                        fetch(scenarioSelect.value)
-                            .then(response => response.json())
-                            .then(scenarioData => {
-                                appliedScenario = getAppliedScenario(scenarioData, country);
-                                resolve(finalizePayload(payload, country, appliedScenario));
-                            });
-                    }
+                    // Always get values from the entrypoints table
+                    const rows = entrypointsTable.querySelectorAll('tbody tr');
+                    rows.forEach(row => {
+                        const id = row.cells[0].textContent;
+                        const value = row.querySelector('input').value;
+                        // Convert to number if possible, otherwise keep as string
+                        appliedScenario[id] = isNaN(parseFloat(value)) ? value : parseFloat(value);
+                    });
+
+                    resolve(finalizePayload(payload, country, appliedScenario));
                 });
             }
 
