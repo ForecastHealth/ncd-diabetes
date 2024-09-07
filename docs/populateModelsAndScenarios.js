@@ -51,6 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const scenarios = data[selectedModelName] || [];
                 scenarioSelect.innerHTML = '';  // Clear existing options
                 
+                // Add Custom scenario first
+                const customOption = document.createElement('option');
+                customOption.value = 'custom';
+                customOption.text = 'Custom';
+                scenarioSelect.appendChild(customOption);
+
                 // Add other scenarios
                 scenarios.forEach(scenario => {
                     const option = document.createElement('option');
@@ -59,21 +65,46 @@ document.addEventListener('DOMContentLoaded', function() {
                     scenarioSelect.appendChild(option);
                 });
                 
-                // Add Custom scenario
-                const customOption = document.createElement('option');
-                customOption.value = 'custom';
-                customOption.text = 'Custom';
-                scenarioSelect.appendChild(customOption);
-
-                // Fetch description for the first scenario if available
-                if (scenarios.length > 0) {
+                // If there are no scenarios, select Custom by default
+                if (scenarios.length === 0) {
+                    scenarioSelect.value = 'custom';
+                    handleCustomScenario(selectedModelPath);
+                } else {
+                    // Fetch description for the first scenario if available
                     fetchScenarioDescription(scenarios[0].path);
                     handleScenarioLockYears(scenarios[0].path);
                     updateEntrypoints(selectedModelPath, scenarios[0].path);
-                    updateExcelWorkbookSelection(scenarios[0].path); // Add this line
+                    updateExcelWorkbookSelection(scenarios[0].path);
                 }
             })
             .catch(error => console.error('Error fetching scenario list:', error));
+    }
+
+    function handleCustomScenario(modelPath) {
+        // Unlock years for custom scenario
+        startYearInput.disabled = false;
+        endYearInput.disabled = false;
+
+        // Fetch and display model entrypoints
+        fetch(modelPath)
+            .then(response => response.json())
+            .then(modelData => {
+                const entrypoints = modelData.entrypoints.filter(entry => entry.id !== "COUNTRY");
+                renderEntrypoints(entrypoints);
+                entrypointsSection.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error fetching model data:', error);
+                entrypointsSection.style.display = 'none';
+            });
+
+        // Clear scenario description
+        if (scenarioDescriptionElement) {
+            scenarioDescriptionElement.textContent = "Custom scenario with all editable entrypoints.";
+        }
+
+        // Clear Excel workbook selection
+        updateExcelWorkbookSelection('custom');
     }
 
     function fetchModelDescription(modelPath) {
@@ -141,17 +172,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (modelData.entrypoints && modelData.entrypoints.length > 0) {
                     const entrypoints = modelData.entrypoints.filter(entry => entry.id !== "COUNTRY");
                     
-                    fetch(scenarioPath)
-                        .then(response => response.json())
-                        .then(scenarioData => {
-                            const selectedCountry = countrySelect ? countrySelect.value : '';
-                            const appliedScenario = getAppliedScenario(scenarioData, selectedCountry);
-                            renderEntrypoints(entrypoints, appliedScenario);
-                        })
-                        .catch(error => {
-                            console.error('Error fetching scenario data:', error);
-                            renderEntrypoints(entrypoints);
-                        });
+                    if (scenarioPath === 'custom') {
+                        // For custom scenario, use model entrypoints directly
+                        renderEntrypoints(entrypoints);
+                    } else {
+                        fetch(scenarioPath)
+                            .then(response => response.json())
+                            .then(scenarioData => {
+                                const selectedCountry = countrySelect ? countrySelect.value : '';
+                                const appliedScenario = getAppliedScenario(scenarioData, selectedCountry);
+                                renderEntrypoints(entrypoints, appliedScenario);
+                            })
+                            .catch(error => {
+                                console.error('Error fetching scenario data:', error);
+                                renderEntrypoints(entrypoints);
+                            });
+                    }
                     
                     entrypointsSection.style.display = 'block';
                 } else {
@@ -181,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return scenarioData.defaults;
     }
 
-    function renderEntrypoints(entrypoints, appliedScenario) {
+    function renderEntrypoints(entrypoints, appliedScenario = {}) {
         const tbody = entrypointsTable.querySelector('tbody');
         tbody.innerHTML = ''; // Clear existing rows
 
@@ -203,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const valueInput = document.createElement('input');
             valueInput.type = 'text';
             
-            valueInput.value = appliedScenario[entry.id] || entry.value;
+            valueInput.value = appliedScenario.hasOwnProperty(entry.id) ? appliedScenario[entry.id] : entry.value;
             valueInput.disabled = appliedScenario.hasOwnProperty(entry.id);
             
             valueInput.addEventListener('change', function() {
@@ -280,10 +316,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (scenarioSelect) {
         scenarioSelect.addEventListener('change', function() {
             const selectedScenarioPath = this.value;
-            fetchScenarioDescription(selectedScenarioPath);
-            updateEntrypoints(modelSelect.value, selectedScenarioPath);
-            handleScenarioLockYears(selectedScenarioPath);
-            updateExcelWorkbookSelection(selectedScenarioPath); // Add this line
+            if (selectedScenarioPath === 'custom') {
+                handleCustomScenario(modelSelect.value);
+            } else {
+                fetchScenarioDescription(selectedScenarioPath);
+                updateEntrypoints(modelSelect.value, selectedScenarioPath);
+                handleScenarioLockYears(selectedScenarioPath);
+                updateExcelWorkbookSelection(selectedScenarioPath);
+            }
         });
     } else {
         console.error('Scenario select element not found in the DOM');
