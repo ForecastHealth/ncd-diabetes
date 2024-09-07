@@ -16,63 +16,84 @@ function generateApiPayload() {
             const runAllCountries = allCountriesCheckbox.checked;
             const selectedCountry = countrySelect.value;
 
-            // Fetch the selected scenario
-            return fetch(scenarioSelect.value)
-                .then(response => response.json())
-                .then(scenarioData => {
-                    // Function to generate payload for a single country
-                    function generateCountryPayload(country) {
-                        const payload = JSON.parse(JSON.stringify(modelData)); // Deep clone the model data
-                        const appliedScenario = getAppliedScenario(scenarioData, country);
+            // Function to generate payload for a single country
+            function generateCountryPayload(country) {
+                return new Promise((resolve) => {
+                    const payload = JSON.parse(JSON.stringify(modelData)); // Deep clone the model data
+                    let appliedScenario = {};
 
-                        // Update country
-                        const countryEntrypoint = payload.entrypoints.find(entry => entry.id === "COUNTRY");
-                        if (countryEntrypoint) {
-                            countryEntrypoint.value = country;
-                        }
-
-                        // Update start and end years
-                        payload.runtime.startYear = parseInt(startYearInput.value);
-                        payload.runtime.endYear = parseInt(endYearInput.value);
-
-                        // Update entrypoints
-                        payload.entrypoints.forEach(entrypoint => {
-                            if (appliedScenario.hasOwnProperty(entrypoint.id)) {
-                                entrypoint.value = appliedScenario[entrypoint.id];
-                            }
+                    // If it's a custom scenario, get values from the entrypoints table
+                    if (scenarioSelect.value === 'custom') {
+                        const rows = entrypointsTable.querySelectorAll('tbody tr');
+                        rows.forEach(row => {
+                            const id = row.cells[0].textContent;
+                            const value = row.querySelector('input').value;
+                            // Convert to number if possible, otherwise keep as string
+                            appliedScenario[id] = isNaN(parseFloat(value)) ? value : parseFloat(value);
                         });
-
-                        // Collect selected results
-                        const selectedResults = Array.from(resultsList.querySelectorAll('input[type="checkbox"]:checked'))
-                            .map(checkbox => {
-                                const resultData = JSON.parse(checkbox.dataset.result);
-                                return {
-                                    label: resultData.label,
-                                    query: resultData.query
-                                };
-                            });
-
-                        // Construct the final payload
-                        return {
-                            botech: payload,
-                            queries: selectedResults,
-                            environment: "appendix_3"
-                        };
-                    }
-
-                    if (runAllCountries) {
-                        // Fetch the list of all countries
-                        return fetch('./list_of_countries.json')
-                            .then(response => response.json())
-                            .then(data => {
-                                const countries = data.countries.map(country => country.iso3);
-                                return countries.map(country => generateCountryPayload(country));
-                            });
+                        resolve(finalizePayload(payload, country, appliedScenario));
                     } else {
-                        // Generate payload for the selected country
-                        return [generateCountryPayload(selectedCountry)];
+                        // For non-custom scenarios, fetch the scenario data
+                        fetch(scenarioSelect.value)
+                            .then(response => response.json())
+                            .then(scenarioData => {
+                                appliedScenario = getAppliedScenario(scenarioData, country);
+                                resolve(finalizePayload(payload, country, appliedScenario));
+                            });
                     }
                 });
+            }
+
+            function finalizePayload(payload, country, appliedScenario) {
+                // Update country
+                const countryEntrypoint = payload.entrypoints.find(entry => entry.id === "COUNTRY");
+                if (countryEntrypoint) {
+                    countryEntrypoint.value = country;
+                }
+
+                // Update start and end years
+                payload.runtime.startYear = parseInt(startYearInput.value);
+                payload.runtime.endYear = parseInt(endYearInput.value);
+
+                // Update entrypoints
+                payload.entrypoints.forEach(entrypoint => {
+                    if (appliedScenario.hasOwnProperty(entrypoint.id)) {
+                        let value = appliedScenario[entrypoint.id];
+                        // Convert to number if possible, otherwise keep as string
+                        entrypoint.value = isNaN(parseFloat(value)) ? value : parseFloat(value);
+                    }
+                });
+
+                // Collect selected results
+                const selectedResults = Array.from(resultsList.querySelectorAll('input[type="checkbox"]:checked'))
+                    .map(checkbox => {
+                        const resultData = JSON.parse(checkbox.dataset.result);
+                        return {
+                            label: resultData.label,
+                            query: resultData.query
+                        };
+                    });
+
+                // Construct the final payload
+                return {
+                    botech: payload,
+                    queries: selectedResults,
+                    environment: "appendix_3"
+                };
+            }
+
+            if (runAllCountries) {
+                // Fetch the list of all countries
+                return fetch('./list_of_countries.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const countries = data.countries.map(country => country.iso3);
+                        return Promise.all(countries.map(country => generateCountryPayload(country)));
+                    });
+            } else {
+                // Generate payload for the selected country
+                return generateCountryPayload(selectedCountry).then(payload => [payload]);
+            }
         });
 }
 

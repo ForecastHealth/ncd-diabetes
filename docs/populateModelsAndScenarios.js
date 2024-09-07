@@ -141,17 +141,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (modelData.entrypoints && modelData.entrypoints.length > 0) {
                     const entrypoints = modelData.entrypoints.filter(entry => entry.id !== "COUNTRY");
                     
-                    fetch(scenarioPath)
-                        .then(response => response.json())
-                        .then(scenarioData => {
-                            const selectedCountry = countrySelect ? countrySelect.value : '';
-                            const appliedScenario = getAppliedScenario(scenarioData, selectedCountry);
-                            renderEntrypoints(entrypoints, appliedScenario);
-                        })
-                        .catch(error => {
-                            console.error('Error fetching scenario data:', error);
-                            renderEntrypoints(entrypoints);
-                        });
+                    if (scenarioPath === 'custom') {
+                        // For custom scenario, use model entrypoints directly
+                        renderEntrypoints(entrypoints);
+                    } else {
+                        fetch(scenarioPath)
+                            .then(response => response.json())
+                            .then(scenarioData => {
+                                const selectedCountry = countrySelect ? countrySelect.value : '';
+                                const appliedScenario = getAppliedScenario(scenarioData, selectedCountry);
+                                renderEntrypoints(entrypoints, appliedScenario);
+                            })
+                            .catch(error => {
+                                console.error('Error fetching scenario data:', error);
+                                renderEntrypoints(entrypoints);
+                            });
+                    }
                     
                     entrypointsSection.style.display = 'block';
                 } else {
@@ -181,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return scenarioData.defaults;
     }
 
-    function renderEntrypoints(entrypoints, appliedScenario) {
+    function renderEntrypoints(entrypoints, appliedScenario = {}) {
         const tbody = entrypointsTable.querySelector('tbody');
         tbody.innerHTML = ''; // Clear existing rows
 
@@ -203,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const valueInput = document.createElement('input');
             valueInput.type = 'text';
             
-            valueInput.value = appliedScenario[entry.id] || entry.value;
+            valueInput.value = appliedScenario.hasOwnProperty(entry.id) ? appliedScenario[entry.id] : entry.value;
             valueInput.disabled = appliedScenario.hasOwnProperty(entry.id);
             
             valueInput.addEventListener('change', function() {
