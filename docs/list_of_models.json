@@ -1,0 +1,8 @@
+{
+  "models": [
+    {
+      "name": "Diabetes Base Model",
+      "path": "./models/diabetes_base_model.json"
+    }
+  ]
+}
