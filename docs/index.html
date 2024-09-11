@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">WHO Cancer Tool</title>
+    <meta id="pageMetaDescription" name="description" content="WHO Cancer Tool for modeling and analysis">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <script src="downloadAll.js"></script>
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeToggle" class="dark-mode-toggle__checkbox">
+        <label for="darkModeToggle" class="dark-mode-toggle__label">Dark Mode</label>
+    </div>
+    <h1 id="mainHeader">Model Selection</h1>
+    <blockquote id="pageDescription">
+        This tool allows you to select and configure statistical models for different countries, scenarios, and time periods. Choose your parameters and generate results to support your research or decision-making process.
+    </blockquote>
+    <div class="form-group">
+        <label for="country">Select Country</label>
+        <select id="country" name="country" required>
+            <!-- Options will be populated by JavaScript -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="model">Select Model</label>
+        <select id="model">
+        </select>
+        <p id="modelDescription" class="model-description"></p>
+    </div>
+    <div class="form-group">
+        <label for="startYear">Select Starting Year</label>
+        <input type="number" id="startYear" min="1950" max="2150" required value=2024>
+    </div>
+    <div class="form-group">
+        <label for="endYear">Select Final Year</label>
+        <input type="number" id="endYear" min="1950" max="2150" required value=2060>
+    </div>
+    <details>
+        <summary>Scenario Settings</summary>
+        <div class="form-group">
+            <label for="scenario">Select Scenario</label>
+            <select id="scenario">
+            </select>
+            <p id="scenarioDescription" class="model-description"></p>
+        </div>
+        <div id="entrypointsSection" style="display: none;">
+            <h3>Parameter Selection</h3>
+            <table id="entrypointsTable" class="entrypoints-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Description</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Entrypoints will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </details>
+    <details>
+        <summary>Resource and Cost Settings</summary>
+        <div class="form-group">
+            <label for="attachResource">
+                <input type="checkbox" id="attachResource" name="attachResource">
+                Include resources and costs? (WARNING: This makes models much larger and slower to run)
+            </label>
+        </div>
+        <div id="resourceOptions">
+            <div class="form-group">
+                <label for="uhccWorkbook">Select UHCC Workbook</label>
+                <select id="uhccWorkbook" name="uhccWorkbook">
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="customWorkbook">Upload Custom Workbook</label>
+                <input type="file" id="customWorkbook" name="customWorkbook" accept=".xlsx,.xls">
+            </div>
+            <div id="uploadedFileInfo" style="display: none;">
+                <span id="uploadedFileName"></span>
+                <button id="removeUploadedFile">Remove</button>
+            </div>
+            <div class="form-group" style="display: flex; align-items: center;">
+                <input type="checkbox" id="optimiseCosts" name="optimiseCosts" style="margin-right: 5px;">
+                <label for="optimiseCosts">Optimise Costs (Model is smaller and will run quicker, but you will lose information about source of costs)</label>
+            </div>
+            <div class="form-group">
+                <label>Exclude Resource Types:</label>
+                <div class="resource-types-grid">
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeMedicine" name="excludeResourceTypes" value="medicine">
+                        <label for="excludeMedicine">Medicine</label>
+                    </div>
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeIvd" name="excludeResourceTypes" value="ivd">
+                        <label for="excludeIvd">IVD</label>
+                    </div>
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeWorkforce" name="excludeResourceTypes" value="workforce">
+                        <label for="excludeWorkforce">Workforce</label>
+                    </div>
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeProduct" name="excludeResourceTypes" value="product">
+                        <label for="excludeProduct">Product</label>
+                    </div>
+                    <div class="resource-type-item">
+                        <input type="checkbox" id="excludeMedevis" name="excludeResourceTypes" value="medevis">
+                        <label for="excludeMedevis">Medevis</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</details>
+    <details>
+        <summary>Advanced Settings</summary>
+        <div class="form-group" style="display: flex; align-items: center;">
+            <input type="checkbox" id="allCountries" name="allCountries" style="margin-right: 5px;">
+            <label for="allCountries">Run Scenario for all countries (NOTE: may change parameters based on country)</label>
+        </div>
+        <div class="form-group">
+            <label for="fertility">Select Fertility Rate Scenario</label>
+            <select id="fertility">
+                <option value="Medium">Medium (Recommended)</option>
+                <option value="Low">Low</option>
+                <option value="High">High</option>
+                <option value="Zero migration">Zero migration</option>
+                <option value="No change">No change</option>
+                <option value="Constant fertility">Constant Fertility</option>
+                <option value="Constant mortality">Constant mortality</option>
+                <option value="Instant replacement">Instant replacement</option>
+                <option value="Momentum">Momentum</option>
+            </select>
+        </div>
+    </details>
+    <details>
+        <summary>Results</summary>
+        <ul id="resultsList" class="results-list">
+            <!-- Results checkboxes will be dynamically added here -->
+        </ul>
+    </details>
+    <button id="generate">Generate Results</button>
+
+    <div id="runList"></div>
+
+    <button id="downloadAll" class="small-button">Download All</button>
+
+    <footer>
+        <a href="documentation.html" target="_blank">View Documentation</a>
+    </footer>
+
+<div id="disclaimer" class="disclaimer">
+<h1 id="disclaimer">Disclaimer</h1>
+<p>This tool is provided for informational purposes only. The results generated should not be considered as definitive medical advice or official WHO recommendations. Users should consult with qualified healthcare professionals and refer to official WHO guidelines for accurate and up-to-date information.</p>
+</div>
+
+    <script src="runList.js"></script>
+    <script src="generateApiPayload.js"></script>
+    <script src="allCountriesCheckbox.js"></script>
+    <script src="parseConfig.js"></script>
+    <script src="populateCountries.js"></script>
+    <script src="populateModelsAndScenarios.js"></script>
+    <script src="populateResults.js"></script>
+    <script src="populateExcelWorkbooks.js"></script>
+    <script src="darkmode.js"></script>
+
+</body>
+</html>
