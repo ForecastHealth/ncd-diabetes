@@ -1,6 +1,6 @@
 {
-  "title": "The Diabetes Tool for Bianca and Sanjana",
-  "mainHeader": "Welcome to the Model Selection Tool",
+  "title": "Diabetes Modelling Tool",
+  "mainHeader": "The Diabetes Modelling Tool: For Bianca and Sanjana",
   "metaDescription": "A tool for selecting and configuring models for various scenarios",
   "pageDescription": "This tool allows you to select and configure statistical models for different countries, scenarios, and time periods. Choose your parameters and generate results to support your research or decision-making process."
 }
