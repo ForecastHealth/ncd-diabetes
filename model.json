@@ -3,7 +3,8 @@
     "name": "NCD Rebuild - Diabetes Base Model",
     "author": "Avenir, Roglic, Bertram, Watts, et al.",
     "description": "The Diabetes Base Model created by Avenir Health and WHO",
-    "version": "2.5"
+    "version": "2.5",
+    "file_id": "diabetes"
   },
   "runtime": {
     "startYear": 2020,
