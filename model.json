@@ -513,8 +513,9 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
+        "postprocessing": {"negative": true},
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1",
@@ -963,8 +964,9 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
+        "postprocessing": {"negative": true},
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1",
@@ -1071,8 +1073,9 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
+        "postprocessing": {"negative": true},
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1",
@@ -1179,8 +1182,9 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
+        "postprocessing": {"negative": true},
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1",
@@ -1305,8 +1309,9 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
+        "postprocessing": {"negative": true},
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1",
@@ -3411,8 +3416,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "UGA"
-        }
+          "country": "UGA" }
       },
       "label": "DiabeticNephropathy -> Deceased"
     }
