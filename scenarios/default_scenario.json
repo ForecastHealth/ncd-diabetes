@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "name": "Default Scenario",
+    "description": "A scenario where there is no change in the coverage of any intervention",
+    "authors": [],
+    "date_created": "2024-12-10 13:04"
+  },
+  "parameters": {
+    "Country": {
+      "hidden": true,
+      "value": "AFG",
+      "paths": [
+        "$.nodes[?(@.id=='lrso81aw')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='DsFreeSus')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='lrso71jf')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='lrso7mga')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9rkzfi')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9rlprb')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9rmh3c')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9rs1ih')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9rvbes')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9t0ml2')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9t13d8')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9t1x51')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9y3aia')].generate_array.parameters.country",
+        "$.links[?(@.id=='PwZT0fUg')].generate_array.parameters.country",
+        "$.links[?(@.id=='BLsXt2Md')].generate_array.parameters.country",
+        "$.links[?(@.id=='mlkMPtza')].generate_array.parameters.country",
+        "$.links[?(@.id=='6ONEDRqf')].generate_array.parameters.country",
+        "$.links[?(@.id=='itKEGsJa')].generate_array.parameters.country",
+        "$.links[?(@.id=='PmszSxyR')].generate_array.parameters.country",
+        "$.links[?(@.id=='bqt9e1Hu')].generate_array.parameters.country",
+        "$.links[?(@.id=='Sr9wD5iX')].generate_array.parameters.country",
+        "$.links[?(@.id=='XERAn3eI')].generate_array.parameters.country",
+        "$.links[?(@.id=='jafkA6il')].generate_array.parameters.country",
+        "$.links[?(@.id=='AaIqu3Sh')].generate_array.parameters.country",
+        "$.links[?(@.id=='OhC9gSTP')].generate_array.parameters.country",
+        "$.links[?(@.id=='Qo1iIBKh')].generate_array.parameters.country",
+        "$.links[?(@.id=='P0YMn6Zi')].generate_array.parameters.country",
+        "$.links[?(@.id=='oDZJAqIc')].generate_array.parameters.country",
+        "$.links[?(@.id=='uQdxASQ8')].generate_array.parameters.country",
+        "$.links[?(@.id=='iB5A8VDc')].generate_array.parameters.country",
+        "$.links[?(@.id=='UFw5HQql')].generate_array.parameters.country",
+        "$.links[?(@.id=='9lHjCUmt')].generate_array.parameters.country",
+        "$.links[?(@.id=='tJOW1hhc')].generate_array.parameters.country",
+        "$.links[?(@.id=='STz4wrnX')].generate_array.parameters.country",
+        "$.links[?(@.id=='BJGaPBZg')].generate_array.parameters.country"
+      ]
+    },
+    "Inhaled Salbutamol Baseline Coverage": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrso22do')].generate_array.parameters.value"
+      ]
+    },
+    "Inhaled Salbutamol Target Coverage": {
+      "value": 0.05,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.value"
+      ]
+    },
+    "Inhaled Salbutamol Population In Need": {
+      "value": 1,
+      "description": "The proportion of persons with asthma who require the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsnavq2')].generate_array.parameters.value"
+      ]
+    },
+    "Inhaled Salbutamol Disability Impact": {
+      "value": -0.148,
+      "description": "The proportion by which the disability weight is reduced due to the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsnjkmt')].generate_array.parameters.value"
+      ]
+    },
+    "Ipratropium Inhaler Baseline Coverage": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsnhyyd')].generate_array.parameters.value"
+      ]
+    },
+    "Ipratropium Inhaler Target Coverage": {
+      "value": 0.05,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrso24ss')].generate_array.parameters.value"
+      ]
+    },
+    "Ipratropium Inhaler Population In Need": {
+      "value": 0.21,
+      "description": "The proportion of persons with asthma who require the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsni0s5')].generate_array.parameters.value"
+      ]
+    },
+    "Ipratropium Inhaler Disability Impact": {
+      "value": -0.169,
+      "description": "The proportion by which the disability weight is reduced due to the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsnjr1s')].generate_array.parameters.value"
+      ]
+    },
+    "Oral Prednisolone Baseline Coverage": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrso28l8')].generate_array.parameters.value"
+      ]
+    },
+    "Oral Prednisolone Target Coverage": {
+      "value": 0.05,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsngpv8')].generate_array.parameters.value"
+      ]
+    },
+    "Oral Prednisolone Population In Need": {
+      "value": 0.12,
+      "description": "The proportion of persons with asthma who require the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsngte4')].generate_array.parameters.value"
+      ]
+    },
+    "Oral Prednisolone Disability Impact": {
+      "value": -0.337,
+      "description": "The proportion by which the disability weight is reduced due to the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lrsnjnt3')].generate_array.parameters.value"
+      ]
+    }
+  }
+}
