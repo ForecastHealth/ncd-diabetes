@@ -1,12 +1,28 @@
 {
   "scenarios": [
     {
+      "name": "Appendix 3 - D1 Scenario",
+      "filename": "d1_scenario.json"
+    },
+    {
+      "name": "Appendix 3 - D2 Scenario",
+      "filename": "d2_scenario.json"
+    },
+    {
       "name": "Null Scenario",
       "filename": "null_scenario.json"
     },
     {
-      "name": "Scale Up Scenario",
-      "filename": "scale_up_scenario.json"
+      "name": "Appendix 3 - D3 Scenario",
+      "filename": "d3_scenario.json"
+    },
+    {
+      "name": "Default Scenario",
+      "filename": "default_scenario.json"
+    },
+    {
+      "name": "Appendix 3 - D5 Scenario",
+      "filename": "d5_scenario.json"
     }
   ]
 }
