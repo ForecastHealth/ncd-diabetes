@@ -1,0 +1,12 @@
+{
+  "resources": [
+    {
+      "name": "tmp/cervical_cancer",
+      "filename": "cervical_cancer.json"
+    },
+    {
+      "name": "tmp/screening",
+      "filename": "screening.json"
+    }
+  ]
+}

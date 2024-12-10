@@ -1,1 +1,12 @@
-{}
+{
+  "scenarios": [
+    {
+      "name": "Null Scenario",
+      "filename": "null_scenario.json"
+    },
+    {
+      "name": "Scale Up Scenario",
+      "filename": "scale_up_scenario.json"
+    }
+  ]
+}
