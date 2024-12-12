@@ -1578,11 +1578,11 @@
         "method": "linear_with_arbitrary_length",
         "parameters": {
           "start_value": 0.05,
-          "end_value": 0.95,
+          "end_value": 0.05,
           "start_index": 0,
           "end_index": 5,
           "fill_before": 0.05,
-          "fill_after": 0.95
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -1647,11 +1647,11 @@
         "method": "linear_with_arbitrary_length",
         "parameters": {
           "start_value": 0.05,
-          "end_value": 0.95,
+          "end_value": 0.05,
           "start_index": 0,
           "end_index": 5,
           "fill_before": 0.05,
-          "fill_after": 0.95
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
