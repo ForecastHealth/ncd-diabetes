@@ -303,7 +303,7 @@ If the year was 2019, it is now 2020.
 If the year was 2020, it is now 2021.
 If the year was 2119, the model simulation ends.
 
-# Outstanding Issues / Clarifications / Questions
+## Outstanding Issues / Clarifications / Questions
 - Our current demographic projection may differ substantially from previous model's demographic project.
     - Changes to fertility rates, background mortality, and migration rates may all affect the magnitude of the results.
 - We are not sure if there has been discounting on effects.
