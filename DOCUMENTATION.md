@@ -1,5 +1,4 @@
 # The Diabetes Model, and its Scenarios
-This document describes the Diabetes state-transition model, and the scenarios which are run using it.
 
 ##  The Diabetes Model and its design
 ### Diabetes Models creates several scenarios: Null_Diabetes, D1, D2, D3, D4, D5
@@ -46,29 +45,29 @@ While treatments are always present in the structure of the Diabetes model, thei
 **NOTE** - These figures imply a modification of effect sizes.
 E.g. `StdGlycControl` reduces the CFR of `DiabeticRetpathy` by 75% (-0.75).
 
-- StdGlycControl
-    - Incidence of `DiabeticRetpathy`: -0.75
-    - Incidence of `LowerExtrmAmpt`: -0.286
-    - Incidence of `DiabeticNephropathy`: -0.39
-- IntsvGlycControl
-    - Incidence of `DiabeticRetpathy`: -0.65
-    - Incidence of `LowerExtrmAmpt`: -0.151
-    - Incidence of `DiabeticNephropathy`: -0.39
-- RetinopathyScrn
-    - Incidence of `DiabeticRetpathy`: -0.20
-- NeuropathyScr
-    - Incidence of `DiabeticNephropathy`: -0.35
-- NeprhopathyScr
-    - Incidence of `DiabeticNephropathy`: -0.24
+| Treatment | Impact on Condition | Effect Size |
+|-----------|-------------------|-------------|
+| StdGlycControl | Incidence of DiabeticRetpathy | -0.75 |
+| | Incidence of LowerExtrmAmpt | -0.286 |
+| | Incidence of DiabeticNephropathy | -0.39 |
+| IntsvGlycControl | Incidence of DiabeticRetpathy | -0.65 |
+| | Incidence of LowerExtrmAmpt | -0.151 |
+| | Incidence of DiabeticNephropathy | -0.39 |
+| RetinopathyScrn | Incidence of DiabeticRetpathy | -0.20 |
+| NeuropathyScr | Incidence of DiabeticNephropathy | -0.35 |
+| NeprhopathyScr | Incidence of DiabeticNephropathy | -0.24 |
 
 ### Population in Need
 **NOTE** - Refers to the proportion of people in `DiabetesEpsd` who are "in need" of this treatment.
 e.g. 90% of `DiabetesEpsd` are "in need" of `StdGlycControl`
-- StdGlycControl: 0.9
-- IntsvGlycControl: 0.1
-- RetinopathyScrn: 1.0
-- NeuropathyScr: 1.0
-- NeprhopathyScr: 1.0
+
+| Treatment | Population in Need |
+|-----------|-------------------|
+| StdGlycControl | 0.9 |
+| IntsvGlycControl | 0.1 |
+| RetinopathyScrn | 1.0 |
+| NeuropathyScr | 1.0 |
+| NeprhopathyScr | 1.0 |
 
 ### The Model has two key components
 The Diabetes model is large, but can be broken down into two components.
