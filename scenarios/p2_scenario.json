@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "Appendix 3 - Null Scenario",
-    "description": "The scenario all interventions are scaled to 0% coverage",
+    "name": "Default Scenario",
+    "description": "A scenario where there is no change in the coverage of any intervention",
     "authors": [],
     "date_created": "2024-12-10 13:04"
   },
@@ -55,7 +55,7 @@
       ]
     },
     "Standard Glycaemic Control Target Coverage": {
-      "value": 0.0,
+      "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.value"
@@ -76,7 +76,7 @@
       ]
     },
     "Intensive Glycaemic Control Target Coverage": {
-      "value": 0.0,
+      "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.value"
@@ -97,7 +97,7 @@
       ]
     },
     "Retinopathy Screening Target Coverage": {
-      "value": 0.0,
+      "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.value"
@@ -118,7 +118,7 @@
       ]
     },
     "Nephropathy Screening Target Coverage": {
-      "value": 0.0,
+      "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.value"
@@ -139,7 +139,7 @@
       ]
     },
     "Neuropathy Screening Target Coverage": {
-      "value": 0.0,
+      "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.value"
