@@ -1,0 +1,445 @@
+{
+  "metadata": {
+    "name": "UNAVAILABLE - Tobacco T3 Scenario",
+    "description": "Enact and enforce comprehensive bans on tobacco advertising, promotion and sponsorship",
+    "authors": [],
+    "date_created": "2025-02-12 10:34"
+  },
+  "parameters": {
+    "Country": {
+      "hidden": true,
+      "value": "AFG",
+      "paths": [
+        "$.nodes[?(@.id=='41XrI0td')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='HvEhBiqV')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='BMlvK43f')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='wdoGuxrz')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='9bm7Z0E8')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='xx922wnd')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='EOCVEnRg')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='Wahz7EG9')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='Gkx6f7za')].generate_array.parameters.country"
+      ]
+    },
+    "Baseline Coverage Physical Inactivity Awareness": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='FyrvtPDd')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Physical Inactivity Awareness": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Physical Inactivity Advice": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Physical Inactivity Advice": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='ufbZ5vVe')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Tobacco Protect": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Tobacco Protect": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='kmOgayPc')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Tobacco Quitbrief": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Tobacco Quitbrief": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='iSPWJd93')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Tobacco Quitcessation": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Tobacco Quitcessation": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='exp5DafX')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Tobacco Warnlabel": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Tobacco Warnlabel": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='jVgKAsq8')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Tobacco Massmedia": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Tobacco Massmedia": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='kH5YhKYM')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Tobacco Ban": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Tobacco Ban": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='zUseZJKK')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Alcohol Ban": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Alcohol Ban": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='Rzb0zAne')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Alcohol Restrict": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Alcohol Restrict": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='wkswo620')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Alcohol Counsel": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Alcohol Counsel": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='jaYSlCkx')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Tobacco Tax": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='BTDc3bch')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Tobacco Tax": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lFMuQmak')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Alcohol Tax Spirits": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='taFGx45n')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Alcohol Tax Spirits": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='aB6HR9Ch')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Alcohol Tax Beer": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='pc8FMpeL')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Alcohol Tax Beer": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='j49wkbET')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Alcohol Tax Wine": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='2NvTp1ts')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Alcohol Tax Wine": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='xgkwNWij')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Fiber Procurement": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Fiber Procurement": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='1DCP2qT2')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Fiber Reformulation": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Fiber Reformulation": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='JZx3RoqR')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Fiber Relabelling": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Fiber Relabelling": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='pRn9e8ZZ')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Fruit Procurement": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='yKzcagOd')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Fruit Procurement": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='Sbd9fFmO')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Fruit Massmedia": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='XTBoUkSf')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Fruit Massmedia": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='fcZDbz8L')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Fruit Reformulation": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='t8lz9w7i')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Fruit Reformulation": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='nPcxUlVC')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Fruit Relabelling": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='Uu8guMnj')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Fruit Relabelling": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='hfl7hAGJ')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Legume Procurement": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='Rmsk6u9E')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Legume Procurement": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='N3IpyYxL')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Legume Massmedia": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='mJI1reH5')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Legume Massmedia": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='AeLUxTf0')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Legume Reformulation": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='fGcZ1dnm')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Legume Reformulation": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='7VzYqajD')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Legume Relabelling": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='wWHm9LFg')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Legume Relabelling": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='HR07O7ph')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Sodium Envsaltreduct": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='tcyh6Bs3')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Sodium Envsaltreduct": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='dCKyKjfS')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Sodium Reformulation": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='lEaWTYcQ')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Sodium Reformulation": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='vHvja5wX')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Sodium Knowledge": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='RhJC3E7k')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Sodium Knowledge": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='vUlB4rV4')].generate_array.parameters.value"
+      ]
+    },
+    "Baseline Coverage Sodium Labelling": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='2un93ssd')].generate_array.parameters.value"
+      ]
+    },
+    "Target Coverage Sodium Labelling": {
+      "value": 0.0,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='qdeZvhM1')].generate_array.parameters.value"
+      ]
+    }
+  }
+}
