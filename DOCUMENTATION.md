@@ -1,5 +1,21 @@
 # The Diabetes Model, and its Scenarios
 
+## Intervention Table
+
+| Category | Code | Name                                                                                                                                                                                                                                  |
+|----------|------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Diabetes | D1   | Foot care to prevent amputation in people with diabetes (including educational programmes, access to appropriate footwear, multidisciplinary clinics)                                                                                 |
+| Diabetes | D2   | Diabetic retinopathy screening for all diabetes patients and laser photocoagulation for prevention of blindness                                                                                                                                 |
+| Diabetes | D3   | Glycaemic control for people with diabetes, along with standard home glucose monitoring for people treated with insulin to reduce diabetes complications                                                                                 |
+| Diabetes | D5   | Screening of people with diabetes for proteinuria and treatment with angiotensin-converting enzyme inhibitor for the prevention and delay of renal disease                                                                              |
+| Diabetes | D6   | Control of blood pressure in people with diabetes                                                                                                                                                                                      |
+| Diabetes | D7   | Statin use in people with diabetes > 40 years old                                                                                                                                                                                      |
+| Diabetes | D8   | Influenza vaccination for patients with diabetes                                                                                                                                                                                       |
+| Diabetes | D9   | Lifestyle interventions for preventing type 2 diabetes                                                                                                                                                                                |
+| Diabetes | D10  | Preconception care among women of reproductive age who have diabetes including patient education and intensive glucose management                                                                                                      |
+
+---
+
 ##  The Diabetes Model and its design
 ### Diabetes Models creates several scenarios: Null_Diabetes, D1, D2, D3, D4, D5
 The Diabetes Model refers to a "Model architecture": A structure of states and transitions, which can be used to run different scenarios.
