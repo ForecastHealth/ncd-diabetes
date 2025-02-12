@@ -1,139 +1,135 @@
 {
   "scenarios": [
     {
-      "name": "Alcohol A3 Scenario",
+      "name": "Appendix 3 - Alcohol A3 Scenario",
       "filename": "alcohol_a3.json"
     },
     {
-      "name": "Unhealthy Diet Null Scenario",
+      "name": "Appendix 3 - Unhealthy Diet Null Scenario",
       "filename": "unhealthy_diet_null.json"
     },
     {
-      "name": "Default Scenario",
+      "name": "Appendix 3 - D5 Scenario",
+      "filename": "diabetes_d5_scenario.json"
+    },
+    {
+      "name": "Appendix 3 - Default Scenario",
       "filename": "p2_scenario.json"
     },
     {
-      "name": "Tobacco T1 Scenario",
+      "name": "Appendix 3 - Tobacco T1 Scenario",
       "filename": "tobacco_t1.json"
     },
     {
-      "name": "Appendix 3 - D1 Scenario",
-      "filename": "d1_scenario.json"
-    },
-    {
-      "name": "Alcohol A2 Scenario",
+      "name": "Appendix 3 - Alcohol A2 Scenario",
       "filename": "alcohol_a2.json"
     },
     {
-      "name": "Unhealthy Diet U10 Scenario",
+      "name": "Appendix 3 - Diabetes Null Scenario",
+      "filename": "diabetes_null_scenario.json"
+    },
+    {
+      "name": "Appendix 3 - Unhealthy Diet U10 Scenario",
       "filename": "unhealthy_diet_u10.json"
     },
     {
-      "name": "Tobacco Null Scenario",
+      "name": "Appendix 3 - Tobacco Null Scenario",
       "filename": "tobacco_null.json"
     },
     {
-      "name": "Unhealthy Diet U11 Scenario",
+      "name": "Appendix 3 - Unhealthy Diet U11 Scenario",
       "filename": "unhealthy_diet_u11.json"
     },
     {
-      "name": "Unhealthy Diet U3 Scenario",
+      "name": "Appendix 3 - Unhealthy Diet U3 Scenario",
       "filename": "unhealthy_diet_u3.json"
     },
     {
-      "name": "INCOMPLETE - Unhealthy Diet U2 Scenario",
+      "name": "Appendix 3 - Appendix 3 - D1 Scenario",
+      "filename": "diabetes_d1_scenario.json"
+    },
+    {
+      "name": "INCOMPLETE - Appendix 3 - Unhealthy Diet U2 Scenario",
       "filename": "unhealthy_diet_u2.json"
     },
     {
-      "name": "Appendix 3 - P1 Scenario (Diabetes Component)",
-      "filename": "p1_scenario.json"
-    },
-    {
-      "name": "Appendix 3 - D2 Scenario",
-      "filename": "d2_scenario.json"
-    },
-    {
-      "name": "Tobacco T2 Scenario",
+      "name": "Appendix 3 - Tobacco T2 Scenario",
       "filename": "tobacco_t2.json"
     },
     {
-      "name": "Physical Inactivity P1 Scenario",
+      "name": "Appendix 3- Physical Inactivity P1 Scenario",
       "filename": "physical_inactivity_p1.json"
     },
     {
-      "name": "UNAVAILABLE - Tobacco T3 Scenario",
+      "name": "UNAVAILABLE - Appendix 3 - Tobacco T3 Scenario",
       "filename": "tobacco_t3.json"
     },
     {
-      "name": "Physical Inactivity Null Scenario",
+      "name": "Appendix 3 - Physical Inactivity - Null Scenario",
       "filename": "physical_inactivity_null.json"
     },
     {
-      "name": "Appendix 3 - Null Scenario",
-      "filename": "null_scenario.json"
-    },
-    {
-      "name": "INCOMPLETE - Unhealthy Diet U4 Scenario",
+      "name": "Appendix 3 - INCOMPLETE - Unhealthy Diet U4 Scenario",
       "filename": "unhealthy_diet_u4.json"
     },
     {
-      "name": "Alcohol A4 Scenario",
+      "name": "Appendix 3 - Alcohol A4 Scenario",
       "filename": "alcohol_a4.json"
     },
     {
-      "name": "Unhealthy Diet U7 Scenario",
+      "name": "Appendix 3 - Unhealthy Diet U7 Scenario",
       "filename": "unhealthy_diet_u7.json"
     },
     {
-      "name": "Physical Inactivity P2",
+      "name": "Appendix 3- Physical Inactivity P2",
       "filename": "physical_inactivity_p2.json"
     },
     {
-      "name": "Appendix 3 - D3 Scenario",
-      "filename": "d3_scenario.json"
+      "name": "Default Scenario",
+      "filename": "diabetes_default_scenario.json"
     },
     {
-      "name": "Alcohol A5 Scenario",
+      "name": "Appendix 3 - Alcohol A5 Scenario",
       "filename": "alcohol_a5.json"
     },
     {
-      "name": "Tobacco T6 Scenario",
+      "name": "Appendix 3 - Tobacco T6 Scenario",
       "filename": "tobacco_t6.json"
     },
     {
-      "name": "Unhealthy Diet U6 Scenario",
+      "name": "Appendix 3 - Unhealthy Diet U6 Scenario",
       "filename": "unhealthy_diet_u6.json"
     },
     {
-      "name": "Default Scenario",
-      "filename": "default_scenario.json"
-    },
-    {
-      "name": "Alcohol A1 Scenario",
+      "name": "Appendix 3 - Alcohol A1 Scenario",
       "filename": "alcohol_a1.json"
     },
     {
-      "name": "Alcohol Null Scenario",
+      "name": "Appendix 3 - Alcohol Null Scenario",
       "filename": "alcohol_null.json"
     },
     {
-      "name": "Tobacco T7 Scenario",
+      "name": "Appendix 3 - D2 Scenario",
+      "filename": "diabetes_d2_scenario.json"
+    },
+    {
+      "name": "Appendix 3 - Tobacco T7 Scenario",
       "filename": "tobacco_t7.json"
     },
     {
-      "name": "UNAVAILABLE - Tobacco T4 Scenario",
+      "name": "UNAVAILABLE - Appendix 3 - Tobacco T4 Scenario",
       "filename": "tobacco_t4.json"
     },
     {
-      "name": "INCOMPLETE - Unhealthy Diet U1 Scenario",
+      "name": "Appendix 3 - D3 Scenario",
+      "filename": "diabetes_d3_scenario.json"
+    },
+    {
+      "name": "INCOMPLETE - Appendix 3 - Unhealthy Diet U1 Scenario",
       "filename": "unhealthy_diet_u1.json"
     },
     {
-      "name": "Appendix 3 - D5 Scenario",
-      "filename": "d5_scenario.json"
-    },
-    {
-      "name": "Tobacco T5 Scenario",
+      "name": "Appendix 3 - Tobacco T5 Scenario",
       "filename": "tobacco_t5.json"
     }
   ]
