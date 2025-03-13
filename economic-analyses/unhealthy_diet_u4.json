@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_UNHEALTHY_DIET_U4",
+    "description": "Reduce nutrient intake (incl. salt) through the implementation of front-of-pack labelling",
+    "baseline_name": "Appendix 3 - Unhealthy Diet Null Scenario",
+    "comparator_name": "INCOMPLETE - Appendix 3 - Unhealthy Diet U4 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

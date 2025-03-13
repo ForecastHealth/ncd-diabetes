@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_D1",
+    "description": "Control of blood pressure in people with diabetes",
+    "baseline_name": "Appendix 3 - DIABETES Null Scenario",
+    "comparator_name": "Appendix 3 - D6",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

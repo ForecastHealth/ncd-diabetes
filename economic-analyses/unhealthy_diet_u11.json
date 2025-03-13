@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_UNHEALTHY_DIET_U11",
+    "description": "Implement nutrition labelling to reduce total energy intake (kcal), sugars, sodium and fats",
+    "baseline_name": "Appendix 3 - Unhealthy Diet Null Scenario",
+    "comparator_name": "Appendix 3 - Unhealthy Diet U11 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

@@ -1,0 +1,8 @@
+{
+    "name": "D3",
+    "description": "Statin use in people with diabetes > 40 years old",
+    "baseline_name": "Appendix 3 - CVD Null Scenario",
+    "comparator_name": "Appendix 3 - D7",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

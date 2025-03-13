@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_UNHEALTHY_DIET_U1",
+    "description": "Reduce nutrient intake (incl. salt) through the reformulation of food products to contain less salt and the setting of target levels for the amount of salt in foods and meals",
+    "baseline_name": "Appendix 3 - Unhealthy Diet Null Scenario",
+    "comparator_name": "INCOMPLETE - Appendix 3 - Unhealthy Diet U1 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

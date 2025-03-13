@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_T6",
+    "description": "Provision of cost-covered effective population-wide support (including brief advice, national toll-free quit line services and mCessation) for tobacco cessation to all tobacco users",
+    "baseline_name": "Appendix 3 - Tobacco Null Scenario",
+    "comparator_name": "Appendix 3 - Tobacco T6 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

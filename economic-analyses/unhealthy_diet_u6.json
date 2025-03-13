@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_UNHEALTHY_DIET_U6",
+    "description": "INCOMPLETE - Reduce sugar consumption through effective taxation on sugar-sweetened beverages",
+    "baseline_name": "Appendix 3 - Unhealthy Diet Null Scenario",
+    "comparator_name": "Appendix 3 - Unhealthy Diet U6 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_T4",
+    "description": "Eliminate exposure to second-hand tobacco smoke in all indoor workplaces, public places, public transport",
+    "baseline_name": "Appendix 3 - Tobacco Null Scenario",
+    "comparator_name": "Appendix 3 - Tobacco T4 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

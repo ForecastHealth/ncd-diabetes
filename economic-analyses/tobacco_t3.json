@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_T3",
+    "description": "Enact and enforce comprehensive bans on tobacco advertising, promotion and sponsorship",
+    "baseline_name": "Appendix 3 - Tobacco Null Scenario",
+    "comparator_name": "Appendix 3 - Tobacco T3 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

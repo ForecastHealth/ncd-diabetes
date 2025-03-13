@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_T2",
+    "description": "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages",
+    "baseline_name": "Appendix 3 - Tobacco Null Scenario",
+    "comparator_name": "Appendix 3 - Tobacco T2 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}

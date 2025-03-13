@@ -1,0 +1,8 @@
+{
+    "name": "DIABETES_ALCOHOL_2",
+    "description": "Enact and enforce bans or comprehensive restrictions on exposure to alcohol advertising (across multiple types of media)",
+    "baseline_name": "Appendix 3 - Alcohol Null Scenario",
+    "comparator_name": "Appendix 3 - Alcohol A2 Scenario",
+    "numerator": "costs",
+    "denominator": "Healthy Years Lived"
+}
