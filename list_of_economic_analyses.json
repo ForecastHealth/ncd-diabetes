@@ -1,0 +1,236 @@
+[
+    {
+        "name": "DIABETES_T1",
+        "description": "Increase excise taxes and prices on tobacco products",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T1 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_UNHEALTHY_DIET_U10",
+        "description": "Replace trans-fats and saturated fats with unsaturated fats through reformulation, labelling, fiscal policies or agricultural policies",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U10 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_UNHEALTHY_DIET_U11",
+        "description": "Implement nutrition labelling to reduce total energy intake (kcal), sugars, sodium and fats",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U11 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_ALCOHOL_2",
+        "description": "Enact and enforce bans or comprehensive restrictions on exposure to alcohol advertising (across multiple types of media)",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Alcohol Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Alcohol A2 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_UNHEALTHY_DIET_U3",
+        "description": "Reduce nutrient intake (incl. salt) through a behaviour change communication and mass media campaign",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U3 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_UNHEALTHY_DIET_U2",
+        "description": "Reduce nutrient intake (incl. salt) through the establishment of a supportive environment in public institutions such as hospitals, schools, workplaces and nursing homes, to enable lower sodium options to be provided",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario",
+        "comparator_scenario_label": "INCOMPLETE - Appendix 3 - Unhealthy Diet U2 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_D5",
+        "description": "Control of blood pressure in people with diabetes",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Diabetes Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - D5 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_T2",
+        "description": "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T2 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_PHYSICAL_INACTIVITY_P1",
+        "description": "Brief advice as part of routine care",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Physical Inactivity Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Physical Inactivity P1 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_T3",
+        "description": "Enact and enforce comprehensive bans on tobacco advertising, promotion and sponsorship",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T3 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_ALCOHOL_4",
+        "description": "Enact and enforce drink-driving laws and blood alcohol concentration limits via sobriety checkpoints",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Alcohol Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Alcohol A4 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_UNHEALTHY_DIET_U4",
+        "description": "Reduce nutrient intake (incl. salt) through the implementation of front-of-pack labelling",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario",
+        "comparator_scenario_label": "INCOMPLETE - Appendix 3 - Unhealthy Diet U4 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_ALCOHOL_1",
+        "description": "Increase excise taxes on alcoholic beverages",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Alcohol Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Alcohol A1 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_D1",
+        "description": "Foot care to prevent amputation in people with diabetes (including educational programmes, access to appropriate footwear, multidisciplinary clinics)",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Diabetes Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - D1 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_ALCOHOL_5",
+        "description": "Provide brief psychosocial intervention for persons with hazardous and harmful alcohol use",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Alcohol Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Alcohol A5 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_UNHEALTHY_DIET_U7",
+        "description": "Implement WHOs set of recommendations on the marketing of foods and non-alcoholic beverages to children, including mechanisms for monitoring",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U7 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_ALCOHOL_3",
+        "description": "Enact and enforce restrictions on the physical availability of retailed alcohol (via reduced hours of sale)",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Alcohol Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Alcohol A3 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_PHYSICAL_INACTIVITY_P2",
+        "description": "Awareness campaigns to encourage physical activity",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Physical Inactivity Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Physical Inactivity P2",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_T6",
+        "description": "Provision of cost-covered effective population-wide support (including brief advice, national toll-free quit line services and mCessation) for tobacco cessation to all tobacco users",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T6 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_UNHEALTHY_DIET_U6",
+        "description": "INCOMPLETE - Reduce sugar consumption through effective taxation on sugar-sweetened beverages",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U6 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_T7",
+        "description": "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T7 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "D3",
+        "description": "Glycaemic control for people with diabetes, along with standard home glucose monitoring for people treated with insulin to reduce diabetes complications",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Diabetes Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - D3 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_T4",
+        "description": "Eliminate exposure to second-hand tobacco smoke in all indoor workplaces, public places, public transport",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T4 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_D2",
+        "description": "Diabetic retinopathy screening for all diabetes patients and laser photocoagulation for prevention of blindness",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Diabetes Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - D2 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_UNHEALTHY_DIET_U1",
+        "description": "Reduce nutrient intake (incl. salt) through the reformulation of food products to contain less salt and the setting of target levels for the amount of salt in foods and meals",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario",
+        "comparator_scenario_label": "INCOMPLETE - Appendix 3 - Unhealthy Diet U1 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "DIABETES_T5",
+        "description": "Implement effective mass media campaigns that educate the public about the harms of smoking/tobacco use and second-hand smoke",
+        "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T5 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    }
+]

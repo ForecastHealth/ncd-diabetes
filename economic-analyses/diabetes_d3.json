@@ -1,5 +1,5 @@
 {
-    "name": "D3",
+    "name": "DIABETES_D3",
     "description": "Glycaemic control for people with diabetes, along with standard home glucose monitoring for people treated with insulin to reduce diabetes complications",
     "baseline_name": "Appendix 3 - Diabetes Null Scenario",
     "comparator_name": "Appendix 3 - D3 Scenario",

@@ -3,26 +3,35 @@
 import json
 import glob
 import os
+import argparse
 
-def create_economic_analyses():
+def create_economic_analyses(countries_file_path=None):
     # Initialize list to store economic analyses
     economic_analyses = []
     
     # Check if countries file exists
     country_iso3_codes = []
-    countries_file_exists = os.path.exists('./list_of_countries.json')
+    countries_file_exists = False
     
-    if countries_file_exists:
+    # Use provided countries file or default to hardcoded path
+    if countries_file_path is None:
+        countries_file_path = './list_of_countries.json'
+    
+    if os.path.exists(countries_file_path):
+        countries_file_exists = True
         try:
             # Load countries data
-            with open('./list_of_countries.json', 'r', encoding='utf-8') as f:
+            with open(countries_file_path, 'r', encoding='utf-8') as f:
                 countries_data = json.load(f)
             
             # Extract ISO3 codes
             country_iso3_codes = [country['iso3'] for country in countries_data['countries']]
+            print(f"Using countries from: {countries_file_path}")
         except (json.JSONDecodeError, KeyError, FileNotFoundError) as e:
             print(f"Error processing countries file: {e}")
             countries_file_exists = False
+    else:
+        print(f"Countries file not found: {countries_file_path}")
     
     # Process each economic analysis file
     cea_files = glob.glob('./economic-analyses/*.json')
@@ -68,4 +77,9 @@ def create_economic_analyses():
     print(f"Total records: {len(economic_analyses)}")
 
 if __name__ == "__main__":
-    create_economic_analyses() 
+    parser = argparse.ArgumentParser(description='Create economic analyses using a countries JSON file')
+    parser.add_argument('--countries', '-c', dest='countries_file', 
+                        help='Path to the JSON file containing country data (default: ./list_of_countries.json)')
+    args = parser.parse_args()
+    
+    create_economic_analyses(args.countries_file)
