@@ -7871,6 +7871,14 @@
       ]
     },
     {
+      "method": "echo",
+      "batch": false,
+      "narration": "Record Healthy Years Lived",
+      "included_source_nodes": [
+        "Disability"
+      ]
+    },
+    {
       "method": "flush",
       "batch": false,
       "narration": "Nodes are flushed"
