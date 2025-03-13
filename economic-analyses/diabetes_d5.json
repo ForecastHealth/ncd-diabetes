@@ -1,8 +1,8 @@
 {
     "name": "DIABETES_D5",
-    "description": "Statin use in people with diabetes > 40 years old",
-    "baseline_name": "Appendix 3 - CVD Null Scenario",
-    "comparator_name": "Appendix 3 - D7",
+    "description": "Control of blood pressure in people with diabetes",
+    "baseline_name": "Appendix 3 - Diabetes Null Scenario",
+    "comparator_name": "Appendix 3 - D5 Scenario",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }

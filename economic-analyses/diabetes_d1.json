@@ -1,8 +1,8 @@
 {
     "name": "DIABETES_D1",
-    "description": "Control of blood pressure in people with diabetes",
-    "baseline_name": "Appendix 3 - DIABETES Null Scenario",
-    "comparator_name": "Appendix 3 - D6",
+    "description": "Foot care to prevent amputation in people with diabetes (including educational programmes, access to appropriate footwear, multidisciplinary clinics)",
+    "baseline_name": "Appendix 3 - Diabetes Null Scenario",
+    "comparator_name": "Appendix 3 - D1 Scenario",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }

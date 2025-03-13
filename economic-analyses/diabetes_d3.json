@@ -1,8 +1,8 @@
 {
     "name": "D3",
-    "description": "Statin use in people with diabetes > 40 years old",
-    "baseline_name": "Appendix 3 - CVD Null Scenario",
-    "comparator_name": "Appendix 3 - D7",
+    "description": "Glycaemic control for people with diabetes, along with standard home glucose monitoring for people treated with insulin to reduce diabetes complications",
+    "baseline_name": "Appendix 3 - Diabetes Null Scenario",
+    "comparator_name": "Appendix 3 - D3 Scenario",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }
