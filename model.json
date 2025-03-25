@@ -7380,7 +7380,7 @@
           ],
           "method": "single_value",
           "parameters": {
-            "value": 0.1
+            "value": 1
           },
           "fill_value": 0
         }
@@ -7413,7 +7413,7 @@
           ],
           "method": "single_value",
           "parameters": {
-            "value": 0.1
+            "value": 1
           },
           "fill_value": 0
         }
@@ -7446,7 +7446,7 @@
           ],
           "method": "single_value",
           "parameters": {
-            "value": 0.1
+            "value": 1
           },
           "fill_value": 0
         }
@@ -7479,7 +7479,7 @@
           ],
           "method": "single_value",
           "parameters": {
-            "value": 0.1
+            "value": 1
           },
           "fill_value": 0
         }
@@ -7512,7 +7512,7 @@
           ],
           "method": "single_value",
           "parameters": {
-            "value": 0.1
+            "value": 1
           },
           "fill_value": 0
         }
