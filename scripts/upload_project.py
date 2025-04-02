@@ -112,28 +112,46 @@ def extract_id_from_response(response: Dict) -> Optional[str]:
 
 
 def extract_json_metadata(file_path: Path) -> Dict[str, Any]:
-    """Extract metadata from JSON file with fallbacks."""
+    """Extract metadata from JSON file with fallbacks, constructing user-friendly name."""
     try:
-        with open(file_path, 'r') as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
-        # Extract metadata or use defaults
         metadata = data.get('metadata', {})
-        name = metadata.get('name')
-        if not name:
-            name = file_path.stem
-        
+        label = metadata.get('label')  # Prioritize label
         description = metadata.get('description', '')
         is_baseline = metadata.get('isBaseline', False)
         
+        # Attempt to construct user-friendly name: "Label - ISO3"
+        name = None
+        if label:
+            try:
+                # Extract country code from parameters if possible
+                country_code = data.get('parameters', {}).get('Country', {}).get('value')
+                if country_code and isinstance(country_code, str) and len(country_code) == 3:
+                    name = f"{label} - {country_code}"
+                else:
+                    name = label  # Fallback to just the label if country code not found/invalid
+            except Exception:
+                name = label  # Fallback on error
+        
+        # Fall back to legacy name field in metadata if label not found
+        if not name:
+            name = metadata.get('name')
+            
+        # Final fallback to filename stem if no label or name was found
+        if not name:
+            name = file_path.stem
+        
         return {
-            'name': name,
+            'name': name,  # This is the potentially constructed user-friendly name
             'description': description,
             'is_baseline': is_baseline,
             'data': data
         }
     except (json.JSONDecodeError, FileNotFoundError) as e:
         print(f"Warning: Error processing {file_path}: {e}")
+        # Fallback if file reading fails
         return {
             'name': file_path.stem,
             'description': '',
