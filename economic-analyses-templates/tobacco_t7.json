@@ -1,8 +1,8 @@
 {
     "name": "DIABETES_T7",
     "description": "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit",
-    "baseline_name": "Appendix 3 - Tobacco Null Scenario",
-    "comparator_name": "Appendix 3 - Tobacco T7 Scenario",
+    "baseline_name": "tobacco_null",
+    "comparator_name": "tobacco_t7",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }

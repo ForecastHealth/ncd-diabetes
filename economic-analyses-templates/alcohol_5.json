@@ -1,8 +1,8 @@
 {
     "name": "DIABETES_ALCOHOL_5",
     "description": "Provide brief psychosocial intervention for persons with hazardous and harmful alcohol use",
-    "baseline_name": "Appendix 3 - Alcohol Null Scenario",
-    "comparator_name": "Appendix 3 - Alcohol A5 Scenario",
+    "baseline_name": "alcohol_null",
+    "comparator_name": "alcohol_a5",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }

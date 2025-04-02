@@ -1,8 +1,8 @@
 {
     "name": "DIABETES_ALCOHOL_4",
     "description": "Enact and enforce drink-driving laws and blood alcohol concentration limits via sobriety checkpoints",
-    "baseline_name": "Appendix 3 - Alcohol Null Scenario",
-    "comparator_name": "Appendix 3 - Alcohol A4 Scenario",
+    "baseline_name": "alcohol_null",
+    "comparator_name": "alcohol_a4",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }

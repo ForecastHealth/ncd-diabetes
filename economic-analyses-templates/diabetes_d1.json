@@ -1,8 +1,8 @@
 {
     "name": "DIABETES_D1",
     "description": "Foot care to prevent amputation in people with diabetes (including educational programmes, access to appropriate footwear, multidisciplinary clinics)",
-    "baseline_name": "Appendix 3 - Diabetes Null Scenario",
-    "comparator_name": "Appendix 3 - D1 Scenario",
+    "baseline_name": "diabetes_null_scenario",
+    "comparator_name": "diabetes_d1_scenario",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }

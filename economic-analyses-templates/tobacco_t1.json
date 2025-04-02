@@ -1,8 +1,8 @@
 {
     "name": "DIABETES_T1",
     "description": "Increase excise taxes and prices on tobacco products",
-    "baseline_name": "Appendix 3 - Tobacco Null Scenario",
-    "comparator_name": "Appendix 3 - Tobacco T1 Scenario",
+    "baseline_name": "tobacco_null",
+    "comparator_name": "tobacco_t1",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }

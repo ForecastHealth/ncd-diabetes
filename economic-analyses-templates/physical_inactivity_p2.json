@@ -1,8 +1,8 @@
 {
     "name": "DIABETES_PHYSICAL_INACTIVITY_P2",
     "description": "Awareness campaigns to encourage physical activity",
-    "baseline_name": "Appendix 3 - Physical Inactivity Null Scenario",
-    "comparator_name": "Appendix 3 - Physical Inactivity P2",
+    "baseline_name": "physical_inactivity_null",
+    "comparator_name": "physical_inactivity_p2",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }
