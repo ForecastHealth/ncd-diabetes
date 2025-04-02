@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_UNHEALTHY_DIET_U6",
-    "description": "Reduce sugar consumption through effective taxation on sugar-sweetened beverages",
-    "baseline_name": "unhealthy_diet_null",
-    "comparator_name": "unhealthy_diet_u6",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

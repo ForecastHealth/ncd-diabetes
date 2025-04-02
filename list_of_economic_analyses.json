@@ -40,14 +40,6 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
-        "name": "DIABETES_UNHEALTHY_DIET_U2 - AFG",
-        "description": "Reduce nutrient intake (incl. salt) through the establishment of a supportive environment in public institutions such as hospitals, schools, workplaces and nursing homes, to enable lower sodium options to be provided - AFG",
-        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario - AFG",
-        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U2 Scenario - AFG",
-        "numerator_label": "costs",
-        "denominator_label": "Healthy Years Lived"
-    },
-    {
         "name": "DIABETES_D5 - AFG",
         "description": "Control of blood pressure in people with diabetes - AFG",
         "baseline_scenario_label": "Appendix 3 - Diabetes Null Scenario - AFG",
@@ -72,26 +64,10 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
-        "name": "DIABETES_T3 - AFG",
-        "description": "Enact and enforce comprehensive bans on tobacco advertising, promotion and sponsorship - AFG",
-        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario - AFG",
-        "comparator_scenario_label": "Appendix 3 - Tobacco T3 Scenario - AFG",
-        "numerator_label": "costs",
-        "denominator_label": "Healthy Years Lived"
-    },
-    {
         "name": "DIABETES_ALCOHOL_4 - AFG",
         "description": "Enact and enforce drink-driving laws and blood alcohol concentration limits via sobriety checkpoints - AFG",
         "baseline_scenario_label": "Appendix 3 - Alcohol Null Scenario - AFG",
         "comparator_scenario_label": "Appendix 3 - Alcohol A4 Scenario - AFG",
-        "numerator_label": "costs",
-        "denominator_label": "Healthy Years Lived"
-    },
-    {
-        "name": "DIABETES_UNHEALTHY_DIET_U4 - AFG",
-        "description": "Reduce nutrient intake (incl. salt) through the implementation of front-of-pack labelling - AFG",
-        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario - AFG",
-        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U4 Scenario - AFG",
         "numerator_label": "costs",
         "denominator_label": "Healthy Years Lived"
     },
@@ -152,14 +128,6 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
-        "name": "DIABETES_UNHEALTHY_DIET_U6 - AFG",
-        "description": "Reduce sugar consumption through effective taxation on sugar-sweetened beverages - AFG",
-        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario - AFG",
-        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U6 Scenario - AFG",
-        "numerator_label": "costs",
-        "denominator_label": "Healthy Years Lived"
-    },
-    {
         "name": "DIABETES_T7 - AFG",
         "description": "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit - AFG",
         "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario - AFG",
@@ -176,26 +144,10 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
-        "name": "DIABETES_T4 - AFG",
-        "description": "Eliminate exposure to second-hand tobacco smoke in all indoor workplaces, public places, public transport - AFG",
-        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario - AFG",
-        "comparator_scenario_label": "Appendix 3 - Tobacco T4 Scenario - AFG",
-        "numerator_label": "costs",
-        "denominator_label": "Healthy Years Lived"
-    },
-    {
         "name": "DIABETES_D2 - AFG",
         "description": "Diabetic retinopathy screening for all diabetes patients and laser photocoagulation for prevention of blindness - AFG",
         "baseline_scenario_label": "Appendix 3 - Diabetes Null Scenario - AFG",
         "comparator_scenario_label": "Appendix 3 - D2 Scenario - AFG",
-        "numerator_label": "costs",
-        "denominator_label": "Healthy Years Lived"
-    },
-    {
-        "name": "DIABETES_UNHEALTHY_DIET_U1 - AFG",
-        "description": "Reduce nutrient intake (incl. salt) through the reformulation of food products to contain less salt and the setting of target levels for the amount of salt in foods and meals - AFG",
-        "baseline_scenario_label": "Appendix 3 - Unhealthy Diet Null Scenario - AFG",
-        "comparator_scenario_label": "Appendix 3 - Unhealthy Diet U1 Scenario - AFG",
         "numerator_label": "costs",
         "denominator_label": "Healthy Years Lived"
     },
