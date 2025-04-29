@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Tobacco T1 Scenario",
-    "description": "Increase excise taxes and prices on tobacco products",
+    "label": "Appendix 3 - Alcohol A3 Scenario",
+    "description": "Enact and enforce restrictions on the physical availability of retailed alcohol (via reduced hours of sale)",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -183,7 +183,7 @@
       ]
     },
     "Target Coverage Alcohol Restrict": {
-      "value": 0.0,
+      "value": 95.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.value"
@@ -211,7 +211,7 @@
       ]
     },
     "Target Coverage Tobacco Tax": {
-      "value": 0.25,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='BTDc3bch')].generate_array.parameters.value"

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Tobacco T2 Scenario",
-    "description": "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages",
+    "label": "Appendix 3 - Unhealthy Diet Null Scenario",
+    "description": "A scenario where there the coverage drops from baseline to 0",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -127,7 +127,7 @@
       ]
     },
     "Target Coverage Tobacco Warnlabel": {
-      "value": 0.95,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.value"

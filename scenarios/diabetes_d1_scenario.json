@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - D2 Scenario",
-    "description": "Diabetic retinopathy screening for all diabetes patients and laser photocoagulation for prevention of blindness",
+    "label": "Appendix 3 - D1 Scenario",
+    "description": "Foot care to prevent amputation in people with diabetes (including educational programmes, access to appropriate footwear, multidisciplinary clinics)",
     "authors": [],
     "date_created": "2024-12-10 13:04"
   },
@@ -97,7 +97,7 @@
       ]
     },
     "Retinopathy Screening Target Coverage": {
-      "value": 0.95,
+      "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.value"
@@ -139,7 +139,7 @@
       ]
     },
     "Neuropathy Screening Target Coverage": {
-      "value": 0.05,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.value"

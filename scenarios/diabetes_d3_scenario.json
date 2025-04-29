@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - D1 Scenario",
-    "description": "Foot care to prevent amputation in people with diabetes (including educational programmes, access to appropriate footwear, multidisciplinary clinics)",
+    "label": "Appendix 3 - D3 Scenario",
+    "description": "Glycaemic control for people with diabetes, along with standard home glucose monitoring for people treated with insulin to reduce diabetes complications",
     "authors": [],
     "date_created": "2024-12-10 13:04"
   },
@@ -55,7 +55,7 @@
       ]
     },
     "Standard Glycaemic Control Target Coverage": {
-      "value": 0.05,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.value"
@@ -76,7 +76,7 @@
       ]
     },
     "Intensive Glycaemic Control Target Coverage": {
-      "value": 0.05,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.value"
@@ -139,7 +139,7 @@
       ]
     },
     "Neuropathy Screening Target Coverage": {
-      "value": 0.95,
+      "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.value"

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Physical Inactivity Null Scenario",
-    "description": "A scenario where there the coverage drops from baseline to 0",
+    "label": "Appendix 3 - Tobacco T6 Scenario",
+    "description": "Provision of cost-covered effective population-wide support (including brief advice, national toll-free quit line services and mCessation) for tobacco cessation to all tobacco users",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -99,7 +99,7 @@
       ]
     },
     "Target Coverage Tobacco Quitbrief": {
-      "value": 0.0,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.value"

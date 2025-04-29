@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Tobacco T7 Scenario",
-    "description": "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit",
+    "label": "Appendix 3 - Alcohol A4 Scenario",
+    "description": "Enact and enforce drink-driving laws and blood alcohol concentration limits via sobriety checkpoints",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -113,7 +113,7 @@
       ]
     },
     "Target Coverage Tobacco Quitcessation": {
-      "value": 0.95,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.value"

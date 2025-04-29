@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Alcohol A5 Scenario",
-    "description": "Provide brief psychosocial intervention for persons with hazardous and harmful alcohol use",
+    "label": "Appendix 3 - Unhealthy Diet U7 Scenario",
+    "description": "Implement WHOs set of recommendations on the marketing of foods and non-alcoholic beverages to children, including mechanisms for monitoring",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -197,7 +197,7 @@
       ]
     },
     "Target Coverage Alcohol Counsel": {
-      "value": 0.95,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.value"
@@ -267,7 +267,7 @@
       ]
     },
     "Target Coverage Fiber Procurement": {
-      "value": 0.0,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.value"

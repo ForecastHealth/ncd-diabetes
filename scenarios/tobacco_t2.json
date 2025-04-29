@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Unhealthy Diet U10 Scenario",
-    "description": "Replace trans-fats and saturated fats with unsaturated fats through reformulation, labelling, fiscal policies or agricultural policies",
+    "label": "Appendix 3 - Tobacco T2 Scenario",
+    "description": "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -127,7 +127,7 @@
       ]
     },
     "Target Coverage Tobacco Warnlabel": {
-      "value": 0.0,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.value"

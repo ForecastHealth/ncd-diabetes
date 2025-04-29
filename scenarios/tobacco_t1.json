@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Tobacco T5 Scenario",
-    "description": "Implement effective mass media campaigns that educate the public about the harms of smoking/tobacco use and second-hand smoke",
+    "label": "Appendix 3 - Tobacco T1 Scenario",
+    "description": "Increase excise taxes and prices on tobacco products",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -141,7 +141,7 @@
       ]
     },
     "Target Coverage Tobacco Massmedia": {
-      "value": 0.95,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.value"
@@ -211,7 +211,7 @@
       ]
     },
     "Target Coverage Tobacco Tax": {
-      "value": 0.0,
+      "value": 0.25,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='BTDc3bch')].generate_array.parameters.value"

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Alcohol Null Scenario",
-    "description": "A scenario where there the coverage drops from baseline to 0",
+    "label": "Appendix 3 - Physical Inactivity P2",
+    "description": "Awareness campaigns to encourage physical activity",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -64,7 +64,7 @@
       ]
     },
     "Target Coverage Physical Inactivity Awareness": {
-      "value": 0.0,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.value"

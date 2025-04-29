@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Alcohol A1 Scenario",
-    "description": "Increase excise taxes on alcoholic beverages",
+    "label": "Appendix 3 - Tobacco Null Scenario",
+    "description": "A scenario where there the coverage drops from baseline to 0",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -225,7 +225,7 @@
       ]
     },
     "Target Coverage Alcohol Tax Spirits": {
-      "value": 0.25,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='taFGx45n')].generate_array.parameters.value"
@@ -239,7 +239,7 @@
       ]
     },
     "Target Coverage Alcohol Tax Beer": {
-      "value": 0.25,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='pc8FMpeL')].generate_array.parameters.value"
@@ -253,7 +253,7 @@
       ]
     },
     "Target Coverage Alcohol Tax Wine": {
-      "value": 0.25,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='2NvTp1ts')].generate_array.parameters.value"

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Unhealthy Diet U3 Scenario",
-    "description": "Reduce nutrient intake (incl. salt) through a behaviour change communication and mass media campaign",
+    "label": "Appendix 3 - Unhealthy Diet U11 Scenario",
+    "description": "Implement nutrition labelling to reduce total energy intake (kcal), sugars, sodium and fats",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -400,7 +400,7 @@
       ]
     },
     "Target Coverage Legume Reformulation": {
-      "value": 0.0,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='7VzYqajD')].generate_array.parameters.value"
@@ -456,7 +456,7 @@
       ]
     },
     "Target Coverage Sodium Knowledge": {
-      "value": 0.95,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='vUlB4rV4')].generate_array.parameters.value"

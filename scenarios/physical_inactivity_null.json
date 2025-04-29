@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Appendix 3 - Alcohol A3 Scenario",
-    "description": "Enact and enforce restrictions on the physical availability of retailed alcohol (via reduced hours of sale)",
+    "label": "Appendix 3 - Physical Inactivity Null Scenario",
+    "description": "A scenario where there the coverage drops from baseline to 0",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -183,7 +183,7 @@
       ]
     },
     "Target Coverage Alcohol Restrict": {
-      "value": 95.0,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.value"
