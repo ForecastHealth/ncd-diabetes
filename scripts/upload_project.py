@@ -123,17 +123,17 @@ def extract_json_metadata(file_path: Path) -> Dict[str, Any]:
         is_baseline = metadata.get('isBaseline', False)
         
         # Attempt to construct user-friendly name: "Label - ISO3"
-        name = None
-        if label:
-            try:
-                # Extract country code from parameters if possible
-                country_code = data.get('parameters', {}).get('Country', {}).get('value')
-                if country_code and isinstance(country_code, str) and len(country_code) == 3:
-                    name = f"{label} - {country_code}"
-                else:
-                    name = label  # Fallback to just the label if country code not found/invalid
-            except Exception:
-                name = label  # Fallback on error
+        name = label
+        # if label:
+        #     try:
+        #         # Extract country code from parameters if possible
+        #         country_code = data.get('parameters', {}).get('Country', {}).get('value')
+        #         if country_code and isinstance(country_code, str) and len(country_code) == 3:
+        #             name = f"{label} - {country_code}"
+        #         else:
+        #             name = label  # Fallback to just the label if country code not found/invalid
+        #     except Exception:
+        #         name = label  # Fallback on error
         
         # Fall back to legacy name field in metadata if label not found
         if not name:
