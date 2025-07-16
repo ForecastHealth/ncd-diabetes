@@ -1,0 +1,252 @@
+{
+    "countries": [
+        {
+            "name": "Afghanistan",
+            "iso3": "AFG"
+        },
+        {
+            "name": "Algeria",
+            "iso3": "DZA"
+        },
+        {
+            "name": "Angola",
+            "iso3": "AGO"
+        },
+        {
+            "name": "Argentina",
+            "iso3": "ARG"
+        },
+        {
+            "name": "Bangladesh",
+            "iso3": "BGD"
+        },
+        {
+            "name": "Brazil",
+            "iso3": "BRA"
+        },
+        {
+            "name": "Burkina Faso",
+            "iso3": "BFA"
+        },
+        {
+            "name": "Burundi",
+            "iso3": "BDI"
+        },
+        {
+            "name": "Cameroon",
+            "iso3": "CMR"
+        },
+        {
+            "name": "Central African Republic",
+            "iso3": "CAF"
+        },
+        {
+            "name": "Chad",
+            "iso3": "TCD"
+        },
+        {
+            "name": "China",
+            "iso3": "CHN"
+        },
+        {
+            "name": "Colombia",
+            "iso3": "COL"
+        },
+        {
+            "name": "Congo, Democratic Republic of the",
+            "iso3": "COD"
+        },
+        {
+            "name": "Côte d'Ivoire",
+            "iso3": "CIV"
+        },
+        {
+            "name": "Dominican Republic",
+            "iso3": "DOM"
+        },
+        {
+            "name": "Ecuador",
+            "iso3": "ECU"
+        },
+        {
+            "name": "Egypt",
+            "iso3": "EGY"
+        },
+        {
+            "name": "Eritrea",
+            "iso3": "ERI"
+        },
+        {
+            "name": "Ethiopia",
+            "iso3": "ETH"
+        },
+        {
+            "name": "Gambia",
+            "iso3": "GMB"
+        },
+        {
+            "name": "Ghana",
+            "iso3": "GHA"
+        },
+        {
+            "name": "Guatemala",
+            "iso3": "GTM"
+        },
+        {
+            "name": "Guinea",
+            "iso3": "GIN"
+        },
+        {
+            "name": "Guinea-Bissau",
+            "iso3": "GNB"
+        },
+        {
+            "name": "Haiti",
+            "iso3": "HTI"
+        },
+        {
+            "name": "India",
+            "iso3": "IND"
+        },
+        {
+            "name": "Indonesia",
+            "iso3": "IDN"
+        },
+        {
+            "name": "Iran, Islamic Republic of",
+            "iso3": "IRN"
+        },
+        {
+            "name": "Iraq",
+            "iso3": "IRQ"
+        },
+        {
+            "name": "Jordan",
+            "iso3": "JOR"
+        },
+        {
+            "name": "Kazakhstan",
+            "iso3": "KAZ"
+        },
+        {
+            "name": "Kenya",
+            "iso3": "KEN"
+        },
+        {
+            "name": "Madagascar",
+            "iso3": "MDG"
+        },
+        {
+            "name": "Malawi",
+            "iso3": "MWI"
+        },
+        {
+            "name": "Malaysia",
+            "iso3": "MYS"
+        },
+        {
+            "name": "Mali",
+            "iso3": "MLI"
+        },
+        {
+            "name": "Mexico",
+            "iso3": "MEX"
+        },
+        {
+            "name": "Morocco",
+            "iso3": "MAR"
+        },
+        {
+            "name": "Mozambique",
+            "iso3": "MOZ"
+        },
+        {
+            "name": "Myanmar",
+            "iso3": "MMR"
+        },
+        {
+            "name": "Nepal",
+            "iso3": "NPL"
+        },
+        {
+            "name": "Niger",
+            "iso3": "NER"
+        },
+        {
+            "name": "Nigeria",
+            "iso3": "NGA"
+        },
+        {
+            "name": "Pakistan",
+            "iso3": "PAK"
+        },
+        {
+            "name": "Peru",
+            "iso3": "PER"
+        },
+        {
+            "name": "Philippines",
+            "iso3": "PHL"
+        },
+        {
+            "name": "Russian Federation",
+            "iso3": "RUS"
+        },
+        {
+            "name": "Rwanda",
+            "iso3": "RWA"
+        },
+        {
+            "name": "Sierra Leone",
+            "iso3": "SLE"
+        },
+        {
+            "name": "South Africa",
+            "iso3": "ZAF"
+        },
+        {
+            "name": "Sri Lanka",
+            "iso3": "LKA"
+        },
+        {
+            "name": "Sudan",
+            "iso3": "SDN"
+        },
+        {
+            "name": "Tajikistan",
+            "iso3": "TJK"
+        },
+        {
+            "name": "Tanzania, United Republic of",
+            "iso3": "TZA"
+        },
+        {
+            "name": "Thailand",
+            "iso3": "THA"
+        },
+        {
+            "name": "Togo",
+            "iso3": "TGO"
+        },
+        {
+            "name": "Türkiye",
+            "iso3": "TUR"
+        },
+        {
+            "name": "Uganda",
+            "iso3": "UGA"
+        },
+        {
+            "name": "Ukraine",
+            "iso3": "UKR"
+        },
+        {
+            "name": "Uzbekistan",
+            "iso3": "UZB"
+        },
+        {
+            "name": "Viet Nam",
+            "iso3": "VNM"
+        }
+    ]
+}
