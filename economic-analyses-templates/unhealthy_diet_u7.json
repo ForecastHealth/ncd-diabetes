@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_UNHEALTHY_DIET_U7",
-    "description": "Implement WHOs set of recommendations on the marketing of foods and non-alcoholic beverages to children, including mechanisms for monitoring",
-    "baseline_name": "unhealthy_diet_null",
-    "comparator_name": "unhealthy_diet_u7",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

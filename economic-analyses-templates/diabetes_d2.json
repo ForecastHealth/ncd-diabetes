@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_D2",
-    "description": "Diabetic retinopathy screening for all diabetes patients and laser photocoagulation for prevention of blindness",
-    "baseline_name": "diabetes_null_scenario",
-    "comparator_name": "diabetes_d2_scenario",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

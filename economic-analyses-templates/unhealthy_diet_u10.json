@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_UNHEALTHY_DIET_U10",
-    "description": "Replace trans-fats and saturated fats with unsaturated fats through reformulation, labelling, fiscal policies or agricultural policies",
-    "baseline_name": "unhealthy_diet_null",
-    "comparator_name": "unhealthy_diet_u10",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

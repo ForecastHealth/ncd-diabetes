@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_T5",
-    "description": "Implement effective mass media campaigns that educate the public about the harms of smoking/tobacco use and second-hand smoke",
-    "baseline_name": "tobacco_null",
-    "comparator_name": "tobacco_t5",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

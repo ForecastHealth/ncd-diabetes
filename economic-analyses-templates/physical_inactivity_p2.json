@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_PHYSICAL_INACTIVITY_P2",
-    "description": "Awareness campaigns to encourage physical activity",
-    "baseline_name": "physical_inactivity_null",
-    "comparator_name": "physical_inactivity_p2",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

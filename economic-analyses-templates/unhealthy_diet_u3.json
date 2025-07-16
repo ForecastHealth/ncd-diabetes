@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_UNHEALTHY_DIET_U3",
-    "description": "Reduce nutrient intake (incl. salt) through a behaviour change communication and mass media campaign",
-    "baseline_name": "unhealthy_diet_null",
-    "comparator_name": "unhealthy_diet_u3",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

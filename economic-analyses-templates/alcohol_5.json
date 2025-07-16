@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_ALCOHOL_5",
-    "description": "Provide brief psychosocial intervention for persons with hazardous and harmful alcohol use",
-    "baseline_name": "alcohol_null",
-    "comparator_name": "alcohol_a5",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

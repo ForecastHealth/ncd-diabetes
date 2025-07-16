@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_ALCOHOL_3",
-    "description": "Enact and enforce restrictions on the physical availability of retailed alcohol (via reduced hours of sale)",
-    "baseline_name": "alcohol_null",
-    "comparator_name": "alcohol_a3",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

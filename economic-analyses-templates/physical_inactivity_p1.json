@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_PHYSICAL_INACTIVITY_P1",
-    "description": "Brief advice as part of routine care",
-    "baseline_name": "physical_inactivity_null",
-    "comparator_name": "physical_inactivity_p1",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}

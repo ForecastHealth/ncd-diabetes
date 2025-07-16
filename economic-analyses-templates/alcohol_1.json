@@ -1,8 +1,0 @@
-{
-    "name": "DIABETES_ALCOHOL_1",
-    "description": "Increase excise taxes on alcoholic beverages",
-    "baseline_name": "alcohol_null",
-    "comparator_name": "alcohol_a1",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}
