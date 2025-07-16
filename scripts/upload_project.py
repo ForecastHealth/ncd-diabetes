@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Interactive script to upload models, scenarios, resources, and economic analyses 
+Script to upload models, scenarios, resources, and economic analyses 
 from the current project directory to the API.
 """
 
@@ -10,7 +10,9 @@ import sys
 import re
 import os
 import csv
+import argparse
 import requests
+import ulid
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, Optional, Any, List, Tuple, NamedTuple
@@ -122,16 +124,11 @@ def extract_json_metadata(file_path: Path) -> Dict[str, Any]:
         description = metadata.get('description', '')
         is_baseline = metadata.get('isBaseline', False)
         
-        # Attempt to construct user-friendly name: "Label - ISO3"
+        # Use the label directly without appending country code
         name = None
         if label:
             try:
-                # Extract country code from parameters if possible
-                country_code = data.get('parameters', {}).get('Country', {}).get('value')
-                if country_code and isinstance(country_code, str) and len(country_code) == 3:
-                    name = f"{label} - {country_code}"
-                else:
-                    name = label  # Fallback to just the label if country code not found/invalid
+                name = label  # Use label directly without country code
             except Exception:
                 name = label  # Fallback on error
         
@@ -173,54 +170,6 @@ def print_section(title: str) -> None:
     print(f"\n--- {title} ---")
 
 
-def get_user_choice(prompt: str, options: List[str], allow_multiple: bool = False) -> List[int]:
-    """Display options and get user choice(s)."""
-    print(f"\n{prompt}")
-    for i, option in enumerate(options, 1):
-        print(f"{i}. {option}")
-    
-    if allow_multiple:
-        print("\nEnter comma-separated numbers (e.g., 1,3,4) or 'all' for all options")
-    else:
-        print("\nEnter a number")
-    
-    while True:
-        try:
-            user_input = input("> ").strip()
-            
-            if allow_multiple and user_input.lower() == 'all':
-                return list(range(1, len(options) + 1))
-            
-            if allow_multiple:
-                choices = [int(x.strip()) for x in user_input.split(',')]
-                if all(1 <= choice <= len(options) for choice in choices):
-                    return choices
-            else:
-                choice = int(user_input)
-                if 1 <= choice <= len(options):
-                    return [choice]
-                
-            print(f"Please enter valid number(s) between 1 and {len(options)}")
-        except ValueError:
-            print("Please enter valid number(s)")
-
-
-def display_menu():
-    """Display the main menu and get user choice."""
-    print_header("Botech Model Upload Tool")
-    
-    options = [
-        "Upload complete model (model + scenarios + resources + economic analyses)",
-        "Upload model only",
-        "Upload scenarios only (requires model)",
-        "Upload resources only (requires model)",
-        "Upload economic analyses only (requires model and scenarios)",
-        "Exit"
-    ]
-    
-    return get_user_choice("Select an option:", options)[0]
-
-
 def upload_model(db_identifiers_path: Path, 
                 api_base_url: str, admin_token: str, superuser_id: str) -> Optional[str]:
     """Upload the model to the API."""
@@ -241,14 +190,41 @@ def upload_model(db_identifiers_path: Path,
     print(f"Uploading model: {name}")
     print(f"Description: {description}")
     
+    # Load documentation from DOCUMENTATION.md if it exists
+    documentation = ""
+    documentation_path = Path("DOCUMENTATION.md")
+    if documentation_path.exists():
+        try:
+            with open(documentation_path, 'r', encoding='utf-8') as doc_file:
+                documentation = doc_file.read()
+        except Exception as e:
+            print(f"Warning: Failed to read DOCUMENTATION.md: {e}")
+    
+    # Load countries from list_of_countries.json if it exists
+    countries = None
+    countries_path = Path("list_of_countries.json")
+    if countries_path.exists():
+        try:
+            with open(countries_path, 'r', encoding='utf-8') as countries_file:
+                countries_data = json.load(countries_file)
+                countries = countries_data.get('countries', [])
+                print(f"Loaded {len(countries)} countries from {countries_path}")
+        except Exception as e:
+            print(f"Warning: Failed to read list_of_countries.json: {e}")
+
     # Upload model
     model_payload = {
         "name": name,
         "description": description,
         "modelData": model_metadata['data'],
-        "isPublic": True,
+        "documentation": documentation,
+        "isPublic": False,
         "version": "1.0.0"
     }
+    
+    # Add countries if available
+    if countries:
+        model_payload["countries"] = countries
     
     # Determine which API endpoint to use based on superuser_id
     if superuser_id:
@@ -272,7 +248,7 @@ def upload_model(db_identifiers_path: Path,
             admin_token
         )
     
-    # Extract model ID from the response (response logging removed)
+    # Extract model ID from the response
     model_id = extract_id_from_response(model_response)
     
     if not model_id:
@@ -331,7 +307,7 @@ def upload_scenarios(db_identifiers_path: Path, model_id: str,
             admin_token
         )
         
-        # Extract scenario ID from the response (response logging removed)
+        # Extract scenario ID from the response
         scenario_id = extract_id_from_response(scenario_response)
         
         if scenario_id:
@@ -344,9 +320,226 @@ def upload_scenarios(db_identifiers_path: Path, model_id: str,
     return scenario_ids
 
 
+def upload_resource_and_scenarios(db_identifiers_path: Path, model_id: str,
+                                    api_base_url: str, admin_token: str) -> Tuple[Optional[str], int]:
+    """Uploads the resource and its associated resource scenarios."""
+    print_section("Uploading Resource and Resource Scenarios")
+    resource_id = None
+    uploaded_scenario_count = 0
+    
+    # 1. Upload Resource
+    resource_file_path = Path("resources/resource.json")
+    if not resource_file_path.exists():
+        print(f"Error: {resource_file_path} not found")
+        return resource_id, uploaded_scenario_count
+    
+    print(f"Processing resource: {resource_file_path}")
+    
+    # Extract resource metadata
+    resource_metadata = extract_json_metadata(resource_file_path)
+    resource_name = resource_metadata['name']
+    resource_description = resource_metadata['description']
+    is_baseline = resource_metadata.get('is_baseline', False)
+    
+    print(f"Uploading resource: {resource_name} (Baseline: {is_baseline})")
+    
+    # Create resource payload
+    resource_payload = {
+        "name": resource_name,
+        "description": resource_description,
+        "resourceData": resource_metadata['data'],
+        "isBaseline": is_baseline,
+        "version": "1.0.0"
+    }
+    
+    # Upload resource
+    resource_response = call_api(
+        "POST", 
+        f"/v1/models/{model_id}/resources/", 
+        resource_payload, 
+        api_base_url, 
+        admin_token
+    )
+    
+    # Extract resource ID from the response
+    resource_id = extract_id_from_response(resource_response)
+    
+    if not resource_id:
+        print("Warning: Could not extract resource ID")
+        return None, 0
+    
+    print(f"Resource ID: {resource_id}")
+    # Record the resource ID
+    add_identifier(db_identifiers_path, "RESOURCE", resource_name, resource_id)
+    
+    # 2. Upload Resource Scenarios
+    resource_scenarios_dir = Path("resource-scenarios")
+    
+    if not resource_scenarios_dir.exists() or not resource_scenarios_dir.is_dir():
+        print(f"No resource scenarios directory found at {resource_scenarios_dir}, skipping resource scenario upload")
+        return resource_id, uploaded_scenario_count
+    
+    if not any(resource_scenarios_dir.glob("*.json")):
+        print(f"No resource scenario files found in {resource_scenarios_dir}, skipping resource scenario upload")
+        return resource_id, uploaded_scenario_count
+    
+    print(f"Processing resource scenarios in {resource_scenarios_dir}")
+    
+    # Process each resource scenario JSON file
+    for resource_scenario_file in resource_scenarios_dir.glob("*.json"):
+        print(f"Processing resource scenario: {resource_scenario_file}")
+        
+        try:
+            # Extract scenario metadata
+            with open(resource_scenario_file, 'r', encoding='utf-8') as f:
+                scenario_data = json.load(f)
+            
+            # Extract metadata, handle potential missing keys
+            try:
+                scenario_name = scenario_data['metadata']['label']
+            except (KeyError, TypeError):
+                print(f"Warning: 'metadata.label' not found in {resource_scenario_file}. Using filename stem as name.")
+                scenario_name = resource_scenario_file.stem
+            
+            try:
+                scenario_description = scenario_data['metadata']['description']
+            except (KeyError, TypeError):
+                print(f"Warning: 'metadata.description' not found in {resource_scenario_file}. Using empty description.")
+                scenario_description = ""
+            
+            print(f"Uploading resource scenario: {scenario_name}")
+            
+            # Create resource scenario payload
+            resource_scenario_payload = {
+                "name": scenario_name,
+                "description": scenario_description,
+                "scenarioData": scenario_data,
+                "isBaseline": scenario_data.get('metadata', {}).get('isBaseline', False)
+            }
+            
+            # Upload resource scenario
+            resource_scenario_response = call_api(
+                "POST", 
+                f"/v1/models/{model_id}/resources/{resource_id}/resource-scenarios/", 
+                resource_scenario_payload, 
+                api_base_url, 
+                admin_token
+            )
+            
+            # Extract resource scenario ID from the response
+            resource_scenario_id = extract_id_from_response(resource_scenario_response)
+            
+            if resource_scenario_id:
+                print(f"Resource Scenario ID: {resource_scenario_id}")
+                # Record the resource scenario ID
+                add_identifier(db_identifiers_path, "RESOURCE_SCENARIO", scenario_name, resource_scenario_id)
+                uploaded_scenario_count += 1
+            else:
+                print(f"Warning: Failed to upload resource scenario {scenario_name}")
+        
+        except Exception as e:
+            print(f"Error processing resource scenario {resource_scenario_file}: {e}")
+            # Continue with next scenario
+    
+    return resource_id, uploaded_scenario_count
+
+
+def upload_model_entrypoints(db_identifiers_path: Path, model_id: str, resource_id: str,
+                             api_base_url: str, admin_token: str, use_existing_config_id: bool = False) -> Tuple[int, Optional[str]]:
+    """
+    Uploads model entrypoint configurations from entrypoints.json.
+    
+    Args:
+        db_identifiers_path: Path to the identifiers CSV file
+        model_id: ID of the model to upload entrypoints for
+        resource_id: ID of the resource to upload entrypoints for
+        api_base_url: Base URL of the API
+        admin_token: Admin token for API authentication
+        use_existing_config_id: If True, use the existing configuration ID from entrypoints file.
+                               If False, generate a new ULID for all entrypoints.
+    
+    Returns:
+        Tuple of (uploaded_entrypoint_count, configuration_id)
+    """
+    print_section("Uploading Model Entrypoints")
+    uploaded_entrypoint_count = 0
+    configuration_id = None
+    
+    # Check prerequisite
+    if not resource_id:
+        print("Skipping entrypoint upload as resource ID is not available")
+        return uploaded_entrypoint_count, configuration_id
+    
+    # Locate and check entrypoint file
+    entrypoint_file_path = Path("entrypoints/entrypoints.json")
+    if not entrypoint_file_path.exists():
+        print(f"Error: {entrypoint_file_path} not found")
+        return uploaded_entrypoint_count, configuration_id
+    
+    # Load entrypoints data
+    try:
+        with open(entrypoint_file_path, 'r', encoding='utf-8') as f:
+            entrypoints_list = json.load(f)
+        
+        if not isinstance(entrypoints_list, list):
+            print(f"Error: Expected a list of entrypoints in {entrypoint_file_path}, found {type(entrypoints_list)}.")
+            return uploaded_entrypoint_count, configuration_id
+        
+        print(f"Found {len(entrypoints_list)} entrypoints in {entrypoint_file_path}")
+        
+        # Extract the configuration ID from the first entrypoint
+        if entrypoints_list and 'configurationId' in entrypoints_list[0]:
+            original_configuration_id = entrypoints_list[0]['configurationId']
+            
+            if use_existing_config_id:
+                configuration_id = original_configuration_id
+                print(f"Using existing configuration ID: {configuration_id}")
+            else:
+                # Generate a new ULID for all entrypoints
+                configuration_id = str(ulid.new())
+                print(f"Replacing configuration ID: {original_configuration_id} with new ID: {configuration_id}")
+                
+                # Update configuration ID in all entrypoints
+                for entrypoint in entrypoints_list:
+                    entrypoint['configurationId'] = configuration_id
+    
+    except (json.JSONDecodeError, FileNotFoundError) as e:
+        print(f"Error reading or parsing {entrypoint_file_path}: {e}")
+        return uploaded_entrypoint_count, configuration_id
+    
+    # Upload each entrypoint
+    for i, entrypoint_data in enumerate(entrypoints_list, 1):
+        try:
+            endpoint = f"/v1/models/{model_id}/resources/{resource_id}/entrypoints/"
+            print(f"Uploading entrypoint {i}/{len(entrypoints_list)}")
+            
+            entrypoint_response = call_api(
+                "POST", 
+                endpoint, 
+                entrypoint_data,  # The individual entrypoint object
+                api_base_url, 
+                admin_token
+            )
+            
+            # Check if upload was successful
+            if 'error' not in entrypoint_response:
+                uploaded_entrypoint_count += 1
+                if uploaded_entrypoint_count % 10 == 0 or uploaded_entrypoint_count == len(entrypoints_list):
+                    print(f"Progress: {uploaded_entrypoint_count}/{len(entrypoints_list)} entrypoints uploaded")
+            else:
+                print(f"Error uploading entrypoint {i}/{len(entrypoints_list)}: {entrypoint_response.get('error')}")
+        
+        except Exception as e:
+            print(f"Error processing entrypoint {i}/{len(entrypoints_list)}: {e}")
+    
+    print(f"Successfully uploaded {uploaded_entrypoint_count} out of {len(entrypoints_list)} entrypoints")
+    return uploaded_entrypoint_count, configuration_id
+
+
 def upload_resources(db_identifiers_path: Path, model_id: str,
                      api_base_url: str, admin_token: str) -> List[str]:
-    """Upload resources to the API."""
+    """Upload resources to the API. Deprecated: Use upload_resource_and_scenarios instead."""
+    print("Warning: upload_resources is deprecated, please use upload_resource_and_scenarios")
     print_section("Uploading Resources")
     
     resources_dir = Path("resources")
@@ -392,7 +585,7 @@ def upload_resources(db_identifiers_path: Path, model_id: str,
             admin_token
         )
         
-        # Extract resource ID from the response (response logging removed)
+        # Extract resource ID from the response
         resource_id = extract_id_from_response(resource_response)
         
         if resource_id:
@@ -531,7 +724,7 @@ def upload_economic_analyses(db_identifiers_path: Path, model_id: str,
                 admin_token
             )
             
-            # Extract analysis ID from the response (response logging removed)
+            # Extract analysis ID from the response
             analysis_id = extract_id_from_response(analysis_response)
             
             if analysis_id:
@@ -550,7 +743,7 @@ def upload_economic_analyses(db_identifiers_path: Path, model_id: str,
 
 class Identifier(NamedTuple):
     """Data structure for database identifiers."""
-    type: str  # MODEL, SCENARIO, RESOURCE, ANALYSIS
+    type: str  # MODEL, SCENARIO, RESOURCE, RESOURCE_SCENARIO, ANALYSIS
     name: str
     id: str
     timestamp: str = ""
@@ -567,7 +760,8 @@ def create_db_identifiers_file(db_identifiers_path: Path) -> None:
 
 
 def print_summary(db_identifiers_path: Path, model_name: Optional[str], model_id: Optional[str],
-                 scenario_count: int, resource_count: int, analysis_count: int) -> None:
+                 scenario_count: int, resource_scenario_count: int, entrypoint_count: int,
+                 analysis_count: int) -> None:
     """Print a summary of the upload results."""
     print_header("Upload Summary")
     
@@ -577,7 +771,8 @@ def print_summary(db_identifiers_path: Path, model_name: Optional[str], model_id
         print(f"Model: {model_name} (ID: {model_id})")
     
     print(f"Scenarios uploaded: {scenario_count}")
-    print(f"Resources uploaded: {resource_count}")
+    print(f"Resource scenarios uploaded: {resource_scenario_count}")
+    print(f"Model entrypoints uploaded: {entrypoint_count}")
     print(f"Economic analyses uploaded: {analysis_count}")
     
     components = []
@@ -585,8 +780,10 @@ def print_summary(db_identifiers_path: Path, model_name: Optional[str], model_id
         components.append("model")
     if scenario_count > 0:
         components.append("scenarios")
-    if resource_count > 0:
-        components.append("resources")
+    if resource_scenario_count > 0:
+        components.append("resource scenarios")
+    if entrypoint_count > 0:
+        components.append("model entrypoints")
     if analysis_count > 0:
         components.append("economic analyses")
     
@@ -605,11 +802,11 @@ def print_summary(db_identifiers_path: Path, model_name: Optional[str], model_id
             return
         
         # Print in a formatted table
-        print(f"{'TYPE':<10} {'NAME':<30} {'ID':<36} {'TIMESTAMP':<20}")
-        print("-" * 96)
+        print(f"{'TYPE':<18} {'NAME':<30} {'ID':<36} {'TIMESTAMP':<20}")
+        print("-" * 104)
         
         for identifier in all_identifiers:
-            print(f"{identifier.type:<10} {identifier.name[:28]:<30} {identifier.id:<36} {identifier.timestamp:<20}")
+            print(f"{identifier.type:<18} {identifier.name[:28]:<30} {identifier.id:<36} {identifier.timestamp:<20}")
     except Exception as e:
         print(f"Error displaying identifiers: {e}")
         # Fallback to raw display
@@ -655,185 +852,80 @@ def get_identifiers(db_identifiers_path: Path, id_type: Optional[str] = None) ->
     return identifiers
 
 
-def get_existing_model_id() -> Optional[str]:
-    """
-    Try to find an existing model ID from the project.csv file.
-    Returns the model ID if found, None otherwise.
-    """
-    db_identifiers_path = Path("project.csv")
-    
-    if not db_identifiers_path.exists():
-        return None
-    
-    try:
-        models = get_identifiers(db_identifiers_path, 'MODEL')
-        if models:
-            # Return the ID of the most recently added model
-            return models[-1].id
-    except Exception as e:
-        print(f"Warning: Error finding model ID: {e}")
-    
-    return None
-
-
 def main():
-    """Main function to run the interactive model upload tool."""
+    """Main function to run the model upload tool."""
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description="Upload model components to the API")
+    parser.add_argument('--use-configuration-id', action='store_true', 
+                        help='Use existing configuration ID from entrypoints file. If not set, a new ID will be generated.')
+    args = parser.parse_args()
+    
     db_identifiers_path = Path("project.csv")
     
     # Load environment variables
     api_base_url, admin_token, superuser_id = load_environment_variables()
     
-    # Initialize tracking variables
-    model_id = None
-    model_name = None
+    print_header("NCD Cancer Model Upload Tool")
+    print("Uploading complete model (model + scenarios + resources + resource scenarios + model entrypoints + economic analyses)")
+    
+    # Inform user about entrypoint configuration ID mode
+    if args.use_configuration_id:
+        print("Entrypoint mode: Using existing configuration ID from entrypoints file")
+    else:
+        print("Entrypoint mode: Generating new configuration ID for entrypoints")
+    
+    # Create or clear the DB identifiers file
+    create_db_identifiers_file(db_identifiers_path)
+    
+    # Upload the model
+    model_id = upload_model(db_identifiers_path, api_base_url, admin_token, superuser_id)
+    
     scenario_ids = []
-    resource_ids = []
+    resource_id = None
+    resource_scenario_count = 0
+    entrypoint_count = 0
     analysis_count = 0
+    model_name = None
     
-    # Display the main menu
-    choice = display_menu()
-    
-    # Create or clear the DB identifiers file if we're going to upload anything
-    if choice < 6:  # Not exit
-        create_db_identifiers_file(db_identifiers_path)
-    
-    # Process the user's choice
-    if choice == 1:  # Upload complete model
-        model_id = upload_model(db_identifiers_path, api_base_url, admin_token, superuser_id)
-        if model_id:
-            model_name = extract_json_metadata(Path("model.json"))['name']
-            scenario_ids = upload_scenarios(db_identifiers_path, model_id, api_base_url, admin_token)
-            resource_ids = upload_resources(db_identifiers_path, model_id, api_base_url, admin_token)
-            analysis_count = upload_economic_analyses(db_identifiers_path, model_id, api_base_url, admin_token, scenario_ids)
-    
-    elif choice == 2:  # Upload model only
-        model_id = upload_model(db_identifiers_path, api_base_url, admin_token, superuser_id)
-        if model_id:
-            model_name = extract_json_metadata(Path("model.json"))['name']
-    
-    elif choice == 3:  # Upload scenarios only
-        # Try to find an existing model ID
-        model_id = get_existing_model_id()
+    if model_id:
+        model_name = extract_json_metadata(Path("model.json"))['name']
         
-        if not model_id:
-            print("No existing model ID found. You need to upload a model first.")
-            print("You can:")
-            print("1. Upload a model now")
-            print("2. Enter a model ID manually")
-            print("3. Return to the main menu")
-            
-            subchoice = get_user_choice("Select an option:", ["Upload a model now", "Enter a model ID manually", "Return to main menu"])[0]
-            
-            if subchoice == 1:
-                model_id = upload_model(db_identifiers_path, api_base_url, admin_token, superuser_id)
-                if model_id:
-                    model_name = extract_json_metadata(Path("model.json"))['name']
-            elif subchoice == 2:
-                model_id = input("Enter the model ID: ").strip()
-                model_name = input("Enter the model name: ").strip()
-                add_identifier(db_identifiers_path, "MODEL", model_name, model_id)
-        else:
-            # Get model name from the existing ID
-            models = get_identifiers(db_identifiers_path, 'MODEL')
-            for model in models:
-                if model.id == model_id:
-                    model_name = model.name
-                    break
-            
-            print(f"Found existing model ID: {model_id}")
-            print(f"Model name: {model_name}")
+        # Upload scenarios
+        scenario_ids = upload_scenarios(db_identifiers_path, model_id, api_base_url, admin_token)
         
-        if model_id:
-            scenario_ids = upload_scenarios(db_identifiers_path, model_id, api_base_url, admin_token)
-    
-    elif choice == 4:  # Upload resources only
-        # Try to find an existing model ID
-        model_id = get_existing_model_id()
-        
-        if not model_id:
-            print("No existing model ID found. You need to upload a model first.")
-            print("You can:")
-            print("1. Upload a model now")
-            print("2. Enter a model ID manually")
-            print("3. Return to the main menu")
-            
-            subchoice = get_user_choice("Select an option:", ["Upload a model now", "Enter a model ID manually", "Return to main menu"])[0]
-            
-            if subchoice == 1:
-                model_id = upload_model(db_identifiers_path, api_base_url, admin_token, superuser_id)
-                if model_id:
-                    model_name = extract_json_metadata(Path("model.json"))['name']
-            elif subchoice == 2:
-                model_id = input("Enter the model ID: ").strip()
-                model_name = input("Enter the model name: ").strip()
-                add_identifier(db_identifiers_path, "MODEL", model_name, model_id)
-        else:
-            # Get model name from the existing ID
-            models = get_identifiers(db_identifiers_path, 'MODEL')
-            for model in models:
-                if model.id == model_id:
-                    model_name = model.name
-                    break
-            
-            print(f"Found existing model ID: {model_id}")
-            print(f"Model name: {model_name}")
-        
-        if model_id:
-            resource_ids = upload_resources(db_identifiers_path, model_id, api_base_url, admin_token)
-    
-    elif choice == 5:  # Upload economic analyses only
-        # Try to find an existing model ID
-        model_id = get_existing_model_id()
-        
-        if not model_id:
-            print("No existing model ID found. You need to upload a model first.")
-            print("You can:")
-            print("1. Upload a model now")
-            print("2. Enter a model ID manually")
-            print("3. Return to the main menu")
-            
-            subchoice = get_user_choice("Select an option:", ["Upload a model now", "Enter a model ID manually", "Return to main menu"])[0]
-            
-            if subchoice == 1:
-                model_id = upload_model(db_identifiers_path, api_base_url, admin_token, superuser_id)
-                if model_id:
-                    model_name = extract_json_metadata(Path("model.json"))['name']
-            elif subchoice == 2:
-                model_id = input("Enter the model ID: ").strip()
-                model_name = input("Enter the model name: ").strip()
-                add_identifier(db_identifiers_path, "MODEL", model_name, model_id)
-        else:
-            # Get model name from the existing ID
-            models = get_identifiers(db_identifiers_path, 'MODEL')
-            for model in models:
-                if model.id == model_id:
-                    model_name = model.name
-                    break
-            
-            print(f"Found existing model ID: {model_id}")
-            print(f"Model name: {model_name}")
-        
-        if model_id:
-            # Check if we need to upload scenarios first
-            if input("Do you need to upload scenarios first? (y/n): ").lower().startswith('y'):
-                scenario_ids = upload_scenarios(db_identifiers_path, model_id, api_base_url, admin_token)
-            
-            analysis_count = upload_economic_analyses(db_identifiers_path, model_id, api_base_url, admin_token, scenario_ids)
-    
-    elif choice == 6:  # Exit
-        print("Exiting...")
-        return
-    
-    # Print summary if we did anything
-    if choice < 6:
-        print_summary(
-            db_identifiers_path, 
-            model_name, 
-            model_id,
-            len(scenario_ids),
-            len(resource_ids),
-            analysis_count
+        # Upload resource and resource scenarios
+        resource_id, resource_scenario_count = upload_resource_and_scenarios(
+            db_identifiers_path, model_id, api_base_url, admin_token
         )
+        
+        # Upload model entrypoints if resource is available
+        entrypoint_configuration_id = None
+        if resource_id:
+            entrypoint_count, entrypoint_configuration_id = upload_model_entrypoints(
+                db_identifiers_path, model_id, resource_id, api_base_url, admin_token, args.use_configuration_id
+            )
+            
+            # Add ENTRYPOINT entry to project.csv if entrypoints were uploaded successfully and configuration ID is available
+            if entrypoint_count > 0 and entrypoint_configuration_id:
+                print(f"Adding ENTRYPOINT entry to project with configuration ID: {entrypoint_configuration_id}")
+                add_identifier(db_identifiers_path, "ENTRYPOINT", "Entrypoint Configuration", entrypoint_configuration_id)
+        else:
+            print("\nSkipping entrypoint upload as resource upload failed or was skipped.")
+            entrypoint_count = 0
+        
+        # Upload economic analyses
+        analysis_count = upload_economic_analyses(db_identifiers_path, model_id, api_base_url, admin_token, scenario_ids)
+    
+    # Print summary
+    print_summary(
+        db_identifiers_path, 
+        model_name, 
+        model_id,
+        len(scenario_ids),
+        resource_scenario_count,
+        entrypoint_count,
+        analysis_count
+    )
 
 
 if __name__ == "__main__":

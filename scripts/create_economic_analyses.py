@@ -28,9 +28,6 @@ def create_economic_analyses():
         print("No countries found in scenario filenames.")
         return
     
-    # Ensure economic-analyses directory exists
-    os.makedirs('./economic-analyses', exist_ok=True)
-    
     # Process each economic analysis template
     template_files = glob.glob('./economic-analyses-templates/*.json')
     if not template_files:
