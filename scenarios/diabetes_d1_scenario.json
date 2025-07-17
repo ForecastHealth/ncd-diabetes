@@ -64,7 +64,7 @@
       ]
     },
     "Standard Glycaemic Control Target Coverage": {
-      "value": 0.05,
+      "value": 0.00,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.value"
@@ -85,7 +85,7 @@
       ]
     },
     "Intensive Glycaemic Control Target Coverage": {
-      "value": 0.05,
+      "value": 0.00,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.value"
@@ -106,7 +106,7 @@
       ]
     },
     "Retinopathy Screening Target Coverage": {
-      "value": 0.05,
+      "value": 0.00,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.value"
@@ -127,7 +127,7 @@
       ]
     },
     "Nephropathy Screening Target Coverage": {
-      "value": 0.05,
+      "value": 0.00,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.value"
