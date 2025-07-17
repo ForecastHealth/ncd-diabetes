@@ -78,7 +78,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "disease": "Diabetes",
           "measure": "deaths"
         }
@@ -339,7 +339,7 @@
         "data_fetcher_label": "fhdb",
         "method": "population",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         },
         "fetch_once": true
       },
@@ -387,7 +387,7 @@
         "data_fetcher_label": "fhdb",
         "method": "healthy_disability",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "tags": [
@@ -553,7 +553,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "DiabeticNephropathy -> Deceased"
         }
       },
@@ -573,7 +573,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "LowerExtrmAmpt -> Deceased"
         }
       },
@@ -593,7 +593,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "DiabeticRetinopathy -> Deceased"
         }
       },
@@ -650,7 +650,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "Diabetes -> DiabeticNephropathy"
         }
       },
@@ -670,7 +670,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "Diabetes -> LowerExtrmAmpt"
         }
       },
@@ -690,7 +690,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "Diabetes -> DiabeticRetinopathy"
         }
       },
@@ -1489,7 +1489,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "disease": "Diabetes",
           "measure": "incidence"
         }
@@ -3348,7 +3348,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "order": 0,
@@ -3368,7 +3368,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "DsFreeSus -> Births"
@@ -3386,7 +3386,7 @@
         "data_fetcher_label": "fhdb",
         "method": "sex_ratio",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "sex": "m"
         }
       },
@@ -3412,7 +3412,7 @@
         "data_fetcher_label": "fhdb",
         "method": "sex_ratio",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "sex": "f"
         }
       },
@@ -3439,7 +3439,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "DsFreeSus -> Deceased"
@@ -3458,7 +3458,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "DiabetesEpsd -> Births"
@@ -3476,7 +3476,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "order": 0,
@@ -3496,7 +3496,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "disease": "Diabetes",
           "measure": "prevalence"
         }
@@ -3649,7 +3649,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "Prevalence -> LowerExtrmAmpt"
         }
       },
@@ -4761,7 +4761,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "Prevalence -> DiabeticRetinopathy"
         }
       },
@@ -4781,7 +4781,7 @@
         "data_fetcher_label": "diabetes",
         "method": "get_observation",
         "parameters": {
-          "country": "UGA",
+          "country": "AFG",
           "observation": "Prevalence -> DiabeticNephropathy"
         }
       },
@@ -4801,7 +4801,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "order": 0,
@@ -4820,7 +4820,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "order": 0,
@@ -4839,7 +4839,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "order": 0,
@@ -4859,7 +4859,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "DiabeticRetinopathy -> Births"
@@ -4878,7 +4878,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "LowerExtrmAmpt -> Births"
@@ -4897,7 +4897,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "DiabeticNephropathy -> Births"
@@ -5226,7 +5226,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "DiabetesEpsd -> Deceased"
@@ -5244,7 +5244,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "DiabeticRetinopathy -> Deceased"
@@ -5262,7 +5262,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "LowerExtrmAmpt -> Deceased"
@@ -5280,7 +5280,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "UGA"
+          "country": "AFG"
         }
       },
       "label": "DiabeticNephropathy -> Deceased"
