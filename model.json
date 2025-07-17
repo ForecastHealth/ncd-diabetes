@@ -422,11 +422,9 @@
       "color": "#06B4E1",
       "generate_array": {
         "fetch_once": true,
-        "data_fetcher_label": "diabetes",
-        "method": "get_observation",
+        "method": "single_value",
         "parameters": {
-          "country": "UGA",
-          "observation": "Diabetes -> Disability"
+          "value": 0.049
         }
       },
       "tags": [
@@ -613,11 +611,9 @@
       "color": "#06B4E1",
       "generate_array": {
         "fetch_once": true,
-        "data_fetcher_label": "diabetes",
-        "method": "get_observation",
+        "method": "single_value",
         "parameters": {
-          "country": "UGA",
-          "observation": "DiabeticRetinopathy -> Disability"
+          "value": 0.18
         }
       },
       "tags": [
@@ -633,11 +629,9 @@
       "color": "#06B4E1",
       "generate_array": {
         "fetch_once": true,
-        "data_fetcher_label": "diabetes",
-        "method": "get_observation",
+        "method": "single_value",
         "parameters": {
-          "country": "UGA",
-          "observation": "LowerExtrmAmpt -> Disability"
+          "value": 0.167
         }
       },
       "tags": [
@@ -1339,11 +1333,9 @@
       "color": "#06B4E1",
       "generate_array": {
         "fetch_once": true,
-        "data_fetcher_label": "diabetes",
-        "method": "get_observation",
+        "method": "single_value",
         "parameters": {
-          "country": "UGA",
-          "observation": "DiabeticNephropathy -> Disability"
+          "value": 0.630
         }
       },
       "tags": [
