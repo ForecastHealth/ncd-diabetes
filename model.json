@@ -4039,7 +4039,10 @@
           "value": 1
         }
       },
-      "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform"
+      "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "2AG3i3pr",
@@ -4071,7 +4074,10 @@
           "value": 1
         }
       },
-      "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform"
+      "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "Jcm0Uifx",
@@ -4103,7 +4109,10 @@
           "value": 1
         }
       },
-      "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform"
+      "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "I57hxswd",
@@ -4199,7 +4208,10 @@
           "value": 1
         }
       },
-      "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform"
+      "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "wV38kTvv",
@@ -4247,7 +4259,10 @@
           "value": 1
         }
       },
-      "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform"
+      "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "cthZMNMp",
@@ -4295,7 +4310,10 @@
           "value": 1
         }
       },
-      "label": "StdGlycControl_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform"
+      "label": "StdGlycControl_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "fRGMIszq",
@@ -4423,7 +4441,10 @@
           "value": 1
         }
       },
-      "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform"
+      "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect -> DiabeticRetinopathy_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "w9BRjqe9",
@@ -4551,7 +4572,10 @@
           "value": 1
         }
       },
-      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform"
+      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Effect -> LowerExtrmAmpt_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "gw9hRmLU",
@@ -4647,7 +4671,10 @@
           "value": 1
         }
       },
-      "label": "NephropathyScr_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform"
+      "label": "NephropathyScr_DiabeticNephropathy_Incidence_Effect -> DiabeticNephropathy_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "0knE2kOo",
