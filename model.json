@@ -7808,6 +7808,11 @@
   ],
   "subroutines": [
     {
+      "method": "flush",
+      "batch": false,
+      "narration": "Nodes are flushed"
+    },
+    {
       "method": "generate_balance",
       "batch": false,
       "narration": "All Constants and Functions are initialised",
@@ -8787,11 +8792,6 @@
         "Jj9sztq7",
         "B4SjgqET"
       ]
-    },
-    {
-      "method": "flush",
-      "batch": false,
-      "narration": "Nodes are flushed"
     }
   ],
   "equilibrium": {
