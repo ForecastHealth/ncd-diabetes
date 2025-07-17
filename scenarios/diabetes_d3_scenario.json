@@ -162,63 +162,63 @@
       ]
     },
     "Retinopathy Screening - Incidence Impact - Diabetic Retinopathy": {
-      "value": -0.2,
+      "value": 0.2,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tsmp3')].generate_array.parameters.value"
       ]
     },
     "Standard Glycaemic Control - Incidence Impact - Diabetic Retinopathy": {
-      "value": -0.65,
+      "value": 0.65,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tli5c')].generate_array.parameters.value"
       ]
     },
     "Intensive Glycaemic Control - Incidence Impact - Diabetic Retinopathy": {
-      "value": -0.75,
+      "value": 0.75,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='lrsnjkmt')].generate_array.parameters.value"
       ]
     },
     "Neuropathy Screening - Incidence Impact - Lower Extremity Amputation": {
-      "value": -0.35,
+      "value": 0.35,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tx5l9')].generate_array.parameters.value"
       ]
     },
     "Standard Glycaemic Control - Incidence Impact - Lower Extremity Amputation": {
-      "value": -0.286,
+      "value": 0.286,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tllxv')].generate_array.parameters.value"
       ]
     },
     "Intensive Glycaemic Control - Incidence Impact - Lower Extremity Amputation": {
-      "value": -0.151,
+      "value": 0.151,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tgf2u')].generate_array.parameters.value"
       ]
     },
     "Nephropathy Screening - Incidence Impact - Diabetic Nephropathy": {
-      "value": -0.24,
+      "value": 0.24,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9u3agu')].generate_array.parameters.value"
       ]
     },
     "Standard Glycaemic Control - Incidence Impact - Diabetic Nephropathy": {
-      "value": -0.39,
+      "value": 0.39,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tloqj')].generate_array.parameters.value"
       ]
     },
     "Intensive Glycamic Control - Incidence Impact - Diabetic Nephropathy": {
-      "value": -0.39,
+      "value": 0.39,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tdxgx')].generate_array.parameters.value"
