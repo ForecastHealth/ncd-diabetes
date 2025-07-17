@@ -550,11 +550,12 @@
       "label": "DiabeticNephropathy_CFR",
       "color": "#06B4E1",
       "generate_array": {
-        "data_fetcher_label": "diabetes",
-        "method": "get_observation",
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
         "parameters": {
           "country": "AFG",
-          "observation": "DiabeticNephropathy -> Deceased"
+          "disease": "CKD",
+          "measure": "deaths"
         }
       },
       "tags": [
@@ -4758,11 +4759,12 @@
       "value_to_target_operator": "add",
       "generate_array": {
         "fetch_once": true,
-        "data_fetcher_label": "diabetes",
-        "method": "get_observation",
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
         "parameters": {
           "country": "AFG",
-          "observation": "Prevalence -> DiabeticRetinopathy"
+          "disease": "Retinopathy",
+          "measure": "prevalence"
         }
       },
       "order": 3,
@@ -4778,11 +4780,12 @@
       "value_to_target_operator": "add",
       "generate_array": {
         "fetch_once": true,
-        "data_fetcher_label": "diabetes",
-        "method": "get_observation",
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
         "parameters": {
           "country": "AFG",
-          "observation": "Prevalence -> DiabeticNephropathy"
+          "disease": "CKD",
+          "measure": "prevalence"
         }
       },
       "order": 3,
