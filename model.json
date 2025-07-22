@@ -1569,7 +1569,7 @@
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0.15
+          "value": 0.05
         }
       },
       "node_type": "CONSTANT",
@@ -1755,7 +1755,7 @@
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0.05
+          "value": 0.15
         }
       },
       "node_type": "CONSTANT",
