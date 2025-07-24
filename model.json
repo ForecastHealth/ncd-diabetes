@@ -1627,18 +1627,17 @@
       "id": "RJSIzsEK",
       "x": -359.24,
       "y": -85.56,
-      "label": "relative-risk-physical-inactivity-ihd",
+      "label": "relative-risk-physical-inactivity-diabetes",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
       "flush": false,
       "generate_array": {
         "fetch_once": true,
         "data_fetcher_label": "risk_factors",
-        "method": "relative_risk",
+        "method": "relative_risk_631",
         "parameters": {
-          "schema": "physical_inactivity",
-          "risk_factor": "Physical Inactivity",
-          "disease": "Diabetes"
+          "disease": "diabetes",
+          "risk_factor": "Physical Inactivity"
         }
       }
     },
@@ -1878,18 +1877,17 @@
       "id": "UJon4r9l",
       "x": -39.05,
       "y": -120.66,
-      "label": "relative-risk-tobacco-ihd",
+      "label": "relative-risk-tobacco-diabetes",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
       "flush": false,
       "generate_array": {
         "fetch_once": true,
         "data_fetcher_label": "risk_factors",
-        "method": "relative_risk",
+        "method": "relative_risk_631",
         "parameters": {
-          "schema": "tobacco",
-          "risk_factor": "Tobacco",
-          "disease": "Diabetes"
+          "disease": "diabetes",
+          "risk_factor": "Tobacco"
         }
       }
     },
@@ -2388,18 +2386,17 @@
       "id": "AHM7HDJv",
       "x": 470.92,
       "y": -104.83,
-      "label": "relative-risk-alcohol-ihd",
+      "label": "relative-risk-alcohol-diabetes",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
       "flush": false,
       "generate_array": {
         "fetch_once": true,
         "data_fetcher_label": "risk_factors",
-        "method": "relative_risk",
+        "method": "relative_risk_631",
         "parameters": {
-          "schema": "alcohol",
-          "risk_factor": "Hazardous Alcohol use",
-          "disease": "Diabetes"
+          "disease": "diabetes",
+          "risk_factor": "Hazardous Alcohol use"
         }
       }
     },
