@@ -3090,11 +3090,12 @@
       "x": -369.39,
       "y": 56.4,
       "label": "effect-size-fiber-relabelling",
+      "description": "Maps to Adopt Standards: Front of Pack Labelling",
       "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0.08
+          "value": 0.8
         }
       },
       "node_type": "CONSTANT",
