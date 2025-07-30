@@ -2910,7 +2910,7 @@
         "data_fetcher_label": "risk_factors",
         "method": "relative_risk_631",
         "parameters": {
-          "disease": "Diabetes",
+          "disease": "diabetes",
           "risk_factor": "Fiber intake (g/day)"
         }
       }
