@@ -2901,18 +2901,17 @@
       "id": "nft1CcZO",
       "x": -269.62,
       "y": -6.85,
-      "label": "relative-risk-fiber-ihd",
+      "label": "relative-risk-fiber-diabetes",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
       "flush": false,
       "generate_array": {
         "fetch_once": true,
         "data_fetcher_label": "risk_factors",
-        "method": "relative_risk",
+        "method": "relative_risk_631",
         "parameters": {
-          "schema": "fiber",
-          "risk_factor": "Fiber intake (g/day)",
-          "disease": "Diabetes"
+          "disease": "Diabetes",
+          "risk_factor": "Fiber intake (g/day)"
         }
       }
     },
