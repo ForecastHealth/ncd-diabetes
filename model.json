@@ -2459,6 +2459,7 @@
         "data_fetcher_label": "risk_factors",
         "method": "alcohol_impact",
         "parameters": {
+          "country": "AFG",
           "intervention": "advertising"
         }
       },
@@ -2524,6 +2525,7 @@
         "data_fetcher_label": "risk_factors",
         "method": "alcohol_impact",
         "parameters": {
+          "country": "AFG",
           "intervention": "availability"
         }
       },
@@ -2589,6 +2591,7 @@
         "data_fetcher_label": "risk_factors",
         "method": "alcohol_impact",
         "parameters": {
+          "country": "AFG",
           "intervention": "brief_intervention"
         }
       },
