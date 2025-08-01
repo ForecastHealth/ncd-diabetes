@@ -2455,9 +2455,11 @@
       "label": "effect-size-alcohol-ban",
       "flush": true,
       "generate_array": {
-        "method": "single_value",
+        "fetch_once": true,
+        "data_fetcher_label": "risk_factors",
+        "method": "alcohol_impact",
         "parameters": {
-          "value": 0.015
+          "intervention": "advertising"
         }
       },
       "node_type": "CONSTANT",
@@ -2518,9 +2520,11 @@
       "label": "effect-size-alcohol-restrict",
       "flush": true,
       "generate_array": {
-        "method": "single_value",
+        "fetch_once": true,
+        "data_fetcher_label": "risk_factors",
+        "method": "alcohol_impact",
         "parameters": {
-          "value": 0.02
+          "intervention": "availability"
         }
       },
       "node_type": "CONSTANT",
@@ -2581,9 +2585,11 @@
       "label": "effect-size-alcohol-counsel",
       "flush": true,
       "generate_array": {
-        "method": "single_value",
+        "fetch_once": true,
+        "data_fetcher_label": "risk_factors",
+        "method": "alcohol_impact",
         "parameters": {
-          "value": 0.4
+          "intervention": "brief_intervention"
         }
       },
       "node_type": "CONSTANT",
