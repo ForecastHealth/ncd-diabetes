@@ -2455,7 +2455,7 @@
       "label": "effect-size-alcohol-ban",
       "flush": true,
       "generate_array": {
-        "fetch_once": true,
+        "generate_once": true,
         "data_fetcher_label": "risk_factors",
         "method": "alcohol_impact",
         "parameters": {
@@ -2520,7 +2520,7 @@
       "label": "effect-size-alcohol-restrict",
       "flush": true,
       "generate_array": {
-        "fetch_once": true,
+        "generate_once": true,
         "data_fetcher_label": "risk_factors",
         "method": "alcohol_impact",
         "parameters": {
@@ -2585,7 +2585,7 @@
       "label": "effect-size-alcohol-counsel",
       "flush": true,
       "generate_array": {
-        "fetch_once": true,
+        "generate_once": true,
         "data_fetcher_label": "risk_factors",
         "method": "alcohol_impact",
         "parameters": {
