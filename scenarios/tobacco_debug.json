@@ -140,18 +140,11 @@
         "$.nodes[?(@.id=='zUseZJKK')].generate_array.parameters.value"
       ]
     },
-    "Target Coverage Tobacco Tax": {
-      "value": 0.05,
-      "description": "The target coverage for the intervention",
+    "Price Increase Tobacco Tax": {
+      "value": 0.0,
+      "description": "The percentage increase in price from baseline.",
       "paths": [
-        "$.nodes[?(@.id=='BTDc3bch')].generate_array.parameters.value"
-      ]
-    },
-    "Baseline Coverage Tobacco Tax": {
-      "value": 0.05,
-      "description": "The baseline coverage for the intervention",
-      "paths": [
-        "$.nodes[?(@.id=='lFMuQmak')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='bdg7vh5J')].generate_array.parameters.value"
       ]
     }
   }
