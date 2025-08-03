@@ -13,8 +13,8 @@
   "nodes": [
     {
       "id": "ls9rc6e6",
-      "x": 190.73,
-      "y": 119,
+      "x": 205.33,
+      "y": 111.63,
       "label": "DiabeticNephropathy Mortality",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -32,8 +32,8 @@
     },
     {
       "id": "lrstce6u",
-      "x": 191.26,
-      "y": 129.05,
+      "x": 205.86,
+      "y": 121.68,
       "label": "DiabetesEpsd Mortality",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -51,8 +51,8 @@
     },
     {
       "id": "ls9rbfxn",
-      "x": 186.35,
-      "y": 108.51,
+      "x": 200.95,
+      "y": 101.14,
       "label": "LowerExtrmAmpt Mortality",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -70,8 +70,8 @@
     },
     {
       "id": "lrso81aw",
-      "x": 277.21,
-      "y": 132.19,
+      "x": 291.81,
+      "y": 124.82,
       "label": "DiabetesEpsd_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -91,8 +91,8 @@
     },
     {
       "id": "ls9rae7a",
-      "x": 185.08,
-      "y": 97.84,
+      "x": 199.68,
+      "y": 90.47,
       "label": "DiabeticRetinopathy Mortality",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -110,8 +110,8 @@
     },
     {
       "id": "Deceased",
-      "x": 200.11,
-      "y": 152.28,
+      "x": 214.71,
+      "y": 144.91,
       "label": "Deceased-DsFreeSus",
       "description": "The state of being dead",
       "node_type": "STATE",
@@ -125,8 +125,8 @@
     },
     {
       "id": "ls9qwy72",
-      "x": 73.81,
-      "y": 134.54,
+      "x": 88.41,
+      "y": 127.17,
       "label": "DiabeticNephropathy",
       "color": "#E5EF73",
       "ageing": true,
@@ -137,8 +137,8 @@
     },
     {
       "id": "ls9qwy35",
-      "x": 76.55,
-      "y": 122.65,
+      "x": 91.15,
+      "y": 115.28,
       "label": "LowerExtrmAmpt",
       "color": "#E5EF73",
       "ageing": true,
@@ -149,8 +149,8 @@
     },
     {
       "id": "ls9qw5uh",
-      "x": 76.04,
-      "y": 105.43,
+      "x": 90.64,
+      "y": 98.06,
       "label": "DiabeticRetinopathy",
       "color": "#E5EF73",
       "ageing": true,
@@ -161,8 +161,8 @@
     },
     {
       "id": "Disability",
-      "x": 95.48,
-      "y": 6.14,
+      "x": 110.08,
+      "y": -1.23,
       "label": "Healthy Years Lived",
       "description": "A store of disability adjusted life years",
       "node_type": "STATE",
@@ -175,8 +175,8 @@
     },
     {
       "id": "ls9reknk",
-      "x": 41.11,
-      "y": -16.15,
+      "x": 55.71,
+      "y": -23.52,
       "label": "DiabeticNephropathy HYL",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -194,8 +194,8 @@
     },
     {
       "id": "ls9re0t3",
-      "x": 37.17,
-      "y": -10.44,
+      "x": 51.77,
+      "y": -17.81,
       "label": "LowerExtrmAmpt HYL",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -213,8 +213,8 @@
     },
     {
       "id": "ls9rdcin",
-      "x": 40.09,
-      "y": -1.8,
+      "x": 54.69,
+      "y": -9.17,
       "label": "DiabeticRetinopathy HYL",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -232,8 +232,8 @@
     },
     {
       "id": "lrwzsau5",
-      "x": 35.94,
-      "y": 10.68,
+      "x": 50.54,
+      "y": 3.31,
       "label": "DiabetesEpsd HYL",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -251,8 +251,8 @@
     },
     {
       "id": "ls9r1is1",
-      "x": 171.08,
-      "y": 69.04,
+      "x": 185.68,
+      "y": 61.67,
       "label": "DiabeticNephropathy Incidence",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -270,8 +270,8 @@
     },
     {
       "id": "ls9r1ind",
-      "x": 174.61,
-      "y": 57.84,
+      "x": 189.21,
+      "y": 50.47,
       "label": "LowerExtrmAmpt Incidence",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -289,8 +289,8 @@
     },
     {
       "id": "ls9r0u95",
-      "x": 174.4,
-      "y": 45.58,
+      "x": 189,
+      "y": 38.21,
       "label": "DiabeticRetinopathy Incidence",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -308,8 +308,8 @@
     },
     {
       "id": "lrste7nj",
-      "x": 35.79,
-      "y": 26.33,
+      "x": 50.39,
+      "y": 18.96,
       "label": "DsFreeSus HYL",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -327,8 +327,8 @@
     },
     {
       "id": "DsFreeSus",
-      "x": 21.45,
-      "y": 54.27,
+      "x": 36.05,
+      "y": 46.9,
       "label": "DsFreeSus",
       "description": "State holding the balance of the healthy population",
       "node_type": "STATE",
@@ -350,8 +350,8 @@
     },
     {
       "id": "Births",
-      "x": -6.62,
-      "y": 54.46,
+      "x": 7.98,
+      "y": 47.09,
       "label": "Births",
       "description": "Store of the number of births in the population",
       "balance_type": "array",
@@ -365,8 +365,8 @@
     },
     {
       "id": "AsthmaEpsd",
-      "x": 1.09,
-      "y": 84.29,
+      "x": 15.69,
+      "y": 76.92,
       "label": "DiabetesEpsd",
       "ageing": true,
       "color": "#E5EF73",
@@ -378,8 +378,8 @@
     },
     {
       "id": "lrso71jf",
-      "x": -121.98,
-      "y": 25.33,
+      "x": -107.38,
+      "y": 17.96,
       "label": "Healthy_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -397,8 +397,8 @@
     },
     {
       "id": "lrwz1ikj",
-      "x": -54.44,
-      "y": 163.55,
+      "x": -39.84,
+      "y": 156.18,
       "label": "DiabeticNephropathy_Transform",
       "description": "Removing each effect from 1",
       "color": "#06B4E1",
@@ -416,8 +416,8 @@
     },
     {
       "id": "lrso7mga",
-      "x": -127.59,
-      "y": 9.74,
+      "x": -112.99,
+      "y": 2.37,
       "label": "DiabetesEpsd_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -434,8 +434,8 @@
     },
     {
       "id": "lrst79uc",
-      "x": -151.85,
-      "y": 134.03,
+      "x": -137.25,
+      "y": 126.66,
       "color": "#06B4E1",
       "flush": true,
       "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect",
@@ -452,8 +452,8 @@
     },
     {
       "id": "lrst0woc",
-      "x": -148.11,
-      "y": 203.05,
+      "x": -133.51,
+      "y": 195.68,
       "label": "RetinopathyScrn_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -470,8 +470,8 @@
     },
     {
       "id": "lrsnjkmt",
-      "x": -154.11,
-      "y": 64.69,
+      "x": -139.51,
+      "y": 57.32,
       "color": "#06B4E1",
       "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Impact",
       "generate_array": {
@@ -488,8 +488,8 @@
     },
     {
       "id": "lrsnalk2",
-      "x": -300.67,
-      "y": 202.54,
+      "x": -286.07,
+      "y": 195.17,
       "label": "RetinopathyScrn_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -506,8 +506,8 @@
     },
     {
       "id": "lrso22do",
-      "x": -233.38,
-      "y": 202.56,
+      "x": -218.78,
+      "y": 195.19,
       "label": "RetinopathyScrn_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -527,8 +527,8 @@
     },
     {
       "id": "lrsnavq2",
-      "x": -270.69,
-      "y": 132.51,
+      "x": -256.09,
+      "y": 125.14,
       "label": "StdGlycControl_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -545,8 +545,8 @@
     },
     {
       "id": "ls9rkzfi",
-      "x": 271.22,
-      "y": 119.7,
+      "x": 285.82,
+      "y": 112.33,
       "label": "DiabeticNephropathy_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -566,8 +566,8 @@
     },
     {
       "id": "ls9rlprb",
-      "x": 267.51,
-      "y": 107.32,
+      "x": 282.11,
+      "y": 99.95,
       "label": "LowerExtrmAmpt_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -586,8 +586,8 @@
     },
     {
       "id": "ls9rmh3c",
-      "x": 268.6,
-      "y": 97.98,
+      "x": 283.2,
+      "y": 90.61,
       "label": "DiabeticRetinopathy_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -606,8 +606,8 @@
     },
     {
       "id": "ls9rs1ih",
-      "x": -134.18,
-      "y": 0.05,
+      "x": -119.58,
+      "y": -7.32,
       "label": "DiabeticRetinopathy_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -624,8 +624,8 @@
     },
     {
       "id": "ls9rvbes",
-      "x": -130.2,
-      "y": -10.08,
+      "x": -115.6,
+      "y": -17.45,
       "label": "LowerExtrmAmpt_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -642,8 +642,8 @@
     },
     {
       "id": "ls9t0ml2",
-      "x": 264,
-      "y": 70.45,
+      "x": 278.6,
+      "y": 63.08,
       "label": "DiabeticNephropathy_Incidence_Rate",
       "color": "#06B4E1",
       "generate_array": {
@@ -662,8 +662,8 @@
     },
     {
       "id": "ls9t13d8",
-      "x": 257.24,
-      "y": 59.99,
+      "x": 271.84,
+      "y": 52.62,
       "label": "LowerExtrmAmpt_Incidence_Rate",
       "color": "#06B4E1",
       "generate_array": {
@@ -682,8 +682,8 @@
     },
     {
       "id": "ls9t1x51",
-      "x": 259.4,
-      "y": 46.87,
+      "x": 274,
+      "y": 39.5,
       "label": "DiabeticRetinopathy_Incidence_Rate",
       "color": "#06B4E1",
       "generate_array": {
@@ -702,8 +702,8 @@
     },
     {
       "id": "ls9t4fk3",
-      "x": -52.72,
-      "y": 146.84,
+      "x": -38.12,
+      "y": 139.47,
       "label": "LowerExtrmAmpt_Transform",
       "description": "Removing each effect from 1",
       "color": "#06B4E1",
@@ -721,8 +721,8 @@
     },
     {
       "id": "ls9t522j",
-      "x": -52.26,
-      "y": 129.13,
+      "x": -37.66,
+      "y": 121.76,
       "label": "DiabeticRetinopathy_Transform",
       "description": "Removing each effect from 1",
       "color": "#06B4E1",
@@ -740,8 +740,8 @@
     },
     {
       "id": "ls9tdixs",
-      "x": -152.78,
-      "y": 172.55,
+      "x": -138.18,
+      "y": 165.18,
       "color": "#06B4E1",
       "flush": true,
       "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Effect",
@@ -758,8 +758,8 @@
     },
     {
       "id": "ls9tdxgx",
-      "x": -153.04,
-      "y": 98.29,
+      "x": -138.44,
+      "y": 90.92,
       "color": "#06B4E1",
       "label": "IntsvGlycControl_DiabeticNephropathy_Incidence_Impact",
       "generate_array": {
@@ -776,8 +776,8 @@
     },
     {
       "id": "ls9tftfr",
-      "x": -151.47,
-      "y": 151.96,
+      "x": -136.87,
+      "y": 144.59,
       "color": "#06B4E1",
       "flush": true,
       "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Effect",
@@ -794,8 +794,8 @@
     },
     {
       "id": "ls9tgf2u",
-      "x": -153.84,
-      "y": 81.05,
+      "x": -139.24,
+      "y": 73.68,
       "color": "#06B4E1",
       "label": "IntsvGlycControl_LowerExtrmAmpt_Incidence_Impact",
       "generate_array": {
@@ -812,8 +812,8 @@
     },
     {
       "id": "ls9tli5c",
-      "x": -154.3,
-      "y": 70.07,
+      "x": -139.7,
+      "y": 62.7,
       "color": "#06B4E1",
       "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Impact",
       "generate_array": {
@@ -830,8 +830,8 @@
     },
     {
       "id": "ls9tllxv",
-      "x": -154.93,
-      "y": 86.7,
+      "x": -140.33,
+      "y": 79.33,
       "color": "#06B4E1",
       "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Impact",
       "generate_array": {
@@ -848,8 +848,8 @@
     },
     {
       "id": "ls9tloqj",
-      "x": -153.53,
-      "y": 104.51,
+      "x": -138.93,
+      "y": 97.14,
       "color": "#06B4E1",
       "label": "StdGlycControl_DiabeticNephropathy_Incidence_Impact",
       "generate_array": {
@@ -866,8 +866,8 @@
     },
     {
       "id": "ls9tlsbv",
-      "x": -270.18,
-      "y": 151.59,
+      "x": -255.58,
+      "y": 144.22,
       "label": "IntsvGlycControl_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -884,8 +884,8 @@
     },
     {
       "id": "ls9tlxvf",
-      "x": -152.12,
-      "y": 128.82,
+      "x": -137.52,
+      "y": 121.45,
       "color": "#06B4E1",
       "flush": true,
       "label": "StdGlycControl_DiabeticRetinopathy_Incidence_Effect",
@@ -902,8 +902,8 @@
     },
     {
       "id": "ls9tm2qi",
-      "x": -152.16,
-      "y": 146.31,
+      "x": -137.56,
+      "y": 138.94,
       "color": "#06B4E1",
       "flush": true,
       "label": "StdGlycControl_LowerExtrmAmpt_Incidence_Effect",
@@ -920,8 +920,8 @@
     },
     {
       "id": "ls9tm6nt",
-      "x": -152.26,
-      "y": 166.2,
+      "x": -137.66,
+      "y": 158.83,
       "color": "#06B4E1",
       "flush": true,
       "label": "StdGlycControl_DiabeticNephropathy_Incidence_Effect",
@@ -938,8 +938,8 @@
     },
     {
       "id": "ls9tmepe",
-      "x": -302.11,
-      "y": 223.85,
+      "x": -287.51,
+      "y": 216.48,
       "label": "IntsvGlycControl_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -956,8 +956,8 @@
     },
     {
       "id": "ls9tmgwr",
-      "x": -232.41,
-      "y": 223.78,
+      "x": -217.81,
+      "y": 216.41,
       "label": "IntsvGlycControl_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -977,8 +977,8 @@
     },
     {
       "id": "ls9tmkpe",
-      "x": -150.03,
-      "y": 222.53,
+      "x": -135.43,
+      "y": 215.16,
       "label": "IntsvGlycControl_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -995,8 +995,8 @@
     },
     {
       "id": "ls9tsmp3",
-      "x": -154.88,
-      "y": 59.48,
+      "x": -140.28,
+      "y": 52.11,
       "color": "#06B4E1",
       "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Impact",
       "generate_array": {
@@ -1013,8 +1013,8 @@
     },
     {
       "id": "ls9tsrav",
-      "x": -150.4,
-      "y": 123.35,
+      "x": -135.8,
+      "y": 115.98,
       "color": "#06B4E1",
       "flush": true,
       "label": "RetinopathyScrn_DiabeticRetinopathy_Incidence_Effect",
@@ -1031,8 +1031,8 @@
     },
     {
       "id": "ls9tsvuf",
-      "x": -270.73,
-      "y": 123.58,
+      "x": -256.13,
+      "y": 116.21,
       "label": "RetinopathyScrn_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -1049,8 +1049,8 @@
     },
     {
       "id": "ls9ttf2m",
-      "x": -147.8,
-      "y": 230.64,
+      "x": -133.2,
+      "y": 223.27,
       "label": "StdGlycControl_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1067,8 +1067,8 @@
     },
     {
       "id": "ls9ttil2",
-      "x": -234.12,
-      "y": 230.28,
+      "x": -219.52,
+      "y": 222.91,
       "label": "StdGlycControl_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -1088,8 +1088,8 @@
     },
     {
       "id": "ls9ttm0m",
-      "x": -302.29,
-      "y": 229.59,
+      "x": -287.69,
+      "y": 222.22,
       "label": "StdGlycControl_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1106,8 +1106,8 @@
     },
     {
       "id": "ls9tx5l9",
-      "x": -154.34,
-      "y": 75.52,
+      "x": -139.74,
+      "y": 68.15,
       "color": "#06B4E1",
       "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Impact",
       "generate_array": {
@@ -1124,8 +1124,8 @@
     },
     {
       "id": "ls9txa8s",
-      "x": -151.85,
-      "y": 141.39,
+      "x": -137.25,
+      "y": 134.02,
       "color": "#06B4E1",
       "flush": true,
       "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Effect",
@@ -1142,8 +1142,8 @@
     },
     {
       "id": "ls9txmx1",
-      "x": -271.54,
-      "y": 141.27,
+      "x": -256.94,
+      "y": 133.9,
       "label": "NeuropathyScr_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -1160,8 +1160,8 @@
     },
     {
       "id": "ls9txte5",
-      "x": -148.71,
-      "y": 209.48,
+      "x": -134.11,
+      "y": 202.11,
       "label": "NeuropathyScr_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1178,8 +1178,8 @@
     },
     {
       "id": "ls9txz8o",
-      "x": -233.02,
-      "y": 209.55,
+      "x": -218.42,
+      "y": 202.18,
       "label": "NeuropathyScr_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -1199,8 +1199,8 @@
     },
     {
       "id": "ls9ty2u5",
-      "x": -304.14,
-      "y": 208.69,
+      "x": -289.54,
+      "y": 201.32,
       "label": "NeuropathyScr_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1217,8 +1217,8 @@
     },
     {
       "id": "ls9u3agu",
-      "x": -153.44,
-      "y": 92.72,
+      "x": -138.84,
+      "y": 85.35,
       "color": "#06B4E1",
       "label": "NephropathyScr_DiabeticNephropathy_Incidence_Impact",
       "generate_array": {
@@ -1235,8 +1235,8 @@
     },
     {
       "id": "ls9u3pq6",
-      "x": -152.33,
-      "y": 160.08,
+      "x": -137.73,
+      "y": 152.71,
       "color": "#06B4E1",
       "flush": true,
       "label": "NephropathyScr_DiabeticNephropathy_Incidence_Effect",
@@ -1253,8 +1253,8 @@
     },
     {
       "id": "ls9u41gm",
-      "x": -270.95,
-      "y": 159.78,
+      "x": -256.35,
+      "y": 152.41,
       "label": "NephropathyScr_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -1271,8 +1271,8 @@
     },
     {
       "id": "ls9u4cw6",
-      "x": -304.38,
-      "y": 215.99,
+      "x": -289.78,
+      "y": 208.62,
       "label": "NephropathyScr_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1289,8 +1289,8 @@
     },
     {
       "id": "ls9u4iq6",
-      "x": -149.54,
-      "y": 215.97,
+      "x": -134.94,
+      "y": 208.6,
       "label": "NephropathyScr_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -1307,8 +1307,8 @@
     },
     {
       "id": "ls9u9aty",
-      "x": -232.1,
-      "y": 216.43,
+      "x": -217.5,
+      "y": 209.06,
       "label": "NephropathyScr_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -1328,15 +1328,15 @@
     },
     {
       "id": "ls9y3aia",
-      "x": -133.41,
-      "y": -19.83,
+      "x": -118.81,
+      "y": -27.2,
       "label": "DiabeticNephropathy_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.630
+          "value": 0.63
         }
       },
       "tags": [
@@ -1346,8 +1346,8 @@
     },
     {
       "id": "8UDk1pwr",
-      "x": -62.73,
-      "y": -18.71,
+      "x": -48.13,
+      "y": -26.08,
       "color": "#06B4E1",
       "generate_array": {
         "method": "single_value",
@@ -1361,8 +1361,8 @@
     },
     {
       "id": "UZumScoj",
-      "x": -58.7,
-      "y": 24.65,
+      "x": -44.1,
+      "y": 17.28,
       "label": "Healthy_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1376,8 +1376,8 @@
     },
     {
       "id": "8t0hevNa",
-      "x": -14.35,
-      "y": -18.16,
+      "x": 0.25,
+      "y": -25.53,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1391,8 +1391,8 @@
     },
     {
       "id": "33IvsrBr",
-      "x": -14.35,
-      "y": -10.61,
+      "x": 0.25,
+      "y": -17.98,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1406,8 +1406,8 @@
     },
     {
       "id": "3A5mnu49",
-      "x": -62.15,
-      "y": -10.67,
+      "x": -47.55,
+      "y": -18.04,
       "color": "#06B4E1",
       "generate_array": {
         "method": "single_value",
@@ -1421,8 +1421,8 @@
     },
     {
       "id": "bUNNX19G",
-      "x": -59.39,
-      "y": 0.22,
+      "x": -44.79,
+      "y": -7.15,
       "color": "#06B4E1",
       "generate_array": {
         "method": "single_value",
@@ -1436,8 +1436,8 @@
     },
     {
       "id": "cATgSiig",
-      "x": -61.74,
-      "y": 8.32,
+      "x": -47.14,
+      "y": 0.95,
       "color": "#06B4E1",
       "generate_array": {
         "method": "single_value",
@@ -1451,8 +1451,8 @@
     },
     {
       "id": "NHHJ4xJa",
-      "x": -14.69,
-      "y": 0.63,
+      "x": -0.09,
+      "y": -6.74,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1466,8 +1466,8 @@
     },
     {
       "id": "jNnbhWqn",
-      "x": -15.21,
-      "y": 9.82,
+      "x": -0.61,
+      "y": 2.45,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -1481,8 +1481,8 @@
     },
     {
       "id": "nLErvery",
-      "x": 247.61,
-      "y": 34.27,
+      "x": 262.21,
+      "y": 26.9,
       "label": "DiabetesEpsd_Incidence_Rate",
       "color": "#06B4E1",
       "node_type": "CONSTANT",
@@ -1499,8 +1499,8 @@
     },
     {
       "id": "4J5E1Abn",
-      "x": 167.57,
-      "y": 34.34,
+      "x": 182.17,
+      "y": 26.97,
       "label": "DiabetesEpsd Incidence",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -1514,8 +1514,8 @@
     },
     {
       "id": "FyrvtPDd",
-      "x": -418.53,
-      "y": -177.26,
+      "x": -403.93,
+      "y": -184.63,
       "label": "baseline-coverage-physical-inactivity-awareness",
       "generate_array": {
         "postprocessing": {
@@ -1532,8 +1532,8 @@
     },
     {
       "id": "6hH1SUDz",
-      "x": -420.85,
-      "y": -168.89,
+      "x": -406.25,
+      "y": -176.26,
       "label": "target-coverage-physical-inactivity-awareness",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -1547,8 +1547,8 @@
     },
     {
       "id": "BwfqMVoa",
-      "x": -419.79,
-      "y": -154.91,
+      "x": -405.19,
+      "y": -162.28,
       "label": "delta-coverage-physical-inactivity-awareness",
       "generate_array": {
         "method": "single_value",
@@ -1562,8 +1562,8 @@
     },
     {
       "id": "RByNTkiJ",
-      "x": -422.32,
-      "y": -141.66,
+      "x": -407.72,
+      "y": -149.03,
       "label": "effect-size-physical-inactivity-awareness",
       "flush": true,
       "generate_array": {
@@ -1577,8 +1577,8 @@
     },
     {
       "id": "neM8Lqzj",
-      "x": -415.97,
-      "y": -122.61,
+      "x": -401.37,
+      "y": -129.98,
       "label": "total-prevalence-reduction-physical-inactivity",
       "generate_array": {
         "method": "single_value",
@@ -1592,8 +1592,8 @@
     },
     {
       "id": "QiyTsEMq",
-      "x": -316.72,
-      "y": -96.17,
+      "x": -302.12,
+      "y": -103.54,
       "label": "prevalence-t-physical-inactivity",
       "generate_array": {
         "method": "single_value",
@@ -1607,8 +1607,8 @@
     },
     {
       "id": "41XrI0td",
-      "x": -404.36,
-      "y": -96.49,
+      "x": -389.76,
+      "y": -103.86,
       "label": "prevalence-0-physical-inactivity",
       "color": "#E5EF73",
       "flush": false,
@@ -1625,8 +1625,8 @@
     },
     {
       "id": "RJSIzsEK",
-      "x": -359.24,
-      "y": -85.56,
+      "x": -344.64,
+      "y": -92.93,
       "label": "relative-risk-physical-inactivity-diabetes",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
@@ -1643,8 +1643,8 @@
     },
     {
       "id": "fDfL0BBO",
-      "x": -301.41,
-      "y": -77.28,
+      "x": -286.81,
+      "y": -84.65,
       "label": "excess-risk-t-physical-inactivity",
       "generate_array": {
         "method": "single_value",
@@ -1656,8 +1656,8 @@
     },
     {
       "id": "0SRF79Ox",
-      "x": -421.9,
-      "y": -77.82,
+      "x": -407.3,
+      "y": -85.19,
       "label": "excess-risk-0-physical-inactivity",
       "generate_array": {
         "method": "single_value",
@@ -1669,8 +1669,8 @@
     },
     {
       "id": "BXOLckIN",
-      "x": 203.31,
-      "y": -113.66,
+      "x": 217.91,
+      "y": -121.03,
       "label": "paf-denom-t",
       "generate_array": {
         "method": "single_value",
@@ -1682,8 +1682,8 @@
     },
     {
       "id": "oGP2Nze1",
-      "x": -173.69,
-      "y": -117.7,
+      "x": -159.09,
+      "y": -125.07,
       "label": "paf-denom-0",
       "generate_array": {
         "method": "single_value",
@@ -1695,8 +1695,8 @@
     },
     {
       "id": "iaB8aZO3",
-      "x": -299.24,
-      "y": -61.69,
+      "x": -284.64,
+      "y": -69.06,
       "label": "paf-physical-inactivity-t",
       "generate_array": {
         "method": "single_value",
@@ -1708,8 +1708,8 @@
     },
     {
       "id": "BGzPI0dG",
-      "x": -400.94,
-      "y": -58.01,
+      "x": -386.34,
+      "y": -65.38,
       "label": "paf-physical-inactivity-0",
       "generate_array": {
         "method": "single_value",
@@ -1721,8 +1721,8 @@
     },
     {
       "id": "BDxJnX09",
-      "x": -348.85,
-      "y": -30.34,
+      "x": -334.25,
+      "y": -37.71,
       "label": "paf-physical-inactivity-delta",
       "flush": true,
       "generate_array": {
@@ -1734,8 +1734,8 @@
     },
     {
       "id": "PjHF9FHh",
-      "x": -22.1,
-      "y": -58.72,
+      "x": -7.5,
+      "y": -66.09,
       "label": "rf-all",
       "flush": true,
       "generate_array": {
@@ -1747,8 +1747,8 @@
     },
     {
       "id": "rWAYzaNB",
-      "x": -341.28,
-      "y": -141.84,
+      "x": -326.68,
+      "y": -149.21,
       "label": "effect-size-physical-inactivity-advice",
       "flush": true,
       "generate_array": {
@@ -1762,8 +1762,8 @@
     },
     {
       "id": "xknbgeZm",
-      "x": -329.56,
-      "y": -156.4,
+      "x": -314.96,
+      "y": -163.77,
       "label": "delta-coverage-physical-inactivity-advice",
       "generate_array": {
         "method": "single_value",
@@ -1777,8 +1777,8 @@
     },
     {
       "id": "2knF9XFX",
-      "x": -328.46,
-      "y": -168.32,
+      "x": -313.86,
+      "y": -175.69,
       "label": "target-coverage-physical-inactivity-advice",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -1792,8 +1792,8 @@
     },
     {
       "id": "ufbZ5vVe",
-      "x": -324.95,
-      "y": -177.32,
+      "x": -310.35,
+      "y": -184.69,
       "label": "baseline-coverage-physical-inactivity-advice",
       "generate_array": {
         "postprocessing": {
@@ -1810,8 +1810,8 @@
     },
     {
       "id": "j8mr17a2",
-      "x": -23.87,
-      "y": -87.2,
+      "x": -9.27,
+      "y": -94.57,
       "label": "paf-tobacco-delta",
       "flush": true,
       "generate_array": {
@@ -1823,8 +1823,8 @@
     },
     {
       "id": "zxPMOyBk",
-      "x": -70.41,
-      "y": -93.34,
+      "x": -55.81,
+      "y": -100.71,
       "label": "paf-tobacco-0",
       "generate_array": {
         "method": "single_value",
@@ -1836,8 +1836,8 @@
     },
     {
       "id": "o1hbxc1R",
-      "x": -71.62,
-      "y": -105.12,
+      "x": -57.02,
+      "y": -112.49,
       "label": "excess-risk-0-tobacco",
       "generate_array": {
         "method": "single_value",
@@ -1849,8 +1849,8 @@
     },
     {
       "id": "h6Dd182n",
-      "x": 17,
-      "y": -95.06,
+      "x": 31.6,
+      "y": -102.43,
       "label": "paf-tobacco-t",
       "generate_array": {
         "method": "single_value",
@@ -1862,8 +1862,8 @@
     },
     {
       "id": "xFQ7WDDN",
-      "x": 18.84,
-      "y": -108.85,
+      "x": 33.44,
+      "y": -116.22,
       "label": "excess-risk-t-tobacco",
       "generate_array": {
         "method": "single_value",
@@ -1875,8 +1875,8 @@
     },
     {
       "id": "UJon4r9l",
-      "x": -39.05,
-      "y": -120.66,
+      "x": -24.45,
+      "y": -128.03,
       "label": "relative-risk-tobacco-diabetes",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
@@ -1893,8 +1893,8 @@
     },
     {
       "id": "HvEhBiqV",
-      "x": -73.89,
-      "y": -130.58,
+      "x": -59.29,
+      "y": -137.95,
       "label": "prevalence-0-tobacco",
       "color": "#E5EF73",
       "flush": false,
@@ -1911,8 +1911,8 @@
     },
     {
       "id": "OujFYFdY",
-      "x": 13.12,
-      "y": -126.27,
+      "x": 27.72,
+      "y": -133.64,
       "label": "prevalence-t-tobacco",
       "generate_array": {
         "method": "single_value",
@@ -1926,8 +1926,8 @@
     },
     {
       "id": "DsMKQaMl",
-      "x": -36.33,
-      "y": -143.91,
+      "x": -21.73,
+      "y": -151.28,
       "label": "total-prevalence-reduction-tobacco",
       "generate_array": {
         "method": "single_value",
@@ -1941,8 +1941,8 @@
     },
     {
       "id": "yeUjLivi",
-      "x": -26.55,
-      "y": -164.76,
+      "x": -11.95,
+      "y": -172.13,
       "label": "effect-size-tobacco-protect",
       "flush": true,
       "generate_array": {
@@ -1956,8 +1956,8 @@
     },
     {
       "id": "Rw3STfqr",
-      "x": -27.07,
-      "y": -176.79,
+      "x": -12.47,
+      "y": -184.16,
       "label": "delta-coverage-tobacco-protect",
       "generate_array": {
         "method": "single_value",
@@ -1971,8 +1971,8 @@
     },
     {
       "id": "f2zVbmFC",
-      "x": -26.14,
-      "y": -184.6,
+      "x": -11.54,
+      "y": -191.97,
       "label": "target-coverage-tobacco-protect",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -1986,8 +1986,8 @@
     },
     {
       "id": "kmOgayPc",
-      "x": -22.91,
-      "y": -193.07,
+      "x": -8.31,
+      "y": -200.44,
       "label": "baseline-coverage-tobacco-protect",
       "generate_array": {
         "postprocessing": {
@@ -2004,8 +2004,8 @@
     },
     {
       "id": "dhCjk23F",
-      "x": -179.54,
-      "y": -166.64,
+      "x": -164.94,
+      "y": -174.01,
       "label": "effect-size-tobacco-quitbrief",
       "flush": true,
       "generate_array": {
@@ -2019,8 +2019,8 @@
     },
     {
       "id": "c6rmN2fs",
-      "x": -176.05,
-      "y": -176.1,
+      "x": -161.45,
+      "y": -183.47,
       "label": "delta-coverage-tobacco-quitbrief",
       "generate_array": {
         "method": "single_value",
@@ -2034,8 +2034,8 @@
     },
     {
       "id": "Go1VxQNw",
-      "x": -174.89,
-      "y": -185.25,
+      "x": -160.29,
+      "y": -192.62,
       "label": "target-coverage-tobacco-quitbrief",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2049,8 +2049,8 @@
     },
     {
       "id": "iSPWJd93",
-      "x": -175.27,
-      "y": -193.1,
+      "x": -160.67,
+      "y": -200.47,
       "label": "baseline-coverage-tobacco-quitbrief",
       "generate_array": {
         "postprocessing": {
@@ -2067,8 +2067,8 @@
     },
     {
       "id": "UW8uObpi",
-      "x": -108.67,
-      "y": -166.47,
+      "x": -94.07,
+      "y": -173.84,
       "label": "effect-size-tobacco-quitcessation",
       "flush": true,
       "generate_array": {
@@ -2082,8 +2082,8 @@
     },
     {
       "id": "b1QqmB9J",
-      "x": -100.3,
-      "y": -177.15,
+      "x": -85.7,
+      "y": -184.52,
       "label": "delta-coverage-tobacco-quitcessation",
       "generate_array": {
         "method": "single_value",
@@ -2097,8 +2097,8 @@
     },
     {
       "id": "ACrnBpRW",
-      "x": -100.46,
-      "y": -185.24,
+      "x": -85.86,
+      "y": -192.61,
       "label": "target-coverage-tobacco-quitcessation",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2112,8 +2112,8 @@
     },
     {
       "id": "exp5DafX",
-      "x": -97.72,
-      "y": -194.03,
+      "x": -83.12,
+      "y": -201.4,
       "label": "baseline-coverage-tobacco-quitcessation",
       "generate_array": {
         "postprocessing": {
@@ -2130,8 +2130,8 @@
     },
     {
       "id": "c7kD60U5",
-      "x": 40.07,
-      "y": -167.3,
+      "x": 54.67,
+      "y": -174.67,
       "label": "effect-size-tobacco-warnlabel",
       "flush": true,
       "generate_array": {
@@ -2145,8 +2145,8 @@
     },
     {
       "id": "CpV9O9hQ",
-      "x": 49.29,
-      "y": -176.42,
+      "x": 63.89,
+      "y": -183.79,
       "label": "delta-coverage-tobacco-warnlabel",
       "generate_array": {
         "method": "single_value",
@@ -2160,8 +2160,8 @@
     },
     {
       "id": "Sr0tR2ig",
-      "x": 51.87,
-      "y": -184.36,
+      "x": 66.47,
+      "y": -191.73,
       "label": "target-coverage-tobacco-warnlabel",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2175,8 +2175,8 @@
     },
     {
       "id": "jVgKAsq8",
-      "x": 52.54,
-      "y": -193.05,
+      "x": 67.14,
+      "y": -200.42,
       "label": "baseline-coverage-tobacco-warnlabel",
       "generate_array": {
         "postprocessing": {
@@ -2193,8 +2193,8 @@
     },
     {
       "id": "RFyZaSPm",
-      "x": 127.8,
-      "y": -168.2,
+      "x": 142.4,
+      "y": -175.57,
       "label": "effect-size-tobacco-massmedia",
       "flush": true,
       "generate_array": {
@@ -2208,8 +2208,8 @@
     },
     {
       "id": "z8dEXLS9",
-      "x": 133.86,
-      "y": -176.67,
+      "x": 148.46,
+      "y": -184.04,
       "label": "delta-coverage-tobacco-massmedia",
       "generate_array": {
         "method": "single_value",
@@ -2223,8 +2223,8 @@
     },
     {
       "id": "lFeWKUSt",
-      "x": 136.14,
-      "y": -184.54,
+      "x": 150.74,
+      "y": -191.91,
       "label": "target-coverage-tobacco-massmedia",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2238,8 +2238,8 @@
     },
     {
       "id": "kH5YhKYM",
-      "x": 138.39,
-      "y": -193.36,
+      "x": 152.99,
+      "y": -200.73,
       "label": "baseline-coverage-tobacco-massmedia",
       "generate_array": {
         "postprocessing": {
@@ -2256,8 +2256,8 @@
     },
     {
       "id": "cahejWW9",
-      "x": 195.68,
-      "y": -164.36,
+      "x": 210.28,
+      "y": -171.73,
       "label": "effect-size-tobacco-ban",
       "flush": true,
       "generate_array": {
@@ -2271,8 +2271,8 @@
     },
     {
       "id": "llX00Ofj",
-      "x": 203.51,
-      "y": -175.58,
+      "x": 218.11,
+      "y": -182.95,
       "label": "delta-coverage-tobacco-ban",
       "generate_array": {
         "method": "single_value",
@@ -2286,8 +2286,8 @@
     },
     {
       "id": "a6OhDhjp",
-      "x": 211.43,
-      "y": -184.68,
+      "x": 226.03,
+      "y": -192.05,
       "label": "target-coverage-tobacco-ban",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2301,8 +2301,8 @@
     },
     {
       "id": "zUseZJKK",
-      "x": 214.96,
-      "y": -192.39,
+      "x": 229.56,
+      "y": -199.76,
       "label": "baseline-coverage-tobacco-ban",
       "generate_array": {
         "postprocessing": {
@@ -2319,8 +2319,8 @@
     },
     {
       "id": "fHjacVl7",
-      "x": 473.52,
-      "y": -54.48,
+      "x": 488.12,
+      "y": -61.85,
       "label": "paf-alcohol-delta",
       "flush": true,
       "generate_array": {
@@ -2332,8 +2332,8 @@
     },
     {
       "id": "PBRY9HLG",
-      "x": 437.79,
-      "y": -70.59,
+      "x": 452.39,
+      "y": -77.96,
       "label": "paf-alcohol-0",
       "generate_array": {
         "method": "single_value",
@@ -2345,8 +2345,8 @@
     },
     {
       "id": "u0sG8X0D",
-      "x": 512.25,
-      "y": -72.3,
+      "x": 526.85,
+      "y": -79.67,
       "label": "paf-alcohol-t",
       "generate_array": {
         "method": "single_value",
@@ -2358,8 +2358,8 @@
     },
     {
       "id": "N8KQsS0p",
-      "x": 439.8,
-      "y": -86.83,
+      "x": 454.4,
+      "y": -94.2,
       "label": "excess-risk-0-alcohol",
       "generate_array": {
         "method": "single_value",
@@ -2371,8 +2371,8 @@
     },
     {
       "id": "UtYjTZWb",
-      "x": 515.7,
-      "y": -87.12,
+      "x": 530.3,
+      "y": -94.49,
       "label": "excess-risk-t-alcohol",
       "generate_array": {
         "method": "single_value",
@@ -2384,8 +2384,8 @@
     },
     {
       "id": "AHM7HDJv",
-      "x": 470.92,
-      "y": -104.83,
+      "x": 485.52,
+      "y": -112.2,
       "label": "relative-risk-alcohol-diabetes",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
@@ -2402,8 +2402,8 @@
     },
     {
       "id": "BMlvK43f",
-      "x": 440.48,
-      "y": -116.43,
+      "x": 455.08,
+      "y": -123.8,
       "label": "prevalence-0-alcohol",
       "color": "#E5EF73",
       "flush": false,
@@ -2420,8 +2420,8 @@
     },
     {
       "id": "sO3ohOYV",
-      "x": 504.39,
-      "y": -114,
+      "x": 518.99,
+      "y": -121.37,
       "label": "prevalence-t-alcohol",
       "generate_array": {
         "method": "single_value",
@@ -2435,8 +2435,8 @@
     },
     {
       "id": "euvseaF9",
-      "x": 469.95,
-      "y": -131.34,
+      "x": 484.55,
+      "y": -138.71,
       "label": "total-prevalence-reduction-alcohol",
       "generate_array": {
         "method": "single_value",
@@ -2450,8 +2450,8 @@
     },
     {
       "id": "LseJUeFs",
-      "x": 287.22,
-      "y": -164.55,
+      "x": 301.82,
+      "y": -171.92,
       "label": "effect-size-alcohol-ban",
       "flush": true,
       "generate_array": {
@@ -2468,8 +2468,8 @@
     },
     {
       "id": "CE3KY0y9",
-      "x": 290.73,
-      "y": -172.69,
+      "x": 305.33,
+      "y": -180.06,
       "label": "delta-coverage-alcohol-ban",
       "generate_array": {
         "method": "single_value",
@@ -2483,8 +2483,8 @@
     },
     {
       "id": "ERfKe83x",
-      "x": 291.43,
-      "y": -183.72,
+      "x": 306.03,
+      "y": -191.09,
       "label": "target-coverage-alcohol-ban",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2498,8 +2498,8 @@
     },
     {
       "id": "Rzb0zAne",
-      "x": 295.91,
-      "y": -191.73,
+      "x": 310.51,
+      "y": -199.1,
       "label": "baseline-coverage-alcohol-ban",
       "generate_array": {
         "postprocessing": {
@@ -2516,8 +2516,8 @@
     },
     {
       "id": "0I7rMRQp",
-      "x": 357.87,
-      "y": -163.78,
+      "x": 372.47,
+      "y": -171.15,
       "label": "effect-size-alcohol-restrict",
       "flush": true,
       "generate_array": {
@@ -2534,8 +2534,8 @@
     },
     {
       "id": "1vq8gWtS",
-      "x": 358.07,
-      "y": -173.9,
+      "x": 372.67,
+      "y": -181.27,
       "label": "delta-coverage-alcohol-restrict",
       "generate_array": {
         "method": "single_value",
@@ -2549,8 +2549,8 @@
     },
     {
       "id": "XaMz5uch",
-      "x": 359.85,
-      "y": -183.82,
+      "x": 374.45,
+      "y": -191.19,
       "label": "target-coverage-alcohol-restrict",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2564,8 +2564,8 @@
     },
     {
       "id": "wkswo620",
-      "x": 362.1,
-      "y": -191.44,
+      "x": 376.7,
+      "y": -198.81,
       "label": "baseline-coverage-alcohol-restrict",
       "generate_array": {
         "postprocessing": {
@@ -2582,8 +2582,8 @@
     },
     {
       "id": "vlVwJ1Xd",
-      "x": 424.85,
-      "y": -164.49,
+      "x": 439.45,
+      "y": -171.86,
       "label": "effect-size-alcohol-counsel",
       "flush": true,
       "generate_array": {
@@ -2600,8 +2600,8 @@
     },
     {
       "id": "L6rtNBW6",
-      "x": 426.23,
-      "y": -174.61,
+      "x": 440.83,
+      "y": -181.98,
       "label": "delta-coverage-alcohol-counsel",
       "generate_array": {
         "method": "single_value",
@@ -2615,8 +2615,8 @@
     },
     {
       "id": "hS1pbjZJ",
-      "x": 428.07,
-      "y": -182.65,
+      "x": 442.67,
+      "y": -190.02,
       "label": "target-coverage-alcohol-counsel",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2630,8 +2630,8 @@
     },
     {
       "id": "jaYSlCkx",
-      "x": 430.91,
-      "y": -191.94,
+      "x": 445.51,
+      "y": -199.31,
       "label": "baseline-coverage-alcohol-counsel",
       "generate_array": {
         "postprocessing": {
@@ -2648,8 +2648,8 @@
     },
     {
       "id": "wdoGuxrz",
-      "x": -246.49,
-      "y": -155.55,
+      "x": -231.89,
+      "y": -162.92,
       "label": "effect-size-tobacco-tax",
       "flush": true,
       "generate_array": {
@@ -2665,9 +2665,9 @@
     },
     {
       "id": "bdg7vh5J",
-      "x": -245.81,
-      "y": -166.16,
-      "label": "delta-coverage-tobacco-protect",
+      "x": -231.21,
+      "y": -173.53,
+      "label": "price-increase-tobacco-tax",
       "generate_array": {
         "method": "single_value",
         "parameters": {
@@ -2679,42 +2679,9 @@
       "node_type": "FUNCTION"
     },
     {
-      "id": "BTDc3bch",
-      "x": -247.01,
-      "y": -177.81,
-      "label": "target-coverage-tobacco-tax",
-      "node_type": "CONSTANT",
-      "color": "#06B4E1",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "lFMuQmak",
-      "x": -245.75,
-      "y": -187.69,
-      "label": "baseline-coverage-tobacco-tax",
-      "generate_array": {
-        "postprocessing": {
-          "negative": true
-        },
-        "method": "single_value",
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "color": "#06B4E1",
-      "node_type": "CONSTANT",
-      "flush": true
-    },
-    {
       "id": "9bm7Z0E8",
-      "x": 496.38,
-      "y": -164.03,
+      "x": 510.98,
+      "y": -171.4,
       "label": "effect-size-alcohol-tax-spirits",
       "flush": true,
       "generate_array": {
@@ -2730,9 +2697,9 @@
     },
     {
       "id": "7N4BITus",
-      "x": 498.57,
-      "y": -174.78,
-      "label": "delta-coverage-alcohol-tax-spirits",
+      "x": 513.17,
+      "y": -182.15,
+      "label": "price-increase-alcohol-tax-spirits",
       "generate_array": {
         "method": "single_value",
         "parameters": {
@@ -2744,42 +2711,9 @@
       "node_type": "FUNCTION"
     },
     {
-      "id": "taFGx45n",
-      "x": 500.19,
-      "y": -182.31,
-      "label": "target-coverage-alcohol-tax-spirits",
-      "node_type": "CONSTANT",
-      "color": "#06B4E1",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "aB6HR9Ch",
-      "x": 502.57,
-      "y": -192.24,
-      "label": "baseline-coverage-alcohol-tax-spirits",
-      "generate_array": {
-        "postprocessing": {
-          "negative": true
-        },
-        "method": "single_value",
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "color": "#06B4E1",
-      "node_type": "CONSTANT",
-      "flush": true
-    },
-    {
       "id": "xx922wnd",
-      "x": 569.1,
-      "y": -163.56,
+      "x": 583.7,
+      "y": -170.93,
       "label": "effect-size-alcohol-tax-beer",
       "flush": true,
       "generate_array": {
@@ -2795,9 +2729,9 @@
     },
     {
       "id": "5NHvXVdm",
-      "x": 572.31,
-      "y": -173.48,
-      "label": "delta-coverage-alcohol-tax-beer",
+      "x": 586.91,
+      "y": -180.85,
+      "label": "price-increase-alcohol-tax-beer",
       "generate_array": {
         "method": "single_value",
         "parameters": {
@@ -2809,42 +2743,9 @@
       "node_type": "FUNCTION"
     },
     {
-      "id": "pc8FMpeL",
-      "x": 572.39,
-      "y": -181.61,
-      "label": "target-coverage-alcohol-tax-beer",
-      "node_type": "CONSTANT",
-      "color": "#06B4E1",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "j49wkbET",
-      "x": 574.8,
-      "y": -192.11,
-      "label": "baseline-coverage-alcohol-tax-beer",
-      "generate_array": {
-        "postprocessing": {
-          "negative": true
-        },
-        "method": "single_value",
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "color": "#06B4E1",
-      "node_type": "CONSTANT",
-      "flush": true
-    },
-    {
       "id": "EOCVEnRg",
-      "x": 642.48,
-      "y": -165.01,
+      "x": 657.08,
+      "y": -172.38,
       "label": "effect-size-alcohol-tax-wine",
       "flush": true,
       "generate_array": {
@@ -2860,9 +2761,9 @@
     },
     {
       "id": "BqvIHH1J",
-      "x": 645.45,
-      "y": -172.95,
-      "label": "delta-coverage-alcohol-tax-wine",
+      "x": 660.05,
+      "y": -180.32,
+      "label": "price-increase-alcohol-tax-wine",
       "generate_array": {
         "method": "single_value",
         "parameters": {
@@ -2874,42 +2775,9 @@
       "node_type": "FUNCTION"
     },
     {
-      "id": "2NvTp1ts",
-      "x": 644.72,
-      "y": -182.84,
-      "label": "target-coverage-alcohol-tax-wine",
-      "node_type": "CONSTANT",
-      "color": "#06B4E1",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "xgkwNWij",
-      "x": 646.64,
-      "y": -192.22,
-      "label": "baseline-coverage-alcohol-tax-wine",
-      "generate_array": {
-        "postprocessing": {
-          "negative": true
-        },
-        "method": "single_value",
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "color": "#06B4E1",
-      "node_type": "CONSTANT",
-      "flush": true
-    },
-    {
       "id": "nft1CcZO",
-      "x": -269.62,
-      "y": -6.85,
+      "x": -255.02,
+      "y": -14.22,
       "label": "relative-risk-fiber-diabetes",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
@@ -2926,8 +2794,8 @@
     },
     {
       "id": "uuTIxxdT",
-      "x": -444.34,
-      "y": 27.73,
+      "x": -429.74,
+      "y": 20.36,
       "label": "delta-coverage-fiber-procurement",
       "generate_array": {
         "method": "single_value",
@@ -2941,8 +2809,8 @@
     },
     {
       "id": "TMZwQPtQ",
-      "x": -514.41,
-      "y": 27.73,
+      "x": -499.81,
+      "y": 20.36,
       "label": "target-coverage-fiber-procurement",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -2956,8 +2824,8 @@
     },
     {
       "id": "1DCP2qT2",
-      "x": -589.1,
-      "y": 27.27,
+      "x": -574.5,
+      "y": 19.9,
       "label": "baseline-coverage-fiber-procurement",
       "generate_array": {
         "postprocessing": {
@@ -2974,8 +2842,8 @@
     },
     {
       "id": "I1XfW3Wk",
-      "x": -367.21,
-      "y": 30.14,
+      "x": -352.61,
+      "y": 22.77,
       "label": "effect-size-fiber-procurement",
       "flush": true,
       "generate_array": {
@@ -2989,8 +2857,8 @@
     },
     {
       "id": "pDa2W3sn",
-      "x": -290.64,
-      "y": 45.43,
+      "x": -276.04,
+      "y": 38.06,
       "label": "total-fiber-increase-grams",
       "generate_array": {
         "method": "single_value",
@@ -3004,8 +2872,8 @@
     },
     {
       "id": "zQOBO28N",
-      "x": -269.22,
-      "y": 34.07,
+      "x": -254.62,
+      "y": 26.7,
       "label": "total-fiber-units",
       "color": "#06B4E1",
       "generate_array": {
@@ -3018,8 +2886,8 @@
     },
     {
       "id": "H4y2YdXN",
-      "x": -247.68,
-      "y": 10.07,
+      "x": -233.08,
+      "y": 2.7,
       "label": "impact-fiber",
       "color": "#06B4E1",
       "generate_array": {
@@ -3032,8 +2900,8 @@
     },
     {
       "id": "f2TvijDr",
-      "x": -367.7,
-      "y": 42.63,
+      "x": -353.1,
+      "y": 35.26,
       "label": "effect-size-fiber-reformulation",
       "flush": true,
       "generate_array": {
@@ -3047,8 +2915,8 @@
     },
     {
       "id": "J4fw2RVt",
-      "x": -436.4,
-      "y": 44.56,
+      "x": -421.8,
+      "y": 37.19,
       "label": "delta-coverage-fiber-reformulation",
       "generate_array": {
         "method": "single_value",
@@ -3062,8 +2930,8 @@
     },
     {
       "id": "zAkctgjQ",
-      "x": -510.76,
-      "y": 44.66,
+      "x": -496.16,
+      "y": 37.29,
       "label": "target-coverage-fiber-reformulation",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -3077,8 +2945,8 @@
     },
     {
       "id": "JZx3RoqR",
-      "x": -584.63,
-      "y": 44.85,
+      "x": -570.03,
+      "y": 37.48,
       "label": "baseline-coverage-fiber-reformulation",
       "generate_array": {
         "postprocessing": {
@@ -3095,8 +2963,8 @@
     },
     {
       "id": "Anpqhf6M",
-      "x": -369.39,
-      "y": 56.4,
+      "x": -354.79,
+      "y": 49.03,
       "label": "effect-size-fiber-relabelling",
       "description": "Maps to Adopt Standards: Front of Pack Labelling",
       "flush": true,
@@ -3111,8 +2979,8 @@
     },
     {
       "id": "2X9cEnxQ",
-      "x": -435.2,
-      "y": 57.57,
+      "x": -420.6,
+      "y": 50.2,
       "label": "delta-coverage-fiber-relabelling",
       "generate_array": {
         "method": "single_value",
@@ -3126,8 +2994,8 @@
     },
     {
       "id": "wCvEuqkB",
-      "x": -509.55,
-      "y": 57.2,
+      "x": -494.95,
+      "y": 49.83,
       "label": "target-coverage-fiber-relabelling",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -3141,8 +3009,8 @@
     },
     {
       "id": "pRn9e8ZZ",
-      "x": -584.36,
-      "y": 57.55,
+      "x": -569.76,
+      "y": 50.18,
       "label": "baseline-coverage-fiber-relabelling",
       "generate_array": {
         "postprocessing": {
@@ -3159,96 +3027,96 @@
     },
     {
       "id": "5HaLc0YJ",
-      "x": 108.47,
-      "y": 270.34,
+      "x": 123.07,
+      "y": 262.97,
       "label": "YLD-DsFreeSus",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "DgmlYgBJ",
-      "x": 110.26,
-      "y": 258.51,
+      "x": 124.86,
+      "y": 251.14,
       "label": "YLD-DiabetesEpsd",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "yTN2TadA",
-      "x": 112.52,
-      "y": 245.57,
+      "x": 127.12,
+      "y": 238.2,
       "label": "YLD-DiabeticRetinopathy",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "MVkktvoD",
-      "x": 125.51,
-      "y": 224.06,
+      "x": 140.11,
+      "y": 216.69,
       "label": "YLD-LowerExtrmAmpt",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "0X7SrCXK",
-      "x": 121,
-      "y": 232.13,
+      "x": 135.6,
+      "y": 224.76,
       "label": "YLD-DiabeticNephropathy",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "gZ18mp9u",
-      "x": 285.79,
-      "y": 170.37,
+      "x": 300.39,
+      "y": 163,
       "label": "YLL-DsFreeSus",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "bC5AM0sN",
-      "x": 237.54,
-      "y": 214.06,
+      "x": 252.14,
+      "y": 206.69,
       "label": "YLL-DiabetesEpsd",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "BsFbESJ7",
-      "x": 280.74,
-      "y": 179.13,
+      "x": 295.34,
+      "y": 171.76,
       "label": "YLL-DiabeticRetinopathy",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "y8CnO3tw",
-      "x": 273.41,
-      "y": 189.83,
+      "x": 288.01,
+      "y": 182.46,
       "label": "YLL-LowerExtrmAmpt",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "9MuKrWrv",
-      "x": 260.64,
-      "y": 204.49,
+      "x": 275.24,
+      "y": 197.12,
       "label": "YLL-DiabeticNephropathy",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "zntB8xaS",
-      "x": 283.94,
-      "y": 262.1,
+      "x": 298.54,
+      "y": 254.73,
       "label": "DALYs",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "i7ihZagV",
-      "x": 192.73,
-      "y": 195.92,
+      "x": 207.33,
+      "y": 188.55,
       "label": "Deceased-DiabetesEpsd",
       "description": "The state of being dead",
       "node_type": "STATE",
@@ -3262,8 +3130,8 @@
     },
     {
       "id": "T9GTSaTy",
-      "x": 198.97,
-      "y": 162.81,
+      "x": 213.57,
+      "y": 155.44,
       "label": "Deceased-DiabeticRetinopathy",
       "description": "The state of being dead",
       "node_type": "STATE",
@@ -3277,8 +3145,8 @@
     },
     {
       "id": "lSONL0qA",
-      "x": 203.19,
-      "y": 175.6,
+      "x": 217.79,
+      "y": 168.23,
       "label": "Deceased-LowerExtrmAmpt",
       "description": "The state of being dead",
       "node_type": "STATE",
@@ -3292,8 +3160,8 @@
     },
     {
       "id": "e6CA3j9O",
-      "x": 205.65,
-      "y": 185.36,
+      "x": 220.25,
+      "y": 177.99,
       "label": "Deceased-DiabeticNephropathy",
       "description": "The state of being dead",
       "node_type": "STATE",
@@ -3307,36 +3175,36 @@
     },
     {
       "id": "5p5rIiTd",
-      "x": -12.66,
-      "y": 207.8,
+      "x": 1.94,
+      "y": 200.43,
       "color": "#FFB255",
       "label": "PopReached-RetinopathyScrn"
     },
     {
       "id": "979lBOrq",
-      "x": -11.96,
-      "y": 220.7,
+      "x": 2.64,
+      "y": 213.33,
       "color": "#FFB255",
       "label": "PopReached-NeuropathyScr"
     },
     {
       "id": "q6foBZs3",
-      "x": -11.73,
-      "y": 230.28,
+      "x": 2.87,
+      "y": 222.91,
       "color": "#FFB255",
       "label": "PopReached-NephropathyScr"
     },
     {
       "id": "Jj9sztq7",
-      "x": -9.02,
-      "y": 242.25,
+      "x": 5.58,
+      "y": 234.88,
       "color": "#FFB255",
       "label": "PopReached-IntsvGlycControl"
     },
     {
       "id": "B4SjgqET",
-      "x": -11.5,
-      "y": 253.12,
+      "x": 3.1,
+      "y": 245.75,
       "color": "#FFB255",
       "label": "PopReached-StdGlycControl"
     }
@@ -6724,41 +6592,9 @@
           "value": 1
         }
       },
-      "label": "delta-coverage-tobacco-tax -> effect-size",
+      "label": "price-increase-tobacco-tax -> effect-size",
       "remove_value_from_source": false,
       "value_to_target_operator": "multiply"
-    },
-    {
-      "id": "4yI2SQu2",
-      "source": "BTDc3bch",
-      "target": "bdg7vh5J",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "target-coverage-tobacco-tax -> delta-coverage-tobacco-tax"
-    },
-    {
-      "id": "ajhix9j7",
-      "source": "lFMuQmak",
-      "target": "bdg7vh5J",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "baseline-coverage-tobacco-tax -> delta-coverage-tobacco-tax"
     },
     {
       "id": "yf2aG9Ur",
@@ -6787,41 +6623,9 @@
           "value": 1
         }
       },
-      "label": "delta-coverage-alcohol-tax-spirits -> effect-size",
+      "label": "price-increase-alcohol-tax-spirits -> effect-size",
       "remove_value_from_source": false,
       "value_to_target_operator": "multiply"
-    },
-    {
-      "id": "hMMk9vtg",
-      "source": "taFGx45n",
-      "target": "7N4BITus",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "target-coverage-alcohol-tax-spirits -> delta-coverage-alcohol-tax-spirits"
-    },
-    {
-      "id": "6Sq5vPLS",
-      "source": "aB6HR9Ch",
-      "target": "7N4BITus",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "baseline-coverage-alcohol-tax-spirits -> delta-coverage-alcohol-tax-spirits"
     },
     {
       "id": "bEf0UAs2",
@@ -6850,41 +6654,9 @@
           "value": 1
         }
       },
-      "label": "delta-coverage-alcohol-tax-beer -> effect-size",
+      "label": "price-increase-alcohol-tax-beer -> effect-size",
       "remove_value_from_source": false,
       "value_to_target_operator": "multiply"
-    },
-    {
-      "id": "mYyFUkdP",
-      "source": "pc8FMpeL",
-      "target": "5NHvXVdm",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "target-coverage-alcohol-tax-beer -> delta-coverage-alcohol-tax-beer"
-    },
-    {
-      "id": "NEreFKJ0",
-      "source": "j49wkbET",
-      "target": "5NHvXVdm",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "baseline-coverage-alcohol-tax-beer -> delta-coverage-alcohol-tax-beer"
     },
     {
       "id": "AA9pnLQ7",
@@ -6913,41 +6685,9 @@
           "value": 1
         }
       },
-      "label": "delta-coverage-alcohol-tax-wine -> effect-size",
+      "label": "price-increase-alcohol-tax-wine -> effect-size",
       "remove_value_from_source": false,
       "value_to_target_operator": "multiply"
-    },
-    {
-      "id": "AM4Mzaps",
-      "source": "2NvTp1ts",
-      "target": "BqvIHH1J",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "target-coverage-alcohol-tax-wine -> delta-coverage-alcohol-tax-wine"
-    },
-    {
-      "id": "xDW6Qwr5",
-      "source": "xgkwNWij",
-      "target": "BqvIHH1J",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "baseline-coverage-alcohol-tax-wine -> delta-coverage-alcohol-tax-wine"
     },
     {
       "id": "nUf3uRJc",
