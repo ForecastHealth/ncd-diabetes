@@ -17,8 +17,6 @@
         "$.nodes[?(@.id=='9bm7Z0E8')].generate_array.parameters.country",
         "$.nodes[?(@.id=='xx922wnd')].generate_array.parameters.country",
         "$.nodes[?(@.id=='EOCVEnRg')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='Wahz7EG9')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='Gkx6f7za')].generate_array.parameters.country",
         "$.nodes[?(@.id=='lrso81aw')].generate_array.parameters.country",
         "$.nodes[?(@.id=='DsFreeSus')].generate_array.parameters.country",
         "$.nodes[?(@.id=='lrso71jf')].generate_array.parameters.country",
