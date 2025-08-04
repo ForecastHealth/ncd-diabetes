@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "label": "Tobacco - T7 - Effective pharmacological intervention",
+    "description": "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit",
+    "authors": [],
+    "date_created": "2025-02-12 10:34"
+  },
+  "parameters": {
+    "Country": {
+      "hidden": true,
+      "value": "AFG",
+      "paths": [
+        "$.nodes[?(@.id=='41XrI0td')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='HvEhBiqV')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='BMlvK43f')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='wdoGuxrz')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='9bm7Z0E8')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='xx922wnd')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='EOCVEnRg')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='lrso81aw')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='DsFreeSus')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='lrso71jf')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9rkzfi')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9rlprb')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9rmh3c')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9t0ml2')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9t13d8')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='ls9t1x51')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='LseJUeFs')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='0I7rMRQp')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='vlVwJ1Xd')].generate_array.parameters.country",
+        "$.links[?(@.id=='PwZT0fUg')].generate_array.parameters.country",
+        "$.links[?(@.id=='BLsXt2Md')].generate_array.parameters.country",
+        "$.links[?(@.id=='mlkMPtza')].generate_array.parameters.country",
+        "$.links[?(@.id=='6ONEDRqf')].generate_array.parameters.country",
+        "$.links[?(@.id=='itKEGsJa')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='nLErvery')].generate_array.parameters.country",
+        "$.links[?(@.id=='bqt9e1Hu')].generate_array.parameters.country",
+        "$.links[?(@.id=='Sr9wD5iX')].generate_array.parameters.country",
+        "$.links[?(@.id=='XERAn3eI')].generate_array.parameters.country",
+        "$.links[?(@.id=='jafkA6il')].generate_array.parameters.country",
+        "$.links[?(@.id=='AaIqu3Sh')].generate_array.parameters.country",
+        "$.links[?(@.id=='OhC9gSTP')].generate_array.parameters.country",
+        "$.links[?(@.id=='Qo1iIBKh')].generate_array.parameters.country",
+        "$.links[?(@.id=='P0YMn6Zi')].generate_array.parameters.country",
+        "$.links[?(@.id=='oDZJAqIc')].generate_array.parameters.country",
+        "$.links[?(@.id=='uQdxASQ8')].generate_array.parameters.country",
+        "$.links[?(@.id=='iB5A8VDc')].generate_array.parameters.country",
+        "$.links[?(@.id=='UFw5HQql')].generate_array.parameters.country",
+        "$.links[?(@.id=='9lHjCUmt')].generate_array.parameters.country",
+        "$.links[?(@.id=='tJOW1hhc')].generate_array.parameters.country",
+        "$.links[?(@.id=='STz4wrnX')].generate_array.parameters.country",
+        "$.links[?(@.id=='BJGaPBZg')].generate_array.parameters.country"
+      ]
+    },
+    "Baseline Coverage Tobacco Quitbrief": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='iSPWJd93')].generate_array.parameters.value"
+      ],
+      "category": "Coverage"
+    },
+    "Target Coverage Tobacco Quitbrief": {
+      "value": 0.05,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.value"
+      ],
+      "category": "Coverage"
+    }
+  }
+}
