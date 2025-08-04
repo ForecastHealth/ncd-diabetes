@@ -155,7 +155,7 @@
       "paths": [
         "$.nodes[?(@.id=='bdg7vh5J')].generate_array.parameters.value"
       ],
-      "category": "Other"
+      "category": "Coverage"
     }
   }
 }
