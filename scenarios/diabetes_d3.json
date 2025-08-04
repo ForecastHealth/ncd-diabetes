@@ -58,168 +58,192 @@
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ttil2')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Standard Glycaemic Control Target Coverage": {
       "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Standard Glycaemic Control Population In Need": {
       "value": 0.9,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='lrsnavq2')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "Intensive Glycaemic Control Baseline Coverage": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tmgwr')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Intensive Glycaemic Control Target Coverage": {
       "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Intensive Glycaemic Control Population In Need": {
       "value": 0.1,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tlsbv')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "Retinopathy Screening Baseline Coverage": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='lrso22do')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Retinopathy Screening Target Coverage": {
       "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Retinopathy Screening Population In Need": {
       "value": 1,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tsvuf')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "Nephropathy Screening Baseline Coverage": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9u9aty')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Nephropathy Screening Target Coverage": {
       "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Nephropathy Screening Population In Need": {
       "value": 1,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9u41gm')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "Neuropathy Screening Baseline Coverage": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9txz8o')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Neuropathy Screening Target Coverage": {
       "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Neuropathy Screening Population In Need": {
       "value": 1,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9txmx1')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "Retinopathy Screening - Incidence Impact - Diabetic Retinopathy": {
       "value": 0.2,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tsmp3')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Standard Glycaemic Control - Incidence Impact - Diabetic Retinopathy": {
       "value": 0.65,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tli5c')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Intensive Glycaemic Control - Incidence Impact - Diabetic Retinopathy": {
       "value": 0.75,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='lrsnjkmt')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Neuropathy Screening - Incidence Impact - Lower Extremity Amputation": {
       "value": 0.35,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tx5l9')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Standard Glycaemic Control - Incidence Impact - Lower Extremity Amputation": {
       "value": 0.286,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tllxv')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Intensive Glycaemic Control - Incidence Impact - Lower Extremity Amputation": {
       "value": 0.151,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tgf2u')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Nephropathy Screening - Incidence Impact - Diabetic Nephropathy": {
       "value": 0.24,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9u3agu')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Standard Glycaemic Control - Incidence Impact - Diabetic Nephropathy": {
       "value": 0.39,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tloqj')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Intensive Glycamic Control - Incidence Impact - Diabetic Nephropathy": {
       "value": 0.39,
       "description": "The impact of the intervention on the incidence rate of the state",
       "paths": [
         "$.nodes[?(@.id=='ls9tdxgx')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     }
   }
 }

@@ -58,42 +58,48 @@
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Fiber Procurement": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='1DCP2qT2')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Target Coverage Fiber Reformulation": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Fiber Reformulation": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='JZx3RoqR')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Target Coverage Fiber Relabelling": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Fiber Relabelling": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='pRn9e8ZZ')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     }
   }
 }
