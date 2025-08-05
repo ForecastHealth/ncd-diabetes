@@ -71,7 +71,7 @@
     },
     "Standard Glycaemic Control Population In Need": {
       "value": 0.9,
-      "description": "The proportion of persons with asthma who require the intervention",
+      "description": "The proportion of persons who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='lrsnavq2')].generate_array.parameters.value"
       ],
@@ -95,7 +95,7 @@
     },
     "Intensive Glycaemic Control Population In Need": {
       "value": 0.1,
-      "description": "The proportion of persons with asthma who require the intervention",
+      "description": "The proportion of persons who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tlsbv')].generate_array.parameters.value"
       ],
@@ -119,7 +119,7 @@
     },
     "Retinopathy Screening Population In Need": {
       "value": 1,
-      "description": "The proportion of persons with asthma who require the intervention",
+      "description": "The proportion of persons who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9tsvuf')].generate_array.parameters.value"
       ],
@@ -143,7 +143,7 @@
     },
     "Nephropathy Screening Population In Need": {
       "value": 1,
-      "description": "The proportion of persons with asthma who require the intervention",
+      "description": "The proportion of persons who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9u41gm')].generate_array.parameters.value"
       ],
@@ -167,7 +167,7 @@
     },
     "Neuropathy Screening Population In Need": {
       "value": 1,
-      "description": "The proportion of persons with asthma who require the intervention",
+      "description": "The proportion of persons who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='ls9txmx1')].generate_array.parameters.value"
       ],
