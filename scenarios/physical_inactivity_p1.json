@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Physical Inactivity Debug",
-    "description": "For testing physical inactivity interventions",
+    "label": "Physical Inactivity - P1 - Brief Intervention",
+    "description": "Provide physical activity assessment, counselling, and behaviour change support as part of routine primary health care services through the use of a brief intervention",
     "authors": [],
     "date_created": "2025-02-12 10:34"
   },
@@ -53,19 +53,11 @@
         "$.links[?(@.id=='BJGaPBZg')].generate_array.parameters.country"
       ]
     },
-    "Baseline Coverage Physical Inactivity Awareness": {
+    "Baseline Coverage Physical Inactivity Advice": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='FyrvtPDd')].generate_array.parameters.value"
-      ],
-      "category": "Coverage"
-    },
-    "Target Coverage Physical Inactivity Awareness": {
-      "value": 0.05,
-      "description": "The target coverage for the intervention",
-      "paths": [
-        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ufbZ5vVe')].generate_array.parameters.value"
       ],
       "category": "Coverage"
     },
@@ -74,14 +66,6 @@
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.value"
-      ],
-      "category": "Coverage"
-    },
-    "Baseline Coverage Physical Inactivity Advice": {
-      "value": 0.05,
-      "description": "The baseline coverage for the intervention",
-      "paths": [
-        "$.nodes[?(@.id=='ufbZ5vVe')].generate_array.parameters.value"
       ],
       "category": "Coverage"
     }
