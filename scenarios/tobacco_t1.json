@@ -1,22 +1,15 @@
 {
   "metadata": {
     "label": "Tobacco - T1 - Raising taxes on tobacco",
-    "description": "Increase excise taxes and prices on tobacco products",
+    "description": "Tobacco tax intervention that increases excise taxes and prices on tobacco products to reduce tobacco prevalence.\nThis scenario exposes the parameters for tobacco taxation policies that work by making tobacco products less affordable.\nThe intervention reduces tobacco prevalence in the population, which in turn reduces the incidence rates of diabetes among susceptible individuals.\nHigher tobacco prices lead to reduced tobacco consumption and fewer new tobacco users, providing preventive benefits for metabolic health.\nNote: For a comprehensive understanding of tobacco control impacts, this intervention should also be run for COPD, Asthma, and Cardiovascular Disease models.\nThis scenario modifies the retail price change of tobacco products to simulate the effect of increased taxation.\n",
     "authors": [],
-    "date_created": "2025-02-12 10:34"
+    "date_created": "2025-08-11 21:27"
   },
   "parameters": {
     "Country": {
       "hidden": true,
       "value": "AFG",
       "paths": [
-        "$.nodes[?(@.id=='41XrI0td')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='HvEhBiqV')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='BMlvK43f')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='wdoGuxrz')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='9bm7Z0E8')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='xx922wnd')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='EOCVEnRg')].generate_array.parameters.country",
         "$.nodes[?(@.id=='lrso81aw')].generate_array.parameters.country",
         "$.nodes[?(@.id=='DsFreeSus')].generate_array.parameters.country",
         "$.nodes[?(@.id=='lrso71jf')].generate_array.parameters.country",
@@ -26,6 +19,13 @@
         "$.nodes[?(@.id=='ls9t0ml2')].generate_array.parameters.country",
         "$.nodes[?(@.id=='ls9t13d8')].generate_array.parameters.country",
         "$.nodes[?(@.id=='ls9t1x51')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='41XrI0td')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='HvEhBiqV')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='BMlvK43f')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='wdoGuxrz')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='9bm7Z0E8')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='xx922wnd')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='EOCVEnRg')].generate_array.parameters.country",
         "$.nodes[?(@.id=='LseJUeFs')].generate_array.parameters.country",
         "$.nodes[?(@.id=='0I7rMRQp')].generate_array.parameters.country",
         "$.nodes[?(@.id=='vlVwJ1Xd')].generate_array.parameters.country",
@@ -53,9 +53,9 @@
         "$.links[?(@.id=='BJGaPBZg')].generate_array.parameters.country"
       ]
     },
-    "Price Increase Tobacco Tax": {
+    "Price Change Tobacco Tax": {
       "value": 0.0,
-      "description": "The percentage increase in price from baseline.",
+      "description": "Percentage change in retail price of tobacco",
       "paths": [
         "$.nodes[?(@.id=='bdg7vh5J')].generate_array.parameters.value"
       ],
