@@ -1,0 +1,18 @@
+{
+  "Baseline Coverage Fiber Procurement": {
+    "value": 0.05,
+    "description": "The baseline coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='1DCP2qT2')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Target Coverage Fiber Procurement": {
+    "value": 0.05,
+    "description": "The target coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  }
+}
