@@ -1,0 +1,19 @@
+# Configuration for Unhealthy Diet - Fiber Reformulation
+metadata:
+  label: "Appendix 3 - Unhealthy Diet Fiber Reformulation Scenario"
+  description: |
+    Fiber reformulation intervention that modifies coverage of industry food reformulation efforts.
+    This scenario changes coverage parameters to increase total fiber intake in grams.
+    The increased fiber intake modifies the relative risk through an impact calculation, which affects diabetes incidence rates.
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - unhealthy_diet_fiber_reformulation.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/unhealthy_diet_fiber_reformulation.json
