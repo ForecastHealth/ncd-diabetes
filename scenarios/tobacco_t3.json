@@ -1,9 +1,9 @@
 {
   "metadata": {
     "label": "Tobacco - T3 - Enforcing tobacco advertising, promotion and sponsorship bans",
-    "description": "Tobacco advertising ban intervention that enacts and enforces comprehensive bans on tobacco advertising, promotion and sponsorship.\nThis scenario exposes the parameters for advertising restriction policies that work by reducing tobacco industry marketing influence and limiting exposure to pro-tobacco messaging.\nThe intervention reduces tobacco prevalence in the population by eliminating promotional activities that encourage tobacco use, which in turn reduces the incidence rates of diabetes among susceptible individuals.\nComprehensive advertising bans prevent tobacco companies from targeting potential new users and reduce cues that might trigger tobacco use among current users.\nThis intervention is particularly effective at preventing tobacco initiation among youth and supporting quit attempts among existing users.\nNote: For a comprehensive understanding of tobacco control impacts, this intervention should also be run for COPD, Asthma, and Cardiovascular Disease models.\n",
+    "description": "Tobacco advertising ban intervention that enforces comprehensive bans on tobacco advertising, promotion and sponsorship.\nThis scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-08-11 21:27"
+    "date_created": "2025-08-11 22:18"
   },
   "parameters": {
     "Country": {

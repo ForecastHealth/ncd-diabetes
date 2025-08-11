@@ -1,9 +1,9 @@
 {
   "metadata": {
     "label": "Tobacco - T1 - Raising taxes on tobacco",
-    "description": "Tobacco tax intervention that increases excise taxes and prices on tobacco products to reduce tobacco prevalence.\nThis scenario exposes the parameters for tobacco taxation policies that work by making tobacco products less affordable.\nThe intervention reduces tobacco prevalence in the population, which in turn reduces the incidence rates of diabetes among susceptible individuals.\nHigher tobacco prices lead to reduced tobacco consumption and fewer new tobacco users, providing preventive benefits for metabolic health.\nNote: For a comprehensive understanding of tobacco control impacts, this intervention should also be run for COPD, Asthma, and Cardiovascular Disease models.\nThis scenario modifies the retail price change of tobacco products to simulate the effect of increased taxation.\n",
+    "description": "Tobacco tax intervention that increases retail prices to reduce tobacco prevalence.\nThis scenario modifies the price change parameters which reduces tobacco prevalence and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-08-11 21:27"
+    "date_created": "2025-08-11 22:18"
   },
   "parameters": {
     "Country": {

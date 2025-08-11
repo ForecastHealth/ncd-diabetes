@@ -1,9 +1,9 @@
 {
   "metadata": {
     "label": "Tobacco - T6 - Quitting tobacco",
-    "description": "Tobacco cessation support intervention that provides cost-covered effective population-wide support including brief advice, national toll-free quit line services and mCessation for all tobacco users.\nThis scenario exposes the parameters for cessation support services that work by providing accessible, evidence-based assistance to tobacco users who want to quit.\nThe intervention reduces tobacco prevalence in the population by increasing successful quit rates through counseling and behavioral support, which in turn reduces the incidence rates of diabetes among susceptible individuals.\nCessation support services include brief clinical interventions, telephone quit lines, text messaging programs, and other behavioral interventions that increase quit attempt success rates.\nThese services are most effective when widely available, free of charge, and integrated with healthcare systems and mass media campaigns.\nNote: For a comprehensive understanding of tobacco control impacts, this intervention should also be run for COPD, Asthma, and Cardiovascular Disease models.\n",
+    "description": "Tobacco cessation support intervention that provides brief advice, quit lines, and behavioral support.\nThis scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-08-11 21:27"
+    "date_created": "2025-08-11 22:18"
   },
   "parameters": {
     "Country": {

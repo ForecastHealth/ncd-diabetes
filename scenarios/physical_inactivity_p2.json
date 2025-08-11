@@ -1,22 +1,15 @@
 {
   "metadata": {
-    "label": "Physical Inactivity - P2 - Best practice communication campaigns",
-    "description": "Implement sustained, population wide, best practice communication campaigns to promote physical activity, with links to community-based programmes and environmental improvements to enable and support behaviour change",
+    "label": "Appendix 3 - Physical Inactivity P2 Scenario",
+    "description": "Physical activity awareness intervention that increases coverage of mass media campaigns.\nThis scenario modifies coverage parameters from baseline to target levels over a specified scale-up period.\nThe intervention reduces prevalence of physical inactivity, which changes the population attributable fraction and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-02-12 10:34"
+    "date_created": "2025-08-11 22:18"
   },
   "parameters": {
     "Country": {
       "hidden": true,
       "value": "AFG",
       "paths": [
-        "$.nodes[?(@.id=='41XrI0td')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='HvEhBiqV')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='BMlvK43f')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='wdoGuxrz')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='9bm7Z0E8')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='xx922wnd')].generate_array.parameters.country",
-        "$.nodes[?(@.id=='EOCVEnRg')].generate_array.parameters.country",
         "$.nodes[?(@.id=='lrso81aw')].generate_array.parameters.country",
         "$.nodes[?(@.id=='DsFreeSus')].generate_array.parameters.country",
         "$.nodes[?(@.id=='lrso71jf')].generate_array.parameters.country",
@@ -26,6 +19,13 @@
         "$.nodes[?(@.id=='ls9t0ml2')].generate_array.parameters.country",
         "$.nodes[?(@.id=='ls9t13d8')].generate_array.parameters.country",
         "$.nodes[?(@.id=='ls9t1x51')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='41XrI0td')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='HvEhBiqV')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='BMlvK43f')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='wdoGuxrz')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='9bm7Z0E8')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='xx922wnd')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='EOCVEnRg')].generate_array.parameters.country",
         "$.nodes[?(@.id=='LseJUeFs')].generate_array.parameters.country",
         "$.nodes[?(@.id=='0I7rMRQp')].generate_array.parameters.country",
         "$.nodes[?(@.id=='vlVwJ1Xd')].generate_array.parameters.country",
@@ -57,7 +57,9 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='FyrvtPDd')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='FyrvtPDd')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
@@ -65,7 +67,24 @@
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Physical Inactivity Awareness": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Physical Inactivity Awareness": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     }
