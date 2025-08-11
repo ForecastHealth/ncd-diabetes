@@ -1,65 +1,11 @@
 {
-  "Target Coverage Tobacco Protect": {
-    "value": 0.05,
-    "description": "The target coverage for the intervention",
-    "paths": [
-      "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Baseline Coverage Tobacco Protect": {
+  "Baseline Coverage Tobacco Massmedia": {
     "value": 0.05,
     "description": "The baseline coverage for the intervention",
     "paths": [
-      "$.nodes[?(@.id=='kmOgayPc')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Target Coverage Tobacco Quitbrief": {
-    "value": 0.05,
-    "description": "The target coverage for the intervention",
-    "paths": [
-      "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Baseline Coverage Tobacco Quitbrief": {
-    "value": 0.05,
-    "description": "The baseline coverage for the intervention",
-    "paths": [
-      "$.nodes[?(@.id=='iSPWJd93')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Target Coverage Tobacco Quitcessation": {
-    "value": 0.05,
-    "description": "The target coverage for the intervention",
-    "paths": [
-      "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Baseline Coverage Tobacco Quitcessation": {
-    "value": 0.05,
-    "description": "The baseline coverage for the intervention",
-    "paths": [
-      "$.nodes[?(@.id=='exp5DafX')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Target Coverage Tobacco Warnlabel": {
-    "value": 0.05,
-    "description": "The target coverage for the intervention",
-    "paths": [
-      "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Baseline Coverage Tobacco Warnlabel": {
-    "value": 0.05,
-    "description": "The baseline coverage for the intervention",
-    "paths": [
-      "$.nodes[?(@.id=='jVgKAsq8')].generate_array.parameters.value"
+      "$.nodes[?(@.id=='kH5YhKYM')].generate_array.parameters.value",
+      "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.start_value",
+      "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.fill_before"
     ],
     "category": "Coverage"
   },
@@ -67,39 +13,24 @@
     "value": 0.05,
     "description": "The target coverage for the intervention",
     "paths": [
-      "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.value"
+      "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.end_value",
+      "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.fill_after"
     ],
     "category": "Coverage"
   },
-  "Baseline Coverage Tobacco Massmedia": {
-    "value": 0.05,
-    "description": "The baseline coverage for the intervention",
+  "Scale-Up Start Year Tobacco Massmedia": {
+    "value": 1,
+    "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
     "paths": [
-      "$.nodes[?(@.id=='kH5YhKYM')].generate_array.parameters.value"
+      "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.start_index"
     ],
     "category": "Coverage"
   },
-  "Target Coverage Tobacco Ban": {
-    "value": 0.05,
-    "description": "The target coverage for the intervention",
+  "Scale-Up Final Year Tobacco Massmedia": {
+    "value": 2,
+    "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
     "paths": [
-      "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Baseline Coverage Tobacco Ban": {
-    "value": 0.05,
-    "description": "The baseline coverage for the intervention",
-    "paths": [
-      "$.nodes[?(@.id=='zUseZJKK')].generate_array.parameters.value"
-    ],
-    "category": "Coverage"
-  },
-  "Price Change Tobacco Tax": {
-    "value": 0.0,
-    "description": "Percentage change in retail price of tobacco",
-    "paths": [
-      "$.nodes[?(@.id=='bdg7vh5J')].generate_array.parameters.value"
+      "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.end_index"
     ],
     "category": "Coverage"
   }

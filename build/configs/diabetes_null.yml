@@ -9,7 +9,13 @@ components:
   - diabetes_base.json
   - diabetes_clinical.json
   - diabetes_physical_activity.json
-  - diabetes_tobacco.json
+  - tobacco_protect.json
+  - tobacco_quitbrief.json
+  - tobacco_quitcessation.json
+  - tobacco_warnlabel.json
+  - tobacco_massmedia.json
+  - tobacco_ban.json
+  - tobacco_tax.json
   - diabetes_alcohol.json
   - diabetes_diet.json
 

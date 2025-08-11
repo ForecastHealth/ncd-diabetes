@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "label": "Default Scenario",
+    "label": "Diabetes - Baseline Scenario",
     "description": "A scenario where there is no change in the coverage of any intervention",
     "authors": [],
-    "date_created": "2024-12-10 13:04"
+    "date_created": "2025-08-11 14:05"
   },
   "parameters": {
     "Country": {
@@ -57,7 +57,9 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9ttil2')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ls9ttil2')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
@@ -65,7 +67,24 @@
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Standard Glycaemic Control": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Standard Glycaemic Control": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ls9ttm0m')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -81,7 +100,9 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9tmgwr')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ls9tmgwr')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
@@ -89,7 +110,24 @@
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Intensive Glycaemic Control": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Intensive Glycaemic Control": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ls9tmepe')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -105,7 +143,9 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='lrso22do')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='lrso22do')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
@@ -113,7 +153,24 @@
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Retinopathy Screening": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Retinopathy Screening": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='lrsnalk2')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -129,7 +186,9 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9u9aty')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ls9u9aty')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
@@ -137,7 +196,24 @@
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Nephropathy Screening": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Nephropathy Screening": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ls9u4cw6')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -153,7 +229,9 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9txz8o')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ls9txz8o')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
@@ -161,7 +239,24 @@
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Neuropathy Screening": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Neuropathy Screening": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -249,7 +344,9 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='FyrvtPDd')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='FyrvtPDd')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
@@ -257,15 +354,24 @@
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.fill_after"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Physical Inactivity Advice": {
-      "value": 0.05,
-      "description": "The target coverage for the intervention",
+    "Scale-Up Start Year Physical Inactivity Awareness": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
       "paths": [
-        "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Physical Inactivity Awareness": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -273,15 +379,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ufbZ5vVe')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ufbZ5vVe')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Tobacco Protect": {
+    "Target Coverage Physical Inactivity Advice": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Physical Inactivity Advice": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Physical Inactivity Advice": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='2knF9XFX')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -289,15 +414,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='kmOgayPc')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='kmOgayPc')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Tobacco Quitbrief": {
+    "Target Coverage Tobacco Protect": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Tobacco Protect": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Tobacco Protect": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -305,15 +449,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='iSPWJd93')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='iSPWJd93')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Tobacco Quitcessation": {
+    "Target Coverage Tobacco Quitbrief": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Tobacco Quitbrief": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Tobacco Quitbrief": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -321,15 +484,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='exp5DafX')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='exp5DafX')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Tobacco Warnlabel": {
+    "Target Coverage Tobacco Quitcessation": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Tobacco Quitcessation": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Tobacco Quitcessation": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -337,15 +519,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='jVgKAsq8')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='jVgKAsq8')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Tobacco Massmedia": {
+    "Target Coverage Tobacco Warnlabel": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Tobacco Warnlabel": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Tobacco Warnlabel": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -353,15 +554,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='kH5YhKYM')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='kH5YhKYM')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Tobacco Ban": {
+    "Target Coverage Tobacco Massmedia": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Tobacco Massmedia": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Tobacco Massmedia": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -369,15 +589,42 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='zUseZJKK')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='zUseZJKK')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Alcohol Ban": {
+    "Target Coverage Tobacco Ban": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Tobacco Ban": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Tobacco Ban": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.end_index"
+      ],
+      "category": "Coverage"
+    },
+    "Price Change Tobacco Tax": {
+      "value": 0.0,
+      "description": "Percentage change in retail price of tobacco",
+      "paths": [
+        "$.nodes[?(@.id=='bdg7vh5J')].generate_array.parameters.value"
       ],
       "category": "Coverage"
     },
@@ -385,15 +632,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='Rzb0zAne')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='Rzb0zAne')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Alcohol Restrict": {
+    "Target Coverage Alcohol Ban": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Alcohol Ban": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Alcohol Ban": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -401,15 +667,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='wkswo620')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='wkswo620')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Alcohol Counsel": {
+    "Target Coverage Alcohol Restrict": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Alcohol Restrict": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Alcohol Restrict": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -417,15 +702,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='jaYSlCkx')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='jaYSlCkx')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Fiber Procurement": {
+    "Target Coverage Alcohol Counsel": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Alcohol Counsel": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Alcohol Counsel": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -433,15 +737,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='1DCP2qT2')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='1DCP2qT2')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Fiber Reformulation": {
+    "Target Coverage Fiber Procurement": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Fiber Procurement": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Fiber Procurement": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='TMZwQPtQ')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -449,15 +772,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='JZx3RoqR')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='JZx3RoqR')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Target Coverage Fiber Relabelling": {
+    "Target Coverage Fiber Reformulation": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Fiber Reformulation": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Fiber Reformulation": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     },
@@ -465,7 +807,34 @@
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='pRn9e8ZZ')].generate_array.parameters.value"
+        "$.nodes[?(@.id=='pRn9e8ZZ')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.fill_before"
+      ],
+      "category": "Coverage"
+    },
+    "Target Coverage Fiber Relabelling": {
+      "value": 0.05,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.fill_after"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Start Year Fiber Relabelling": {
+      "value": 1,
+      "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.start_index"
+      ],
+      "category": "Coverage"
+    },
+    "Scale-Up Final Year Fiber Relabelling": {
+      "value": 2,
+      "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
+      "paths": [
+        "$.nodes[?(@.id=='wCvEuqkB')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
     }
