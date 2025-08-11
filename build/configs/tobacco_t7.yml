@@ -1,7 +1,13 @@
 # Configuration for Tobacco T7 Scenario
 metadata:
   label: "Tobacco - T7 - Effective pharmacological intervention"
-  description: "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit"
+  description: |
+    Tobacco cessation pharmacotherapy intervention that provides cost-covered effective pharmacological interventions to all tobacco users who want to quit.
+    This scenario exposes the parameters for cessation medication policies that work by providing nicotine replacement therapy, prescription medications, and other pharmacological aids to support quit attempts.
+    The intervention reduces tobacco prevalence in the population by increasing successful quit rates through medication-assisted treatment, which in turn reduces the incidence rates of diabetes among susceptible individuals.
+    Pharmacological interventions include nicotine replacement therapy (patches, gum, lozenges), prescription medications (bupropion, varenicline), and other evidence-based cessation aids.
+    These medications are most effective when combined with behavioral support and when made accessible through healthcare coverage and reduced cost barriers.
+    Note: For a comprehensive understanding of tobacco control impacts, this intervention should also be run for COPD, Asthma, and Cardiovascular Disease models.
   authors: []
 
 # Components to include (from build/components/)

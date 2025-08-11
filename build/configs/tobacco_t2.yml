@@ -1,7 +1,13 @@
 # Configuration for Tobacco T2 Scenario
 metadata:
   label: "Tobacco - T2 - Warning about the dangers of tobacco"
-  description: "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages"
+  description: |
+    Tobacco warning label intervention that implements plain/standardized packaging and large graphic health warnings on all tobacco packages.
+    This scenario exposes the parameters for warning label policies that work by educating consumers about tobacco health risks and reducing the appeal of tobacco products.
+    The intervention reduces tobacco prevalence in the population through increased awareness and deterrence, which in turn reduces the incidence rates of diabetes among susceptible individuals.
+    Graphic warnings and plain packaging make tobacco products less attractive and reinforce health messaging to current and potential tobacco users.
+    The intervention includes coverage scale-up parameters that can be adjusted to simulate different implementation timelines and population reach.
+    Note: For a comprehensive understanding of tobacco control impacts, this intervention should also be run for COPD, Asthma, and Cardiovascular Disease models.
   authors: []
 
 # Components to include (from build/components/)
