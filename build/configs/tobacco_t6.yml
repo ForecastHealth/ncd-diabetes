@@ -1,0 +1,17 @@
+# Configuration for Tobacco T6 Scenario
+metadata:
+  label: "Tobacco - T6 - Quitting tobacco"
+  description: "Provision of cost-covered effective population-wide support (including brief advice, national toll-free quit line services and mCessation) for tobacco cessation to all tobacco users"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - tobacco_quitbrief.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/tobacco_t6.json

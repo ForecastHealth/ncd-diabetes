@@ -1,0 +1,17 @@
+# Configuration for Tobacco T2 Scenario
+metadata:
+  label: "Tobacco - T2 - Warning about the dangers of tobacco"
+  description: "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - tobacco_warnlabel.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/tobacco_t2.json

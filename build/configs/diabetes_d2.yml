@@ -1,0 +1,17 @@
+# Configuration for Diabetes D2 Scenario
+metadata:
+  label: "Appendix 3 - D2 Scenario"
+  description: "Diabetic retinopathy screening for all diabetes patients and laser photocoagulation for prevention of blindness"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - diabetes_retinopathy_screening.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/diabetes_d2.json

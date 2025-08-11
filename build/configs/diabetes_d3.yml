@@ -1,0 +1,17 @@
+# Configuration for Diabetes D3 Scenario
+metadata:
+  label: "Appendix 3 - D3 Scenario"
+  description: "Glycaemic control for people with diabetes, along with standard home glucose monitoring for people treated with insulin to reduce diabetes complications"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - diabetes_glycaemic_control.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/diabetes_d3.json

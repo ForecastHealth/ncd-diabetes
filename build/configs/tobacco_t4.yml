@@ -1,0 +1,17 @@
+# Configuration for Tobacco T4 Scenario
+metadata:
+  label: "Tobacco - T4 - Protecting people from tobacco smoke"
+  description: "Eliminate exposure to second-hand tobacco smoke in all indoor workplaces, public places, public transport"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - tobacco_protect.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/tobacco_t4.json

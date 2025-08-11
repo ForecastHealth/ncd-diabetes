@@ -1,0 +1,17 @@
+# Configuration for Diabetes D5 Scenario
+metadata:
+  label: "Appendix 3 - D5 Scenario"
+  description: "Control of blood pressure in people with diabetes"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - diabetes_blood_pressure_control.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/diabetes_d5.json

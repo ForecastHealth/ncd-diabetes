@@ -1,0 +1,17 @@
+# Configuration for Diabetes D1 Scenario
+metadata:
+  label: "Appendix 3 - D1 Scenario"
+  description: "Foot care to prevent amputation in people with diabetes (including educational programmes, access to appropriate footwear, multidisciplinary clinics)"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - diabetes_foot_care.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/diabetes_d1.json

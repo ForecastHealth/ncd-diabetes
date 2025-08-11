@@ -1,0 +1,17 @@
+# Configuration for Tobacco T5 Scenario
+metadata:
+  label: "Tobacco - T5 - Effective Mass Media Campaigns"
+  description: "Implement effective mass media campaigns that educate the public about the harms of smoking/tobacco use and second-hand smoke"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - tobacco_massmedia.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/tobacco_t5.json

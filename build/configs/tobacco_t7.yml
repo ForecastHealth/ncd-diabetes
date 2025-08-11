@@ -1,0 +1,17 @@
+# Configuration for Tobacco T7 Scenario
+metadata:
+  label: "Tobacco - T7 - Effective pharmacological intervention"
+  description: "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - tobacco_quitcessation.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/tobacco_t7.json
