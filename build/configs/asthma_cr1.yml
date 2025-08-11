@@ -1,0 +1,21 @@
+# Configuration for CR1 Scenario
+metadata:
+  label: "Appendix 3 - CR1 Scenario"
+  description: "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids."
+  authors: []
+
+# Components to include
+components:
+  - base.json
+  - low_dose_beclom.json
+  - high_dose_beclom.json
+  - oral_prednisolone.json
+  - inhaled_beta_agonist.json
+  - tobacco_interventions.json
+
+# Override specific values for CR1 scenario
+overrides:
+  "Oral Prednisolone Target Coverage":
+    value: 0.95
+
+output: ../scenarios/asthma_cr1.json

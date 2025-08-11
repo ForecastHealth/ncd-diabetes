@@ -1,0 +1,25 @@
+{
+  "Country": {
+    "hidden": true,
+    "value": "AFG",
+    "paths": [
+      "$.nodes[?(@.id=='AsthmaEpsd_CFR')].generate_array.parameters.country",
+      "$.nodes[?(@.id=='Healthy_Disability')].generate_array.parameters.country",
+      "$.nodes[?(@.id=='Asthma_Disability')].generate_array.parameters.country",
+      "$.nodes[?(@.id=='DsFreeSus')].generate_array.parameters.country",
+      "$.nodes[?(@.id=='rXFK8r54')].generate_array.parameters.country",
+      "$.nodes[?(@.id=='HvEhBiqV')].generate_array.parameters.country",
+      "$.nodes[?(@.id=='wdoGuxrz')].generate_array.parameters.country",
+      "$.links[?(@.id=='avvOYu19')].generate_array.parameters.country",
+      "$.links[?(@.id=='MCWFcR4e')].generate_array.parameters.country",
+      "$.links[?(@.id=='EXGS1xV6')].generate_array.parameters.country",
+      "$.links[?(@.id=='Yfenedx0')].generate_array.parameters.country",
+      "$.links[?(@.id=='09Q1rhSn')].generate_array.parameters.country",
+      "$.links[?(@.id=='Z6UVoLxv')].generate_array.parameters.country",
+      "$.links[?(@.id=='tGFmOvlz')].generate_array.parameters.country",
+      "$.links[?(@.id=='yCtPKnQ5')].generate_array.parameters.country",
+      "$.links[?(@.id=='kdE7JaZO')].generate_array.parameters.country",
+      "$.links[?(@.id=='z2MaEXxg')].generate_array.parameters.country"
+    ]
+  }
+}

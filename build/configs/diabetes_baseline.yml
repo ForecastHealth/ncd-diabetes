@@ -1,0 +1,19 @@
+# Configuration for Diabetes Baseline Scenario
+metadata:
+  label: "Diabetes - Baseline Scenario"
+  description: "A scenario where there is no change in the coverage of any intervention"
+  authors: []
+
+# Components to include
+components:
+  - diabetes_base.json
+  - diabetes_clinical.json
+  - diabetes_physical_activity.json
+  - diabetes_tobacco.json
+  - diabetes_alcohol.json
+  - diabetes_diet.json
+
+# No overrides needed for baseline
+overrides: {}
+
+output: ../scenarios/diabetes_baseline.json

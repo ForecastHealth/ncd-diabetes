@@ -1,0 +1,21 @@
+# Configuration for Asthma Baseline Scenario
+metadata:
+  label: "Asthma - Baseline Scenario"
+  description: "A scenario where there is no change in the coverage of any intervention"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - base.json
+  - low_dose_beclom.json
+  - high_dose_beclom.json
+  - oral_prednisolone.json
+  - inhaled_beta_agonist.json
+  - tobacco_interventions.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/asthma_baseline.json

@@ -1,0 +1,34 @@
+{
+  "Oral Prednisolone Baseline Coverage": {
+    "value": 0.05,
+    "description": "The baseline coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='AsthmaOralPrednisolone_StartingCoverage')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Oral Prednisolone Target Coverage": {
+    "value": 0.05,
+    "description": "The target coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Oral Prednisolone Population In Need": {
+    "value": 0.323,
+    "description": "The proportion of persons with asthma who require the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='AsthmaOralPrednisolone_PIN')].generate_array.parameters.value"
+    ],
+    "category": "Population In Need"
+  },
+  "Oral Prednisolone Disability Impact": {
+    "description": "The proportion by which the disability weight is reduced due to the intervention",
+    "value": 0.33,
+    "paths": [
+      "$.nodes[?(@.id=='AsthmaOralPrednisolone_Disability_Impact')].generate_array.parameters.value"
+    ],
+    "category": "Impact"
+  }
+}

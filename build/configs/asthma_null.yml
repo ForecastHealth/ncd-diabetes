@@ -1,0 +1,39 @@
+# Configuration for Asthma Null Scenario
+metadata:
+  label: "Appendix 3 - Asthma Null Scenario"
+  description: "The scenario all interventions are scaled to 0% coverage. Used as the baseline scenario for analyses in Appendix 3 for clinical interventions."
+  authors: []
+
+# Components to include
+components:
+  - base.json
+  - low_dose_beclom.json
+  - high_dose_beclom.json
+  - oral_prednisolone.json
+  - inhaled_beta_agonist.json
+  - tobacco_interventions.json
+
+# Override all target coverages to 0
+overrides:
+  "Low Dose Beclometasone Target Coverage":
+    value: 0
+  "High Dose Beclometasone Target Coverage":
+    value: 0
+  "Oral Prednisolone Target Coverage":
+    value: 0
+  "Inhaled Short Acting Beta Agonist Target Coverage":
+    value: 0
+  "Target Coverage Tobacco Protect":
+    value: 0
+  "Target Coverage Tobacco Quitbrief":
+    value: 0
+  "Target Coverage Tobacco Quitcessation":
+    value: 0
+  "Target Coverage Tobacco Warnlabel":
+    value: 0
+  "Target Coverage Tobacco Massmedia":
+    value: 0
+  "Target Coverage Tobacco Ban":
+    value: 0
+
+output: ../scenarios/asthma_null.json

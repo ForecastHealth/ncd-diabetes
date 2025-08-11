@@ -1,0 +1,34 @@
+{
+  "Low Dose Beclometasone Baseline Coverage": {
+    "value": 0.05,
+    "description": "The baseline coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='LowDoseBeclom_StartingCoverage')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Low Dose Beclometasone Target Coverage": {
+    "value": 0.05,
+    "description": "The target coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Low Dose Beclometasone Population In Need": {
+    "value": 0.4,
+    "description": "The proportion of persons with asthma who require the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='LowDoseBeclom_PIN')].generate_array.parameters.value"
+    ],
+    "category": "Population In Need"
+  },
+  "Low Dose Beclometasone Disability Impact": {
+    "description": "The proportion by which the disability weight is reduced due to the intervention",
+    "value": 0.08,
+    "paths": [
+      "$.nodes[?(@.id=='LowDoseBeclom_Disability_Impact')].generate_array.parameters.value"
+    ],
+    "category": "Impact"
+  }
+}

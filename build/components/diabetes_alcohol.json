@@ -1,0 +1,50 @@
+{
+  "Target Coverage Alcohol Ban": {
+    "value": 0.05,
+    "description": "The target coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='ERfKe83x')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Baseline Coverage Alcohol Ban": {
+    "value": 0.05,
+    "description": "The baseline coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='Rzb0zAne')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Target Coverage Alcohol Restrict": {
+    "value": 0.05,
+    "description": "The target coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='XaMz5uch')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Baseline Coverage Alcohol Restrict": {
+    "value": 0.05,
+    "description": "The baseline coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='wkswo620')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Target Coverage Alcohol Counsel": {
+    "value": 0.05,
+    "description": "The target coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='hS1pbjZJ')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Baseline Coverage Alcohol Counsel": {
+    "value": 0.05,
+    "description": "The baseline coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='jaYSlCkx')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  }
+}

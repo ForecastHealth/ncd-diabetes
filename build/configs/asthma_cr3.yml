@@ -1,0 +1,23 @@
+# Configuration for CR3 Scenario
+metadata:
+  label: "Appendix 3 - CR3 Scenario"
+  description: "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone."
+  authors: []
+
+# Components to include
+components:
+  - base.json
+  - low_dose_beclom.json
+  - high_dose_beclom.json
+  - oral_prednisolone.json
+  - inhaled_beta_agonist.json
+  - tobacco_interventions.json
+
+# Override specific values for CR3 scenario
+overrides:
+  "Low Dose Beclometasone Target Coverage":
+    value: 0.95
+  "Inhaled Short Acting Beta Agonist Target Coverage":
+    value: 0.95
+
+output: ../scenarios/asthma_cr3.json

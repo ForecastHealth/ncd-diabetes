@@ -1,0 +1,57 @@
+# Configuration for Diabetes Null Scenario
+metadata:
+  label: "Diabetes - Null Scenario"
+  description: "Scenario with all interventions scaled to 0% coverage"
+  authors: []
+
+# Components to include
+components:
+  - diabetes_base.json
+  - diabetes_clinical.json
+  - diabetes_physical_activity.json
+  - diabetes_tobacco.json
+  - diabetes_alcohol.json
+  - diabetes_diet.json
+
+# Set key target coverages to 0
+overrides:
+  "Standard Glycaemic Control Target Coverage":
+    value: 0
+  "Intensive Glycaemic Control Target Coverage":
+    value: 0
+  "Retinopathy Screening Target Coverage":
+    value: 0
+  "Nephropathy Screening Target Coverage":
+    value: 0
+  "Neuropathy Screening Target Coverage":
+    value: 0
+  "Target Coverage Physical Inactivity Awareness":
+    value: 0
+  "Target Coverage Physical Inactivity Advice":
+    value: 0
+  "Target Coverage Tobacco Protect":
+    value: 0
+  "Target Coverage Tobacco Quitbrief":
+    value: 0
+  "Target Coverage Tobacco Quitcessation":
+    value: 0
+  "Target Coverage Tobacco Warnlabel":
+    value: 0
+  "Target Coverage Tobacco Massmedia":
+    value: 0
+  "Target Coverage Tobacco Ban":
+    value: 0
+  "Target Coverage Alcohol Ban":
+    value: 0
+  "Target Coverage Alcohol Restrict":
+    value: 0
+  "Target Coverage Alcohol Counsel":
+    value: 0
+  "Target Coverage Fiber Procurement":
+    value: 0
+  "Target Coverage Fiber Reformulation":
+    value: 0
+  "Target Coverage Fiber Relabelling":
+    value: 0
+
+output: ../scenarios/diabetes_null.json

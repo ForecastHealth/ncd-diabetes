@@ -1,0 +1,34 @@
+{
+  "Inhaled Short Acting Beta Agonist Baseline Coverage": {
+    "value": 0.05,
+    "description": "The baseline coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='InhaledShortActingBeta_StartingCoverage')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Inhaled Short Acting Beta Agonist Target Coverage": {
+    "value": 0.05,
+    "description": "The target coverage for the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.value"
+    ],
+    "category": "Coverage"
+  },
+  "Inhaled Short Acting Beta Agonist Population In Need": {
+    "value": 0.3,
+    "description": "The proportion of persons with asthma who require the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='InhaledShortActingBeta_PIN')].generate_array.parameters.value"
+    ],
+    "category": "Population In Need"
+  },
+  "Inhaled Short Acting Beta Agonist Disability Impact": {
+    "value": 0.00961066,
+    "description": "The proportion by which the disability weight is reduced due to the intervention",
+    "paths": [
+      "$.nodes[?(@.id=='InhaledShortActingBeta_Disability_Impact')].generate_array.parameters.value"
+    ],
+    "category": "Impact"
+  }
+}
