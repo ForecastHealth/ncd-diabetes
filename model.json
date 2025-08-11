@@ -492,9 +492,14 @@
       "y": 195.17,
       "label": "RetinopathyScrn_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -942,9 +947,14 @@
       "y": 216.48,
       "label": "IntsvGlycControl_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -1092,9 +1102,14 @@
       "y": 222.22,
       "label": "StdGlycControl_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -1203,9 +1218,14 @@
       "y": 201.32,
       "label": "NeuropathyScr_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -1275,9 +1295,14 @@
       "y": 208.62,
       "label": "NephropathyScr_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -1538,9 +1563,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -1783,9 +1813,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -1977,9 +2012,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2040,9 +2080,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2103,9 +2148,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2166,9 +2216,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2229,9 +2284,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2292,9 +2352,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2489,9 +2554,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2555,9 +2625,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2621,9 +2696,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2815,9 +2895,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -2936,9 +3021,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
@@ -3000,9 +3090,14 @@
       "node_type": "CONSTANT",
       "color": "#06B4E1",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "flush": true
