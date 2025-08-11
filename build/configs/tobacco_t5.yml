@@ -2,12 +2,8 @@
 metadata:
   label: "Tobacco - T5 - Effective Mass Media Campaigns"
   description: |
-    Mass media campaign intervention that implements effective campaigns educating the public about the harms of smoking/tobacco use and second-hand smoke.
-    This scenario exposes the parameters for public education campaigns that work by increasing awareness of tobacco health risks and motivating behavior change.
-    The intervention reduces tobacco prevalence in the population through sustained messaging about health consequences, which in turn reduces the incidence rates of diabetes among susceptible individuals.
-    Mass media campaigns reach broad audiences with anti-tobacco messaging, counter tobacco industry marketing, and provide social support for quit attempts.
-    Effective campaigns use multiple media channels and evidence-based messaging to change social norms around tobacco use and encourage cessation.
-    Note: For a comprehensive understanding of tobacco control impacts, this intervention should also be run for COPD, Asthma, and Cardiovascular Disease models.
+    Mass media campaign intervention that educates the public about tobacco harms.
+    This scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
   authors: []
 
 # Components to include (from build/components/)
