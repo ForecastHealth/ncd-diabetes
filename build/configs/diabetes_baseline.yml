@@ -18,6 +18,12 @@ components:
   - tobacco_massmedia.json
   - tobacco_ban.json
   - tobacco_tax.json
+  - physical_inactivity_p1.json
+  - physical_inactivity_p2.json
+  - unhealthy_diet_fiber_procurement.json
+  - unhealthy_diet_fiber_reformulation.json
+  - unhealthy_diet_fiber_relabelling.json
+
 
 # No overrides needed for baseline
 overrides: {}

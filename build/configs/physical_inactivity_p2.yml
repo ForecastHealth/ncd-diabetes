@@ -9,6 +9,7 @@ metadata:
 
 # Components to include (from build/components/)
 components:
+  - diabetes_base.json
   - physical_inactivity_p2.json
 
 # Optional: Override specific parameter values

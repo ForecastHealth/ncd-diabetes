@@ -9,6 +9,7 @@ metadata:
 
 # Components to include (from build/components/)
 components:
+  - diabetes_base.json
   - unhealthy_diet_fiber_reformulation.json
 
 # Optional: Override specific parameter values
