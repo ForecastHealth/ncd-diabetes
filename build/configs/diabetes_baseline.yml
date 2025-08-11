@@ -7,8 +7,10 @@ metadata:
 # Components to include
 components:
   - diabetes_base.json
-  - diabetes_clinical.json
-  - diabetes_physical_activity.json
+  - diabetes_foot_care.json
+  - diabetes_glycaemic_control.json
+  - diabetes_nephropathy_screening.json
+  - diabetes_retinopathy_screening.json
   - tobacco_protect.json
   - tobacco_quitbrief.json
   - tobacco_quitcessation.json
@@ -16,8 +18,6 @@ components:
   - tobacco_massmedia.json
   - tobacco_ban.json
   - tobacco_tax.json
-  - diabetes_alcohol.json
-  - diabetes_diet.json
 
 # No overrides needed for baseline
 overrides: {}
