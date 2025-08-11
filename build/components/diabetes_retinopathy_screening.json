@@ -35,10 +35,10 @@
     "category": "Coverage"
   },
   "Retinopathy Screening Population In Need": {
-    "value": 0.33,
+    "value": 1,
     "description": "The proportion of persons who require the intervention",
     "paths": [
-      "$.nodes[?(@.id=='lrsnbowl')].generate_array.parameters.value"
+      "$.nodes[?(@.id=='ls9tsvuf')].generate_array.parameters.value"
     ],
     "category": "Population In Need"
   }
