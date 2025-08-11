@@ -14,7 +14,7 @@ metadata:
 # Components to include (from build/components/)
 components:
   - diabetes_base.json
-  - diabetes_blood_pressure_control.json
+  - diabetes_nephropathy_screening.json
 
 # Optional: Override specific parameter values
 # These will be applied after merging components
