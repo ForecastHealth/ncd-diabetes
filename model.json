@@ -425,7 +425,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.049
+          "value": 0.031
         }
       },
       "tags": [
@@ -620,7 +620,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.18
+          "value": 0.338
         }
       },
       "tags": [
@@ -638,7 +638,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.167
+          "value": 0.164
         }
       },
       "tags": [
@@ -1362,7 +1362,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.63
+          "value": 0.338
         }
       },
       "tags": [
