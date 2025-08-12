@@ -8469,21 +8469,30 @@
       ]
     },
     {
-      "method": "push_balance_to_edges",
-      "batch": false,
-      "narration": "Main routine - diabetes incidence",
+      "method": "synchronous_transfer",
+      "batch": true,
+      "narration": "Main routine",
       "included_edges": [
-        "iBQ6U36V"
+        "iBQ6U36V",
+        "qwfuA7jx",
+        "nyZHiO9K",
+        "91C8HO8E",
+        "nU0Snw08",
+        "cdXO88Jz",
+        "SOdrw9IV",
+        "OyW7kOSM"
       ]
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
-      "narration": "Main Routine - Distribute Diabetes to Effects",
+      "narration": "Background mortality",
       "included_edges": [
-        "qwfuA7jx",
-        "nyZHiO9K",
-        "91C8HO8E"
+        "itKEGsJa",
+        "tJOW1hhc",
+        "STz4wrnX",
+        "9lHjCUmt",
+        "BJGaPBZg"
       ]
     },
     {
@@ -8537,22 +8546,6 @@
         "ls9qw5uh",
         "ls9qwy35",
         "ls9qwy72"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "batch": false,
-      "narration": "Mortality is recorded",
-      "included_edges": [
-        "itKEGsJa",
-        "nU0Snw08",
-        "cdXO88Jz",
-        "SOdrw9IV",
-        "OyW7kOSM",
-        "9lHjCUmt",
-        "tJOW1hhc",
-        "STz4wrnX",
-        "BJGaPBZg"
       ]
     },
     {
