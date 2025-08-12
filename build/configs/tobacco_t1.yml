@@ -14,7 +14,7 @@ components:
 # Override specific values for T1 scenario
 overrides:
   "Price Change Tobacco Tax":
-    value: 0.5
+    value: 0.25
 
 # Output file path (relative to build directory)
 output: ../scenarios/tobacco_t1.json
