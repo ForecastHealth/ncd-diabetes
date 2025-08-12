@@ -1,0 +1,18 @@
+# Configuration for Foot Care Only
+metadata:
+  label: "Clinical Intervention - Diabetes Foot Care"
+  description: |
+    Comprehensive foot care intervention to prevent lower extremity amputations in people with diabetes.
+    This intervention reduces progression from diabetes to lower extremity amputation by providing educational programs, access to appropriate footwear, and multidisciplinary clinic care.
+    Neuropathy screening identifies at-risk individuals with diabetic nerve damage who require enhanced foot care.
+  authors: []
+
+# Components to include
+components:
+  - diabetes_base.json
+  - diabetes_foot_care.json
+
+# No overrides needed for clinical intervention
+overrides: {}
+
+output: ../scenarios/diabetes_foot_care.json

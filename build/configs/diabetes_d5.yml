@@ -16,9 +16,10 @@ components:
   - diabetes_base.json
   - diabetes_nephropathy_screening.json
 
-# Optional: Override specific parameter values
-# These will be applied after merging components
-overrides: {}
+# Override specific values for D5 scenario
+overrides:
+  "Nephropathy Screening Target Coverage":
+    value: 0.95
 
 # Output file path (relative to build directory)
 output: ../scenarios/diabetes_d5.json

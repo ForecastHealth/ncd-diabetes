@@ -1,0 +1,18 @@
+# Configuration for Nephropathy Screening Only
+metadata:
+  label: "Clinical Intervention - Diabetic Nephropathy Screening"
+  description: |
+    Comprehensive blood pressure control intervention for people with diabetes to prevent cardiovascular and microvascular complications.
+    This intervention reduces progression from diabetes to diabetic nephropathy and other cardiovascular complications by providing regular blood pressure monitoring, antihypertensive medications, and nephropathy screening.
+    Nephropathy screening identifies diabetic patients with early kidney damage who require enhanced blood pressure control.
+  authors: []
+
+# Components to include
+components:
+  - diabetes_base.json
+  - diabetes_nephropathy_screening.json
+
+# No overrides needed for clinical intervention
+overrides: {}
+
+output: ../scenarios/diabetes_nephropathy_screening.json

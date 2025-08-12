@@ -12,9 +12,10 @@ components:
   - diabetes_base.json
   - physical_inactivity_p2.json
 
-# Optional: Override specific parameter values
-# These will be applied after merging components
-overrides: {}
+# Override specific values for P2 scenario
+overrides:
+  "Target Coverage Physical Inactivity Awareness":
+    value: 0.95
 
 # Output file path (relative to build directory)
 output: ../scenarios/physical_inactivity_p2.json

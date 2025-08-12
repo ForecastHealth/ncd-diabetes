@@ -1,6 +1,6 @@
 # Configuration for Tobacco T4 Scenario
 metadata:
-  label: "Tobacco - T4 - Protecting people from tobacco smoke"
+  label: "Appendix 3 - Tobacco 4 - Protecting people from tobacco smoke"
   description: |
     Smoke-free environment intervention that protects people from tobacco smoke in public places.
     This scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
@@ -11,9 +11,10 @@ components:
   - diabetes_base.json
   - tobacco_protect.json
 
-# Optional: Override specific parameter values
-# These will be applied after merging components
-overrides: {}
+# Override specific values for T4 scenario
+overrides:
+  "Target Coverage Tobacco Protect":
+    value: 0.95
 
 # Output file path (relative to build directory)
 output: ../scenarios/tobacco_t4.json

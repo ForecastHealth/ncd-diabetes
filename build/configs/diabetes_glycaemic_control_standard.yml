@@ -1,0 +1,18 @@
+# Configuration for Standard Glycaemic Control Only
+metadata:
+  label: "Clinical Intervention - Standard Glycaemic Control"
+  description: |
+    Standard glycaemic control intervention for people with diabetes to prevent microvascular complications.
+    This intervention works by maintaining optimal blood glucose levels through medication management and glucose monitoring.
+    The intervention reduces progression from diabetes to diabetic nephropathy, retinopathy, and other complications by providing systematic glucose control with standard home glucose monitoring for insulin-treated patients.
+  authors: []
+
+# Components to include
+components:
+  - diabetes_base.json
+  - diabetes_glycaemic_control_standard.json
+
+# No overrides needed for clinical intervention
+overrides: {}
+
+output: ../scenarios/diabetes_glycaemic_control_standard.json

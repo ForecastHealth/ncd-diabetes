@@ -1,6 +1,6 @@
 # Configuration for Tobacco T6 Scenario
 metadata:
-  label: "Tobacco - T6 - Quitting tobacco"
+  label: "Appendix 3 - Tobacco 6 - Quitting tobacco"
   description: |
     Tobacco cessation support intervention that provides brief advice, quit lines, and behavioral support.
     This scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
@@ -11,9 +11,10 @@ components:
   - diabetes_base.json
   - tobacco_quitbrief.json
 
-# Optional: Override specific parameter values
-# These will be applied after merging components
-overrides: {}
+# Override specific values for T6 scenario
+overrides:
+  "Target Coverage Tobacco Quitbrief":
+    value: 0.95
 
 # Output file path (relative to build directory)
 output: ../scenarios/tobacco_t6.json

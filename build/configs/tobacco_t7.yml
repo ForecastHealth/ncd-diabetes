@@ -1,6 +1,6 @@
 # Configuration for Tobacco T7 Scenario
 metadata:
-  label: "Tobacco - T7 - Effective pharmacological intervention"
+  label: "Appendix 3 - Tobacco 7 - Effective pharmacological intervention"
   description: |
     Tobacco cessation pharmacotherapy intervention that provides pharmacological interventions for quitting tobacco.
     This scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
@@ -11,9 +11,10 @@ components:
   - diabetes_base.json
   - tobacco_quitcessation.json
 
-# Optional: Override specific parameter values
-# These will be applied after merging components
-overrides: {}
+# Override specific values for T7 scenario
+overrides:
+  "Target Coverage Tobacco Quitcessation":
+    value: 0.95
 
 # Output file path (relative to build directory)
 output: ../scenarios/tobacco_t7.json

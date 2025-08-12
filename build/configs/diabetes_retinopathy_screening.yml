@@ -1,0 +1,18 @@
+# Configuration for Retinopathy Screening Only
+metadata:
+  label: "Clinical Intervention - Diabetic Retinopathy Screening"
+  description: |
+    Comprehensive diabetic retinopathy screening and treatment intervention to prevent blindness in people with diabetes.
+    This intervention reduces progression from diabetes to diabetic retinopathy and blindness by providing systematic eye examinations and timely laser treatment.
+    Retinopathy screening identifies diabetic patients with early eye damage who require laser photocoagulation treatment.
+  authors: []
+
+# Components to include
+components:
+  - diabetes_base.json
+  - diabetes_retinopathy_screening.json
+
+# No overrides needed for clinical intervention
+overrides: {}
+
+output: ../scenarios/diabetes_retinopathy_screening.json

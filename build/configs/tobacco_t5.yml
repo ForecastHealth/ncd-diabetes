@@ -1,6 +1,6 @@
 # Configuration for Tobacco T5 Scenario
 metadata:
-  label: "Tobacco - T5 - Effective Mass Media Campaigns"
+  label: "Appendix 3 - Tobacco 5 - Effective Mass Media Campaigns"
   description: |
     Mass media campaign intervention that educates the public about tobacco harms.
     This scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
@@ -11,9 +11,10 @@ components:
   - diabetes_base.json
   - tobacco_massmedia.json
 
-# Optional: Override specific parameter values
-# These will be applied after merging components
-overrides: {}
+# Override specific values for T5 scenario
+overrides:
+  "Target Coverage Tobacco Massmedia":
+    value: 0.95
 
 # Output file path (relative to build directory)
 output: ../scenarios/tobacco_t5.json
