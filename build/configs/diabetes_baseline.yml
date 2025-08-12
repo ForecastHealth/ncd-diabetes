@@ -8,7 +8,8 @@ metadata:
 components:
   - diabetes_base.json
   - diabetes_foot_care.json
-  - diabetes_glycaemic_control.json
+  - diabetes_glycaemic_control_standard.json
+  - diabetes_glycaemic_control_intense.json
   - diabetes_nephropathy_screening.json
   - diabetes_retinopathy_screening.json
   - tobacco_protect.json
