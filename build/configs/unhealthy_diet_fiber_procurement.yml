@@ -1,6 +1,6 @@
 # Configuration for Unhealthy Diet - Fiber Procurement
 metadata:
-  label: "Appendix 3 - Unhealthy Diet Fiber Procurement Scenario"
+  label: "Unhealthy Diet - Fiber - Procurement"
   description: |
     Fiber procurement intervention that modifies coverage of public procurement policies.
     This scenario changes coverage parameters to increase total fiber intake in grams.

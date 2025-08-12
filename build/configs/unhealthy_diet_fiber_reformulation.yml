@@ -1,6 +1,6 @@
 # Configuration for Unhealthy Diet - Fiber Reformulation
 metadata:
-  label: "Appendix 3 - Unhealthy Diet Fiber Reformulation Scenario"
+  label: "Unhealthy Diet - Fiber - Reformulation"
   description: |
     Fiber reformulation intervention that modifies coverage of industry food reformulation efforts.
     This scenario changes coverage parameters to increase total fiber intake in grams.

@@ -1,6 +1,6 @@
 # Configuration for Unhealthy Diet - Fiber Relabelling
 metadata:
-  label: "Appendix 3 - Unhealthy Diet Fiber Relabelling Scenario"
+  label: "Unhealthy Diet - Fiber - Relabelling"
   description: |
     Fiber relabelling intervention that modifies coverage of front-of-pack nutrition labeling.
     This scenario changes coverage parameters to increase total fiber intake in grams.
