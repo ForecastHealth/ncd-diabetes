@@ -8628,19 +8628,5 @@
         "B4SjgqET"
       ]
     }
-  ],
-  "equilibrium": {
-    "index": 20,
-    "node_with_population": "DsFreeSus",
-    "nodes_to_receive_population": [
-      "AsthmaEpsd",
-      "ls9qw5uh",
-      "ls9qwy35",
-      "ls9qwy72"
-    ],
-    "subroutine_to_appear_after": "Generate the population",
-    "subroutines_to_remove": [
-      "Allocate prevalence"
-    ]
-  }
+  ]
 }
