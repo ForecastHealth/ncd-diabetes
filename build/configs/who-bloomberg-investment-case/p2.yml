@@ -1,0 +1,28 @@
+# Configuration for Physical Inactivity P2 Scenario
+metadata:
+  label: "Appendix 3 - Physical Inactivity P2 Scenario"
+  description: |
+    Physical activity awareness intervention that increases coverage of mass media campaigns.
+    This scenario modifies coverage parameters from baseline to target levels over a specified scale-up period.
+    The intervention reduces prevalence of physical inactivity, which changes the population attributable fraction and subsequently affects diabetes incidence rates.
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - runtime.json
+  - physical_inactivity_p2.json
+
+# Override specific values for P2 scenario
+overrides:
+  "Start Year":
+    value: 2025
+  "End Year":
+    value: 2051
+  "Target Coverage Physical Inactivity Awareness":
+    value: 0.95
+  "Scale-Up Final Year Physical Inactivity Awareness":
+    value: 3
+
+# Output file path (relative to build directory)
+output: ../scenarios/who-bloomberg-investment-case/physical_inactivity_p2.json

@@ -1,0 +1,21 @@
+# Configuration for U6 Scenario
+metadata:
+  label: "U6 Scenario"
+  description: |
+    Placeholder configuration for U6 intervention.
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - runtime.json
+
+# Override specific values for U6 scenario
+overrides:
+  "Start Year":
+    value: 2025
+  "End Year":
+    value: 2051
+
+# Output file path (relative to build directory)
+output: ../scenarios/who-bloomberg-investment-case/u6.json
