@@ -1,0 +1,27 @@
+# Configuration for Tobacco T7 Scenario
+metadata:
+  label: "Appendix 3 - Tobacco 7 - Pharmacological cessation aids"
+  description: |
+    Tobacco cessation pharmacotherapy intervention that provides pharmacological interventions for quitting tobacco.
+    This scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - runtime.json
+  - tobacco_quitcessation.json
+
+# Override specific values for T7 scenario
+overrides:
+  "Start Year":
+    value: 2025
+  "End Year":
+    value: 2051
+  "Target Coverage Tobacco Quitcessation":
+    value: 0.95
+  "Scale-Up Final Year Tobacco Quitcessation":
+    value: 4
+
+# Output file path (relative to build directory)
+output: ../scenarios/who-bloomberg-investment-case/tobacco_t7.json

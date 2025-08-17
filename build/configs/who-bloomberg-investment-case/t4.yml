@@ -1,0 +1,27 @@
+# Configuration for Tobacco T4 Scenario
+metadata:
+  label: "Appendix 3 - Tobacco 4 - Smoke-free environments"
+  description: |
+    Smoke-free environment intervention that protects people from tobacco smoke in public places.
+    This scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - runtime.json
+  - tobacco_protect.json
+
+# Override specific values for T4 scenario
+overrides:
+  "Start Year":
+    value: 2025
+  "End Year":
+    value: 2051
+  "Target Coverage Tobacco Protect":
+    value: 0.95
+  "Scale-Up Final Year Tobacco Protect":
+    value: 4
+
+# Output file path (relative to build directory)
+output: ../scenarios/who-bloomberg-investment-case/tobacco_t4.json

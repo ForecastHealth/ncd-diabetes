@@ -1,0 +1,27 @@
+# Configuration for Tobacco T5 Scenario
+metadata:
+  label: "Appendix 3 - Tobacco 5 - Mass media campaigns"
+  description: |
+    Mass media campaign intervention that educates the public about tobacco harms.
+    This scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - diabetes_base.json
+  - runtime.json
+  - tobacco_massmedia.json
+
+# Override specific values for T5 scenario
+overrides:
+  "Start Year":
+    value: 2025
+  "End Year":
+    value: 2051
+  "Target Coverage Tobacco Massmedia":
+    value: 0.95
+  "Scale-Up Final Year Tobacco Massmedia":
+    value: 4
+
+# Output file path (relative to build directory)
+output: ../scenarios/who-bloomberg-investment-case/tobacco_t5.json

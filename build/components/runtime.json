@@ -1,0 +1,18 @@
+{
+  "Start Year": {
+    "value": 2020,
+    "description": "The starting year for the model simulation",
+    "paths": [
+      "$.runtime.startYear"
+    ],
+    "category": "Runtime"
+  },
+  "End Year": {
+    "value": 2121,
+    "description": "The ending year for the model simulation",
+    "paths": [
+      "$.runtime.endYear"
+    ],
+    "category": "Runtime"
+  }
+}
