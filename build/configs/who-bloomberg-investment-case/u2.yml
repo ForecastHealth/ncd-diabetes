@@ -1,14 +1,16 @@
 # Configuration for U2 Scenario
 metadata:
-  label: "U2 Scenario"
+  label: "U2 - Supportive environment in public institutions"
   description: |
-    Placeholder configuration for U2 intervention.
+    Reduce nutrient intake (incl. salt) through the establishment of a supportive environment in public institutions such as hospitals, schools, workplaces and nursing homes, to enable lower sodium options to be provided.
+    This intervention targets institutional procurement for fiber content.
   authors: []
 
 # Components to include (from build/components/)
 components:
   - diabetes_base.json
   - runtime.json
+  - unhealthy_diet_fiber_procurement.json
 
 # Override specific values for U2 scenario
 overrides:

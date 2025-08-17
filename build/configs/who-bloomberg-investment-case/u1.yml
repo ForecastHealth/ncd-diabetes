@@ -1,14 +1,16 @@
 # Configuration for U1 Scenario
 metadata:
-  label: "U1 Scenario"
+  label: "U1 - Food reformulation to reduce salt and nutrients"
   description: |
-    Placeholder configuration for U1 intervention.
+    Reduce nutrient intake (incl. salt) through the reformulation of food products to contain less salt and the setting of target levels for the amount of salt in foods and meals.
+    This intervention targets food industry reformulation policies for fiber content.
   authors: []
 
 # Components to include (from build/components/)
 components:
   - diabetes_base.json
   - runtime.json
+  - unhealthy_diet_fiber_reformulation.json
 
 # Override specific values for U1 scenario
 overrides:

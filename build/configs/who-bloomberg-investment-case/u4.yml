@@ -1,14 +1,16 @@
 # Configuration for U4 Scenario
 metadata:
-  label: "U4 Scenario"
+  label: "U4 - Front-of-pack labelling"
   description: |
-    Placeholder configuration for U4 intervention.
+    Reduce nutrient intake (incl. salt) through the implementation of front-of-pack labelling.
+    This intervention targets consumer information through improved food labelling for fiber content.
   authors: []
 
 # Components to include (from build/components/)
 components:
   - diabetes_base.json
   - runtime.json
+  - unhealthy_diet_fiber_relabelling.json
 
 # Override specific values for U4 scenario
 overrides:
