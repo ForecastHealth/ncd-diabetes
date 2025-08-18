@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "label": "Appendix 3 - D1 Scenario",
-    "description": "Comprehensive foot care intervention to prevent lower extremity amputations in people with diabetes.\nThis scenario exposes the parameters for neuropathy screening and foot care programs that work by early detection and management of diabetic neuropathy complications.\nThe intervention reduces progression from diabetes to lower extremity amputation by providing educational programs, access to appropriate footwear, and multidisciplinary clinic care.\nNeuropathy screening identifies at-risk individuals with diabetic nerve damage who require enhanced foot care, with a target population in need of 66% of diabetic patients.\nThe intervention includes systematic foot examinations, patient education on foot care practices, provision of therapeutic footwear, and coordinated care through specialized clinics.\nThis intervention is particularly effective in preventing costly and debilitating amputations while improving quality of life for people with diabetes.\nNote: This intervention should be implemented alongside other diabetes care interventions for comprehensive management of diabetes complications.\n",
+    "label": "U1 - Food reformulation to reduce salt and nutrients",
+    "description": "Reduce nutrient intake (incl. salt) through the reformulation of food products to contain less salt and the setting of target levels for the amount of salt in foods and meals.\nThis intervention targets food industry reformulation policies for fiber content.\n",
     "authors": [],
-    "date_created": "2025-08-12 13:59"
+    "date_created": "2025-08-18 17:33"
   },
   "parameters": {
     "Country": {
@@ -53,48 +53,56 @@
         "$.links[?(@.id=='BJGaPBZg')].generate_array.parameters.country"
       ]
     },
-    "Neuropathy Screening Baseline Coverage": {
+    "Start Year": {
+      "value": 2025,
+      "description": "The starting year for the model simulation",
+      "paths": [
+        "$.runtime.startYear"
+      ],
+      "category": "Runtime"
+    },
+    "End Year": {
+      "value": 2051,
+      "description": "The ending year for the model simulation",
+      "paths": [
+        "$.runtime.endYear"
+      ],
+      "category": "Runtime"
+    },
+    "Baseline Coverage Fiber Reformulation": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9txz8o')].generate_array.parameters.value",
-        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.start_value",
-        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.fill_before"
+        "$.nodes[?(@.id=='JZx3RoqR')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.fill_before"
       ],
       "category": "Coverage"
     },
-    "Neuropathy Screening Target Coverage": {
-      "value": 0.95,
+    "Target Coverage Fiber Reformulation": {
+      "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
-        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.end_value",
-        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.fill_after"
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.fill_after"
       ],
       "category": "Coverage"
     },
-    "Scale-Up Start Year Neuropathy Screening": {
+    "Scale-Up Start Year Fiber Reformulation": {
       "value": 0,
       "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
       "paths": [
-        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.start_index"
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.start_index"
       ],
       "category": "Coverage"
     },
-    "Scale-Up Final Year Neuropathy Screening": {
+    "Scale-Up Final Year Fiber Reformulation": {
       "value": 1,
       "description": "The index when scale-up ends for this intervention, where 0 == the first year of the time horizon",
       "paths": [
-        "$.nodes[?(@.id=='ls9ty2u5')].generate_array.parameters.end_index"
+        "$.nodes[?(@.id=='zAkctgjQ')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
-    },
-    "Neuropathy Screening Population In Need": {
-      "value": 1,
-      "description": "The proportion of persons who require the intervention",
-      "paths": [
-        "$.nodes[?(@.id=='ls9txmx1')].generate_array.parameters.value"
-      ],
-      "category": "Population In Need"
     }
   }
 }

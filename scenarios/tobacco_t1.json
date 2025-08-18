@@ -3,7 +3,7 @@
     "label": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
     "description": "Tobacco tax intervention that increases retail prices to reduce tobacco prevalence.\nThis scenario modifies the price change parameters which reduces tobacco prevalence and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-08-12 13:59"
+    "date_created": "2025-08-18 17:33"
   },
   "parameters": {
     "Country": {
@@ -52,6 +52,22 @@
         "$.links[?(@.id=='STz4wrnX')].generate_array.parameters.country",
         "$.links[?(@.id=='BJGaPBZg')].generate_array.parameters.country"
       ]
+    },
+    "Start Year": {
+      "value": 2025,
+      "description": "The starting year for the model simulation",
+      "paths": [
+        "$.runtime.startYear"
+      ],
+      "category": "Runtime"
+    },
+    "End Year": {
+      "value": 2051,
+      "description": "The ending year for the model simulation",
+      "paths": [
+        "$.runtime.endYear"
+      ],
+      "category": "Runtime"
     },
     "Price Change Tobacco Tax": {
       "value": 0.25,
