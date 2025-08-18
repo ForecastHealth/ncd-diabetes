@@ -1,0 +1,33 @@
+# Configuration for Diabetes Baseline Scenario
+metadata:
+  label: "Diabetes - Baseline Scenario"
+  description: "A scenario where there is no change in the coverage of any intervention"
+  authors: []
+
+# Components to include
+components:
+  - diabetes_base.json
+  - runtime.json
+  - diabetes_foot_care.json
+  - diabetes_glycaemic_control_standard.json
+  - diabetes_glycaemic_control_intense.json
+  - diabetes_nephropathy_screening.json
+  - diabetes_retinopathy_screening.json
+  - tobacco_protect.json
+  - tobacco_quitbrief.json
+  - tobacco_quitcessation.json
+  - tobacco_warnlabel.json
+  - tobacco_massmedia.json
+  - tobacco_ban.json
+  - tobacco_tax.json
+  - physical_inactivity_p1.json
+  - physical_inactivity_p2.json
+  - unhealthy_diet_fiber_procurement.json
+  - unhealthy_diet_fiber_reformulation.json
+  - unhealthy_diet_fiber_relabelling.json
+
+
+# No overrides needed for baseline
+overrides: {}
+
+output: ../scenarios/diabetes_baseline.json
