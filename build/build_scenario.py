@@ -4,7 +4,7 @@ Build scenario files by composing component JSONs using YAML configuration.
 
 Usage:
     python3 build_scenario.py configs/asthma_baseline.yml
-    python3 build_scenario.py configs/asthma_cr1.yml
+    python3 build_scenario.py configs/asthma_cr1.yml configs/asthma_cr3.yml
     python3 build_scenario.py --all  # Build all configs in configs/
 """
 
@@ -76,8 +76,8 @@ def build_scenario_from_config(config_file):
 
 def main():
     parser = argparse.ArgumentParser(description='Build scenario files from YAML configurations')
-    parser.add_argument('config', nargs='?', 
-                        help='YAML configuration file (e.g., configs/asthma_baseline.yml)')
+    parser.add_argument('configs', nargs='*', 
+                        help='YAML configuration file(s) (e.g., configs/asthma_baseline.yml)')
     parser.add_argument('--all', action='store_true',
                         help='Build all configuration files in configs/')
     
@@ -109,26 +109,52 @@ def main():
             except Exception as e:
                 print(f"✗ Failed to build {config_file.name}: {e}")
     
-    elif args.config:
-        # Build single config
-        config_file = Path(args.config)
+    elif args.configs:
+        # Build specified config files
+        config_files = [Path(c) for c in args.configs]
         
-        if not config_file.exists():
-            print(f"Configuration file not found: {config_file}")
+        # Check if all files exist
+        missing_files = [f for f in config_files if not f.exists()]
+        if missing_files:
+            print("Configuration file(s) not found:")
+            for f in missing_files:
+                print(f"  - {f}")
             return
         
-        scenario, output_path = build_scenario_from_config(config_file)
-        
-        # Write the output
-        output_path = Path(output_path)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        
-        with open(output_path, 'w') as f:
-            json.dump(scenario, f, indent=2)
-        
-        print(f"Scenario built successfully: {output_path}")
-        print(f"  Configuration: {config_file}")
-        print(f"  Total parameters: {len(scenario['parameters'])}")
+        # Build each config file
+        if len(config_files) == 1:
+            # Single file - keep original output format for backward compatibility
+            config_file = config_files[0]
+            scenario, output_path = build_scenario_from_config(config_file)
+            
+            # Write the output
+            output_path = Path(output_path)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            
+            with open(output_path, 'w') as f:
+                json.dump(scenario, f, indent=2)
+            
+            print(f"Scenario built successfully: {output_path}")
+            print(f"  Configuration: {config_file}")
+            print(f"  Total parameters: {len(scenario['parameters'])}")
+        else:
+            # Multiple files
+            print(f"Building {len(config_files)} scenarios...")
+            for config_file in config_files:
+                try:
+                    scenario, output_path = build_scenario_from_config(config_file)
+                    
+                    # Write the output
+                    output_path = Path(output_path)
+                    output_path.parent.mkdir(parents=True, exist_ok=True)
+                    
+                    with open(output_path, 'w') as f:
+                        json.dump(scenario, f, indent=2)
+                    
+                    print(f"✓ Built {config_file.name} → {output_path}")
+                    
+                except Exception as e:
+                    print(f"✗ Failed to build {config_file.name}: {e}")
     
     else:
         parser.print_help()
