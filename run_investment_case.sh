@@ -42,7 +42,7 @@ while [[ $# -gt 0 ]]; do
             echo "Usage: $0 [--scenarios scenario1,scenario2] [--force]"
             echo ""
             echo "Options:"
-            echo "  --scenarios   Comma-separated list of scenarios to run (default: all asthma and tobacco scenarios)"
+            echo "  --scenarios   Comma-separated list of scenarios to run (default: all scenarios in scenarios/ directory)"
             echo "  --force       Force re-run of all validations"
             echo "  --help        Show this help message"
             exit 0
@@ -128,9 +128,16 @@ log_success "Prerequisites check completed"
 
 # Determine which scenarios to run
 if [ -z "$SELECTED_SCENARIOS" ]; then
-    # Default: run asthma_baseline, asthma_cr1, and all tobacco scenarios
-    SCENARIOS=(asthma_baseline asthma_cr1 tobacco_t1 tobacco_t2 tobacco_t3 tobacco_t4 tobacco_t5 tobacco_t6)
-    log_step "Using default scenarios: ${SCENARIOS[*]}"
+    # Default: run all scenarios found in the scenarios directory
+    SCENARIOS=()
+    for scenario_file in "$SCENARIOS_DIR"/*.json; do
+        if [ -f "$scenario_file" ]; then
+            # Extract filename without path and .json extension
+            scenario_name=$(basename "$scenario_file" .json)
+            SCENARIOS+=("$scenario_name")
+        fi
+    done
+    log_step "Using all scenarios from $SCENARIOS_DIR: ${SCENARIOS[*]}"
 else
     # Parse comma-separated scenarios
     IFS=',' read -ra SCENARIOS <<< "$SELECTED_SCENARIOS"
