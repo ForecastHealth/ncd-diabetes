@@ -3,7 +3,7 @@
     "label": "Appendix 3 - Tobacco 5 - Mass media campaigns",
     "description": "Mass media campaign intervention that educates the public about tobacco harms.\nThis scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-08-18 17:33"
+    "date_created": "2025-08-19 20:38"
   },
   "parameters": {
     "Country": {
@@ -29,6 +29,8 @@
         "$.nodes[?(@.id=='LseJUeFs')].generate_array.parameters.country",
         "$.nodes[?(@.id=='0I7rMRQp')].generate_array.parameters.country",
         "$.nodes[?(@.id=='vlVwJ1Xd')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='HaYRxeQQ')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='mrGezI4c')].generate_array.parameters.country",
         "$.links[?(@.id=='PwZT0fUg')].generate_array.parameters.country",
         "$.links[?(@.id=='BLsXt2Md')].generate_array.parameters.country",
         "$.links[?(@.id=='mlkMPtza')].generate_array.parameters.country",
@@ -89,7 +91,7 @@
       "category": "Coverage"
     },
     "Scale-Up Start Year Tobacco Massmedia": {
-      "value": 0,
+      "value": 1,
       "description": "The index when scale-up starts for this intervention, where 0 == the first year of the time horizon",
       "paths": [
         "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.start_index"
