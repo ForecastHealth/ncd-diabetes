@@ -18,6 +18,10 @@ overrides:
     value: 2025
   "End Year":
     value: 2051
+  "Target Coverage Fiber Reformulation":
+    value: 0.95
+  "Scale-Up Final Year Fiber Reformulation":
+    value: 3
 
 # Output file path (relative to build directory)
 output: ../scenarios/who-bloomberg-investment-case/u1.json
