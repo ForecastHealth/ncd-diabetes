@@ -22,6 +22,8 @@
       "$.nodes[?(@.id=='LseJUeFs')].generate_array.parameters.country",
       "$.nodes[?(@.id=='0I7rMRQp')].generate_array.parameters.country",
       "$.nodes[?(@.id=='vlVwJ1Xd')].generate_array.parameters.country",
+      "$.nodes[?(@.id=='HaYRxeQQ')].generate_array.parameters.country",
+      "$.nodes[?(@.id=='mrGezI4c')].generate_array.parameters.country",
       "$.links[?(@.id=='PwZT0fUg')].generate_array.parameters.country",
       "$.links[?(@.id=='BLsXt2Md')].generate_array.parameters.country",
       "$.links[?(@.id=='mlkMPtza')].generate_array.parameters.country",
