@@ -28,6 +28,10 @@ components:
 
 
 # No overrides needed for baseline
-overrides: {}
+overrides:
+  "Start Year":
+    value: 2025
+  "End Year":
+    value: 2051
 
 output: ../scenarios/diabetes_baseline.json
