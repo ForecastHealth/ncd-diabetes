@@ -225,81 +225,27 @@ FETCH_END=$(date +%s)
 FETCH_DURATION=$((FETCH_END - FETCH_START))
 log "Fetching took $((FETCH_DURATION / 60)) minutes and $((FETCH_DURATION % 60)) seconds"
 
-# Step 3: Process analytics
-log_step "Step 3: Processing analytics..."
-
-# Determine baseline scenario (usually the first one that contains 'baseline')
-BASELINE_SCENARIO=""
-for scenario in "${SCENARIOS[@]}"; do
-    if [[ "$scenario" == *"baseline"* ]]; then
-        BASELINE_SCENARIO="$scenario"
-        break
-    fi
-done
-
-if [ -z "$BASELINE_SCENARIO" ]; then
-    # Default to first scenario if no baseline found
-    BASELINE_SCENARIO="${SCENARIOS[0]}"
-    log_warning "No baseline scenario found, using $BASELINE_SCENARIO as baseline"
-else
-    log "Using $BASELINE_SCENARIO as baseline scenario"
-fi
-
-PROCESS_CMD="python3 scripts/process_analytics.py --baseline $BASELINE_SCENARIO"
-log "Running command: $PROCESS_CMD"
-
-if $PROCESS_CMD 2>&1 | tee -a "$LOG_FILE"; then
-    log_success "Analytics processed successfully"
-else
-    log_error "Failed to process analytics"
-    exit 1
-fi
-
-# Find the generated results file
-RESULTS_FILE=$(ls -t results/analytics_results_*.csv 2>/dev/null | head -1)
-
-if [ -z "$RESULTS_FILE" ] || [ ! -f "$RESULTS_FILE" ]; then
-    log_error "No results file was generated"
-    exit 1
-fi
-
-log_success "Results file created: $RESULTS_FILE"
-
-# Step 4: Upload results to database (if configured)
-if [ "$SKIP_UPLOAD" = false ]; then
-    log_step "Step 4: Uploading results to database..."
-    
-    if ./upload_results.sh "$RESULTS_FILE" 2>&1 | tee -a "$LOG_FILE"; then
-        log_success "Results uploaded successfully"
-    else
-        log_error "Failed to upload results to database"
-        exit 1
-    fi
-else
-    log_warning "Step 4: Skipping database upload (no configuration)"
-fi
+# Step 3: Process completed - manual steps required
+log_step "Step 3: Validation and fetching completed"
+log_success "Automated steps completed successfully!"
+log ""
+log "${YELLOW}Manual steps required:${NC}"
+log "  1. Run: python3 scripts/process_analytics.py --baseline <baseline_scenario>"
+log "  2. Upload results to database if needed"
 
 # Summary
 log ""
 log "=========================================="
-log "${GREEN}Investment Case Process Completed Successfully!${NC}"
+log "${GREEN}Automated Steps Completed Successfully!${NC}"
 log "=========================================="
 log "Summary:"
 log "  - Scenarios processed: ${SCENARIOS[*]}"
 log "  - Countries processed: $COUNTRY_COUNT"
-log "  - Results file: $RESULTS_FILE"
 log "  - Log file: $LOG_FILE"
 
 TOTAL_END=$(date +%s)
 TOTAL_DURATION=$((TOTAL_END - VALIDATION_START))
 log "  - Total time: $((TOTAL_DURATION / 60)) minutes and $((TOTAL_DURATION % 60)) seconds"
-
-if [ "$SKIP_UPLOAD" = true ]; then
-    log ""
-    log "${YELLOW}Note:${NC} Database upload was skipped. To enable it:"
-    log "  1. Create a .env.local file with DB_HOST, DB_USER, DB_PASS, DB_NAME"
-    log "  2. Run: ./upload_results.sh $RESULTS_FILE"
-fi
 
 log ""
 log "Finished at: $(date)"
