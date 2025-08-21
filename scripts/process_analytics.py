@@ -14,13 +14,17 @@ from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
 import glob
+import country_metadata
 
+
+# Model source identifier
+MODEL_SOURCE = 'diabetes'
 
 # Cost data mapping - maps scenario names to CSV tags
 SCENARIO_TO_COST_TAG = {}
 
 def load_cost_data(csv_path="Appendix 3 Costs Reverse Engineering - TABLE.csv"):
-    """Load cost per capita data from CSV."""
+    """Load cost per capita data from CSV with income-specific columns."""
     costs = {}
     
     try:
@@ -29,14 +33,46 @@ def load_cost_data(csv_path="Appendix 3 Costs Reverse Engineering - TABLE.csv"):
             headers = next(reader)
             
             for row in reader:
-                if len(row) >= 5 and row[0].strip():  # Has TAG and TOTAL columns
+                if len(row) >= 5 and row[0].strip():  # Has TAG, LIC, LMIC, UMIC, TOTAL columns
                     tag = row[0].strip()
-                    total_cost = float(row[4].strip())
-                    costs[tag] = total_cost
+                    # Store costs by income level
+                    costs[tag] = {
+                        'LIC': float(row[1].strip()),    # Low income
+                        'LMIC': float(row[2].strip()),   # Lower middle income
+                        'UMIC': float(row[3].strip()),   # Upper middle income
+                        'TOTAL': float(row[4].strip())   # Total (fallback)
+                    }
     except (FileNotFoundError, ValueError) as e:
         print(f"Warning: Could not load cost data: {e}")
     
     return costs
+
+
+def get_cost_for_country(cost_data, tag, country_code):
+    """Get the appropriate cost for a country based on its income classification."""
+    if tag not in cost_data:
+        return None
+    
+    try:
+        wb_income = country_metadata.get_tag(country_code, 'wb_income')
+        
+        # Map World Bank income classifications to cost columns
+        if wb_income == 'Low income':
+            return cost_data[tag]['LIC']
+        elif wb_income == 'Lower middle income':
+            return cost_data[tag]['LMIC']
+        elif wb_income == 'Upper middle income':
+            return cost_data[tag]['UMIC']
+        elif wb_income == 'High income':
+            # For high income, use UMIC with 30% increase
+            return cost_data[tag]['UMIC'] * 1.3
+        else:
+            # Fallback to TOTAL if classification not found
+            print(f"Warning: Unknown income classification '{wb_income}' for {country_code}, using TOTAL")
+            return cost_data[tag]['TOTAL']
+    except Exception as e:
+        print(f"Warning: Could not determine income classification for {country_code}: {e}")
+        return cost_data[tag]['TOTAL']
 
 
 def calculate_discounted_value(value, year, base_year=2025, discount_rate=0.03):
@@ -167,7 +203,7 @@ def calculate_metric_by_year(data, metric_config, cost_per_capita=None):
     return yearly_values
 
 
-def process_comparison(baseline_files, comparison_files, scenario_name=None, cost_data=None, metrics_to_calculate=None):
+def process_comparison(baseline_files, comparison_files, scenario_name=None, cost_data=None, metrics_to_calculate=None, country_code=None):
     """Process comparison between baseline and comparison scenario - returns yearly differences."""
     results = defaultdict(lambda: defaultdict(dict))
     
@@ -175,12 +211,14 @@ def process_comparison(baseline_files, comparison_files, scenario_name=None, cos
     if metrics_to_calculate is None:
         metrics_to_calculate = METRICS_CONFIG.keys()
     
-    # Get cost per capita for this scenario if available
+    # Get cost per capita for this scenario and country if available
     cost_per_capita = None
-    if cost_data and scenario_name:
+    if cost_data and scenario_name and country_code:
         cost_tag = SCENARIO_TO_COST_TAG.get(scenario_name)
         if cost_tag:
-            cost_per_capita = cost_data.get(cost_tag, 0)
+            cost_per_capita = get_cost_for_country(cost_data, cost_tag, country_code)
+            if cost_per_capita is None:
+                cost_per_capita = 0
     
     for metric_key in metrics_to_calculate:
         metric_config = METRICS_CONFIG[metric_key]
@@ -280,7 +318,8 @@ def save_results_csv(all_results, output_path):
                         'metric': metric_name,
                         'year': timestamp,
                         'value': value,
-                        'cum_value': cumulative_sum
+                        'cum_value': cumulative_sum,
+                        'source': MODEL_SOURCE
                     }
                     rows.append(row)
     
@@ -289,7 +328,7 @@ def save_results_csv(all_results, output_path):
     
     if rows:
         with open(output_path, 'w', newline='') as f:
-            fieldnames = ['country', 'scenario', 'metric', 'year', 'value', 'cum_value']
+            fieldnames = ['country', 'scenario', 'metric', 'year', 'value', 'cum_value', 'source']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
@@ -391,7 +430,8 @@ def main():
                 comp_files,
                 comp_entry['scenario'],
                 cost_data,
-                args.metrics
+                args.metrics,
+                country  # Pass the country code for income-specific costs
             )
             
             country_results[comp_entry['scenario']] = yearly_results
