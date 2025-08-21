@@ -16,49 +16,126 @@ from collections import defaultdict
 import glob
 
 
-# Modular metric definitions - easily adjustable
+# Cost data mapping - maps scenario names to CSV tags
+SCENARIO_TO_COST_TAG = {
+    # Cardiovascular interventions
+    'cv1_scenario': 'CV1',
+    'cv2a_scenario': 'CV2a',
+    'cv2b_scenario': 'CV2b',
+    'cv3a_scenario': 'CV3a',
+    'cv3b_scenario': 'CV3b',
+    'cv3c_scenario': 'CV3c',
+    'cv3d_scenario': 'CV3d',
+    'cv4a_scenario': 'CV4a',
+    'cv4b_scenario': 'CV4b',
+    'cv5a_scenario': 'CV5a',
+    'cv5b_scenario': 'CV5b',
+    'cv6_scenario': 'CV6',
+    'cv7_scenario': 'CV7',
+    # Diabetes interventions
+    'd1_scenario': 'D1',
+    'd2_scenario': 'D2',
+    'd3_scenario': 'D3',
+    'd5_scenario': 'D5',
+    'd6_scenario': 'D6',
+    'd7_scenario': 'D7',
+    # Chronic respiratory interventions
+    'asthma_cr1_scenario': 'CR1',
+    'asthma_cr1': 'CR1',
+    'cr1_scenario': 'CR1',
+    'cr2_scenario': 'CR2',
+    'asthma_cr3_scenario': 'CR3',
+    'cr3_scenario': 'CR3',
+    'cr4_scenario': 'CR4',
+    # Tobacco interventions
+    't1_scenario': 'T1',
+    'tobacco_t1': 'T1',
+    't2_scenario': 'T2',
+    'tobacco_t2': 'T2',
+    't3_scenario': 'T3',
+    'tobacco_t3': 'T3',
+    't4_scenario': 'T4',
+    'tobacco_t4': 'T4',
+    't5_scenario': 'T5',
+    'tobacco_t5': 'T5',
+    't6_scenario': 'T6',
+    'tobacco_t6': 'T6',
+    't7_scenario': 'T7',
+    # Alcohol interventions
+    'a1_scenario': 'A1',
+    'a2_scenario': 'A2',
+    'a3_scenario': 'A3',
+    'a4_scenario': 'A4',
+    'a5_scenario': 'A5',
+    # Unhealthy diet interventions
+    'u1_scenario': 'U1',
+    'u2_scenario': 'U2',
+    'u3_scenario': 'U3',
+    'u4_scenario': 'U4',
+    'u5_scenario': 'U5',
+    'u9_scenario': 'U9',
+    # Physical activity interventions
+    'p1_scenario': 'P1',
+    'p2_scenario': 'P2'
+}
+
+
+def load_cost_data(csv_path="Appendix 3 Costs Reverse Engineering - TABLE.csv"):
+    """Load cost per capita data from CSV."""
+    costs = {}
+    
+    try:
+        with open(csv_path, 'r') as f:
+            reader = csv.reader(f)
+            headers = next(reader)
+            
+            for row in reader:
+                if len(row) >= 5 and row[0].strip():  # Has TAG and TOTAL columns
+                    tag = row[0].strip()
+                    total_cost = float(row[4].strip())
+                    costs[tag] = total_cost
+    except (FileNotFoundError, ValueError) as e:
+        print(f"Warning: Could not load cost data: {e}")
+    
+    return costs
+
+
+def calculate_discounted_value(value, year, base_year=2025, discount_rate=0.03):
+    """Apply discounting to a value."""
+    years_from_base = year - base_year
+    if years_from_base <= 0:
+        return value
+    discount_factor = 1 / ((1 + discount_rate) ** years_from_base)
+    return value * discount_factor
+
+
+# Modular metric definitions - adjusted for yearly reporting
 METRICS_CONFIG = {
-    "deaths_averted_2030": {
-        "name": "Total deaths averted by 2030",
+    "deaths averted": {
+        "name": "deaths averted",
         "event_type": "echo",
         "element_labels": ["Deceased-DsFreeSus", "Deceased-AsthmaEpsd"],
-        "year_filter": lambda y: y <= 2030,
-        "aggregation": "sum"
+        "aggregation": "yearly"
     },
-    "deaths_averted_2035": {
-        "name": "Total deaths averted by 2035",
-        "event_type": "echo",
-        "element_labels": ["Deceased-DsFreeSus", "Deceased-AsthmaEpsd"],
-        "year_filter": lambda y: y <= 2035,
-        "aggregation": "sum"
-    },
-    "cases_averted_2030": {
-        "name": "Cases averted by 2030",
-        "event_type": "echo",
-        "element_labels": ["AsthmaEpsd"],
-        "year_filter": lambda y: y <= 2030,
-        "aggregation": "sum"
-    },
-    "cases_averted_2035": {
-        "name": "Cases averted by 2035",
-        "event_type": "echo",
-        "element_labels": ["AsthmaEpsd"],
-        "year_filter": lambda y: y <= 2035,
-        "aggregation": "sum"
-    },
-    "healthy_years_2030": {
-        "name": "Total healthy years lived by 2030",
+    "healthy years lived": {
+        "name": "healthy years lived",
         "event_type": "echo",
         "element_labels": ["Healthy Years Lived"],
-        "year_filter": lambda y: y <= 2030,
-        "aggregation": "sum"
+        "aggregation": "yearly"
     },
-    "healthy_years_2035": {
-        "name": "Total healthy years lived by 2035",
+    "economic benefit": {
+        "name": "economic benefit",
         "event_type": "echo",
-        "element_labels": ["Healthy Years Lived"],
-        "year_filter": lambda y: y <= 2035,
-        "aggregation": "sum"
+        "element_labels": ["Economic Value"],
+        "aggregation": "yearly",
+        "apply_discounting": True
+    },
+    "incremental costs": {
+        "name": "incremental costs",
+        "event_type": "echo",
+        "element_labels": ["DsFreeSus", "AsthmaEpsd"],
+        "aggregation": "cost",
+        "apply_discounting": True
     }
 }
 
@@ -116,35 +193,55 @@ def load_json_file(filepath):
         return json.load(f)
 
 
-def calculate_metric(data, metric_config):
-    """Calculate a single metric based on configuration."""
-    total = 0
+def calculate_metric_by_year(data, metric_config, cost_per_capita=None):
+    """Calculate metrics grouped by year."""
+    yearly_values = defaultdict(float)
     
     for item in data:
         # Check if element_label matches
         if item.get('element_label') not in metric_config['element_labels']:
             continue
         
-        # Check year filter
         year = item.get('timestamp_year')
-        if year and not metric_config['year_filter'](year):
+        if not year:
             continue
         
-        # Add value
+        # Get value
         value = item.get('value', 0)
-        if metric_config['aggregation'] == 'sum':
-            total += value
+        
+        # Handle different aggregation types
+        if metric_config['aggregation'] == 'yearly':
+            # Apply discounting if specified
+            if metric_config.get('apply_discounting', False):
+                value = calculate_discounted_value(value, year)
+            yearly_values[year] += value
+        elif metric_config['aggregation'] == 'cost' and cost_per_capita is not None:
+            # For cost calculations: multiply population by per capita cost
+            cost_value = value * cost_per_capita
+            
+            # Apply discounting if specified
+            if metric_config.get('apply_discounting', False):
+                cost_value = calculate_discounted_value(cost_value, year)
+            
+            yearly_values[year] += cost_value
     
-    return total
+    return yearly_values
 
 
-def process_comparison(baseline_files, comparison_files, metrics_to_calculate=None):
-    """Process comparison between baseline and comparison scenario."""
-    results = {}
+def process_comparison(baseline_files, comparison_files, scenario_name=None, cost_data=None, metrics_to_calculate=None):
+    """Process comparison between baseline and comparison scenario - returns yearly differences."""
+    results = defaultdict(lambda: defaultdict(dict))
     
     # Use all metrics if none specified
     if metrics_to_calculate is None:
         metrics_to_calculate = METRICS_CONFIG.keys()
+    
+    # Get cost per capita for this scenario if available
+    cost_per_capita = None
+    if cost_data and scenario_name:
+        cost_tag = SCENARIO_TO_COST_TAG.get(scenario_name)
+        if cost_tag:
+            cost_per_capita = cost_data.get(cost_tag, 0)
     
     for metric_key in metrics_to_calculate:
         metric_config = METRICS_CONFIG[metric_key]
@@ -154,34 +251,48 @@ def process_comparison(baseline_files, comparison_files, metrics_to_calculate=No
         baseline_data = load_json_file(baseline_files[event_type])
         comparison_data = load_json_file(comparison_files[event_type])
         
-        # Calculate metrics
-        baseline_value = calculate_metric(baseline_data, metric_config)
-        comparison_value = calculate_metric(comparison_data, metric_config)
+        # Calculate yearly metrics
+        if metric_config.get('aggregation') == 'cost':
+            # For cost metrics, only calculate for the comparison scenario
+            baseline_yearly = defaultdict(float)  # No intervention cost for baseline
+            comparison_yearly = calculate_metric_by_year(comparison_data, metric_config, cost_per_capita)
+        else:
+            baseline_yearly = calculate_metric_by_year(baseline_data, metric_config)
+            comparison_yearly = calculate_metric_by_year(comparison_data, metric_config, cost_per_capita)
         
-        # Result is COMPARISON - BASELINE
-        results[metric_key] = {
-            'name': metric_config['name'],
-            'baseline_value': baseline_value,
-            'comparison_value': comparison_value,
-            'difference': comparison_value - baseline_value
-        }
+        # Calculate differences by year
+        all_years = set(baseline_yearly.keys()) | set(comparison_yearly.keys())
+        for year in all_years:
+            baseline_val = baseline_yearly.get(year, 0)
+            comparison_val = comparison_yearly.get(year, 0)
+            difference = comparison_val - baseline_val
+            
+            results[year][metric_key] = {
+                'name': metric_config['name'],
+                'difference': difference
+            }
     
     return results
 
 
 def format_results(country, scenario, results):
-    """Format results for display."""
+    """Format results for display - now showing yearly data."""
     lines = []
     lines.append(f"\n{'='*60}")
     lines.append(f"Country: {country}")
     lines.append(f"Scenario: {scenario}")
     lines.append(f"{'='*60}")
     
-    for metric_key, metric_result in results.items():
-        lines.append(f"\n{metric_result['name']}:")
-        lines.append(f"  Baseline: {metric_result['baseline_value']:,.0f}")
-        lines.append(f"  Comparison: {metric_result['comparison_value']:,.0f}")
-        lines.append(f"  Difference: {metric_result['difference']:+,.0f}")
+    # Group by metric for display
+    metrics_by_name = defaultdict(dict)
+    for year, metrics in sorted(results.items()):
+        for metric_key, metric_result in metrics.items():
+            metrics_by_name[metric_result['name']][year] = metric_result['difference']
+    
+    for metric_name, yearly_values in metrics_by_name.items():
+        lines.append(f"\n{metric_name}:")
+        for year, value in sorted(yearly_values.items()):
+            lines.append(f"  {year}: {value:+,.0f}")
     
     return '\n'.join(lines)
 
@@ -193,25 +304,53 @@ def save_results_json(all_results, output_path):
 
 
 def save_results_csv(all_results, output_path):
-    """Save results to CSV file."""
+    """Save results to CSV file matching NEW_SCHEMA format with timestamp and cumulative values."""
     rows = []
     
+    # First collect all rows and organize by country/scenario/metric
+    organized_data = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+    
     for country, scenarios in all_results.items():
+        for scenario, yearly_data in scenarios.items():
+            for year, metrics in yearly_data.items():
+                for metric_key, metric_data in metrics.items():
+                    organized_data[country][scenario][metric_data['name']].append({
+                        'year': year,
+                        'value': metric_data['difference']
+                    })
+    
+    # Now create rows with cumulative values
+    for country, scenarios in organized_data.items():
         for scenario, metrics in scenarios.items():
-            for metric_key, metric_data in metrics.items():
-                row = {
-                    'country': country,
-                    'scenario': scenario,
-                    'metric': metric_data['name'],
-                    'baseline_value': metric_data['baseline_value'],
-                    'comparison_value': metric_data['comparison_value'],
-                    'difference': metric_data['difference']
-                }
-                rows.append(row)
+            for metric_name, yearly_values in metrics.items():
+                # Sort by year
+                yearly_values.sort(key=lambda x: x['year'])
+                
+                cumulative_sum = 0
+                for year_data in yearly_values:
+                    year = year_data['year']
+                    value = year_data['value']
+                    cumulative_sum += value
+                    
+                    # Create timestamp for January 1st of the year
+                    timestamp = f"{year}-01-01"
+                    
+                    row = {
+                        'country': country,
+                        'scenario': scenario,
+                        'metric': metric_name,
+                        'year': timestamp,
+                        'value': value,
+                        'cum_value': cumulative_sum
+                    }
+                    rows.append(row)
+    
+    # Sort rows by country, scenario, metric, year for consistent output
+    rows.sort(key=lambda x: (x['country'], x['scenario'], x['metric'], x['year']))
     
     if rows:
         with open(output_path, 'w', newline='') as f:
-            fieldnames = ['country', 'scenario', 'metric', 'baseline_value', 'comparison_value', 'difference']
+            fieldnames = ['country', 'scenario', 'metric', 'year', 'value', 'cum_value']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
@@ -247,6 +386,9 @@ def main():
     
     data_by_country = load_csv_data(csv_path)
     
+    # Load cost data
+    cost_data = load_cost_data()
+    
     if not data_by_country:
         print(f"No data found in {csv_path}")
         return 1
@@ -261,6 +403,7 @@ def main():
     invalid_comparisons = 0
     
     for country, entries in data_by_country.items():
+        print(f"Processing {country}...")
         # Find baseline ULID for this country
         baseline_entry = None
         comparison_entries = []
@@ -303,19 +446,17 @@ def main():
                 invalid_comparisons += 1
                 continue
             
-            # Calculate metrics
-            print(f"✓ Processing {country}/{comp_entry['scenario']}")
-            results = process_comparison(
+            # Calculate metrics (now returns yearly data)
+            yearly_results = process_comparison(
                 baseline_files, 
                 comp_files,
+                comp_entry['scenario'],
+                cost_data,
                 args.metrics
             )
             
-            country_results[comp_entry['scenario']] = results
+            country_results[comp_entry['scenario']] = yearly_results
             valid_comparisons += 1
-            
-            # Print results
-            print(format_results(country, comp_entry['scenario'], results))
         
         if country_results:
             all_results[country] = country_results
@@ -333,12 +474,6 @@ def main():
         save_results_csv(all_results, csv_path)
         print(f"✓ CSV results saved to: {csv_path}")
     
-    # Summary
-    print(f"\n{'='*60}")
-    print(f"Processing complete:")
-    print(f"  Valid comparisons: {valid_comparisons}")
-    print(f"  Invalid comparisons: {invalid_comparisons}")
-    print(f"  Countries processed: {len(all_results)}")
     
     return 0
 
