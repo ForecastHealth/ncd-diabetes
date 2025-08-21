@@ -17,68 +17,7 @@ import glob
 
 
 # Cost data mapping - maps scenario names to CSV tags
-SCENARIO_TO_COST_TAG = {
-    # Cardiovascular interventions
-    'cv1_scenario': 'CV1',
-    'cv2a_scenario': 'CV2a',
-    'cv2b_scenario': 'CV2b',
-    'cv3a_scenario': 'CV3a',
-    'cv3b_scenario': 'CV3b',
-    'cv3c_scenario': 'CV3c',
-    'cv3d_scenario': 'CV3d',
-    'cv4a_scenario': 'CV4a',
-    'cv4b_scenario': 'CV4b',
-    'cv5a_scenario': 'CV5a',
-    'cv5b_scenario': 'CV5b',
-    'cv6_scenario': 'CV6',
-    'cv7_scenario': 'CV7',
-    # Diabetes interventions
-    'd1_scenario': 'D1',
-    'd2_scenario': 'D2',
-    'd3_scenario': 'D3',
-    'd5_scenario': 'D5',
-    'd6_scenario': 'D6',
-    'd7_scenario': 'D7',
-    # Chronic respiratory interventions
-    'asthma_cr1_scenario': 'CR1',
-    'asthma_cr1': 'CR1',
-    'cr1_scenario': 'CR1',
-    'cr2_scenario': 'CR2',
-    'asthma_cr3_scenario': 'CR3',
-    'cr3_scenario': 'CR3',
-    'cr4_scenario': 'CR4',
-    # Tobacco interventions
-    't1_scenario': 'T1',
-    'tobacco_t1': 'T1',
-    't2_scenario': 'T2',
-    'tobacco_t2': 'T2',
-    't3_scenario': 'T3',
-    'tobacco_t3': 'T3',
-    't4_scenario': 'T4',
-    'tobacco_t4': 'T4',
-    't5_scenario': 'T5',
-    'tobacco_t5': 'T5',
-    't6_scenario': 'T6',
-    'tobacco_t6': 'T6',
-    't7_scenario': 'T7',
-    # Alcohol interventions
-    'a1_scenario': 'A1',
-    'a2_scenario': 'A2',
-    'a3_scenario': 'A3',
-    'a4_scenario': 'A4',
-    'a5_scenario': 'A5',
-    # Unhealthy diet interventions
-    'u1_scenario': 'U1',
-    'u2_scenario': 'U2',
-    'u3_scenario': 'U3',
-    'u4_scenario': 'U4',
-    'u5_scenario': 'U5',
-    'u9_scenario': 'U9',
-    # Physical activity interventions
-    'p1_scenario': 'P1',
-    'p2_scenario': 'P2'
-}
-
+SCENARIO_TO_COST_TAG = {}
 
 def load_cost_data(csv_path="Appendix 3 Costs Reverse Engineering - TABLE.csv"):
     """Load cost per capita data from CSV."""
