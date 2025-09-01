@@ -2748,7 +2748,7 @@
       "id": "bdg7vh5J",
       "x": -231.21,
       "y": -173.53,
-      "label": "price-increase-tobacco-tax",
+      "label": "price-change-tobacco-tax",
       "generate_array": {
         "method": "single_value",
         "parameters": {
@@ -2780,7 +2780,7 @@
       "id": "7N4BITus",
       "x": 513.17,
       "y": -182.15,
-      "label": "price-increase-alcohol-tax-spirits",
+      "label": "price-change-alcohol-tax-spirits",
       "generate_array": {
         "method": "single_value",
         "parameters": {
@@ -2812,7 +2812,7 @@
       "id": "5NHvXVdm",
       "x": 586.91,
       "y": -180.85,
-      "label": "price-increase-alcohol-tax-beer",
+      "label": "price-change-alcohol-tax-beer",
       "generate_array": {
         "method": "single_value",
         "parameters": {
@@ -2844,7 +2844,7 @@
       "id": "BqvIHH1J",
       "x": 660.05,
       "y": -180.32,
-      "label": "price-increase-alcohol-tax-wine",
+      "label": "price-change-alcohol-tax-wine",
       "generate_array": {
         "method": "single_value",
         "parameters": {
