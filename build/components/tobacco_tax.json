@@ -1,7 +1,7 @@
 {
-  "Price Change Tobacco Tax": {
+  "Price Difference Tobacco Tax": {
     "value": 0.0,
-    "description": "Percentage change in retail price of tobacco",
+    "description": "Proportional change in retail price of tobacco",
     "paths": [
       "$.nodes[?(@.id=='bdg7vh5J')].generate_array.parameters.value"
     ],
