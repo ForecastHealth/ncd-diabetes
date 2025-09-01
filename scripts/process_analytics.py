@@ -192,6 +192,10 @@ def calculate_metric_by_year(data, metric_config, cost_per_capita=None):
         
         # Handle different aggregation types
         if metric_config['aggregation'] == 'yearly':
+            # For economic benefit, scale by 1.5 before discounting
+            if metric_config['name'] == 'economic benefit':
+                value = value * 1.5
+            
             # Apply discounting if specified
             if metric_config.get('apply_discounting', False):
                 value = calculate_discounted_value(value, year)
