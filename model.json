@@ -2738,7 +2738,10 @@
         "method": "tax",
         "parameters": {
           "intervention": "tobacco",
-          "country": "AFG"
+          "country": "AFG",
+          "unrecorded_consumption": 0.112,
+          "prevalence_coefficient": 0.5,
+          "regional_elasticity": true
         }
       },
       "node_type": "CONSTANT",
