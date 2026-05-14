@@ -7858,48 +7858,6 @@
       "value_to_target_operator": "multiply"
     },
     {
-      "id": "ResourceAbs_StdGlycControl_Base_1",
-      "source": "4J5E1Abn",
-      "target": "ResourcePopulationReached_StdGlycControl",
-      "label": "DiabetesEpsd Incidence -> ResourcePopulationReached-StdGlycControl",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add"
-    },
-    {
-      "id": "ResourceAbs_StdGlycControl_PIN",
-      "source": "lrsnavq2",
-      "target": "ResourcePopulationReached_StdGlycControl",
-      "label": "StdGlycControl_PIN -> ResourcePopulationReached-StdGlycControl",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply"
-    },
-    {
-      "id": "ResourceAbs_StdGlycControl_Coverage",
-      "source": "ls9ttm0m",
-      "target": "ResourcePopulationReached_StdGlycControl",
-      "label": "StdGlycControl_Coverage -> ResourcePopulationReached-StdGlycControl",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply"
-    },
-    {
       "id": "ResourceAbs_IntsvGlycControl_Base_1",
       "source": "4J5E1Abn",
       "target": "ResourcePopulationReached_IntsvGlycControl",
@@ -7932,6 +7890,48 @@
       "source": "ls9tmepe",
       "target": "ResourcePopulationReached_IntsvGlycControl",
       "label": "IntsvGlycControl_Coverage -> ResourcePopulationReached-IntsvGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_StdGlycControl_Base_1",
+      "source": "4J5E1Abn",
+      "target": "ResourcePopulationReached_StdGlycControl",
+      "label": "DiabetesEpsd Incidence -> ResourcePopulationReached-StdGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "ResourceAbs_StdGlycControl_PIN",
+      "source": "lrsnavq2",
+      "target": "ResourcePopulationReached_StdGlycControl",
+      "label": "StdGlycControl_PIN -> ResourcePopulationReached-StdGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_StdGlycControl_Coverage",
+      "source": "ls9ttm0m",
+      "target": "ResourcePopulationReached_StdGlycControl",
+      "label": "StdGlycControl_Coverage -> ResourcePopulationReached-StdGlycControl",
       "generate_array": {
         "method": "single_value",
         "parameters": {
