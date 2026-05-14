@@ -3350,6 +3350,46 @@
         },
         "fetch_once": true
       }
+    },
+    {
+      "id": "ResourcePopulationReached_NeuropathyScr",
+      "x": 30.64,
+      "y": 241.33,
+      "color": "#6EE7B7",
+      "label": "ResourcePopulationReached-NeuropathyScr",
+      "flush": true
+    },
+    {
+      "id": "ResourcePopulationReached_RetinopathyScrn",
+      "x": 29.94,
+      "y": 228.43,
+      "color": "#6EE7B7",
+      "label": "ResourcePopulationReached-RetinopathyScrn",
+      "flush": true
+    },
+    {
+      "id": "ResourcePopulationReached_StdGlycControl",
+      "x": 31.1,
+      "y": 273.75,
+      "color": "#6EE7B7",
+      "label": "ResourcePopulationReached-StdGlycControl",
+      "flush": true
+    },
+    {
+      "id": "ResourcePopulationReached_IntsvGlycControl",
+      "x": 33.58,
+      "y": 262.88,
+      "color": "#6EE7B7",
+      "label": "ResourcePopulationReached-IntsvGlycControl",
+      "flush": true
+    },
+    {
+      "id": "ResourcePopulationReached_NephropathyScr",
+      "x": 30.87,
+      "y": 250.91,
+      "color": "#6EE7B7",
+      "label": "ResourcePopulationReached-NephropathyScr",
+      "flush": true
     }
   ],
   "links": [
@@ -7732,6 +7772,216 @@
           "value": 1
         }
       }
+    },
+    {
+      "id": "ResourceAbs_NeuropathyScr_Base_1",
+      "source": "4J5E1Abn",
+      "target": "ResourcePopulationReached_NeuropathyScr",
+      "label": "DiabetesEpsd Incidence -> ResourcePopulationReached-NeuropathyScr",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "ResourceAbs_NeuropathyScr_PIN",
+      "source": "ls9txmx1",
+      "target": "ResourcePopulationReached_NeuropathyScr",
+      "label": "NeuropathyScr_PIN -> ResourcePopulationReached-NeuropathyScr",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_NeuropathyScr_Coverage",
+      "source": "ls9ty2u5",
+      "target": "ResourcePopulationReached_NeuropathyScr",
+      "label": "NeuropathyScr_Coverage -> ResourcePopulationReached-NeuropathyScr",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_RetinopathyScrn_Base_1",
+      "source": "4J5E1Abn",
+      "target": "ResourcePopulationReached_RetinopathyScrn",
+      "label": "DiabetesEpsd Incidence -> ResourcePopulationReached-RetinopathyScrn",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "ResourceAbs_RetinopathyScrn_PIN",
+      "source": "ls9tsvuf",
+      "target": "ResourcePopulationReached_RetinopathyScrn",
+      "label": "RetinopathyScrn_PIN -> ResourcePopulationReached-RetinopathyScrn",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_RetinopathyScrn_Coverage",
+      "source": "lrsnalk2",
+      "target": "ResourcePopulationReached_RetinopathyScrn",
+      "label": "RetinopathyScrn_Coverage -> ResourcePopulationReached-RetinopathyScrn",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_StdGlycControl_Base_1",
+      "source": "4J5E1Abn",
+      "target": "ResourcePopulationReached_StdGlycControl",
+      "label": "DiabetesEpsd Incidence -> ResourcePopulationReached-StdGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "ResourceAbs_StdGlycControl_PIN",
+      "source": "lrsnavq2",
+      "target": "ResourcePopulationReached_StdGlycControl",
+      "label": "StdGlycControl_PIN -> ResourcePopulationReached-StdGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_StdGlycControl_Coverage",
+      "source": "ls9ttm0m",
+      "target": "ResourcePopulationReached_StdGlycControl",
+      "label": "StdGlycControl_Coverage -> ResourcePopulationReached-StdGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_IntsvGlycControl_Base_1",
+      "source": "4J5E1Abn",
+      "target": "ResourcePopulationReached_IntsvGlycControl",
+      "label": "DiabetesEpsd Incidence -> ResourcePopulationReached-IntsvGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "ResourceAbs_IntsvGlycControl_PIN",
+      "source": "ls9tlsbv",
+      "target": "ResourcePopulationReached_IntsvGlycControl",
+      "label": "IntsvGlycControl_PIN -> ResourcePopulationReached-IntsvGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_IntsvGlycControl_Coverage",
+      "source": "ls9tmepe",
+      "target": "ResourcePopulationReached_IntsvGlycControl",
+      "label": "IntsvGlycControl_Coverage -> ResourcePopulationReached-IntsvGlycControl",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_NephropathyScr_Base_1",
+      "source": "4J5E1Abn",
+      "target": "ResourcePopulationReached_NephropathyScr",
+      "label": "DiabetesEpsd Incidence -> ResourcePopulationReached-NephropathyScr",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "ResourceAbs_NephropathyScr_PIN",
+      "source": "ls9u41gm",
+      "target": "ResourcePopulationReached_NephropathyScr",
+      "label": "NephropathyScr_PIN -> ResourcePopulationReached-NephropathyScr",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_NephropathyScr_Coverage",
+      "source": "ls9u4cw6",
+      "target": "ResourcePopulationReached_NephropathyScr",
+      "label": "NephropathyScr_Coverage -> ResourcePopulationReached-NephropathyScr",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
     }
   ],
   "subroutines": [
@@ -8703,6 +8953,35 @@
       ]
     },
     {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Push disease populations to absolute resource population reached",
+      "included_edges": [
+        "ResourceAbs_NeuropathyScr_Base_1",
+        "ResourceAbs_RetinopathyScrn_Base_1",
+        "ResourceAbs_StdGlycControl_Base_1",
+        "ResourceAbs_IntsvGlycControl_Base_1",
+        "ResourceAbs_NephropathyScr_Base_1"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Modify absolute resource population reached by PIN and coverage",
+      "included_edges": [
+        "ResourceAbs_NeuropathyScr_PIN",
+        "ResourceAbs_NeuropathyScr_Coverage",
+        "ResourceAbs_RetinopathyScrn_PIN",
+        "ResourceAbs_RetinopathyScrn_Coverage",
+        "ResourceAbs_StdGlycControl_PIN",
+        "ResourceAbs_StdGlycControl_Coverage",
+        "ResourceAbs_IntsvGlycControl_PIN",
+        "ResourceAbs_IntsvGlycControl_Coverage",
+        "ResourceAbs_NephropathyScr_PIN",
+        "ResourceAbs_NephropathyScr_Coverage"
+      ]
+    },
+    {
       "method": "echo",
       "batch": false,
       "narration": "Record ECHO values",
@@ -8731,7 +9010,12 @@
         "q6foBZs3",
         "Jj9sztq7",
         "B4SjgqET",
-        "DXhAVyOP"
+        "DXhAVyOP",
+        "ResourcePopulationReached_NeuropathyScr",
+        "ResourcePopulationReached_RetinopathyScrn",
+        "ResourcePopulationReached_StdGlycControl",
+        "ResourcePopulationReached_IntsvGlycControl",
+        "ResourcePopulationReached_NephropathyScr"
       ]
     }
   ]
