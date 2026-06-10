@@ -8808,7 +8808,7 @@
       ]
     },
     {
-      "method": "synchronous_transfer",
+      "method": "transition_system",
       "batch": true,
       "narration": "Main routine",
       "included_edges": [
