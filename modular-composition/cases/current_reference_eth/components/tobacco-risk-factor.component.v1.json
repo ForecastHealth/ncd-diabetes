@@ -1,0 +1,310 @@
+{
+  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "component_id": "tobacco-risk-factor",
+  "declared_inputs": [],
+  "internal_link_ids": [
+    "0Oy5FSrS",
+    "gCkoE4hy",
+    "Zy8OfkVr",
+    "H5vdfbZj",
+    "6XHzDDLY",
+    "G84Cajwc",
+    "X06Yy1Pa",
+    "Q1gCzdNO",
+    "l2Gk9zma",
+    "oFSikFS6"
+  ],
+  "links": [
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "0Oy5FSrS",
+      "label": "paf-tobacco-0 -> paf-delta",
+      "postprocessing": {
+        "negative": true
+      },
+      "remove_value_from_source": false,
+      "source": "zxPMOyBk",
+      "target": "j8mr17a2",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "gCkoE4hy",
+      "label": "excess-risk-0-tobacco -> paf",
+      "remove_value_from_source": false,
+      "source": "o1hbxc1R",
+      "target": "zxPMOyBk",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "Zy8OfkVr",
+      "label": "paf-tobacco-t -> paf-delta",
+      "remove_value_from_source": false,
+      "source": "h6Dd182n",
+      "target": "j8mr17a2",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "H5vdfbZj",
+      "label": "excess-risk-t-tobacco -> paf",
+      "remove_value_from_source": false,
+      "source": "xFQ7WDDN",
+      "target": "h6Dd182n",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "6XHzDDLY",
+      "label": "relative-risk-tobacco-ihd -> excess-risk-0",
+      "remove_value_from_source": false,
+      "source": "UJon4r9l",
+      "target": "o1hbxc1R",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "G84Cajwc",
+      "label": "relative-risk-tobacco-ihd -> excess-risk-t",
+      "remove_value_from_source": false,
+      "source": "UJon4r9l",
+      "target": "xFQ7WDDN",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "X06Yy1Pa",
+      "label": "prevalence-0-tobacco -> excess-risk",
+      "remove_value_from_source": false,
+      "source": "HvEhBiqV",
+      "target": "o1hbxc1R",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "Q1gCzdNO",
+      "label": "prevalence-t-tobacco -> excess-risk",
+      "remove_value_from_source": false,
+      "source": "OujFYFdY",
+      "target": "xFQ7WDDN",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "l2Gk9zma",
+      "label": "prevalence-0-tobacco -> prevalence-t",
+      "remove_value_from_source": false,
+      "source": "HvEhBiqV",
+      "target": "OujFYFdY",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "oFSikFS6",
+      "label": "total-prevalence-reduction-tobacco -> prevalence",
+      "remove_value_from_source": false,
+      "source": "DsMKQaMl",
+      "target": "OujFYFdY",
+      "value_to_target_operator": "multiply"
+    }
+  ],
+  "module_type": "generated_first_pass_boundary",
+  "nodes": [
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "j8mr17a2",
+      "label": "paf-tobacco-delta",
+      "x": -9.27,
+      "y": -94.57
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "zxPMOyBk",
+      "label": "paf-tobacco-0",
+      "x": -55.81,
+      "y": -100.71
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": -1
+        }
+      },
+      "id": "o1hbxc1R",
+      "label": "excess-risk-0-tobacco",
+      "x": -57.02,
+      "y": -112.49
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "h6Dd182n",
+      "label": "paf-tobacco-t",
+      "x": 31.6,
+      "y": -102.43
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": -1
+        }
+      },
+      "id": "xFQ7WDDN",
+      "label": "excess-risk-t-tobacco",
+      "x": 33.44,
+      "y": -116.22
+    },
+    {
+      "color": "#E5EF73",
+      "flush": false,
+      "generate_array": {
+        "data_fetcher_label": "risk_factors",
+        "fetch_once": true,
+        "method": "relative_risk_631",
+        "parameters": {
+          "disease": "diabetes",
+          "risk_factor": "Tobacco"
+        }
+      },
+      "id": "UJon4r9l",
+      "label": "relative-risk-tobacco-diabetes",
+      "node_type": "CONSTANT",
+      "x": -24.45,
+      "y": -128.03
+    },
+    {
+      "color": "#E5EF73",
+      "flush": false,
+      "generate_array": {
+        "data_fetcher_label": "risk_factors",
+        "fetch_once": true,
+        "method": "prevalence",
+        "parameters": {
+          "country": "ETH",
+          "risk_factor": "tobacco"
+        }
+      },
+      "id": "HvEhBiqV",
+      "label": "prevalence-0-tobacco",
+      "node_type": "CONSTANT",
+      "x": -59.29,
+      "y": -137.95
+    },
+    {
+      "color": "#E5EF73",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "OujFYFdY",
+      "label": "prevalence-t-tobacco",
+      "node_type": "FUNCTION",
+      "x": 27.72,
+      "y": -133.64
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "DsMKQaMl",
+      "label": "total-prevalence-reduction-tobacco",
+      "node_type": "FUNCTION",
+      "x": -21.73,
+      "y": -151.28
+    }
+  ],
+  "owned_node_ids": [
+    "j8mr17a2",
+    "zxPMOyBk",
+    "o1hbxc1R",
+    "h6Dd182n",
+    "xFQ7WDDN",
+    "UJon4r9l",
+    "HvEhBiqV",
+    "OujFYFdY",
+    "DsMKQaMl"
+  ],
+  "published_outputs": [],
+  "runtime_role": "link_then_inject_bundle",
+  "schema": "forecast-health.generated-module-component.v1"
+}

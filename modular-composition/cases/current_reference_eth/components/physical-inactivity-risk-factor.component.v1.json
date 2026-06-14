@@ -1,0 +1,310 @@
+{
+  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "component_id": "physical-inactivity-risk-factor",
+  "declared_inputs": [],
+  "internal_link_ids": [
+    "NMbXXftF",
+    "p3PCFeBR",
+    "syo6g8BS",
+    "LdylGnAr",
+    "aeYNA8uv",
+    "zIe8IB4c",
+    "zlBtWUNo",
+    "NunoGqmQ",
+    "MESbC8BC",
+    "APxx55ak"
+  ],
+  "links": [
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "NMbXXftF",
+      "label": "total-prevalence-reduction-physical-inactivity -> prevalence",
+      "remove_value_from_source": false,
+      "source": "neM8Lqzj",
+      "target": "QiyTsEMq",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "p3PCFeBR",
+      "label": "prevalence-0-physical-inactivity -> prevalence-t",
+      "remove_value_from_source": false,
+      "source": "41XrI0td",
+      "target": "QiyTsEMq",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "syo6g8BS",
+      "label": "relative-risk-physical-inactivity-ihd -> excess-risk-t",
+      "remove_value_from_source": false,
+      "source": "RJSIzsEK",
+      "target": "fDfL0BBO",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "LdylGnAr",
+      "label": "prevalence-t-physical-inactivity -> excess-risk",
+      "remove_value_from_source": false,
+      "source": "QiyTsEMq",
+      "target": "fDfL0BBO",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "aeYNA8uv",
+      "label": "relative-risk-physical-inactivity-ihd -> excess-risk-0",
+      "remove_value_from_source": false,
+      "source": "RJSIzsEK",
+      "target": "0SRF79Ox",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "zIe8IB4c",
+      "label": "prevalence-0-physical-inactivity -> excess-risk",
+      "remove_value_from_source": false,
+      "source": "41XrI0td",
+      "target": "0SRF79Ox",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "zlBtWUNo",
+      "label": "excess-risk-t-physical-inactivity -> paf",
+      "remove_value_from_source": false,
+      "source": "fDfL0BBO",
+      "target": "iaB8aZO3",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "NunoGqmQ",
+      "label": "excess-risk-0-physical-inactivity -> paf",
+      "remove_value_from_source": false,
+      "source": "0SRF79Ox",
+      "target": "BGzPI0dG",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "MESbC8BC",
+      "label": "paf-physical-inactivity-0 -> paf-delta",
+      "postprocessing": {
+        "negative": true
+      },
+      "remove_value_from_source": false,
+      "source": "BGzPI0dG",
+      "target": "BDxJnX09",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "APxx55ak",
+      "label": "paf-physical-inactivity-t -> paf-delta",
+      "remove_value_from_source": false,
+      "source": "iaB8aZO3",
+      "target": "BDxJnX09",
+      "value_to_target_operator": "add"
+    }
+  ],
+  "module_type": "generated_first_pass_boundary",
+  "nodes": [
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "neM8Lqzj",
+      "label": "total-prevalence-reduction-physical-inactivity",
+      "node_type": "FUNCTION",
+      "x": -401.37,
+      "y": -129.98
+    },
+    {
+      "color": "#E5EF73",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "QiyTsEMq",
+      "label": "prevalence-t-physical-inactivity",
+      "node_type": "FUNCTION",
+      "x": -302.12,
+      "y": -103.54
+    },
+    {
+      "color": "#E5EF73",
+      "flush": false,
+      "generate_array": {
+        "data_fetcher_label": "risk_factors",
+        "fetch_once": true,
+        "method": "prevalence",
+        "parameters": {
+          "country": "ETH",
+          "risk_factor": "physical_inactivity"
+        }
+      },
+      "id": "41XrI0td",
+      "label": "prevalence-0-physical-inactivity",
+      "node_type": "CONSTANT",
+      "x": -389.76,
+      "y": -103.86
+    },
+    {
+      "color": "#E5EF73",
+      "flush": false,
+      "generate_array": {
+        "data_fetcher_label": "risk_factors",
+        "fetch_once": true,
+        "method": "relative_risk_631",
+        "parameters": {
+          "disease": "diabetes",
+          "risk_factor": "Physical Inactivity"
+        }
+      },
+      "id": "RJSIzsEK",
+      "label": "relative-risk-physical-inactivity-diabetes",
+      "node_type": "CONSTANT",
+      "x": -344.64,
+      "y": -92.93
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": -1
+        }
+      },
+      "id": "fDfL0BBO",
+      "label": "excess-risk-t-physical-inactivity",
+      "x": -286.81,
+      "y": -84.65
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": -1
+        }
+      },
+      "id": "0SRF79Ox",
+      "label": "excess-risk-0-physical-inactivity",
+      "x": -407.3,
+      "y": -85.19
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "iaB8aZO3",
+      "label": "paf-physical-inactivity-t",
+      "x": -284.64,
+      "y": -69.06
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "BGzPI0dG",
+      "label": "paf-physical-inactivity-0",
+      "x": -386.34,
+      "y": -65.38
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "BDxJnX09",
+      "label": "paf-physical-inactivity-delta",
+      "x": -334.25,
+      "y": -37.71
+    }
+  ],
+  "owned_node_ids": [
+    "neM8Lqzj",
+    "QiyTsEMq",
+    "41XrI0td",
+    "RJSIzsEK",
+    "fDfL0BBO",
+    "0SRF79Ox",
+    "iaB8aZO3",
+    "BGzPI0dG",
+    "BDxJnX09"
+  ],
+  "published_outputs": [],
+  "runtime_role": "link_then_inject_bundle",
+  "schema": "forecast-health.generated-module-component.v1"
+}

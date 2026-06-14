@@ -1,0 +1,225 @@
+{
+  "active_parameters": [
+    {
+      "category": "Coverage",
+      "name": "Baseline Coverage Tobacco Quitcessation",
+      "path_count": 3,
+      "paths": [
+        "$.nodes[?(@.id=='exp5DafX')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.fill_before"
+      ],
+      "value": 0.05
+    },
+    {
+      "category": "Coverage",
+      "name": "Target Coverage Tobacco Quitcessation",
+      "path_count": 2,
+      "paths": [
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.fill_after"
+      ],
+      "value": 0.05
+    },
+    {
+      "category": "Coverage",
+      "name": "Scale-Up Start Year Tobacco Quitcessation",
+      "path_count": 1,
+      "paths": [
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.start_index"
+      ],
+      "value": 1
+    },
+    {
+      "category": "Coverage",
+      "name": "Scale-Up Final Year Tobacco Quitcessation",
+      "path_count": 1,
+      "paths": [
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.end_index"
+      ],
+      "value": 2
+    }
+  ],
+  "acts_on_module": "tobacco-risk-factor",
+  "bound_parameter_path_count": 7,
+  "boundary_note": "This module records the runnable platform scenario as an upstream risk-factor intervention. It owns the scenario parameter changes and acts on the named risk-factor module before the disease model consumes the resulting risk-factor state.",
+  "component_id": "intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-diabetes-diabetes-tobacco-t6",
+  "declared_inputs": [
+    {
+      "description": "Risk-factor state before this intervention is applied.",
+      "input_id": "baseline_risk_factor_state",
+      "source_module": "tobacco-risk-factor"
+    },
+    {
+      "description": "Coverage value controlled by the scenario parameters owned by this intervention module.",
+      "input_id": "intervention_coverage"
+    },
+    {
+      "description": "Effect-size value controlled by the scenario parameters owned by this intervention module.",
+      "input_id": "intervention_effect_size"
+    }
+  ],
+  "family": "tobacco",
+  "internal_link_ids": [
+    "J1UpQ4mi",
+    "ICENsZHr",
+    "GY83b36l"
+  ],
+  "label": "Cessation support services",
+  "links": [
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "J1UpQ4mi",
+      "label": "delta-coverage-tobacco-quitcessation -> effect-size",
+      "remove_value_from_source": false,
+      "source": "b1QqmB9J",
+      "target": "UW8uObpi",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ICENsZHr",
+      "label": "target-coverage-tobacco-quitcessation -> delta-coverage-tobacco-quitcessation",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "ACrnBpRW",
+      "target": "b1QqmB9J",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "GY83b36l",
+      "label": "baseline-coverage-tobacco-quitcessation -> delta-coverage-tobacco-quitcessation",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "exp5DafX",
+      "target": "b1QqmB9J",
+      "value_to_target_operator": "add"
+    }
+  ],
+  "model": "ncd-diabetes",
+  "module_id": "intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-diabetes-diabetes-tobacco-t6",
+  "module_owned_parameter_paths": [
+    "$.nodes[?(@.id=='exp5DafX')].generate_array.parameters.value",
+    "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.start_value",
+    "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.fill_before",
+    "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.end_value",
+    "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.fill_after",
+    "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.start_index",
+    "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.end_index"
+  ],
+  "module_type": "risk_factor_intervention",
+  "nodes": [
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.0933
+        }
+      },
+      "id": "UW8uObpi",
+      "label": "effect-size-tobacco-quitcessation",
+      "node_type": "CONSTANT",
+      "x": -94.07,
+      "y": -173.84
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "b1QqmB9J",
+      "label": "delta-coverage-tobacco-quitcessation",
+      "node_type": "FUNCTION",
+      "x": -85.7,
+      "y": -184.52
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "linear_with_arbitrary_length",
+        "parameters": {
+          "end_index": 2,
+          "end_value": 0.05,
+          "fill_after": 0.05,
+          "fill_before": 0.05,
+          "start_index": 1,
+          "start_value": 0.05
+        }
+      },
+      "id": "ACrnBpRW",
+      "label": "target-coverage-tobacco-quitcessation",
+      "node_type": "CONSTANT",
+      "x": -85.86,
+      "y": -192.61
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "id": "exp5DafX",
+      "label": "baseline-coverage-tobacco-quitcessation",
+      "node_type": "CONSTANT",
+      "x": -83.12,
+      "y": -201.4
+    }
+  ],
+  "owned_node_ids": [
+    "UW8uObpi",
+    "b1QqmB9J",
+    "ACrnBpRW",
+    "exp5DafX"
+  ],
+  "published_output_contract": {
+    "consumer_path": "disease modules consume the changed upstream risk-factor surface through the composed model",
+    "kind": "changed_risk_factor_state"
+  },
+  "published_outputs": [
+    {
+      "node_id": "intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-diabetes-diabetes-tobacco-t6--changed-risk-factor-state",
+      "output_id": "changed_risk_factor_state",
+      "target_module": "tobacco-risk-factor"
+    }
+  ],
+  "runtime_role": "link_then_inject_bundle",
+  "scenario_id": "diabetes-tobacco-t6",
+  "scenario_parameter_count": 73,
+  "scenario_path": "/models/ncd-diabetes/scenarios/tobacco_t6.json",
+  "schema": "forecast-health.risk-factor-intervention-module.v1",
+  "signature_sha256": "4074351cc61025e369286a84701c7f9658ef24aebdaec65c5a11b0356f18cd99",
+  "source_component": "NC_RFTobaccoQuitmCessation",
+  "source_inventory": "state/risk-factor-intervention-inventory.v1.json",
+  "source_status": "represented_in_manifest"
+}

@@ -1,0 +1,92 @@
+{
+  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "component_id": "economic-metrics",
+  "declared_inputs": [],
+  "internal_link_ids": [
+    "pfDEgvPv",
+    "B48YPJzw"
+  ],
+  "links": [
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "pfDEgvPv",
+      "remove_value_from_source": false,
+      "source": "HaYRxeQQ",
+      "target": "DXhAVyOP",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "B48YPJzw",
+      "remove_value_from_source": false,
+      "source": "mrGezI4c",
+      "target": "DXhAVyOP",
+      "value_to_target_operator": "multiply"
+    }
+  ],
+  "module_type": "generated_first_pass_boundary",
+  "nodes": [
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "DXhAVyOP",
+      "label": "Economic Value",
+      "x": -59.83,
+      "y": 33.36
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "fetch_once": true,
+        "method": "wb_gdp_per_capita",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "HaYRxeQQ",
+      "label": "GDP Per Capita",
+      "x": -77.56,
+      "y": 13.91
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "fetch_once": true,
+        "method": "ilo_labour_force_participation_rate",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "mrGezI4c",
+      "label": "Labour Force Participation",
+      "x": -84.55,
+      "y": 23.53
+    }
+  ],
+  "owned_node_ids": [
+    "DXhAVyOP",
+    "HaYRxeQQ",
+    "mrGezI4c"
+  ],
+  "published_outputs": [],
+  "runtime_role": "downstream_handoff",
+  "schema": "forecast-health.generated-module-component.v1"
+}

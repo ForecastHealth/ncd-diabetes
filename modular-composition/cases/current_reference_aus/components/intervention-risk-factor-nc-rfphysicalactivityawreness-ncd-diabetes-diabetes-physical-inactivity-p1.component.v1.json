@@ -1,0 +1,225 @@
+{
+  "active_parameters": [
+    {
+      "category": "Coverage",
+      "name": "Baseline Coverage Physical Inactivity Awareness",
+      "path_count": 3,
+      "paths": [
+        "$.nodes[?(@.id=='FyrvtPDd')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.fill_before"
+      ],
+      "value": 0.05
+    },
+    {
+      "category": "Coverage",
+      "name": "Target Coverage Physical Inactivity Awareness",
+      "path_count": 2,
+      "paths": [
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.fill_after"
+      ],
+      "value": 0.05
+    },
+    {
+      "category": "Coverage",
+      "name": "Scale-Up Start Year Physical Inactivity Awareness",
+      "path_count": 1,
+      "paths": [
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.start_index"
+      ],
+      "value": 1
+    },
+    {
+      "category": "Coverage",
+      "name": "Scale-Up Final Year Physical Inactivity Awareness",
+      "path_count": 1,
+      "paths": [
+        "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.end_index"
+      ],
+      "value": 2
+    }
+  ],
+  "acts_on_module": "physical-inactivity-risk-factor",
+  "bound_parameter_path_count": 7,
+  "boundary_note": "This module records the runnable platform scenario as an upstream risk-factor intervention. It owns the scenario parameter changes and acts on the named risk-factor module before the disease model consumes the resulting risk-factor state.",
+  "component_id": "intervention-risk-factor-nc-rfphysicalactivityawreness-ncd-diabetes-diabetes-physical-inactivity-p1",
+  "declared_inputs": [
+    {
+      "description": "Risk-factor state before this intervention is applied.",
+      "input_id": "baseline_risk_factor_state",
+      "source_module": "physical-inactivity-risk-factor"
+    },
+    {
+      "description": "Coverage value controlled by the scenario parameters owned by this intervention module.",
+      "input_id": "intervention_coverage"
+    },
+    {
+      "description": "Effect-size value controlled by the scenario parameters owned by this intervention module.",
+      "input_id": "intervention_effect_size"
+    }
+  ],
+  "family": "physical_inactivity",
+  "internal_link_ids": [
+    "mMHpQDmU",
+    "GHMcc6cJ",
+    "0Z3zAUK0"
+  ],
+  "label": "Physical activity awareness campaign",
+  "links": [
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "mMHpQDmU",
+      "label": "baseline-coverage-physical-inactivity-awareness -> delta-coverage-physical-inactivity-awareness",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "FyrvtPDd",
+      "target": "BwfqMVoa",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "GHMcc6cJ",
+      "label": "target-coverage-physical-inactivity-awareness -> delta-coverage-physical-inactivity-awareness",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "6hH1SUDz",
+      "target": "BwfqMVoa",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "0Z3zAUK0",
+      "label": "delta-coverage-physical-inactivity-awareness -> effect-size",
+      "remove_value_from_source": false,
+      "source": "BwfqMVoa",
+      "target": "RByNTkiJ",
+      "value_to_target_operator": "multiply"
+    }
+  ],
+  "model": "ncd-diabetes",
+  "module_id": "intervention-risk-factor-nc-rfphysicalactivityawreness-ncd-diabetes-diabetes-physical-inactivity-p1",
+  "module_owned_parameter_paths": [
+    "$.nodes[?(@.id=='FyrvtPDd')].generate_array.parameters.value",
+    "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.start_value",
+    "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.fill_before",
+    "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.end_value",
+    "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.fill_after",
+    "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.start_index",
+    "$.nodes[?(@.id=='6hH1SUDz')].generate_array.parameters.end_index"
+  ],
+  "module_type": "risk_factor_intervention",
+  "nodes": [
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "id": "FyrvtPDd",
+      "label": "baseline-coverage-physical-inactivity-awareness",
+      "node_type": "CONSTANT",
+      "x": -403.93,
+      "y": -184.63
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "linear_with_arbitrary_length",
+        "parameters": {
+          "end_index": 2,
+          "end_value": 0.05,
+          "fill_after": 0.05,
+          "fill_before": 0.05,
+          "start_index": 1,
+          "start_value": 0.05
+        }
+      },
+      "id": "6hH1SUDz",
+      "label": "target-coverage-physical-inactivity-awareness",
+      "node_type": "CONSTANT",
+      "x": -406.25,
+      "y": -176.26
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "BwfqMVoa",
+      "label": "delta-coverage-physical-inactivity-awareness",
+      "node_type": "FUNCTION",
+      "x": -405.19,
+      "y": -162.28
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        }
+      },
+      "id": "RByNTkiJ",
+      "label": "effect-size-physical-inactivity-awareness",
+      "node_type": "CONSTANT",
+      "x": -407.72,
+      "y": -149.03
+    }
+  ],
+  "owned_node_ids": [
+    "FyrvtPDd",
+    "6hH1SUDz",
+    "BwfqMVoa",
+    "RByNTkiJ"
+  ],
+  "published_output_contract": {
+    "consumer_path": "disease modules consume the changed upstream risk-factor surface through the composed model",
+    "kind": "changed_risk_factor_state"
+  },
+  "published_outputs": [
+    {
+      "node_id": "intervention-risk-factor-nc-rfphysicalactivityawreness-ncd-diabetes-diabetes-physical-inactivity-p1--changed-risk-factor-state",
+      "output_id": "changed_risk_factor_state",
+      "target_module": "physical-inactivity-risk-factor"
+    }
+  ],
+  "runtime_role": "link_then_inject_bundle",
+  "scenario_id": "diabetes-physical-inactivity-p1",
+  "scenario_parameter_count": 73,
+  "scenario_path": "/models/ncd-diabetes/scenarios/physical_inactivity_p1.json",
+  "schema": "forecast-health.risk-factor-intervention-module.v1",
+  "signature_sha256": "44300509bc46db8ec23b9f6e298699b5403f2e2868dcd47fa746ffc3585982ac",
+  "source_component": "NC_RFPhysicalActivityAwreness",
+  "source_inventory": "state/risk-factor-intervention-inventory.v1.json",
+  "source_status": "represented_in_manifest"
+}

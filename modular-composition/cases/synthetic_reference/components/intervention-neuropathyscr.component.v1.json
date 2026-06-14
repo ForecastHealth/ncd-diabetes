@@ -1,0 +1,299 @@
+{
+  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "component_id": "intervention-neuropathyscr",
+  "declared_inputs": [],
+  "internal_link_ids": [
+    "gw9hRmLU",
+    "b4vzlUDn",
+    "rN4Pg02x",
+    "qbyP50ke",
+    "nzOokZh1",
+    "IMG55bhT",
+    "xOxfySRX",
+    "ResourceAbs_NeuropathyScr_PIN",
+    "ResourceAbs_NeuropathyScr_Coverage"
+  ],
+  "links": [
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "gw9hRmLU",
+      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Impact -> NeuropathyScr_LowerExtrmAmpt_Incidence_Effect",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "ls9tx5l9",
+      "target": "ls9txa8s",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "b4vzlUDn",
+      "label": "NeuropathyScr_PIN -> NeuropathyScr_LowerExtrmAmpt_Incidence_Effect",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "ls9txmx1",
+      "target": "ls9txa8s",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "rN4Pg02x",
+      "label": "NeuropathyScr_Calculated_Coverage -> NeuropathyScr_LowerExtrmAmpt_Incidence_Effect",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "ls9txte5",
+      "target": "ls9txa8s",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "qbyP50ke",
+      "label": "NeuropathyScr_StartingCoverage -> NeuropathyScr_Calculated_Coverage",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "ls9txz8o",
+      "target": "ls9txte5",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "nzOokZh1",
+      "label": "NeuropathyScr_Coverage -> NeuropathyScr_Calculated_Coverage",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "ls9ty2u5",
+      "target": "ls9txte5",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "IMG55bhT",
+      "remove_value_from_source": false,
+      "source": "ls9txte5",
+      "target": "979lBOrq",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "xOxfySRX",
+      "remove_value_from_source": false,
+      "source": "ls9txmx1",
+      "target": "979lBOrq",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_NeuropathyScr_PIN",
+      "label": "NeuropathyScr_PIN -> ResourcePopulationReached-NeuropathyScr",
+      "remove_value_from_source": false,
+      "source": "ls9txmx1",
+      "target": "ResourcePopulationReached_NeuropathyScr",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_NeuropathyScr_Coverage",
+      "label": "NeuropathyScr_Coverage -> ResourcePopulationReached-NeuropathyScr",
+      "remove_value_from_source": false,
+      "source": "ls9ty2u5",
+      "target": "ResourcePopulationReached_NeuropathyScr",
+      "value_to_target_operator": "multiply"
+    }
+  ],
+  "module_type": "generated_first_pass_boundary",
+  "nodes": [
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.35
+        }
+      },
+      "id": "ls9tx5l9",
+      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Impact",
+      "node_type": "CONSTANT",
+      "tags": [
+        "function"
+      ],
+      "x": -139.74,
+      "y": 68.15
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ls9txa8s",
+      "label": "NeuropathyScr_LowerExtrmAmpt_Incidence_Effect",
+      "node_type": "FUNCTION",
+      "tags": [
+        "function"
+      ],
+      "x": -137.25,
+      "y": 134.02
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ls9txmx1",
+      "label": "NeuropathyScr_PIN",
+      "node_type": "CONSTANT",
+      "tags": [
+        "function"
+      ],
+      "x": -256.94,
+      "y": 133.9
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "ls9txte5",
+      "label": "NeuropathyScr_Calculated_Coverage",
+      "node_type": "FUNCTION",
+      "tags": [
+        "function"
+      ],
+      "x": -134.11,
+      "y": 202.11
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "id": "ls9txz8o",
+      "label": "NeuropathyScr_StartingCoverage",
+      "node_type": "CONSTANT",
+      "tags": [
+        "function"
+      ],
+      "x": -218.42,
+      "y": 202.18
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "linear_with_arbitrary_length",
+        "parameters": {
+          "end_index": 2,
+          "end_value": 0.05,
+          "fill_after": 0.05,
+          "fill_before": 0.05,
+          "start_index": 1,
+          "start_value": 0.05
+        }
+      },
+      "id": "ls9ty2u5",
+      "label": "NeuropathyScr_Coverage",
+      "node_type": "CONSTANT",
+      "tags": [
+        "function"
+      ],
+      "x": -289.54,
+      "y": 201.32
+    },
+    {
+      "color": "#FFB255",
+      "id": "979lBOrq",
+      "label": "PopReached-NeuropathyScr",
+      "x": 2.64,
+      "y": 213.33
+    },
+    {
+      "color": "#6EE7B7",
+      "flush": true,
+      "id": "ResourcePopulationReached_NeuropathyScr",
+      "label": "ResourcePopulationReached-NeuropathyScr",
+      "x": 30.64,
+      "y": 241.33
+    }
+  ],
+  "owned_node_ids": [
+    "ls9tx5l9",
+    "ls9txa8s",
+    "ls9txmx1",
+    "ls9txte5",
+    "ls9txz8o",
+    "ls9ty2u5",
+    "979lBOrq",
+    "ResourcePopulationReached_NeuropathyScr"
+  ],
+  "published_outputs": [],
+  "runtime_role": "compiled_together",
+  "schema": "forecast-health.generated-module-component.v1"
+}

@@ -1,0 +1,97 @@
+{
+  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "component_id": "demographic-substrate",
+  "declared_inputs": [],
+  "internal_link_ids": [
+    "PwZT0fUg",
+    "itKEGsJa"
+  ],
+  "links": [
+    {
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "ETH"
+        }
+      },
+      "id": "PwZT0fUg",
+      "label": "DsFreeSus -> DsFreeSus",
+      "order": 0,
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "DsFreeSus",
+      "target": "DsFreeSus",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Transition people into the mortality state",
+      "edge_type": "transition",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "ETH"
+        }
+      },
+      "id": "itKEGsJa",
+      "label": "DsFreeSus -> Deceased",
+      "order": 2,
+      "remove_value_from_source": true,
+      "requires_source_balance": true,
+      "source": "DsFreeSus",
+      "target": "Deceased",
+      "value_to_target_operator": "add"
+    }
+  ],
+  "module_type": "generated_first_pass_boundary",
+  "nodes": [
+    {
+      "balance_type": "array",
+      "color": "#FB6375",
+      "description": "The state of being dead",
+      "flush": true,
+      "id": "Deceased",
+      "label": "Deceased-DsFreeSus",
+      "node_type": "STATE",
+      "order": 3,
+      "tags": [
+        "state"
+      ],
+      "x": 214.71,
+      "y": 144.91
+    },
+    {
+      "ageing": true,
+      "balance_type": "array",
+      "color": "#3CD009",
+      "description": "State holding the balance of the healthy population",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "fetch_once": true,
+        "method": "population",
+        "parameters": {
+          "country": "ETH"
+        }
+      },
+      "id": "DsFreeSus",
+      "label": "DsFreeSus",
+      "node_type": "STATE",
+      "order": 0,
+      "tags": [
+        "state"
+      ],
+      "x": 36.05,
+      "y": 46.9
+    }
+  ],
+  "owned_node_ids": [
+    "Deceased",
+    "DsFreeSus"
+  ],
+  "published_outputs": [],
+  "runtime_role": "compiled_together",
+  "schema": "forecast-health.generated-module-component.v1"
+}

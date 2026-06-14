@@ -1,0 +1,183 @@
+{
+  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "component_id": "metrics-and-helpers",
+  "declared_inputs": [],
+  "internal_link_ids": [
+    "P0YMn6Zi",
+    "iB5A8VDc",
+    "STz4wrnX"
+  ],
+  "links": [
+    {
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "P0YMn6Zi",
+      "label": "LowerExtrmAmpt -> LowerExtrmAmpt",
+      "order": 0,
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "ls9qwy35",
+      "target": "ls9qwy35",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "iB5A8VDc",
+      "label": "LowerExtrmAmpt -> Births",
+      "order": 1,
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "ls9qwy35",
+      "target": "Births",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Background Mortality",
+      "edge_type": "transition",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "STz4wrnX",
+      "label": "LowerExtrmAmpt -> Deceased",
+      "remove_value_from_source": true,
+      "requires_source_balance": true,
+      "source": "ls9qwy35",
+      "target": "lSONL0qA",
+      "value_to_target_operator": "add"
+    }
+  ],
+  "module_type": "generated_first_pass_boundary",
+  "nodes": [
+    {
+      "ageing": true,
+      "color": "#E5EF73",
+      "id": "ls9qwy35",
+      "label": "LowerExtrmAmpt",
+      "node_type": "STATE",
+      "tags": [
+        "state"
+      ],
+      "x": 91.15,
+      "y": 115.28
+    },
+    {
+      "balance_type": "array",
+      "color": "#EB7FEF",
+      "description": "Store of the number of births in the population",
+      "flush": true,
+      "id": "Births",
+      "label": "Births",
+      "node_type": "FUNCTION",
+      "order": 2,
+      "tags": [
+        "state"
+      ],
+      "x": 7.98,
+      "y": 47.09
+    },
+    {
+      "color": "#06B4E1",
+      "description": "Removing each effect from 1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ls9t4fk3",
+      "label": "LowerExtrmAmpt_Transform",
+      "node_type": "FUNCTION",
+      "tags": [
+        "function"
+      ],
+      "x": -38.12,
+      "y": 139.47
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "BXOLckIN",
+      "label": "paf-denom-t",
+      "x": 217.91,
+      "y": -121.03
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "oGP2Nze1",
+      "label": "paf-denom-0",
+      "x": -159.09,
+      "y": -125.07
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "PjHF9FHh",
+      "label": "rf-all",
+      "x": -7.5,
+      "y": -66.09
+    },
+    {
+      "balance_type": "array",
+      "color": "#FB6375",
+      "description": "The state of being dead",
+      "flush": true,
+      "id": "lSONL0qA",
+      "label": "Deceased-LowerExtrmAmpt",
+      "node_type": "STATE",
+      "order": 3,
+      "tags": [
+        "state"
+      ],
+      "x": 217.79,
+      "y": 168.23
+    }
+  ],
+  "owned_node_ids": [
+    "ls9qwy35",
+    "Births",
+    "ls9t4fk3",
+    "BXOLckIN",
+    "oGP2Nze1",
+    "PjHF9FHh",
+    "lSONL0qA"
+  ],
+  "published_outputs": [],
+  "runtime_role": "compiled_together",
+  "schema": "forecast-health.generated-module-component.v1"
+}
