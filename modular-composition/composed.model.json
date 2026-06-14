@@ -4974,7 +4974,7 @@
     "description": "The Diabetes Base Model created by Avenir Health and WHO",
     "file_id": "diabetes",
     "modular_composition": {
-      "manifest": "state/modular-compositions/ncd-diabetes/composition.manifest.v1.json",
+      "manifest": "modular-composition/composition.manifest.v1.json",
       "mode": "first_pass_executable_decomposition_without_math_change",
       "schema": "forecast-health.generated-modular-composition.v1"
     },
