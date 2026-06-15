@@ -1,0 +1,461 @@
+{
+  "component_id": "demographic-substrate",
+  "component_signature_sha256": "c442840aef531ee586a3c73e400653e9016cfd92ec5455d2e49c8483f4a7ddb9",
+  "contract_summary": "Population, births, deaths, ageing and demographic source data are embedded in the current executable graph.",
+  "execution_mode": "compiled_together_current_graph_boundary",
+  "independently_executable_now": false,
+  "label": "Demographic substrate",
+  "limitations": [
+    "The intended future direction is to use the shared demographic model as the substrate rather than keeping a disease-local demographic copy.",
+    "Matching scenario parameters are present in scenario files, but this component did not find changes relative to baseline."
+  ],
+  "matched_links": {
+    "count": 22,
+    "sample": [
+      {
+        "id": "PwZT0fUg",
+        "label": "DsFreeSus -> DsFreeSus",
+        "source": "DsFreeSus",
+        "target": "DsFreeSus"
+      },
+      {
+        "id": "BLsXt2Md",
+        "label": "DsFreeSus -> Births",
+        "source": "DsFreeSus",
+        "target": "Births"
+      },
+      {
+        "id": "mlkMPtza",
+        "label": "Births -> DsFreeSus",
+        "source": "Births",
+        "target": "DsFreeSus"
+      },
+      {
+        "id": "6ONEDRqf",
+        "label": "Births -> DsFreeSus",
+        "source": "Births",
+        "target": "DsFreeSus"
+      },
+      {
+        "id": "itKEGsJa",
+        "label": "DsFreeSus -> Deceased",
+        "source": "DsFreeSus",
+        "target": "Deceased"
+      },
+      {
+        "id": "bqt9e1Hu",
+        "label": "DiabetesEpsd -> Births",
+        "source": "AsthmaEpsd",
+        "target": "Births"
+      },
+      {
+        "id": "Sr9wD5iX",
+        "label": "DiabetesEpsd -> DiabetesEpsd",
+        "source": "AsthmaEpsd",
+        "target": "AsthmaEpsd"
+      },
+      {
+        "id": "XERAn3eI",
+        "label": "Prevalence DsFreeSus -> DiabetesEpsd",
+        "source": "DsFreeSus",
+        "target": "AsthmaEpsd"
+      },
+      {
+        "id": "g3h855iV",
+        "label": "DsFreeSus -> DsFreeSus HYL",
+        "source": "DsFreeSus",
+        "target": "lrste7nj"
+      },
+      {
+        "id": "S2Dkmt7a",
+        "label": "DsFreeSus HYL -> Healthy Years Lived",
+        "source": "lrste7nj",
+        "target": "Disability"
+      },
+      {
+        "id": "jafkA6il",
+        "label": "DsFreeSus -> LowerExtrmAmpt",
+        "source": "DsFreeSus",
+        "target": "ls9qwy35"
+      },
+      {
+        "id": "AaIqu3Sh",
+        "label": "DsFreeSus -> DiabeticRetinopathy",
+        "source": "DsFreeSus",
+        "target": "ls9qw5uh"
+      },
+      {
+        "id": "OhC9gSTP",
+        "label": "DsFreeSus -> DiabeticNephropathy",
+        "source": "DsFreeSus",
+        "target": "ls9qwy72"
+      },
+      {
+        "id": "Qo1iIBKh",
+        "label": "DiabeticRetinopathy -> DiabeticRetinopathy",
+        "source": "ls9qw5uh",
+        "target": "ls9qw5uh"
+      },
+      {
+        "id": "P0YMn6Zi",
+        "label": "LowerExtrmAmpt -> LowerExtrmAmpt",
+        "source": "ls9qwy35",
+        "target": "ls9qwy35"
+      },
+      {
+        "id": "oDZJAqIc",
+        "label": "DiabeticNephropathy -> DiabeticNephropathy",
+        "source": "ls9qwy72",
+        "target": "ls9qwy72"
+      },
+      {
+        "id": "uQdxASQ8",
+        "label": "DiabeticRetinopathy -> Births",
+        "source": "ls9qw5uh",
+        "target": "Births"
+      },
+      {
+        "id": "iB5A8VDc",
+        "label": "LowerExtrmAmpt -> Births",
+        "source": "ls9qwy35",
+        "target": "Births"
+      },
+      {
+        "id": "UFw5HQql",
+        "label": "DiabeticNephropathy -> Births",
+        "source": "ls9qwy72",
+        "target": "Births"
+      },
+      {
+        "id": "LzXYrpyL",
+        "label": "Healthy_HYL -> DsFreeSus HYL",
+        "source": "UZumScoj",
+        "target": "lrste7nj"
+      }
+    ]
+  },
+  "matched_nodes": {
+    "count": 6,
+    "sample": [
+      {
+        "id": "Deceased",
+        "label": "Deceased-DsFreeSus",
+        "node_type": "STATE"
+      },
+      {
+        "id": "lrste7nj",
+        "label": "DsFreeSus HYL",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "DsFreeSus",
+        "label": "DsFreeSus",
+        "node_type": "STATE"
+      },
+      {
+        "id": "Births",
+        "label": "Births",
+        "node_type": "FUNCTION"
+      },
+      {
+        "id": "5HaLc0YJ",
+        "label": "YLD-DsFreeSus",
+        "node_type": null
+      },
+      {
+        "id": "gZ18mp9u",
+        "label": "YLL-DsFreeSus",
+        "node_type": null
+      }
+    ]
+  },
+  "matched_scenario_parameters": [],
+  "matching_rule": "Case-insensitive match against node id, node label, node tags, link id, link label, link endpoints, generated data fetcher blocks, and scenario parameter names.",
+  "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+  "model_slug": "ncd-diabetes",
+  "outputs_or_handoffs": [
+    "Uses or publishes in-graph node balances and generated values.",
+    "Uses or publishes in-graph edge values and transfer events."
+  ],
+  "patterns": [
+    "\\bdsfreesus\\b",
+    "\\bbirth",
+    "\\bfertility\\b",
+    "\\bmigration\\b",
+    "\\bsex ratio\\b",
+    "\\bdeceased-dsfreesus\\b",
+    "\\bbackground mortality\\b",
+    "\\bpopulation\\b"
+  ],
+  "role": "Population substrate",
+  "scenario_parameter_changes_relative_to_baseline": [],
+  "scenario_parameter_presence": [
+    {
+      "label": "Diabetes - Baseline Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-baseline"
+    },
+    {
+      "label": "Appendix 3 - D1 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-d1"
+    },
+    {
+      "label": "Appendix 3 - D2 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-d2"
+    },
+    {
+      "label": "Appendix 3 - D3 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-d3"
+    },
+    {
+      "label": "Appendix 3 - D5 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-d5"
+    },
+    {
+      "label": "Clinical Intervention - Diabetes Foot Care",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-foot-care"
+    },
+    {
+      "label": "Clinical Intervention - Diabetic Nephropathy Screening",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-nephropathy-screening"
+    },
+    {
+      "label": "Clinical Intervention - Diabetic Retinopathy Screening",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-retinopathy-screening"
+    },
+    {
+      "label": "Clinical Intervention - Standard Glycaemic Control",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-glycaemic-control-standard"
+    },
+    {
+      "label": "Clinical Intervention - Intensive Glycaemic Control",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-glycaemic-control-intense"
+    },
+    {
+      "label": "Appendix 3 - Physical Inactivity P1 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-physical-inactivity-p1"
+    },
+    {
+      "label": "Appendix 3 - Physical Inactivity P2 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-physical-inactivity-p2"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "01K2GJSH8CYYNK25PBDAMFWH8W"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t2"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 3 - Enforcing tobacco advertising, promotion and sponsorship bans",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t3"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 4 - Protecting people from tobacco smoke",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t4"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 5 - Effective Mass Media Campaigns",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t5"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 6 - Quitting tobacco",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t6"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 7 - Effective pharmacological intervention",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t7"
+    },
+    {
+      "label": "U1 - Food reformulation to reduce salt and nutrients",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-u1"
+    },
+    {
+      "label": "U2 - Supportive environment in public institutions",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-u2"
+    },
+    {
+      "label": "U4 - Front-of-pack labelling",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Neuropathy Screening Population In Need",
+        "Intensive Glycaemic Control Population In Need",
+        "Standard Glycaemic Control Population In Need",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Population In Need"
+      ],
+      "scenario_id": "diabetes-u4"
+    }
+  ],
+  "schema": "ncd-module-component.v1",
+  "source_model": "public/models/ncd-diabetes/model.json",
+  "source_model_sha256": "cccc445e13b4da72fbfdb94afe3f28701a923925e5f9d83a15f648cdbbf8b935"
+}

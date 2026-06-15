@@ -1,0 +1,328 @@
+{
+  "component_id": "clinical-standard-glycaemic-control",
+  "component_signature_sha256": "aacadc409939990ae52fac278c66b806a1fb04cefd72b7580e02e2d11ec8c263",
+  "contract_summary": "Intervention-specific graph and scenario boundary. The current executable graph applies any changed scenario parameters by materialising them into the monolithic model.",
+  "execution_mode": "compiled_together_current_graph_boundary",
+  "independently_executable_now": false,
+  "label": "Clinical Standard Glycaemic Control",
+  "limitations": [
+    "This is not yet a separately executable module. It is a component record for a boundary inside the current graph."
+  ],
+  "matched_links": {
+    "count": 0,
+    "sample": []
+  },
+  "matched_nodes": {
+    "count": 0,
+    "sample": []
+  },
+  "matched_scenario_parameters": [
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Standard Glycaemic Control Target Coverage",
+          "scenario_value": 0.95
+        }
+      ],
+      "label": "Appendix 3 - D3 Scenario",
+      "scenario_id": "diabetes-d3"
+    }
+  ],
+  "matching_rule": "Case-insensitive match against node id, node label, node tags, link id, link label, link endpoints, generated data fetcher blocks, and scenario parameter names.",
+  "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+  "model_slug": "ncd-diabetes",
+  "outputs_or_handoffs": [
+    "Has scenario parameter changes relative to the baseline scenario in the client bundle."
+  ],
+  "patterns": [
+    "standard glycaemic",
+    "standard glycemic",
+    "standard glycaemic control"
+  ],
+  "role": "Clinical intervention",
+  "scenario_parameter_changes_relative_to_baseline": [
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Standard Glycaemic Control Target Coverage",
+          "scenario_value": 0.95
+        }
+      ],
+      "label": "Appendix 3 - D3 Scenario",
+      "scenario_id": "diabetes-d3"
+    }
+  ],
+  "scenario_parameter_presence": [
+    {
+      "label": "Diabetes - Baseline Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-baseline"
+    },
+    {
+      "label": "Appendix 3 - D1 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-d1"
+    },
+    {
+      "label": "Appendix 3 - D2 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-d2"
+    },
+    {
+      "label": "Appendix 3 - D3 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-d3"
+    },
+    {
+      "label": "Appendix 3 - D5 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-d5"
+    },
+    {
+      "label": "Clinical Intervention - Diabetes Foot Care",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-foot-care"
+    },
+    {
+      "label": "Clinical Intervention - Diabetic Nephropathy Screening",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-nephropathy-screening"
+    },
+    {
+      "label": "Clinical Intervention - Diabetic Retinopathy Screening",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-retinopathy-screening"
+    },
+    {
+      "label": "Clinical Intervention - Standard Glycaemic Control",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-glycaemic-control-standard"
+    },
+    {
+      "label": "Clinical Intervention - Intensive Glycaemic Control",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-glycaemic-control-intense"
+    },
+    {
+      "label": "Appendix 3 - Physical Inactivity P1 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-physical-inactivity-p1"
+    },
+    {
+      "label": "Appendix 3 - Physical Inactivity P2 Scenario",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-physical-inactivity-p2"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "01K2GJSH8CYYNK25PBDAMFWH8W"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t2"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 3 - Enforcing tobacco advertising, promotion and sponsorship bans",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t3"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 4 - Protecting people from tobacco smoke",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t4"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 5 - Effective Mass Media Campaigns",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t5"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 6 - Quitting tobacco",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t6"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 7 - Effective pharmacological intervention",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-tobacco-t7"
+    },
+    {
+      "label": "U1 - Food reformulation to reduce salt and nutrients",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-u1"
+    },
+    {
+      "label": "U2 - Supportive environment in public institutions",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-u2"
+    },
+    {
+      "label": "U4 - Front-of-pack labelling",
+      "matched_parameter_count": 5,
+      "matched_parameters_sample": [
+        "Standard Glycaemic Control Baseline Coverage",
+        "Standard Glycaemic Control Target Coverage",
+        "Scale-Up Start Year Standard Glycaemic Control",
+        "Scale-Up Final Year Standard Glycaemic Control",
+        "Standard Glycaemic Control Population In Need"
+      ],
+      "scenario_id": "diabetes-u4"
+    }
+  ],
+  "schema": "ncd-module-component.v1",
+  "source_model": "public/models/ncd-diabetes/model.json",
+  "source_model_sha256": "cccc445e13b4da72fbfdb94afe3f28701a923925e5f9d83a15f648cdbbf8b935"
+}

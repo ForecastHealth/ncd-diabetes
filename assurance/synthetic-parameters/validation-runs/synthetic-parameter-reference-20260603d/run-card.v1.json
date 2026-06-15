@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-06-03T13:19:34+00:00",
+  "model_slug": "ncd-diabetes",
+  "reference_parameter_set_id": "reference-parameter-set:ncd-diabetes:synthetic-v1",
+  "runs": {
+    "current_reference_eth": {
+      "bundle_input_count": 605,
+      "data_bundle_sha256": "f5ed8c124c28d3a9959319a324d5063a4475581b1bec4ba7421c057eea77939e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131458814.83,
+          "2030": 147487231.53,
+          "2040": 179633969.48,
+          "2046": null,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2025701.28,
+          "2030": 2224666.68,
+          "2040": 2860022.23,
+          "2046": null,
+          "metric": "Diabetes prevalence state"
+        },
+        {
+          "2025": 127590.1,
+          "2030": 152106.45,
+          "2040": 212123.57,
+          "2046": null,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 16884.86,
+          "2030": 18073.25,
+          "2040": 23999.57,
+          "2046": null,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 115341939.93,
+          "2030": 129198717.28,
+          "2040": 156871864.9,
+          "2046": null,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "15d13f39f68d6cab2f9648b9a7638436b3a54550dd18bdbc7d2d6fad35cdc2ee",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 30837,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "fc4c460cfe0e1ef345d9eb04d56dd53ebf0257c2084134562878e4be1c39ca9a",
+      "status": "pass",
+      "stderr_tail": ""
+    },
+    "synthetic_reference": {
+      "error": "<HTTPError 500: 'Internal Server Error'>",
+      "explanation": "Synthetic country run is expected to fail until unified API/datafetchers provide synthetic disease and risk-factor bundle fixtures.",
+      "status": "fail"
+    }
+  },
+  "scenario_registry_id": "scenario-registry:ncd-diabetes:reference-synthetic-v1",
+  "schema": "reference-parameter-validation-run.v1",
+  "signature_sha256": "8bf9fd89d829ff72d206c397474d78a1690eb0ace76ee3eb00e4eedfc3a17715"
+}

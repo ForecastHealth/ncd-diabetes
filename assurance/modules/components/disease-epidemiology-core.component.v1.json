@@ -1,0 +1,644 @@
+{
+  "component_id": "disease-epidemiology-core",
+  "component_signature_sha256": "5b079151275013d5fab13b4f6da334b337ab56f7ee3142328edb061892554dee",
+  "contract_summary": "Disease states, incidence, mortality, complication or post-acute transfers, and synchronous transfer mechanics.",
+  "execution_mode": "compiled_together_current_graph_boundary",
+  "independently_executable_now": false,
+  "label": "Disease epidemiology core",
+  "limitations": [],
+  "matched_links": {
+    "count": 113,
+    "sample": [
+      {
+        "id": "bqt9e1Hu",
+        "label": "DiabetesEpsd -> Births",
+        "source": "AsthmaEpsd",
+        "target": "Births"
+      },
+      {
+        "id": "Sr9wD5iX",
+        "label": "DiabetesEpsd -> DiabetesEpsd",
+        "source": "AsthmaEpsd",
+        "target": "AsthmaEpsd"
+      },
+      {
+        "id": "XERAn3eI",
+        "label": "Prevalence DsFreeSus -> DiabetesEpsd",
+        "source": "DsFreeSus",
+        "target": "AsthmaEpsd"
+      },
+      {
+        "id": "0sNrINie",
+        "label": "RetinopathyScrn_Coverage -> RetinopathyScrn_Calculated_Coverage",
+        "source": "lrsnalk2",
+        "target": "lrst0woc"
+      },
+      {
+        "id": "5gBcBgTW",
+        "label": "RetinopathyScrn_StartingCoverage -> RetinopathyScrn_Calculated_Coverage",
+        "source": "lrso22do",
+        "target": "lrst0woc"
+      },
+      {
+        "id": "z1m3GYLt",
+        "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Impact -> IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect",
+        "source": "lrsnjkmt",
+        "target": "lrst79uc"
+      },
+      {
+        "id": "QNP1gYuf",
+        "label": "DiabetesEpsd_CFR -> DiabetesEpsd Mortality",
+        "source": "lrso81aw",
+        "target": "lrstce6u"
+      },
+      {
+        "id": "XKtgbA5d",
+        "label": "DiabeticNephropathy_Transform -> DiabeticNephropathy Incidence",
+        "source": "lrwz1ikj",
+        "target": "ls9r1is1"
+      },
+      {
+        "id": "4LTJKWna",
+        "label": "DiabetesEpsd -> DiabetesEpsd HYL",
+        "source": "AsthmaEpsd",
+        "target": "lrwzsau5"
+      },
+      {
+        "id": "qdo9097P",
+        "label": "DiabetesEpsd HYL -> Healthy Years Lived",
+        "source": "lrwzsau5",
+        "target": "Disability"
+      },
+      {
+        "id": "jafkA6il",
+        "label": "DsFreeSus -> LowerExtrmAmpt",
+        "source": "DsFreeSus",
+        "target": "ls9qwy35"
+      },
+      {
+        "id": "QDm89Xb6",
+        "label": "DiabetesEpsd Mortality -> Deceased",
+        "source": "lrstce6u",
+        "target": "i7ihZagV"
+      },
+      {
+        "id": "qwfuA7jx",
+        "label": "DiabetesEpsd -> DiabeticRetinopathy Incidence",
+        "source": "AsthmaEpsd",
+        "target": "ls9r0u95"
+      },
+      {
+        "id": "nyZHiO9K",
+        "label": "DiabetesEpsd -> LowerExtrmAmpt Incidence",
+        "source": "AsthmaEpsd",
+        "target": "ls9r1ind"
+      },
+      {
+        "id": "91C8HO8E",
+        "label": "DiabetesEpsd -> DiabeticNephropathy Incidence",
+        "source": "AsthmaEpsd",
+        "target": "ls9r1is1"
+      },
+      {
+        "id": "PzOtBRht",
+        "label": "DiabeticRetinopathy Incidence -> DiabeticRetinopathy",
+        "source": "ls9r0u95",
+        "target": "ls9qw5uh"
+      },
+      {
+        "id": "wbb442ft",
+        "label": "LowerExtrmAmpt Incidence -> LowerExtrmAmpt",
+        "source": "ls9r1ind",
+        "target": "ls9qwy35"
+      },
+      {
+        "id": "FhZgetai",
+        "label": "DiabeticNephropathy Incidence -> DiabeticNephropathy",
+        "source": "ls9r1is1",
+        "target": "ls9qwy72"
+      },
+      {
+        "id": "nU0Snw08",
+        "label": "DiabeticRetinopathy -> DiabeticRetinopathy Mortality",
+        "source": "ls9qw5uh",
+        "target": "ls9rae7a"
+      },
+      {
+        "id": "vGe8pycW",
+        "label": "DiabeticRetinopathy Mortality -> Deceased",
+        "source": "ls9rae7a",
+        "target": "T9GTSaTy"
+      }
+    ]
+  },
+  "matched_nodes": {
+    "count": 81,
+    "sample": [
+      {
+        "id": "ls9rc6e6",
+        "label": "DiabeticNephropathy Mortality",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "lrstce6u",
+        "label": "DiabetesEpsd Mortality",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "ls9rbfxn",
+        "label": "LowerExtrmAmpt Mortality",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "lrso81aw",
+        "label": "DiabetesEpsd_CFR",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "ls9rae7a",
+        "label": "DiabeticRetinopathy Mortality",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "ls9qwy72",
+        "label": "DiabeticNephropathy",
+        "node_type": "STATE"
+      },
+      {
+        "id": "ls9qwy35",
+        "label": "LowerExtrmAmpt",
+        "node_type": "STATE"
+      },
+      {
+        "id": "ls9qw5uh",
+        "label": "DiabeticRetinopathy",
+        "node_type": "STATE"
+      },
+      {
+        "id": "ls9reknk",
+        "label": "DiabeticNephropathy HYL",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "ls9re0t3",
+        "label": "LowerExtrmAmpt HYL",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "ls9rdcin",
+        "label": "DiabeticRetinopathy HYL",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "lrwzsau5",
+        "label": "DiabetesEpsd HYL",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "ls9r1is1",
+        "label": "DiabeticNephropathy Incidence",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "ls9r1ind",
+        "label": "LowerExtrmAmpt Incidence",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "ls9r0u95",
+        "label": "DiabeticRetinopathy Incidence",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "AsthmaEpsd",
+        "label": "DiabetesEpsd",
+        "node_type": "STATE"
+      },
+      {
+        "id": "lrwz1ikj",
+        "label": "DiabeticNephropathy_Transform",
+        "node_type": "FUNCTION"
+      },
+      {
+        "id": "lrso7mga",
+        "label": "DiabetesEpsd_Disability_Weight",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "lrst79uc",
+        "label": "IntsvGlycControl_DiabeticRetinopathy_Incidence_Effect",
+        "node_type": "FUNCTION"
+      },
+      {
+        "id": "lrst0woc",
+        "label": "RetinopathyScrn_Calculated_Coverage",
+        "node_type": "FUNCTION"
+      }
+    ]
+  },
+  "matched_scenario_parameters": [
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Retinopathy Screening Target Coverage",
+          "scenario_value": 0.95
+        }
+      ],
+      "label": "Appendix 3 - D2 Scenario",
+      "scenario_id": "diabetes-d2"
+    },
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Nephropathy Screening Target Coverage",
+          "scenario_value": 0.95
+        }
+      ],
+      "label": "Appendix 3 - D5 Scenario",
+      "scenario_id": "diabetes-d5"
+    }
+  ],
+  "matching_rule": "Case-insensitive match against node id, node label, node tags, link id, link label, link endpoints, generated data fetcher blocks, and scenario parameter names.",
+  "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+  "model_slug": "ncd-diabetes",
+  "outputs_or_handoffs": [
+    "Uses or publishes in-graph node balances and generated values.",
+    "Uses or publishes in-graph edge values and transfer events.",
+    "Has scenario parameter changes relative to the baseline scenario in the client bundle."
+  ],
+  "patterns": [
+    "diabetes",
+    "diabetic",
+    "DiabetesEpsd",
+    "retinopathy",
+    "nephropathy",
+    "amputation",
+    "LowerExtrmAmpt"
+  ],
+  "role": "Disease state and transfer mechanics",
+  "scenario_parameter_changes_relative_to_baseline": [
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Retinopathy Screening Target Coverage",
+          "scenario_value": 0.95
+        }
+      ],
+      "label": "Appendix 3 - D2 Scenario",
+      "scenario_id": "diabetes-d2"
+    },
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Nephropathy Screening Target Coverage",
+          "scenario_value": 0.95
+        }
+      ],
+      "label": "Appendix 3 - D5 Scenario",
+      "scenario_id": "diabetes-d5"
+    }
+  ],
+  "scenario_parameter_presence": [
+    {
+      "label": "Diabetes - Baseline Scenario",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-baseline"
+    },
+    {
+      "label": "Appendix 3 - D1 Scenario",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-d1"
+    },
+    {
+      "label": "Appendix 3 - D2 Scenario",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-d2"
+    },
+    {
+      "label": "Appendix 3 - D3 Scenario",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-d3"
+    },
+    {
+      "label": "Appendix 3 - D5 Scenario",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-d5"
+    },
+    {
+      "label": "Clinical Intervention - Diabetes Foot Care",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-foot-care"
+    },
+    {
+      "label": "Clinical Intervention - Diabetic Nephropathy Screening",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-nephropathy-screening"
+    },
+    {
+      "label": "Clinical Intervention - Diabetic Retinopathy Screening",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-retinopathy-screening"
+    },
+    {
+      "label": "Clinical Intervention - Standard Glycaemic Control",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-glycaemic-control-standard"
+    },
+    {
+      "label": "Clinical Intervention - Intensive Glycaemic Control",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-glycaemic-control-intense"
+    },
+    {
+      "label": "Appendix 3 - Physical Inactivity P1 Scenario",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-physical-inactivity-p1"
+    },
+    {
+      "label": "Appendix 3 - Physical Inactivity P2 Scenario",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-physical-inactivity-p2"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "01K2GJSH8CYYNK25PBDAMFWH8W"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-tobacco-t2"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 3 - Enforcing tobacco advertising, promotion and sponsorship bans",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-tobacco-t3"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 4 - Protecting people from tobacco smoke",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-tobacco-t4"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 5 - Effective Mass Media Campaigns",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-tobacco-t5"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 6 - Quitting tobacco",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-tobacco-t6"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 7 - Effective pharmacological intervention",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-tobacco-t7"
+    },
+    {
+      "label": "U1 - Food reformulation to reduce salt and nutrients",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-u1"
+    },
+    {
+      "label": "U2 - Supportive environment in public institutions",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-u2"
+    },
+    {
+      "label": "U4 - Front-of-pack labelling",
+      "matched_parameter_count": 10,
+      "matched_parameters_sample": [
+        "Nephropathy Screening Baseline Coverage",
+        "Nephropathy Screening Target Coverage",
+        "Scale-Up Start Year Nephropathy Screening",
+        "Scale-Up Final Year Nephropathy Screening",
+        "Nephropathy Screening Population In Need",
+        "Retinopathy Screening Baseline Coverage",
+        "Retinopathy Screening Target Coverage",
+        "Scale-Up Start Year Retinopathy Screening"
+      ],
+      "scenario_id": "diabetes-u4"
+    }
+  ],
+  "schema": "ncd-module-component.v1",
+  "source_model": "public/models/ncd-diabetes/model.json",
+  "source_model_sha256": "cccc445e13b4da72fbfdb94afe3f28701a923925e5f9d83a15f648cdbbf8b935"
+}

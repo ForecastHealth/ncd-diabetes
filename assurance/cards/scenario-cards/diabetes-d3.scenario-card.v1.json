@@ -1,0 +1,308 @@
+{
+  "composition_record_id": "composition:ncd-diabetes:client-manifest-current:v1",
+  "model_card_id": "model-card:ncd-diabetes:client-manifest-current:v1",
+  "parameter_count": 73,
+  "parameter_values": [
+    [
+      "Country",
+      "AFG"
+    ],
+    [
+      "Neuropathy Screening Baseline Coverage",
+      0.05
+    ],
+    [
+      "Neuropathy Screening Target Coverage",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Neuropathy Screening",
+      1
+    ],
+    [
+      "Scale-Up Final Year Neuropathy Screening",
+      2
+    ],
+    [
+      "Neuropathy Screening Population In Need",
+      1
+    ],
+    [
+      "Intensive Glycaemic Control Baseline Coverage",
+      0.05
+    ],
+    [
+      "Intensive Glycaemic Control Target Coverage",
+      0.95
+    ],
+    [
+      "Scale-Up Start Year Intensive Glycaemic Control",
+      1
+    ],
+    [
+      "Scale-Up Final Year Intensive Glycaemic Control",
+      2
+    ],
+    [
+      "Intensive Glycaemic Control Population In Need",
+      0.1
+    ],
+    [
+      "Standard Glycaemic Control Baseline Coverage",
+      0.05
+    ],
+    [
+      "Standard Glycaemic Control Target Coverage",
+      0.95
+    ],
+    [
+      "Scale-Up Start Year Standard Glycaemic Control",
+      1
+    ],
+    [
+      "Scale-Up Final Year Standard Glycaemic Control",
+      2
+    ],
+    [
+      "Standard Glycaemic Control Population In Need",
+      0.9
+    ],
+    [
+      "Nephropathy Screening Baseline Coverage",
+      0.05
+    ],
+    [
+      "Nephropathy Screening Target Coverage",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Nephropathy Screening",
+      1
+    ],
+    [
+      "Scale-Up Final Year Nephropathy Screening",
+      2
+    ],
+    [
+      "Nephropathy Screening Population In Need",
+      1
+    ],
+    [
+      "Retinopathy Screening Baseline Coverage",
+      0.05
+    ],
+    [
+      "Retinopathy Screening Target Coverage",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Retinopathy Screening",
+      1
+    ],
+    [
+      "Scale-Up Final Year Retinopathy Screening",
+      2
+    ],
+    [
+      "Retinopathy Screening Population In Need",
+      1
+    ],
+    [
+      "Baseline Coverage Physical Inactivity Advice",
+      0.05
+    ],
+    [
+      "Target Coverage Physical Inactivity Advice",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Physical Inactivity Advice",
+      1
+    ],
+    [
+      "Scale-Up Final Year Physical Inactivity Advice",
+      2
+    ],
+    [
+      "Baseline Coverage Physical Inactivity Awareness",
+      0.05
+    ],
+    [
+      "Target Coverage Physical Inactivity Awareness",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Physical Inactivity Awareness",
+      1
+    ],
+    [
+      "Scale-Up Final Year Physical Inactivity Awareness",
+      2
+    ],
+    [
+      "Start Year",
+      2020
+    ],
+    [
+      "End Year",
+      2121
+    ],
+    [
+      "Baseline Coverage Tobacco Ban",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Ban",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Ban",
+      1
+    ],
+    [
+      "Scale-Up Final Year Tobacco Ban",
+      2
+    ],
+    [
+      "Baseline Coverage Tobacco Massmedia",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Massmedia",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Massmedia",
+      1
+    ],
+    [
+      "Scale-Up Final Year Tobacco Massmedia",
+      2
+    ],
+    [
+      "Baseline Coverage Tobacco Protect",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Protect",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Protect",
+      1
+    ],
+    [
+      "Scale-Up Final Year Tobacco Protect",
+      2
+    ],
+    [
+      "Baseline Coverage Tobacco Quitbrief",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Quitbrief",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Quitbrief",
+      1
+    ],
+    [
+      "Scale-Up Final Year Tobacco Quitbrief",
+      2
+    ],
+    [
+      "Baseline Coverage Tobacco Quitcessation",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Quitcessation",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Quitcessation",
+      1
+    ],
+    [
+      "Scale-Up Final Year Tobacco Quitcessation",
+      2
+    ],
+    [
+      "Price Difference Tobacco Tax",
+      0.0
+    ],
+    [
+      "Baseline Coverage Tobacco Warnlabel",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Warnlabel",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Warnlabel",
+      1
+    ],
+    [
+      "Scale-Up Final Year Tobacco Warnlabel",
+      2
+    ],
+    [
+      "Baseline Coverage Fiber Procurement",
+      0.05
+    ],
+    [
+      "Target Coverage Fiber Procurement",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Fiber Procurement",
+      1
+    ],
+    [
+      "Scale-Up Final Year Fiber Procurement",
+      2
+    ],
+    [
+      "Baseline Coverage Fiber Reformulation",
+      0.05
+    ],
+    [
+      "Target Coverage Fiber Reformulation",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Fiber Reformulation",
+      1
+    ],
+    [
+      "Scale-Up Final Year Fiber Reformulation",
+      2
+    ],
+    [
+      "Baseline Coverage Fiber Relabelling",
+      0.05
+    ],
+    [
+      "Target Coverage Fiber Relabelling",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Fiber Relabelling",
+      1
+    ],
+    [
+      "Scale-Up Final Year Fiber Relabelling",
+      2
+    ]
+  ],
+  "scenario_card_id": "scenario-card:ncd-diabetes:diabetes-d3:client-manifest-current:v1",
+  "scenario_card_signature_sha256": "7c49d0cf964f083f0b67e29f77591696edd5562ff5f6f4dec27f693dc145579a",
+  "scenario_id": "diabetes-d3",
+  "scenario_sha256": "d446b4f7ce0f8dcc5168955d1242058c2a7354f4fe0ffbe6635ff8ebea544e8c",
+  "scenario_source": "public/models/ncd-diabetes/scenarios/diabetes_d3.json",
+  "schema": "scenario-card.v1",
+  "scope_statement": "This is a manifest-level scenario card. If the scenario file contains a Country value, that value is the scenario authoring default; the run certificate records the countries actually materialised and executed.",
+  "summary": "Comprehensive glycaemic control intervention for people with diabetes to prevent microvascular complications.\nThis scenario exposes the parameters for both standard and intensive glycaemic control programs that work by maintaining optimal blood glucose levels through medication management and glucose monitoring.\nThe intervention reduces progression from diabetes to diabetic nephropathy, retinopathy, and other complications by providing systematic glucose control with standard home glucose monitoring for insulin-treated patients.\nStandard glycaemic control targets 90% of diabetic patients, while intensive glycaemic control is provided for 10% of patients requiring more aggressive management.\nThe intervention includes regular blood glucose monitoring, medication adjustment, patient education on diabetes management, and clinical follow-up to maintain target glucose levels.\nThis intervention is fundamental to diabetes care and provides the foundation for preventing multiple diabetes complications across all organ systems.\nNote: This intervention should be implemented alongside other diabetes care interventions for comprehensive management of diabetes complications.\n",
+  "title": "Appendix 3 - D3 Scenario"
+}

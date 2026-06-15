@@ -1,0 +1,4633 @@
+{
+  "certification_statement": "This certificate records the scenario-country runs present in the source validation-run JSON. It is runtime execution evidence, not a claim that the model agrees with OneHealth Tool, Spectrum, or any other external comparator.",
+  "composition_record_id": "composition:ncd-diabetes:client-manifest-current:v1",
+  "country_certificates": [
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:41:46.604856+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "efbb50ca47849b5eb1227a9518fc31daa1e2e37f53a1600d975e107cca31f82d",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723459.53,
+          "2030": 47092322.05,
+          "2040": 57896035.89,
+          "2046": 64018112.26,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.17,
+          "2046": 241999.54,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5615.3,
+          "2030": 6544.88,
+          "2040": 9082.52,
+          "2046": 11273.05,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1715.17,
+          "2030": 1994.94,
+          "2040": 2799.96,
+          "2046": 3476.94,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 1942.54,
+          "2030": 2258.79,
+          "2040": 3101.53,
+          "2046": 3753.78,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23817.38,
+          "2030": 27500.41,
+          "2040": 38291.98,
+          "2046": 46973.96,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54850.21,
+          "2030": 63657.05,
+          "2040": 88846.95,
+          "2046": 108847.51,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32136.23,
+          "2030": 35525.08,
+          "2040": 47103.37,
+          "2046": 57423.64,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114590.55,
+          "2030": 42977553.92,
+          "2040": 53027097.19,
+          "2046": 58838458.68,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "8ed8bfb772b28c524fd6e89829bd7f48feba45d197f2daf1f170df2e5da4baaa",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "f2202fa653a4d50df3476204b8c14c4e1c84709ce94032f417a645344bd1cdd8",
+      "rust_duration_seconds": 0.72,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "ee54ab24d08e0b43cce70b03475b4b88b848963fa2146ed1b90253b6db3f14e5",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-d1",
+      "scenario_name": "Appendix 3 - D1 Scenario",
+      "started_at": "2026-06-02T20:39:40.057098+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:41:46.711462+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "bb0ce3f74bc9f9f8b19463b15ea9942215d4241959faf7280506748ad619bdc0",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723459.47,
+          "2030": 47092320.32,
+          "2040": 57896022.27,
+          "2046": 64018088.72,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.17,
+          "2046": 241999.54,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5607.23,
+          "2030": 6527.41,
+          "2040": 9050.35,
+          "2046": 11231.46,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1405.12,
+          "2030": 1633.01,
+          "2040": 2290.49,
+          "2046": 2843.79,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2829.2,
+          "2030": 3283.2,
+          "2040": 4501.98,
+          "2046": 5447.09,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23793.56,
+          "2030": 27447.41,
+          "2040": 38187.77,
+          "2046": 46837.22,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54791.45,
+          "2030": 63536.08,
+          "2040": 88614.98,
+          "2046": 108544.77,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32067.41,
+          "2030": 35396.71,
+          "2040": 46895.05,
+          "2046": 57152.74,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114491.76,
+          "2030": 42977239.64,
+          "2040": 53026303.98,
+          "2046": 58837329.55,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "767b421ae22bb1e211581e0c15e7d5b3d0a62a121366c569f9ba3190ccc9d963",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "bbaa01c3de4b137545b79a8644f9fe2b86965d82e8389a0c49039e14a2c76e19",
+      "rust_duration_seconds": 0.639,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "ad44ec8d4d49c0175a3a13645e09c093cbd71178388736531cfd1a2f86599370",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-d2",
+      "scenario_name": "Appendix 3 - D2 Scenario",
+      "started_at": "2026-06-02T20:39:45.602393+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:41:56.997165+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723460.86,
+          "2030": 47092349.85,
+          "2040": 57896221.95,
+          "2046": 64018429.23,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.2,
+          "2046": 241999.62,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5718.58,
+          "2030": 6812.09,
+          "2040": 9724.55,
+          "2046": 12179.15,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 583.09,
+          "2030": 691.91,
+          "2040": 994.46,
+          "2046": 1243.75,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2177.51,
+          "2030": 2583.6,
+          "2040": 3641.48,
+          "2046": 4446.53,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 15720.29,
+          "2030": 18481.55,
+          "2040": 26257.96,
+          "2046": 32407.75,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 55874.77,
+          "2030": 65936.09,
+          "2040": 93749.19,
+          "2046": 115500.87,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32785.07,
+          "2030": 37012.68,
+          "2040": 50448.5,
+          "2046": 62103.62,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38123095.62,
+          "2030": 42997005.9,
+          "2040": 53070871.11,
+          "2046": 58898969.69,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "002f95368c084a3f4775ef251f3d4816560f0a0e3b9916caf76ca94b94c5ade3",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "17580e2c100e77d9b5aa5d0dfffc5d2d5639337b9af8d51698f8cbcfaf88d158",
+      "rust_duration_seconds": 0.411,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "ba7ec3b39f073cf7a4909c5f1faf3b7a761d743d9099026dbf693c4b61d38b90",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-d3",
+      "scenario_name": "Appendix 3 - D3 Scenario",
+      "started_at": "2026-06-02T20:39:54.751846+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:41:59.599427+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723460.16,
+          "2030": 47092335.48,
+          "2040": 57896125.9,
+          "2046": 64018266.11,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.19,
+          "2046": 241999.58,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5657.53,
+          "2030": 6656.74,
+          "2040": 9358.91,
+          "2046": 11666.26,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1728.77,
+          "2030": 2029.48,
+          "2040": 2881.04,
+          "2046": 3589.97,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2854.75,
+          "2030": 3347.31,
+          "2040": 4650.5,
+          "2046": 5651.54,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 18818.41,
+          "2030": 21913.05,
+          "2040": 30807.93,
+          "2046": 37903.13,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 55321.46,
+          "2030": 64709.61,
+          "2040": 91122.01,
+          "2046": 111935.46,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32390.0,
+          "2030": 36128.7,
+          "2040": 48526.11,
+          "2046": 59432.8,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38118829.86,
+          "2030": 42987026.04,
+          "2040": 53047930.98,
+          "2046": 58867013.78,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "58e24a9bf248b3ccd7baeaddb872e92d6603d2e98a1be8bc1c0ddc1c92cb1b44",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "0726d756ba41d0f52f3663b153e3d276d9570b9d54015a915b4dc4ea95b31b1f",
+      "rust_duration_seconds": 0.375,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "04d8c1b8a258ae083ad8e752b4b313f529db39f9db146952ba17e3e623b354b6",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-d5",
+      "scenario_name": "Appendix 3 - D5 Scenario",
+      "started_at": "2026-06-02T20:41:47.905598+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:16.514913+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41725707.24,
+          "2030": 47097643.41,
+          "2040": 57908542.74,
+          "2046": 64035613.41,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115479.25,
+          "2030": 138404.96,
+          "2040": 197907.63,
+          "2046": 240886.89,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5598.98,
+          "2030": 6505.46,
+          "2040": 8996.43,
+          "2046": 11154.49,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1711.0,
+          "2030": 1984.76,
+          "2040": 2777.27,
+          "2046": 3445.63,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2825.4,
+          "2030": 3272.99,
+          "2040": 4477.75,
+          "2046": 5413.69,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23757.6,
+          "2030": 27355.44,
+          "2040": 37980.14,
+          "2046": 46554.49,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54690.45,
+          "2030": 63310.4,
+          "2040": 88130.6,
+          "2046": 107892.22,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32018.23,
+          "2030": 35281.63,
+          "2040": 46632.1,
+          "2046": 56788.56,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114289.98,
+          "2030": 42976833.3,
+          "2040": 53025665.04,
+          "2046": 58836647.48,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "ee0eebf3cb347097d2bcf032ac854cb605389d5016fbe3358dc5df089aa1068e",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "3f14e0c782ed53596cfb7e922d9b0ff650a813c822eb32f42e689f5553fb0115",
+      "rust_duration_seconds": 0.395,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "071b7067f5b4dc29788c794f8c7259c02afb64d4838e857a9114aae3d2a1c412",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-physical-inactivity-p1",
+      "scenario_name": "Appendix 3 - Physical Inactivity P1 Scenario",
+      "started_at": "2026-06-02T20:42:03.821807+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:33.318087+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41724205.44,
+          "2030": 47094086.39,
+          "2040": 57900174.28,
+          "2046": 64023899.31,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115881.51,
+          "2030": 138869.76,
+          "2040": 198535.47,
+          "2046": 241630.44,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5601.54,
+          "2030": 6512.74,
+          "2040": 9015.76,
+          "2046": 11183.05,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1711.92,
+          "2030": 1987.35,
+          "2040": 2783.86,
+          "2046": 3455.03,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2826.78,
+          "2030": 3276.87,
+          "2040": 4487.15,
+          "2046": 5426.74,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23772.82,
+          "2030": 27396.29,
+          "2040": 38075.21,
+          "2046": 46684.66,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54735.79,
+          "2030": 63413.38,
+          "2040": 88355.96,
+          "2046": 108196.75,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32033.5,
+          "2030": 35319.29,
+          "2040": 46724.87,
+          "2046": 56919.77,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114238.54,
+          "2030": 42976665.93,
+          "2040": 53025081.31,
+          "2046": 58835697.69,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "6b2ad25cb79b3ba241ff516686f5d58a58d1d45d4548da2d79c0725238cea398",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "d4100c105aa618350e04065650fede485f3a1704c07ca34943f7892ca25b8259",
+      "rust_duration_seconds": 0.331,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "a8019389ea37ebba1905e912fdcb02d8f4dfd30238534b88cac8dee04a2ba0a2",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-physical-inactivity-p2",
+      "scenario_name": "Appendix 3 - Physical Inactivity P2 Scenario",
+      "started_at": "2026-06-02T20:42:14.385450+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:33.083153+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41724775.4,
+          "2030": 47094869.42,
+          "2040": 57901531.76,
+          "2046": 64025713.84,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115833.22,
+          "2030": 138806.86,
+          "2040": 198426.42,
+          "2046": 241484.94,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5600.64,
+          "2030": 6511.56,
+          "2040": 9013.73,
+          "2046": 11180.41,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1711.48,
+          "2030": 1986.72,
+          "2040": 2782.83,
+          "2046": 3453.72,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2826.21,
+          "2030": 3276.14,
+          "2040": 4485.36,
+          "2046": 5423.84,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23765.8,
+          "2030": 27387.04,
+          "2040": 38059.79,
+          "2046": 46664.09,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54719.2,
+          "2030": 63391.61,
+          "2040": 88319.74,
+          "2046": 108148.55,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32024.1,
+          "2030": 35303.34,
+          "2040": 46691.14,
+          "2046": 56872.97,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114263.02,
+          "2030": 42976708.63,
+          "2040": 53025168.64,
+          "2046": 58835815.8,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "24c64dc31f1538bdc643405f4bd5d40793335cee729ad15810c4cb4a91d1dce9",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "6f14ed2817322c58ff0596083fc40aa2f20cc6353519f6c062f3f2d3ee33ec31",
+      "rust_duration_seconds": 0.468,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "377606ba7006edbea73cd757abda1d5543a2e97f410947f74dfc5dee6a49a97f",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2GJSH8CYYNK25PBDAMFWH8W",
+      "scenario_name": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "started_at": "2026-06-02T20:42:17.829424+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:34.443156+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41724216.37,
+          "2030": 47094117.95,
+          "2040": 57900303.17,
+          "2046": 64024132.48,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115876.79,
+          "2030": 138859.17,
+          "2040": 198503.98,
+          "2046": 241581.14,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5601.71,
+          "2030": 6513.12,
+          "2040": 9016.46,
+          "2046": 11183.98,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1711.91,
+          "2030": 1987.32,
+          "2040": 2783.79,
+          "2046": 3454.95,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2826.82,
+          "2030": 3276.96,
+          "2040": 4486.9,
+          "2046": 5425.89,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23772.7,
+          "2030": 27395.9,
+          "2040": 38073.44,
+          "2046": 46681.36,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54735.44,
+          "2030": 63412.33,
+          "2040": 88351.53,
+          "2046": 108188.65,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32031.75,
+          "2030": 35314.38,
+          "2040": 46710.09,
+          "2046": 56897.04,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114238.08,
+          "2030": 42976663.58,
+          "2040": 53025070.5,
+          "2046": 58835678.54,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "120dd1e545077d3a0f5a98773944adf442ec8a521193d4604e3b324bb5928f8b",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "2baf04fbe9250e8b04ea4864a5d011592f48a42ad14922048be9ed4655b124ae",
+      "rust_duration_seconds": 0.381,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "41a3950a39972b5b1af3f09473f170132515c7c54930bcb8c522fc7a11b7b38f",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t2",
+      "scenario_name": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "started_at": "2026-06-02T20:42:20.061595+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:35.377382+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723912.89,
+          "2030": 47093396.92,
+          "2040": 57898585.15,
+          "2046": 64021706.63,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115958.79,
+          "2030": 138955.97,
+          "2040": 198641.6,
+          "2046": 241748.93,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5602.15,
+          "2030": 6514.42,
+          "2040": 9020.03,
+          "2046": 11189.29,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1712.1,
+          "2030": 1987.85,
+          "2040": 2785.13,
+          "2046": 3456.85,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2827.08,
+          "2030": 3277.7,
+          "2040": 4488.88,
+          "2046": 5428.83,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23775.78,
+          "2030": 27404.19,
+          "2040": 38093.08,
+          "2046": 46708.6,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54744.61,
+          "2030": 63433.26,
+          "2040": 88398.18,
+          "2046": 108252.53,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32035.49,
+          "2030": 35323.85,
+          "2040": 46734.49,
+          "2046": 56932.28,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114228.02,
+          "2030": 42976631.19,
+          "2040": 53024958.62,
+          "2046": 58835497.14,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "de37209f981af92a98fdbd947282353d4acfe0bc04a71a3ed23578dd27efbeb9",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "9fd129f75097308d1da36c05eeed0b9b2b89ae22657b3ebf0ed9a63579dc17de",
+      "rust_duration_seconds": 0.486,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "40b3eff2cda6e83addfcdceb83cd00d4dbaf0e6128b3f1e075842fe4e8de7ea6",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t3",
+      "scenario_name": "Appendix 3 - Tobacco 3 - Enforcing tobacco advertising, promotion and sponsorship bans",
+      "started_at": "2026-06-02T20:42:20.624689+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:46.972896+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41724520.8,
+          "2030": 47094841.27,
+          "2040": 57902026.84,
+          "2046": 64026566.39,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115794.54,
+          "2030": 138762.05,
+          "2040": 198365.9,
+          "2046": 241412.79,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5601.27,
+          "2030": 6511.82,
+          "2040": 9012.88,
+          "2046": 11178.66,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1711.73,
+          "2030": 1986.8,
+          "2040": 2782.45,
+          "2046": 3453.04,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2826.56,
+          "2030": 3276.22,
+          "2040": 4484.93,
+          "2046": 5422.93,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23769.62,
+          "2030": 27387.58,
+          "2040": 38053.74,
+          "2046": 46654.03,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54726.24,
+          "2030": 63391.34,
+          "2040": 88304.72,
+          "2046": 108124.56,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32028.0,
+          "2030": 35304.88,
+          "2040": 46685.61,
+          "2046": 56861.69,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114248.17,
+          "2030": 42976696.07,
+          "2040": 53025182.74,
+          "2046": 58835860.52,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "572e7c87dcfe7071c6e6b355de717eb5fd749b0aa485b912e1efba6cf8ce1752",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "000b35503c45ad2f65e94025c961f75ce0a13fc59bf0fba4084a02b4f27e8b02",
+      "rust_duration_seconds": 0.307,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "326d9bb55f6c349842cc4c33ddce331e481eac367086d10d56119347d6b6741f",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t4",
+      "scenario_name": "Appendix 3 - Tobacco 4 - Protecting people from tobacco smoke",
+      "started_at": "2026-06-02T20:42:32.427074+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:48.555318+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41724368.46,
+          "2030": 47094479.32,
+          "2040": 57901164.3,
+          "2046": 64025348.42,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115835.7,
+          "2030": 138810.65,
+          "2040": 198435.0,
+          "2046": 241497.04,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5601.49,
+          "2030": 6512.47,
+          "2040": 9014.67,
+          "2046": 11181.32,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1711.82,
+          "2030": 1987.06,
+          "2040": 2783.12,
+          "2046": 3453.99,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2826.69,
+          "2030": 3276.59,
+          "2040": 4485.92,
+          "2046": 5424.41,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23771.16,
+          "2030": 27391.74,
+          "2040": 38063.6,
+          "2046": 46667.7,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54730.85,
+          "2030": 63401.85,
+          "2040": 88328.15,
+          "2046": 108156.64,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32029.87,
+          "2030": 35309.64,
+          "2040": 46697.86,
+          "2046": 56879.38,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114243.12,
+          "2030": 42976679.81,
+          "2040": 53025126.58,
+          "2046": 58835769.46,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "4e302b92986705698eec3d526e9a09fa18d38df7cc0860ff1169eb413c3f99c0",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "216a0719de3f4089ea80c48888dcdafc3f2753248100b68f711ba6d5722d1a88",
+      "rust_duration_seconds": 0.6,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "ecefb49652d19303715931d8c074d57f19cf9e4a968e05fb628c633a9130ee0d",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t5",
+      "scenario_name": "Appendix 3 - Tobacco 5 - Effective Mass Media Campaigns",
+      "started_at": "2026-06-02T20:42:34.578955+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:52.890728+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41724019.0,
+          "2030": 47093649.02,
+          "2040": 57899185.82,
+          "2046": 64022554.76,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115930.12,
+          "2030": 138922.13,
+          "2040": 198593.49,
+          "2046": 241690.27,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5602.0,
+          "2030": 6513.96,
+          "2040": 9018.78,
+          "2046": 11187.43,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1712.03,
+          "2030": 1987.66,
+          "2040": 2784.66,
+          "2046": 3456.19,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2826.99,
+          "2030": 3277.44,
+          "2040": 4488.19,
+          "2046": 5427.8,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23774.7,
+          "2030": 27401.29,
+          "2040": 38086.21,
+          "2046": 46699.08,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54741.4,
+          "2030": 63425.95,
+          "2040": 88381.87,
+          "2046": 108230.2,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32034.19,
+          "2030": 35320.54,
+          "2040": 46725.96,
+          "2046": 56919.96,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114231.54,
+          "2030": 42976642.52,
+          "2040": 53024997.74,
+          "2046": 58835560.57,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "d2f8a7a329bf2a0425b84ca3c20afacf5e77252c5bfdc99171c4d49ee39095ac",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "12864e27c409cc669bba296600916b474dfb4c225d8dfdb0883fc3dab83ba1b0",
+      "rust_duration_seconds": 0.294,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "8eaaa2d2913cb254072011e5082e2c459a2c99c5b15df0ea1de00a8c446afe3c",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t6",
+      "scenario_name": "Appendix 3 - Tobacco 6 - Quitting tobacco",
+      "started_at": "2026-06-02T20:42:35.384169+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:51.303026+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41724876.66,
+          "2030": 47095686.86,
+          "2040": 57904042.06,
+          "2046": 64029412.13,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 115698.38,
+          "2030": 138648.5,
+          "2040": 198204.44,
+          "2046": 241215.93,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5600.76,
+          "2030": 6510.31,
+          "2040": 9008.7,
+          "2046": 11172.44,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1711.51,
+          "2030": 1986.18,
+          "2040": 2780.89,
+          "2046": 3450.8,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2826.25,
+          "2030": 3275.35,
+          "2040": 4482.61,
+          "2046": 5419.48,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23766.01,
+          "2030": 27377.85,
+          "2040": 38030.7,
+          "2046": 46622.07,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54715.49,
+          "2030": 63366.79,
+          "2040": 88250.0,
+          "2046": 108049.63,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32023.61,
+          "2030": 35293.78,
+          "2040": 46657.0,
+          "2046": 56820.35,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114259.97,
+          "2030": 42976734.05,
+          "2040": 53025313.93,
+          "2046": 58836073.24,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "d120ec1829cf608ee6de45c8d8bd5c070f5acb3613017ad00d45048ba48ea498",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "8ce976023b2ae14c170fd1e8ecffd0973ba67aca277020dfe0efe2d6ee441ed2",
+      "rust_duration_seconds": 0.296,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "6128413fd1f17610b121ac5c8b5250bf7c62f216d29aabe41e8259367f6dba45",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t7",
+      "scenario_name": "Appendix 3 - Tobacco 7 - Effective pharmacological intervention",
+      "started_at": "2026-06-02T20:42:36.067002+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:02.523952+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723459.43,
+          "2030": 47092319.66,
+          "2040": 57896018.63,
+          "2046": 64018082.89,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.17,
+          "2046": 241999.54,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5602.81,
+          "2030": 6516.35,
+          "2040": 9025.36,
+          "2046": 11197.22,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1712.38,
+          "2030": 1988.63,
+          "2040": 2787.12,
+          "2046": 3459.7,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2827.47,
+          "2030": 3278.8,
+          "2040": 4491.82,
+          "2046": 5433.22,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23780.38,
+          "2030": 27416.58,
+          "2040": 38122.42,
+          "2046": 46749.29,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54758.31,
+          "2030": 63464.53,
+          "2040": 88467.87,
+          "2046": 108347.95,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32041.09,
+          "2030": 35338.0,
+          "2040": 46770.94,
+          "2046": 56984.91,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114212.99,
+          "2030": 42976582.79,
+          "2040": 53024791.44,
+          "2046": 58835226.11,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "5e993a241d851b23242e8c238b425922f7758167ff5cdc46764dbde645e37b48",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "37df64bd47c54c723869f380aa8c766af1ee3200dd45fb0a9f5f899a5dc5fb7c",
+      "rust_duration_seconds": 0.331,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "21561f590228210066b6db92e596d10f5bf8a6a2ee601f966e3a6f015bd04572",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-foot-care",
+      "scenario_name": "Clinical Intervention - Diabetes Foot Care",
+      "started_at": "2026-06-02T20:41:48.052361+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:41:59.599459+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723459.43,
+          "2030": 47092319.66,
+          "2040": 57896018.63,
+          "2046": 64018082.89,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.17,
+          "2046": 241999.54,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5602.81,
+          "2030": 6516.35,
+          "2040": 9025.36,
+          "2046": 11197.22,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1712.38,
+          "2030": 1988.63,
+          "2040": 2787.12,
+          "2046": 3459.7,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2827.47,
+          "2030": 3278.8,
+          "2040": 4491.82,
+          "2046": 5433.22,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23780.38,
+          "2030": 27416.58,
+          "2040": 38122.42,
+          "2046": 46749.29,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54758.31,
+          "2030": 63464.53,
+          "2040": 88467.87,
+          "2046": 108347.95,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32041.09,
+          "2030": 35338.0,
+          "2040": 46770.94,
+          "2046": 56984.91,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114212.99,
+          "2030": 42976582.79,
+          "2040": 53024791.44,
+          "2046": 58835226.11,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "5e993a241d851b23242e8c238b425922f7758167ff5cdc46764dbde645e37b48",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "bcd7eed50acb9370cbaaf67fcae9f72fc8f72db6572d9251ae6c3617ce6ee42f",
+      "rust_duration_seconds": 0.337,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "21561f590228210066b6db92e596d10f5bf8a6a2ee601f966e3a6f015bd04572",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-nephropathy-screening",
+      "scenario_name": "Clinical Intervention - Diabetic Nephropathy Screening",
+      "started_at": "2026-06-02T20:41:48.651550+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:13.685236+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723459.43,
+          "2030": 47092319.66,
+          "2040": 57896018.63,
+          "2046": 64018082.89,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.17,
+          "2046": 241999.54,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5602.81,
+          "2030": 6516.35,
+          "2040": 9025.36,
+          "2046": 11197.22,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1712.38,
+          "2030": 1988.63,
+          "2040": 2787.12,
+          "2046": 3459.7,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2827.47,
+          "2030": 3278.8,
+          "2040": 4491.82,
+          "2046": 5433.22,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23780.38,
+          "2030": 27416.58,
+          "2040": 38122.42,
+          "2046": 46749.29,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54758.31,
+          "2030": 63464.53,
+          "2040": 88467.87,
+          "2046": 108347.95,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32041.09,
+          "2030": 35338.0,
+          "2040": 46770.94,
+          "2046": 56984.91,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114212.99,
+          "2030": 42976582.79,
+          "2040": 53024791.44,
+          "2046": 58835226.11,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "5e993a241d851b23242e8c238b425922f7758167ff5cdc46764dbde645e37b48",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "89b551c7cba8562c259f7beda89c0bacb60124030b2c261e1486dc3c58203555",
+      "rust_duration_seconds": 0.345,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "21561f590228210066b6db92e596d10f5bf8a6a2ee601f966e3a6f015bd04572",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-retinopathy-screening",
+      "scenario_name": "Clinical Intervention - Diabetic Retinopathy Screening",
+      "started_at": "2026-06-02T20:41:58.142969+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:15.989945+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723459.43,
+          "2030": 47092319.66,
+          "2040": 57896018.63,
+          "2046": 64018082.89,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.17,
+          "2046": 241999.54,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5602.81,
+          "2030": 6516.35,
+          "2040": 9025.36,
+          "2046": 11197.22,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1712.38,
+          "2030": 1988.63,
+          "2040": 2787.12,
+          "2046": 3459.7,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2827.47,
+          "2030": 3278.8,
+          "2040": 4491.82,
+          "2046": 5433.22,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23780.38,
+          "2030": 27416.58,
+          "2040": 38122.42,
+          "2046": 46749.29,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54758.31,
+          "2030": 63464.53,
+          "2040": 88467.87,
+          "2046": 108347.95,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32041.09,
+          "2030": 35338.0,
+          "2040": 46770.94,
+          "2046": 56984.91,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114212.99,
+          "2030": 42976582.79,
+          "2040": 53024791.44,
+          "2046": 58835226.11,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "5e993a241d851b23242e8c238b425922f7758167ff5cdc46764dbde645e37b48",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "89aa6c76c760fa6a2fdbe57e9e9cd5cbbdd99176d79a633226a0d6d5521c98de",
+      "rust_duration_seconds": 0.349,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "21561f590228210066b6db92e596d10f5bf8a6a2ee601f966e3a6f015bd04572",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-glycaemic-control-intense",
+      "scenario_name": "Clinical Intervention - Intensive Glycaemic Control",
+      "started_at": "2026-06-02T20:42:03.664730+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:42:16.047787+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "b3f0f52a1d5df154590bb5b366068a407af83f1c23c45d3e3d0398e900050173",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723459.43,
+          "2030": 47092319.66,
+          "2040": 57896018.63,
+          "2046": 64018082.89,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.17,
+          "2046": 241999.54,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5602.81,
+          "2030": 6516.35,
+          "2040": 9025.36,
+          "2046": 11197.22,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1712.38,
+          "2030": 1988.63,
+          "2040": 2787.12,
+          "2046": 3459.7,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2827.47,
+          "2030": 3278.8,
+          "2040": 4491.82,
+          "2046": 5433.22,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23780.38,
+          "2030": 27416.58,
+          "2040": 38122.42,
+          "2046": 46749.29,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54758.31,
+          "2030": 63464.53,
+          "2040": 88467.87,
+          "2046": 108347.95,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32041.09,
+          "2030": 35338.0,
+          "2040": 46770.94,
+          "2046": 56984.91,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114212.99,
+          "2030": 42976582.79,
+          "2040": 53024791.44,
+          "2046": 58835226.11,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "5e993a241d851b23242e8c238b425922f7758167ff5cdc46764dbde645e37b48",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "05d76dee47cdda504c5c2417123914d67be5846debc01912d833ce0a9c7810dd",
+      "rust_duration_seconds": 0.385,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "21561f590228210066b6db92e596d10f5bf8a6a2ee601f966e3a6f015bd04572",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-glycaemic-control-standard",
+      "scenario_name": "Clinical Intervention - Standard Glycaemic Control",
+      "started_at": "2026-06-02T20:42:01.212698+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "4b624abfc48bf0854d332122b1e012cee35e68537c2b3bbc95e2884561f3fb10",
+      "completed_at": "2026-06-02T20:41:46.604741+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "cbbf3c9fec26172430c679a88fb029f3f250ab474aac61c9335d527c8bfa3e85",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41723459.43,
+          "2030": 47092319.66,
+          "2040": 57896018.63,
+          "2046": 64018082.89,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 116081.31,
+          "2030": 139100.59,
+          "2040": 198847.17,
+          "2046": 241999.54,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 5602.81,
+          "2030": 6516.35,
+          "2040": 9025.36,
+          "2046": 11197.22,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1712.38,
+          "2030": 1988.63,
+          "2040": 2787.12,
+          "2046": 3459.7,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 2827.47,
+          "2030": 3278.8,
+          "2040": 4491.82,
+          "2046": 5433.22,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 23780.38,
+          "2030": 27416.58,
+          "2040": 38122.42,
+          "2046": 46749.29,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 54758.31,
+          "2030": 63464.53,
+          "2040": 88467.87,
+          "2046": 108347.95,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 32041.09,
+          "2030": 35338.0,
+          "2040": 46770.94,
+          "2046": 56984.91,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38114212.99,
+          "2030": 42976582.79,
+          "2040": 53024791.44,
+          "2046": 58835226.11,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "5e993a241d851b23242e8c238b425922f7758167ff5cdc46764dbde645e37b48",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "e89f66d61c8f6e54c181a07c461bdef87b8d33e9391e30a7caf5aac18b167db1",
+      "rust_duration_seconds": 0.575,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "21561f590228210066b6db92e596d10f5bf8a6a2ee601f966e3a6f015bd04572",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-baseline",
+      "scenario_name": "Diabetes - Baseline Scenario",
+      "started_at": "2026-06-02T20:39:38.983837+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 740,
+      "bundle_semantic_sha256": "6846e37935038d5e2df0252ebe15aed7c2adf64b9349f888694abe978c0d1dfe",
+      "completed_at": "2026-06-02T20:43:10.693054+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "5ef061767886b72a3b52cc9d66cc85c3bec5520c158d3f61612f6ca67b47da2e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 42706216.52,
+          "2030": 48188756.46,
+          "2040": 59291682.92,
+          "2046": 65641305.64,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 117640.76,
+          "2030": 141433.33,
+          "2040": 202309.78,
+          "2046": 246629.89,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 6327.87,
+          "2030": 6968.19,
+          "2040": 9422.98,
+          "2046": 11666.16,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1912.17,
+          "2030": 2127.65,
+          "2040": 2907.58,
+          "2046": 3578.29,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 3156.64,
+          "2030": 3518.35,
+          "2040": 4659.68,
+          "2046": 5670.54,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 26129.27,
+          "2030": 29431.91,
+          "2040": 39716.66,
+          "2046": 48253.42,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 59854.37,
+          "2030": 67853.09,
+          "2040": 91987.37,
+          "2046": 111710.63,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 35536.9,
+          "2030": 38323.91,
+          "2040": 49363.85,
+          "2046": 58824.34,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 39130593.82,
+          "2030": 44073349.4,
+          "2040": 54354593.66,
+          "2046": 60361034.64,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "8eda38e9438d61db2a42965368bc06e96ca2c6efdfb0a6e5d37247b459df8aab",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 38157,
+      "run_signature_sha256": "5ff0e50ab2b2cf552c9a8044f1d01c558e0130b2f5cb4455fcda620fa2618272",
+      "rust_duration_seconds": 0.107,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "dd7a875d1245620b22c90c55a0c5bfb436bd5e750d1237be46ed63a419a0664e",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-u1",
+      "scenario_name": "U1 - Food reformulation to reduce salt and nutrients",
+      "started_at": "2026-06-02T20:42:47.989413+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 740,
+      "bundle_semantic_sha256": "6846e37935038d5e2df0252ebe15aed7c2adf64b9349f888694abe978c0d1dfe",
+      "completed_at": "2026-06-02T20:43:07.159249+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "e625a5d61923cf1571bcee09b072e6a20163c603a6b4057f1357aabb4c26b5a1",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 42706216.52,
+          "2030": 48188756.46,
+          "2040": 59291682.92,
+          "2046": 65641305.64,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 117640.76,
+          "2030": 141433.33,
+          "2040": 202309.78,
+          "2046": 246629.89,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 6327.87,
+          "2030": 6968.19,
+          "2040": 9422.98,
+          "2046": 11666.16,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1912.17,
+          "2030": 2127.65,
+          "2040": 2907.58,
+          "2046": 3578.29,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 3156.64,
+          "2030": 3518.35,
+          "2040": 4659.68,
+          "2046": 5670.54,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 26129.27,
+          "2030": 29431.91,
+          "2040": 39716.66,
+          "2046": 48253.42,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 59854.37,
+          "2030": 67853.09,
+          "2040": 91987.37,
+          "2046": 111710.63,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 35536.9,
+          "2030": 38323.91,
+          "2040": 49363.85,
+          "2046": 58824.34,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 39130593.82,
+          "2030": 44073349.4,
+          "2040": 54354593.66,
+          "2046": 60361034.64,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "3195212e474374fa14c48bcd5d95b90f21859fb7dd51a6fe14fe82dbfbf1dbff",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 38157,
+      "run_signature_sha256": "7a4e9357acc02c70d9139eaae30c2bb83ceabd5927c3a0721349ba9df084cbde",
+      "rust_duration_seconds": 0.171,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "1498ca73c0b9df38967c28064b2ae74a738575ec434669973834f261d1bd946c",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-u2",
+      "scenario_name": "U2 - Supportive environment in public institutions",
+      "started_at": "2026-06-02T20:42:49.800827+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 740,
+      "bundle_semantic_sha256": "6846e37935038d5e2df0252ebe15aed7c2adf64b9349f888694abe978c0d1dfe",
+      "completed_at": "2026-06-02T20:43:14.684504+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "3e80d934ae80de0f78a82c119066f8359b52b00353548d05cfa6c1eb188b28f2",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 42706216.52,
+          "2030": 48195312.76,
+          "2040": 59317139.32,
+          "2046": 65679853.47,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 117640.76,
+          "2030": 139681.72,
+          "2040": 199955.36,
+          "2046": 243843.74,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 6327.87,
+          "2030": 6957.61,
+          "2040": 9368.58,
+          "2046": 11578.6,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1912.17,
+          "2030": 2123.72,
+          "2040": 2888.31,
+          "2046": 3548.23,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 3156.64,
+          "2030": 3512.15,
+          "2040": 4630.09,
+          "2046": 5625.85,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 26129.27,
+          "2030": 29365.59,
+          "2040": 39422.71,
+          "2046": 47815.98,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 59854.37,
+          "2030": 67655.14,
+          "2040": 91277.54,
+          "2046": 110678.17,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 35536.9,
+          "2030": 38257.37,
+          "2040": 49079.83,
+          "2046": 58380.22,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 39130593.82,
+          "2030": 44073571.98,
+          "2040": 54356075.26,
+          "2046": 60363764.49,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "2aacd11cd48519aec171c9f8344d99aa4ad6b50933fe0aac2df955ef24faeb01",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 38157,
+      "run_signature_sha256": "8c5d91ff9adf415bc87aa841eddb71a077d3f6639329840d40a77f35121fc397",
+      "rust_duration_seconds": 0.093,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "a687c968ef3f33d5c64b6b1085650d92bc20bd48e6c3775754cb6465fbade63d",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-u4",
+      "scenario_name": "U4 - Front-of-pack labelling",
+      "started_at": "2026-06-02T20:42:51.245982+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:41:46.413884+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "1d5831da6768874861b49e6f509b2aad78120ece69233d8c367722b5261f4d61",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414784.12,
+          "2030": 147435387.71,
+          "2040": 179535398.76,
+          "2046": 198654399.7,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.61,
+          "2046": 256076.46,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14869.66,
+          "2030": 17373.75,
+          "2040": 23999.15,
+          "2046": 29634.43,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5177.23,
+          "2030": 5988.46,
+          "2040": 8203.3,
+          "2046": 10039.06,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 5584.6,
+          "2030": 6403.2,
+          "2040": 8552.48,
+          "2046": 10252.6,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 25073.58,
+          "2030": 28344.06,
+          "2040": 37718.01,
+          "2046": 45165.67,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57842.53,
+          "2030": 65628.23,
+          "2040": 87559.72,
+          "2046": 104811.25,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39830.77,
+          "2030": 44005.84,
+          "2040": 58691.2,
+          "2046": 70186.55,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115047010.81,
+          "2030": 128939239.38,
+          "2040": 156650036.31,
+          "2046": 173044730.2,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "2eac5657a96643bdde50f74c65d0e860eddfc2fac916c8a80962f900e1a28a18",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "666bec79ba523b052a3b9a1e83ae347f92705239b9422b5c2ccf0650e242a691",
+      "rust_duration_seconds": 0.478,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "c8ab67f3872dc46f4cbb0afae14b938cbdb3203295aa8f1ac995be5075c55c3f",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-d1",
+      "scenario_name": "Appendix 3 - D1 Scenario",
+      "started_at": "2026-06-02T20:39:39.380562+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:41:46.604839+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "31a9292657836722eedb6ff5c053e9ff381307234f14d405428e3ef8dccfd037",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414783.01,
+          "2030": 147435367.68,
+          "2040": 179535258.24,
+          "2046": 198654162.11,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.6,
+          "2046": 256076.43,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14796.16,
+          "2030": 17217.04,
+          "2040": 23716.82,
+          "2046": 29268.52,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 4234.48,
+          "2030": 4888.0,
+          "2040": 6685.39,
+          "2046": 8177.76,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8107.18,
+          "2030": 9253.64,
+          "2040": 12324.93,
+          "2046": 14768.14,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 25008.24,
+          "2030": 28204.04,
+          "2040": 37457.51,
+          "2046": 44832.8,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57681.72,
+          "2030": 65309.57,
+          "2040": 86981.08,
+          "2046": 104075.16,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39644.32,
+          "2030": 43683.32,
+          "2040": 58171.35,
+          "2046": 69538.37,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115046780.36,
+          "2030": 128938443.6,
+          "2040": 156647768.69,
+          "2046": 173041403.75,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "4914a8b354056c0948f654b284c3d91e71717dad1a04ea4fb53f2a4d117c447b",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "38a3cf3ce0572bcb0dd8eea352728c9a8bac27ef34807e704a41151cec5c1082",
+      "rust_duration_seconds": 0.567,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "fb0fc786bd5ecf4f12ca3e1d21c880e6179612ed3468ea1e14b71d30bfe4f9e8",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-d2",
+      "scenario_name": "Appendix 3 - D2 Scenario",
+      "started_at": "2026-06-02T20:39:41.576492+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:41:48.671791+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414786.6,
+          "2030": 147435429.87,
+          "2040": 179535657.83,
+          "2046": 198654836.29,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.69,
+          "2040": 212526.63,
+          "2046": 256076.52,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 15202.97,
+          "2030": 18211.0,
+          "2040": 25893.13,
+          "2046": 32233.59,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 1768.47,
+          "2030": 2095.94,
+          "2040": 2950.82,
+          "2046": 3639.79,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 6281.15,
+          "2030": 7370.17,
+          "2040": 10108.81,
+          "2046": 12209.55,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 16600.32,
+          "2030": 19162.25,
+          "2040": 26083.81,
+          "2046": 31440.59,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 59115.6,
+          "2030": 68373.32,
+          "2040": 93131.01,
+          "2046": 112158.03,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 40778.81,
+          "2030": 46097.42,
+          "2040": 63084.87,
+          "2046": 76025.2,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115057832.57,
+          "2030": 128964199.73,
+          "2040": 156705193.47,
+          "2046": 173119752.39,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "be1cb87361042468b55b2c49afad69632463db05c9dcb1c6941747c6fcd9fb02",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "485d652a96aaa71ea0ae87ccd509376ad068526e1ce78cc1f805d29a435b4b70",
+      "rust_duration_seconds": 0.472,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "cd242412aaaea1afdac98f88e151bafc50f815790cb127721f0e333b7fb5423a",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-d3",
+      "scenario_name": "Appendix 3 - D3 Scenario",
+      "started_at": "2026-06-02T20:39:48.832145+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:01.407550+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414783.09,
+          "2030": 147435373.11,
+          "2040": 179535305.26,
+          "2046": 198654245.47,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.6,
+          "2046": 256076.44,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14904.14,
+          "2030": 17487.62,
+          "2040": 24330.19,
+          "2046": 30113.37,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5201.34,
+          "2030": 6053.07,
+          "2040": 8358.87,
+          "2046": 10254.2,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8169.06,
+          "2030": 9402.28,
+          "2040": 12638.3,
+          "2046": 15180.27,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 19758.52,
+          "2030": 22467.37,
+          "2040": 30106.6,
+          "2046": 36124.45,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 58172.0,
+          "2030": 66364.44,
+          "2040": 89111.33,
+          "2046": 106867.51,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39957.78,
+          "2030": 44371.64,
+          "2040": 59627.71,
+          "2046": 71489.45,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115050848.12,
+          "2030": 128947638.8,
+          "2040": 156667615.34,
+          "2046": 173068138.18,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "4daccfd16afda277abbcc12eb801041cf037cddb626b17918bda6549a5166f6c",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "ff5c18ae4cc374db9928870f6d9f83433e9b91243f448f95b3ffb371ae4ac88e",
+      "rust_duration_seconds": 0.433,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "9b48e5fb17665317e4cd37d0542c40837a5078170a4d4ab8fecaf8d90508d0c6",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-d5",
+      "scenario_name": "Appendix 3 - D5 Scenario",
+      "started_at": "2026-06-02T20:41:46.391089+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:19.057692+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131416191.97,
+          "2030": 147438692.89,
+          "2040": 179542978.23,
+          "2046": 198664921.68,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128007.15,
+          "2030": 152158.22,
+          "2040": 211908.29,
+          "2046": 255336.05,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14756.32,
+          "2030": 17119.2,
+          "2040": 23503.92,
+          "2046": 28980.14,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5149.79,
+          "2030": 5926.88,
+          "2040": 8080.33,
+          "2046": 9875.34,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8088.31,
+          "2030": 9207.12,
+          "2040": 12224.94,
+          "2046": 14635.36,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24955.3,
+          "2030": 28079.47,
+          "2040": 37200.79,
+          "2046": 44493.82,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57542.6,
+          "2030": 65014.44,
+          "2040": 86395.02,
+          "2046": 103306.25,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39530.73,
+          "2030": 43438.51,
+          "2040": 57678.33,
+          "2046": 68897.61,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115046023.36,
+          "2030": 128936758.14,
+          "2040": 156644362.6,
+          "2046": 173036997.43,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "8b0aa05d793e46cb797d5a92fccc9435143a50e3e3f9248091fff0ac7f868a1b",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "58db3ee93ceb82dd5863956d484f0af6d488745659dac1f44466d913ab1718bf",
+      "rust_duration_seconds": 0.407,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "53e51c95f648eeb74786f6a0cebc821d642ce62b8f97b5bda600f3bcf7e58570",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-physical-inactivity-p1",
+      "scenario_name": "Appendix 3 - Physical Inactivity P1 Scenario",
+      "started_at": "2026-06-02T20:42:03.731886+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:19.005319+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131415251.23,
+          "2030": 147436468.62,
+          "2040": 179537798.65,
+          "2046": 198657696.13,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128262.63,
+          "2030": 152458.88,
+          "2040": 212320.99,
+          "2046": 255830.23,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14760.82,
+          "2030": 17131.76,
+          "2040": 23535.38,
+          "2046": 29025.28,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5151.65,
+          "2030": 5932.01,
+          "2040": 8092.82,
+          "2046": 9892.89,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8090.91,
+          "2030": 9214.3,
+          "2040": 12241.83,
+          "2046": 14658.38,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24964.71,
+          "2030": 28104.3,
+          "2040": 37256.54,
+          "2046": 44569.01,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57570.67,
+          "2030": 65077.01,
+          "2040": 86527.23,
+          "2046": 103482.53,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39545.8,
+          "2030": 43474.31,
+          "2040": 57758.6,
+          "2046": 69005.55,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045987.1,
+          "2030": 128936626.67,
+          "2040": 156643875.47,
+          "2046": 173036196.32,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "98b368633f1623daed6a9f15e10d739f89ec9f1f1077c3c379be09d34dd590bd",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "a81866e0b57ff58f707214436484a513aaa56929ea0a083ff82505c8527f04cc",
+      "rust_duration_seconds": 0.508,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "8bdbaf06ccca07ecbd72df5906631beca13c9442ac517d2e24e16381b3467636",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-physical-inactivity-p2",
+      "scenario_name": "Appendix 3 - Physical Inactivity P2 Scenario",
+      "started_at": "2026-06-02T20:42:05.506144+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:32.407919+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131415367.92,
+          "2030": 147436490.05,
+          "2040": 179537617.02,
+          "2046": 198657384.16,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128276.94,
+          "2030": 152472.83,
+          "2040": 212332.14,
+          "2046": 255839.29,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14758.99,
+          "2030": 17129.39,
+          "2040": 23531.81,
+          "2046": 29020.98,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5151.52,
+          "2030": 5932.37,
+          "2040": 8094.32,
+          "2046": 9895.19,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8090.26,
+          "2030": 9213.88,
+          "2040": 12241.57,
+          "2046": 14657.9,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24963.08,
+          "2030": 28104.16,
+          "2040": 37259.01,
+          "2046": 44572.82,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57567.67,
+          "2030": 65077.29,
+          "2040": 86533.22,
+          "2046": 103491.43,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39540.62,
+          "2030": 43467.55,
+          "2040": 57747.73,
+          "2046": 68991.53,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045998.11,
+          "2030": 128936642.8,
+          "2040": 156643893.59,
+          "2046": 173036208.0,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "a1c4101c05d2cd7e92072cc7c4611e5a3022d89e90fc90d756ec3044cc71cdc3",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "da0f4e89771389c88e033b0dbbc04a9e830666b5b03802db5839ea813d872640",
+      "rust_duration_seconds": 0.386,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "e54f4c2e022755978cc0c8c0104a310832fc0a50b3322c8dd1a7c4f300cb8255",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2GJSH8CYYNK25PBDAMFWH8W",
+      "scenario_name": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "started_at": "2026-06-02T20:42:17.697446+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:31.042609+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131415118.33,
+          "2030": 147436155.38,
+          "2040": 179537080.15,
+          "2046": 198656700.83,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128297.76,
+          "2030": 152497.97,
+          "2040": 212368.49,
+          "2046": 255883.85,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14760.96,
+          "2030": 17132.1,
+          "2040": 23536.16,
+          "2046": 29026.52,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.03,
+          "2030": 5933.05,
+          "2040": 8095.37,
+          "2046": 9896.51,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8091.19,
+          "2030": 9215.1,
+          "2040": 12243.54,
+          "2046": 14660.39,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24966.05,
+          "2030": 28107.86,
+          "2040": 37264.46,
+          "2046": 44579.58,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57574.66,
+          "2030": 65085.95,
+          "2040": 86545.93,
+          "2046": 103507.18,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39546.24,
+          "2030": 43474.98,
+          "2040": 57759.06,
+          "2046": 69005.49,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045982.45,
+          "2030": 128936611.71,
+          "2040": 156643824.07,
+          "2046": 173036111.3,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "70aaacc57d2c5d43ec8c6d1b855cf9da2c79dad98a2d0a1e24d912a81ab3a8cc",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "040a89014342937b89e329024715c713b4da1a9e6f3d72aba4118cffc7eac6c0",
+      "rust_duration_seconds": 0.293,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "848308e99a3a8135dba879fc0466c1f9572720ee3bec8148facd5f658e6796e8",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t2",
+      "scenario_name": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "started_at": "2026-06-02T20:42:18.043176+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:33.760473+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414983.86,
+          "2030": 147435837.06,
+          "2040": 179536334.53,
+          "2046": 198655657.89,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128334.66,
+          "2030": 152542.3,
+          "2040": 212431.8,
+          "2046": 255960.96,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14761.81,
+          "2030": 17134.47,
+          "2040": 23542.12,
+          "2046": 29035.03,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.25,
+          "2030": 5933.66,
+          "2040": 8096.84,
+          "2046": 9898.56,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8091.6,
+          "2030": 9216.21,
+          "2040": 12246.23,
+          "2046": 14664.18,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24967.39,
+          "2030": 28111.39,
+          "2040": 37272.41,
+          "2046": 44590.35,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57578.66,
+          "2030": 65094.85,
+          "2040": 86564.82,
+          "2046": 103532.48,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39549.07,
+          "2030": 43481.85,
+          "2040": 57774.89,
+          "2046": 69027.05,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045977.07,
+          "2030": 128936591.47,
+          "2040": 156643747.47,
+          "2046": 173035985.52,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "71ee83d94b2c76b1a1cf024b85526e280243be38247486d599e91f15591475e8",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "633dabb6ccc1c80b12fba6304fd4e1c12828bf25296cc4d89bc4398cdbd8f330",
+      "rust_duration_seconds": 0.465,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "eae2761fccd1ecf62604236e40f702427adb69295250d397c156044bf4104c82",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t3",
+      "scenario_name": "Appendix 3 - Tobacco 3 - Enforcing tobacco advertising, promotion and sponsorship bans",
+      "started_at": "2026-06-02T20:42:20.113020+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:37.850536+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131415252.99,
+          "2030": 147436474.16,
+          "2040": 179537826.86,
+          "2046": 198657745.32,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128260.8,
+          "2030": 152453.58,
+          "2040": 212305.09,
+          "2046": 255806.62,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14760.12,
+          "2030": 17129.72,
+          "2040": 23530.19,
+          "2046": 29018.0,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5151.81,
+          "2030": 5932.44,
+          "2040": 8093.9,
+          "2046": 9894.45,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8090.78,
+          "2030": 9213.98,
+          "2040": 12240.85,
+          "2046": 14656.59,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24964.7,
+          "2030": 28104.33,
+          "2040": 37256.5,
+          "2046": 44568.8,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57570.65,
+          "2030": 65077.04,
+          "2040": 86527.01,
+          "2046": 103481.84,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39543.4,
+          "2030": 43468.09,
+          "2040": 57743.2,
+          "2046": 68983.91,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045987.83,
+          "2030": 128936631.98,
+          "2040": 156643900.78,
+          "2046": 173036237.26,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "653c7f6b52de54b55f13453b7d69b596e0674767cbe913967006d968f217ada2",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "87a83eeb42b38dbc27ef840189671397ae0fa055ca5613dc78b3d04d974fd38c",
+      "rust_duration_seconds": 0.29,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "d89b150df74df43fd5b59473a1f08a8737e81f42e7e1e6e5ce9b86a0e5c87959",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t4",
+      "scenario_name": "Appendix 3 - Tobacco 4 - Protecting people from tobacco smoke",
+      "started_at": "2026-06-02T20:42:20.942592+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:50.488311+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131415185.63,
+          "2030": 147436314.72,
+          "2040": 179537453.37,
+          "2046": 198657222.88,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128279.28,
+          "2030": 152475.78,
+          "2040": 212336.8,
+          "2046": 255845.25,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14760.54,
+          "2030": 17130.91,
+          "2040": 23533.18,
+          "2046": 29022.26,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5151.92,
+          "2030": 5932.74,
+          "2040": 8094.63,
+          "2046": 9895.48,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8090.98,
+          "2030": 9214.54,
+          "2040": 12242.19,
+          "2046": 14658.49,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24965.38,
+          "2030": 28106.09,
+          "2040": 37260.48,
+          "2046": 44574.19,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57572.66,
+          "2030": 65081.5,
+          "2040": 86536.48,
+          "2046": 103494.52,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39544.82,
+          "2030": 43471.54,
+          "2040": 57751.13,
+          "2046": 68994.7,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045985.14,
+          "2030": 128936621.84,
+          "2040": 156643862.41,
+          "2046": 173036174.26,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "46faa573bf1c4bec639b334bbaf667ac0e196d04866a9a0c9820639355f69ed0",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "2e3df318b88738aa2004388d7a6f680e770e80c0106b69f18ff816e245f4eb01",
+      "rust_duration_seconds": 0.319,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "2152ddaa1f45d9277ce1d8ca2dae14cdcc207417918b33cdbb529295ad845515",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t5",
+      "scenario_name": "Appendix 3 - Tobacco 5 - Effective Mass Media Campaigns",
+      "started_at": "2026-06-02T20:42:34.347516+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:46.938922+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131415030.9,
+          "2030": 147435948.42,
+          "2040": 179536595.37,
+          "2046": 198656022.75,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128321.75,
+          "2030": 152526.79,
+          "2040": 212409.65,
+          "2046": 255933.98,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14761.51,
+          "2030": 17133.64,
+          "2040": 23540.04,
+          "2046": 29032.06,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.17,
+          "2030": 5933.44,
+          "2040": 8096.32,
+          "2046": 9897.84,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8091.45,
+          "2030": 9215.82,
+          "2040": 12245.29,
+          "2046": 14662.85,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24966.92,
+          "2030": 28110.16,
+          "2040": 37269.63,
+          "2046": 44586.58,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57577.26,
+          "2030": 65091.74,
+          "2040": 86558.21,
+          "2046": 103523.63,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39548.08,
+          "2030": 43479.45,
+          "2040": 57769.35,
+          "2046": 69019.51,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045978.96,
+          "2030": 128936598.55,
+          "2040": 156643774.27,
+          "2046": 173036029.52,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "255d3dc0636075830b1f506afd3dacf85c25747c672b2c9718afc83de236c45d",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "216d37d501aca3c89e2b9bd042351e294607651f195f430f73568a52849bd172",
+      "rust_duration_seconds": 0.307,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "11bf11441b52003c2c74f8d4d0d7bdded9985f0d353d8636e8703767e1c345f3",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t6",
+      "scenario_name": "Appendix 3 - Tobacco 6 - Quitting tobacco",
+      "started_at": "2026-06-02T20:42:34.600773+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:49.222710+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131415410.11,
+          "2030": 147436846.12,
+          "2040": 179538698.17,
+          "2046": 198658964.1,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128217.68,
+          "2030": 152401.78,
+          "2040": 212231.12,
+          "2046": 255716.51,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14759.14,
+          "2030": 17126.95,
+          "2040": 23523.23,
+          "2046": 29008.06,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5151.55,
+          "2030": 5931.72,
+          "2040": 8092.18,
+          "2046": 9892.05,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8090.3,
+          "2030": 9212.68,
+          "2040": 12237.71,
+          "2046": 14652.17,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24963.13,
+          "2030": 28100.2,
+          "2040": 37247.21,
+          "2046": 44556.21,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57565.98,
+          "2030": 65066.64,
+          "2040": 86504.94,
+          "2046": 103452.28,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39540.1,
+          "2030": 43460.06,
+          "2040": 57724.71,
+          "2046": 68958.72,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045994.11,
+          "2030": 128936655.62,
+          "2040": 156643990.29,
+          "2046": 173036384.24,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "e5b05454e06fd2a2ae13d6caa57277d9b3e2450ab69d473509d5d3db80a30f69",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "69dc2e9835a6b85e43f00c22d828b5eb78abf057a51db84df37eaf100bda1b76",
+      "rust_duration_seconds": 0.366,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "1e4a7cfea6c8602304ee0d64cbee7f285d3b00e895306db6f69251eebd5f6d47",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-tobacco-t7",
+      "scenario_name": "Appendix 3 - Tobacco 7 - Effective pharmacological intervention",
+      "started_at": "2026-06-02T20:42:35.387921+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:02.532942+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414782.51,
+          "2030": 147435360.42,
+          "2040": 179535218.14,
+          "2046": 198654096.38,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.59,
+          "2046": 256076.42,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14763.07,
+          "2030": 17138.02,
+          "2040": 23551.05,
+          "2046": 29047.77,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.59,
+          "2030": 5934.57,
+          "2040": 8099.04,
+          "2046": 9901.63,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8092.21,
+          "2030": 9217.88,
+          "2040": 12250.25,
+          "2046": 14669.85,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24969.4,
+          "2030": 28116.68,
+          "2040": 37284.31,
+          "2046": 44606.47,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57584.65,
+          "2030": 65108.18,
+          "2040": 86593.1,
+          "2046": 103570.35,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39553.31,
+          "2030": 43492.15,
+          "2040": 57798.59,
+          "2046": 69059.32,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045969.03,
+          "2030": 128936561.17,
+          "2040": 156643632.77,
+          "2046": 173035797.2,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "a2fbf39e328f99f0f593a353f1b4b158a565b1d102f9ed069d0b41ae36602dca",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "1bbeaa0afb9351e53e68ee69db773be74ed153dc971663b2810e3c2a2c71ceaa",
+      "rust_duration_seconds": 0.373,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "49ee111ddc283b702733b70c51b79eed11283936c837bd32c85cd88348468845",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-foot-care",
+      "scenario_name": "Clinical Intervention - Diabetes Foot Care",
+      "started_at": "2026-06-02T20:41:48.045248+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:02.540637+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414782.51,
+          "2030": 147435360.42,
+          "2040": 179535218.14,
+          "2046": 198654096.38,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.59,
+          "2046": 256076.42,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14763.07,
+          "2030": 17138.02,
+          "2040": 23551.05,
+          "2046": 29047.77,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.59,
+          "2030": 5934.57,
+          "2040": 8099.04,
+          "2046": 9901.63,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8092.21,
+          "2030": 9217.88,
+          "2040": 12250.25,
+          "2046": 14669.85,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24969.4,
+          "2030": 28116.68,
+          "2040": 37284.31,
+          "2046": 44606.47,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57584.65,
+          "2030": 65108.18,
+          "2040": 86593.1,
+          "2046": 103570.35,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39553.31,
+          "2030": 43492.15,
+          "2040": 57798.59,
+          "2046": 69059.32,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045969.03,
+          "2030": 128936561.17,
+          "2040": 156643632.77,
+          "2046": 173035797.2,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "a2fbf39e328f99f0f593a353f1b4b158a565b1d102f9ed069d0b41ae36602dca",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "ccf8b6ecf384a8f3340e288ba394d8aa2210b6f853939213a74e7658db662e37",
+      "rust_duration_seconds": 0.332,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "49ee111ddc283b702733b70c51b79eed11283936c837bd32c85cd88348468845",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-nephropathy-screening",
+      "scenario_name": "Clinical Intervention - Diabetic Nephropathy Screening",
+      "started_at": "2026-06-02T20:41:48.091249+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:04.676446+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414782.51,
+          "2030": 147435360.42,
+          "2040": 179535218.14,
+          "2046": 198654096.38,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.59,
+          "2046": 256076.42,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14763.07,
+          "2030": 17138.02,
+          "2040": 23551.05,
+          "2046": 29047.77,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.59,
+          "2030": 5934.57,
+          "2040": 8099.04,
+          "2046": 9901.63,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8092.21,
+          "2030": 9217.88,
+          "2040": 12250.25,
+          "2046": 14669.85,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24969.4,
+          "2030": 28116.68,
+          "2040": 37284.31,
+          "2046": 44606.47,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57584.65,
+          "2030": 65108.18,
+          "2040": 86593.1,
+          "2046": 103570.35,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39553.31,
+          "2030": 43492.15,
+          "2040": 57798.59,
+          "2046": 69059.32,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045969.03,
+          "2030": 128936561.17,
+          "2040": 156643632.77,
+          "2046": 173035797.2,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "a2fbf39e328f99f0f593a353f1b4b158a565b1d102f9ed069d0b41ae36602dca",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "b2df5b72d1e37e08b1936272574b75d134946a68575144c9b19507799a1e35a4",
+      "rust_duration_seconds": 0.318,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "49ee111ddc283b702733b70c51b79eed11283936c837bd32c85cd88348468845",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-retinopathy-screening",
+      "scenario_name": "Clinical Intervention - Diabetic Retinopathy Screening",
+      "started_at": "2026-06-02T20:41:49.435114+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:19.339658+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414782.51,
+          "2030": 147435360.42,
+          "2040": 179535218.14,
+          "2046": 198654096.38,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.59,
+          "2046": 256076.42,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14763.07,
+          "2030": 17138.02,
+          "2040": 23551.05,
+          "2046": 29047.77,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.59,
+          "2030": 5934.57,
+          "2040": 8099.04,
+          "2046": 9901.63,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8092.21,
+          "2030": 9217.88,
+          "2040": 12250.25,
+          "2046": 14669.85,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24969.4,
+          "2030": 28116.68,
+          "2040": 37284.31,
+          "2046": 44606.47,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57584.65,
+          "2030": 65108.18,
+          "2040": 86593.1,
+          "2046": 103570.35,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39553.31,
+          "2030": 43492.15,
+          "2040": 57798.59,
+          "2046": 69059.32,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045969.03,
+          "2030": 128936561.17,
+          "2040": 156643632.77,
+          "2046": 173035797.2,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "a2fbf39e328f99f0f593a353f1b4b158a565b1d102f9ed069d0b41ae36602dca",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "5c05fde3984f84d513ebd9099c05d99785dac4259c0f6084c5e4f584d4de80c2",
+      "rust_duration_seconds": 0.42,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "49ee111ddc283b702733b70c51b79eed11283936c837bd32c85cd88348468845",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-glycaemic-control-intense",
+      "scenario_name": "Clinical Intervention - Intensive Glycaemic Control",
+      "started_at": "2026-06-02T20:42:02.577705+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:42:20.113136+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "0978974a68bb551da3f5fa93f9d96e83e1b16f78b12e3e7afa8d144c7f9b183f",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414782.51,
+          "2030": 147435360.42,
+          "2040": 179535218.14,
+          "2046": 198654096.38,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.59,
+          "2046": 256076.42,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14763.07,
+          "2030": 17138.02,
+          "2040": 23551.05,
+          "2046": 29047.77,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.59,
+          "2030": 5934.57,
+          "2040": 8099.04,
+          "2046": 9901.63,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8092.21,
+          "2030": 9217.88,
+          "2040": 12250.25,
+          "2046": 14669.85,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24969.4,
+          "2030": 28116.68,
+          "2040": 37284.31,
+          "2046": 44606.47,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57584.65,
+          "2030": 65108.18,
+          "2040": 86593.1,
+          "2046": 103570.35,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39553.31,
+          "2030": 43492.15,
+          "2040": 57798.59,
+          "2046": 69059.32,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045969.03,
+          "2030": 128936561.17,
+          "2040": 156643632.77,
+          "2046": 173035797.2,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "a2fbf39e328f99f0f593a353f1b4b158a565b1d102f9ed069d0b41ae36602dca",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "f29c26e6aba0b5a91305deb9bc90c71d278573a3513ef56a9a627ef1ab58e779",
+      "rust_duration_seconds": 0.344,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "49ee111ddc283b702733b70c51b79eed11283936c837bd32c85cd88348468845",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-glycaemic-control-standard",
+      "scenario_name": "Clinical Intervention - Standard Glycaemic Control",
+      "started_at": "2026-06-02T20:42:01.180710+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 2765,
+      "bundle_semantic_sha256": "fc9c6facfcd1c66b80bd69a00566c0e33ae47402c23b038a1ad4519e9cd0f91d",
+      "completed_at": "2026-06-02T20:41:44.755485+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "19fa7ff81a21b02586680f0dfd0a9dada77afd36ded91455b90b25f8a6522dcd",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131414782.51,
+          "2030": 147435360.42,
+          "2040": 179535218.14,
+          "2046": 198654096.38,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 128389.92,
+          "2030": 152608.68,
+          "2040": 212526.59,
+          "2046": 256076.42,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 14763.07,
+          "2030": 17138.02,
+          "2040": 23551.05,
+          "2046": 29047.77,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5152.59,
+          "2030": 5934.57,
+          "2040": 8099.04,
+          "2046": 9901.63,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 8092.21,
+          "2030": 9217.88,
+          "2040": 12250.25,
+          "2046": 14669.85,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 24969.4,
+          "2030": 28116.68,
+          "2040": 37284.31,
+          "2046": 44606.47,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 57584.65,
+          "2030": 65108.18,
+          "2040": 86593.1,
+          "2046": 103570.35,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 39553.31,
+          "2030": 43492.15,
+          "2040": 57798.59,
+          "2046": 69059.32,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115045969.03,
+          "2030": 128936561.17,
+          "2040": 156643632.77,
+          "2046": 173035797.2,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "a2fbf39e328f99f0f593a353f1b4b158a565b1d102f9ed069d0b41ae36602dca",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 147957,
+      "run_signature_sha256": "3ed274f2e7e66ac5dfd54bc3f24f3ddcadb554359858e34221530b379bde86f7",
+      "rust_duration_seconds": 0.569,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "49ee111ddc283b702733b70c51b79eed11283936c837bd32c85cd88348468845",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-baseline",
+      "scenario_name": "Diabetes - Baseline Scenario",
+      "started_at": "2026-06-02T20:39:38.848521+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 740,
+      "bundle_semantic_sha256": "23696aa51d6a7cab46830362931675125584965ef52bf8b35072d60811d17955",
+      "completed_at": "2026-06-02T20:42:57.832187+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "ebced5c67cc67852f4794142be3c3bd14082b2c80ac43bc547ba31af4e784fa3",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131458814.83,
+          "2030": 147488014.25,
+          "2040": 179636970.31,
+          "2046": 198897195.36,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 127590.1,
+          "2030": 151893.85,
+          "2040": 211831.97,
+          "2046": 255261.49,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 16884.86,
+          "2030": 18069.24,
+          "2040": 23980.46,
+          "2046": 29594.81,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5753.19,
+          "2030": 6267.88,
+          "2040": 8285.21,
+          "2046": 10054.88,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 9158.12,
+          "2030": 9795.58,
+          "2040": 12483.46,
+          "2046": 14962.31,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 27428.61,
+          "2030": 29932.36,
+          "2040": 38226.48,
+          "2046": 45228.89,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 62796.74,
+          "2030": 68941.33,
+          "2040": 88580.79,
+          "2046": 104867.28,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 43896.49,
+          "2030": 46538.08,
+          "2040": 59413.81,
+          "2046": 69761.3,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115341939.93,
+          "2030": 129198747.75,
+          "2040": 156872103.15,
+          "2046": 173350831.37,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "64e5b28f00ab3928ff7fd5e846ca63e3ab0c8022ce6ceb775eb1b66862c57810",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 38157,
+      "run_signature_sha256": "7061875ee7c42e3659f7e243b6da213687a7247d6ebe7fdbad2952471058f23c",
+      "rust_duration_seconds": 0.082,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "d6c320774991784ec34f4681b8c5b78ce04c1d6dc0e3db24dedaf30de1ed8667",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-u1",
+      "scenario_name": "U1 - Food reformulation to reduce salt and nutrients",
+      "started_at": "2026-06-02T20:42:38.341342+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 740,
+      "bundle_semantic_sha256": "23696aa51d6a7cab46830362931675125584965ef52bf8b35072d60811d17955",
+      "completed_at": "2026-06-02T20:43:02.494244+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "ebced5c67cc67852f4794142be3c3bd14082b2c80ac43bc547ba31af4e784fa3",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131458814.83,
+          "2030": 147488014.25,
+          "2040": 179636970.31,
+          "2046": 198897195.36,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 127590.1,
+          "2030": 151893.85,
+          "2040": 211831.97,
+          "2046": 255261.49,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 16884.86,
+          "2030": 18069.24,
+          "2040": 23980.46,
+          "2046": 29594.81,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5753.19,
+          "2030": 6267.88,
+          "2040": 8285.21,
+          "2046": 10054.88,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 9158.12,
+          "2030": 9795.58,
+          "2040": 12483.46,
+          "2046": 14962.31,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 27428.61,
+          "2030": 29932.36,
+          "2040": 38226.48,
+          "2046": 45228.89,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 62796.74,
+          "2030": 68941.33,
+          "2040": 88580.79,
+          "2046": 104867.28,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 43896.49,
+          "2030": 46538.08,
+          "2040": 59413.81,
+          "2046": 69761.3,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115341939.93,
+          "2030": 129198747.75,
+          "2040": 156872103.15,
+          "2046": 173350831.37,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "aeab493e05444378c7edc9ad5c608591ee25d20da65eb175ed45181ee4fbc892",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 38157,
+      "run_signature_sha256": "fb4d3d5c0a6f814fd2675875054bba1570af1ef33fb290f305785853252f6476",
+      "rust_duration_seconds": 0.108,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "b15bd43b68e740cae07a57ecdd68c97db4b559f8825299f0f7141b1452a1a7d2",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-u2",
+      "scenario_name": "U2 - Supportive environment in public institutions",
+      "started_at": "2026-06-02T20:42:48.508364+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 740,
+      "bundle_semantic_sha256": "23696aa51d6a7cab46830362931675125584965ef52bf8b35072d60811d17955",
+      "completed_at": "2026-06-02T20:43:01.308436+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "ebced5c67cc67852f4794142be3c3bd14082b2c80ac43bc547ba31af4e784fa3",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 131458814.83,
+          "2030": 147495008.11,
+          "2040": 179663788.79,
+          "2046": 198937599.68,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 195.74,
+          "2030": 195.74,
+          "2040": 195.74,
+          "2046": 195.74,
+          "metric": "Diabetes calculated state"
+        },
+        {
+          "2025": 127590.1,
+          "2030": 149994.09,
+          "2040": 209225.41,
+          "2046": 252142.98,
+          "metric": "Diabetes incidence flow"
+        },
+        {
+          "2025": 16884.86,
+          "2030": 18033.42,
+          "2040": 23809.59,
+          "2046": 29330.18,
+          "metric": "Diabetes mortality flow"
+        },
+        {
+          "2025": 5753.19,
+          "2030": 6254.73,
+          "2040": 8224.68,
+          "2046": 9962.61,
+          "metric": "Retinopathy incidence flow"
+        },
+        {
+          "2025": 9158.12,
+          "2030": 9775.06,
+          "2040": 12389.77,
+          "2046": 14823.76,
+          "metric": "Lower-extremity amputation incidence flow"
+        },
+        {
+          "2025": 27428.61,
+          "2030": 29862.39,
+          "2040": 37930.7,
+          "2046": 44797.68,
+          "metric": "Nephropathy incidence flow"
+        },
+        {
+          "2025": 62796.74,
+          "2030": 68732.84,
+          "2040": 87866.72,
+          "2046": 103848.06,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 43896.49,
+          "2030": 46421.8,
+          "2040": 58967.46,
+          "2046": 69110.85,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 115341939.93,
+          "2030": 129199020.03,
+          "2040": 156874232.36,
+          "2046": 173354848.21,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "68f286951d01b4125696e14443f96f1da3d662e0f6f3d0f0b36d4566a10a9a79",
+      "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+      "model_slug": "ncd-diabetes",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 38157,
+      "run_signature_sha256": "efb74d4b07d0ea4aa85d26fa919a04a27235a4681e3ec208ab81fe5b242ca0e8",
+      "rust_duration_seconds": 0.092,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "78e24785d2401f6cfa1f44e919a08f0b0cf0f8534d6ceb10615a237362030d42",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "diabetes-u4",
+      "scenario_name": "U4 - Front-of-pack labelling",
+      "started_at": "2026-06-02T20:42:50.453698+00:00",
+      "status": "pass"
+    }
+  ],
+  "country_scope": "default",
+  "created_at": "2026-06-02T20:49:42+00:00",
+  "failed": 0,
+  "generated_file_retention": "temporary materialised models, data bundles, and result CSVs are discarded after hashing and headline extraction",
+  "model_card_id": "model-card:ncd-diabetes:client-manifest-current:v1",
+  "passed": 44,
+  "reference_country": "ETH",
+  "reference_headline_metrics": [
+    {
+      "2025": 131414784.12,
+      "2030": 147435387.71,
+      "2040": 179535398.76,
+      "2046": 198654399.7,
+      "metric": "Population at risk"
+    },
+    {
+      "2025": 195.74,
+      "2030": 195.74,
+      "2040": 195.74,
+      "2046": 195.74,
+      "metric": "Diabetes calculated state"
+    },
+    {
+      "2025": 128389.92,
+      "2030": 152608.68,
+      "2040": 212526.61,
+      "2046": 256076.46,
+      "metric": "Diabetes incidence flow"
+    },
+    {
+      "2025": 14869.66,
+      "2030": 17373.75,
+      "2040": 23999.15,
+      "2046": 29634.43,
+      "metric": "Diabetes mortality flow"
+    },
+    {
+      "2025": 5177.23,
+      "2030": 5988.46,
+      "2040": 8203.3,
+      "2046": 10039.06,
+      "metric": "Retinopathy incidence flow"
+    },
+    {
+      "2025": 5584.6,
+      "2030": 6403.2,
+      "2040": 8552.48,
+      "2046": 10252.6,
+      "metric": "Lower-extremity amputation incidence flow"
+    },
+    {
+      "2025": 25073.58,
+      "2030": 28344.06,
+      "2040": 37718.01,
+      "2046": 45165.67,
+      "metric": "Nephropathy incidence flow"
+    },
+    {
+      "2025": 57842.53,
+      "2030": 65628.23,
+      "2040": 87559.72,
+      "2046": 104811.25,
+      "metric": "Years lived with disability"
+    },
+    {
+      "2025": 39830.77,
+      "2030": 44005.84,
+      "2040": 58691.2,
+      "2046": 70186.55,
+      "metric": "Years of life lost"
+    },
+    {
+      "2025": 115047010.81,
+      "2030": 128939239.38,
+      "2040": 156650036.31,
+      "2046": 173044730.2,
+      "metric": "Healthy years lived"
+    }
+  ],
+  "reference_scenario": "diabetes-d1",
+  "row_count": 44,
+  "run_certificate_id": "run-certificate:ncd-diabetes:all-scenarios-default-20260602b:v1",
+  "run_certificate_signature_sha256": "13a9b3ea5ed70c7020d905ecf473cf3378e2754a5d7c8752f9f06a8266d9a957",
+  "scenario_scope": "all",
+  "schema": "run-certificate.v1",
+  "source_run_file_sha256": "65c637e60967e15878c9a8df7fb5748936c7465d0a9f0be25c0345320e84902d",
+  "source_run_id": "all-scenarios-default-20260602b",
+  "source_run_semantic_sha256": "9255bc6b6fd10c7035ff6f7e509dfa34ece9a6cf87a12c93bdacf40a017ea946",
+  "status": "pass",
+  "status_definition": "pass means the Rust runner exited successfully and emitted result rows for the scenario-country run",
+  "title": "Diabetes Run Certificate",
+  "warnings": [
+    "This certificate records runtime execution evidence only. It does not compare model outputs with OneHealth Tool, Spectrum, Appendix 3 reference outputs, or another external comparator.",
+    "Generated data bundles are identified by hashes in the run JSON, but the hosted unified API/datafetcher source version that produced them is not pinned in this certificate."
+  ]
+}

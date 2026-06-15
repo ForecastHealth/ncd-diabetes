@@ -1,0 +1,657 @@
+{
+  "component_id": "dietary-risk-factor",
+  "component_signature_sha256": "13a125497ee5aa2ae9ce1cd63ee19599a057ef0a81bfd2ca27d3e66e04fd50b7",
+  "contract_summary": "Risk-factor exposure, coverage, relative-risk, attributable-fraction or modifier logic currently held inside the executable graph.",
+  "execution_mode": "link_then_inject_bundle_candidate_current_graph_boundary",
+  "independently_executable_now": false,
+  "label": "Dietary Risk Factor",
+  "limitations": [
+    "This record identifies the current in-graph boundary. It does not claim an upstream exposure model has already been separated and injected."
+  ],
+  "matched_links": {
+    "count": 16,
+    "sample": [
+      {
+        "id": "nUf3uRJc",
+        "label": "target-coverage-fiber-procurement -> delta-coverage-fiber-procurement",
+        "source": "TMZwQPtQ",
+        "target": "uuTIxxdT"
+      },
+      {
+        "id": "lTXUXDnU",
+        "label": "baseline-coverage-fiber-procurement -> delta-coverage-fiber-procurement",
+        "source": "1DCP2qT2",
+        "target": "uuTIxxdT"
+      },
+      {
+        "id": "KKaDNiL4",
+        "label": "delta-coverage-fiber-procurement -> effect-size",
+        "source": "uuTIxxdT",
+        "target": "I1XfW3Wk"
+      },
+      {
+        "id": "MwGS3kqh",
+        "label": "effect-size-fiber-procurement -> total-fiber-increase-grams",
+        "source": "I1XfW3Wk",
+        "target": "pDa2W3sn"
+      },
+      {
+        "id": "apSUf2Q6",
+        "label": "total-fiber-increase-grams -> total-fiber-units",
+        "source": "pDa2W3sn",
+        "target": "zQOBO28N"
+      },
+      {
+        "id": "srJSxIVI",
+        "label": "relative-risk-fiber-ihd -> impact-fiber",
+        "source": "nft1CcZO",
+        "target": "H4y2YdXN"
+      },
+      {
+        "id": "DqfGZrRi",
+        "label": "total-fiber-units -> impact-fiber",
+        "source": "zQOBO28N",
+        "target": "H4y2YdXN"
+      },
+      {
+        "id": "mwMRysgK",
+        "label": "impact-fiber -> rf-all",
+        "source": "H4y2YdXN",
+        "target": "PjHF9FHh"
+      },
+      {
+        "id": "dVImZ0Tn",
+        "label": "effect-size-fiber-reformulation -> total-fiber-increase-grams",
+        "source": "f2TvijDr",
+        "target": "pDa2W3sn"
+      },
+      {
+        "id": "cFVE9R2t",
+        "label": "delta-coverage-fiber-reformulation -> effect-size",
+        "source": "J4fw2RVt",
+        "target": "f2TvijDr"
+      },
+      {
+        "id": "MFBuuRAJ",
+        "label": "target-coverage-fiber-reformulation -> delta-coverage-fiber-reformulation",
+        "source": "zAkctgjQ",
+        "target": "J4fw2RVt"
+      },
+      {
+        "id": "QAeGkBf7",
+        "label": "baseline-coverage-fiber-reformulation -> delta-coverage-fiber-reformulation",
+        "source": "JZx3RoqR",
+        "target": "J4fw2RVt"
+      },
+      {
+        "id": "QbkrWNOs",
+        "label": "effect-size-fiber-relabelling -> total-fiber-increase-grams",
+        "source": "Anpqhf6M",
+        "target": "pDa2W3sn"
+      },
+      {
+        "id": "ieM8un5d",
+        "label": "delta-coverage-fiber-relabelling -> effect-size",
+        "source": "2X9cEnxQ",
+        "target": "Anpqhf6M"
+      },
+      {
+        "id": "loctaS6K",
+        "label": "target-coverage-fiber-relabelling -> delta-coverage-fiber-relabelling",
+        "source": "wCvEuqkB",
+        "target": "2X9cEnxQ"
+      },
+      {
+        "id": "KbXp9y67",
+        "label": "baseline-coverage-fiber-relabelling -> delta-coverage-fiber-relabelling",
+        "source": "pRn9e8ZZ",
+        "target": "2X9cEnxQ"
+      }
+    ]
+  },
+  "matched_nodes": {
+    "count": 16,
+    "sample": [
+      {
+        "id": "nft1CcZO",
+        "label": "relative-risk-fiber-diabetes",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "uuTIxxdT",
+        "label": "delta-coverage-fiber-procurement",
+        "node_type": "FUNCTION"
+      },
+      {
+        "id": "TMZwQPtQ",
+        "label": "target-coverage-fiber-procurement",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "1DCP2qT2",
+        "label": "baseline-coverage-fiber-procurement",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "I1XfW3Wk",
+        "label": "effect-size-fiber-procurement",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "pDa2W3sn",
+        "label": "total-fiber-increase-grams",
+        "node_type": "FUNCTION"
+      },
+      {
+        "id": "zQOBO28N",
+        "label": "total-fiber-units",
+        "node_type": null
+      },
+      {
+        "id": "H4y2YdXN",
+        "label": "impact-fiber",
+        "node_type": null
+      },
+      {
+        "id": "f2TvijDr",
+        "label": "effect-size-fiber-reformulation",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "J4fw2RVt",
+        "label": "delta-coverage-fiber-reformulation",
+        "node_type": "FUNCTION"
+      },
+      {
+        "id": "zAkctgjQ",
+        "label": "target-coverage-fiber-reformulation",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "JZx3RoqR",
+        "label": "baseline-coverage-fiber-reformulation",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "Anpqhf6M",
+        "label": "effect-size-fiber-relabelling",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "2X9cEnxQ",
+        "label": "delta-coverage-fiber-relabelling",
+        "node_type": "FUNCTION"
+      },
+      {
+        "id": "wCvEuqkB",
+        "label": "target-coverage-fiber-relabelling",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "pRn9e8ZZ",
+        "label": "baseline-coverage-fiber-relabelling",
+        "node_type": "CONSTANT"
+      }
+    ]
+  },
+  "matched_scenario_parameters": [
+    {
+      "changed_parameter_count": 2,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Target Coverage Fiber Reformulation",
+          "scenario_value": 0.95
+        },
+        {
+          "baseline_value": 2,
+          "parameter": "Scale-Up Final Year Fiber Reformulation",
+          "scenario_value": 3
+        }
+      ],
+      "label": "U1 - Food reformulation to reduce salt and nutrients",
+      "scenario_id": "diabetes-u1"
+    },
+    {
+      "changed_parameter_count": 2,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Target Coverage Fiber Procurement",
+          "scenario_value": 0.95
+        },
+        {
+          "baseline_value": 2,
+          "parameter": "Scale-Up Final Year Fiber Procurement",
+          "scenario_value": 3
+        }
+      ],
+      "label": "U2 - Supportive environment in public institutions",
+      "scenario_id": "diabetes-u2"
+    },
+    {
+      "changed_parameter_count": 2,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Target Coverage Fiber Relabelling",
+          "scenario_value": 0.95
+        },
+        {
+          "baseline_value": 2,
+          "parameter": "Scale-Up Final Year Fiber Relabelling",
+          "scenario_value": 3
+        }
+      ],
+      "label": "U4 - Front-of-pack labelling",
+      "scenario_id": "diabetes-u4"
+    }
+  ],
+  "matching_rule": "Case-insensitive match against node id, node label, node tags, link id, link label, link endpoints, generated data fetcher blocks, and scenario parameter names.",
+  "model_id": "01K2GJSGDYMQA19727Z9F2FSH8",
+  "model_slug": "ncd-diabetes",
+  "outputs_or_handoffs": [
+    "Uses or publishes in-graph node balances and generated values.",
+    "Uses or publishes in-graph edge values and transfer events.",
+    "Has scenario parameter changes relative to the baseline scenario in the client bundle."
+  ],
+  "patterns": [
+    "fiber",
+    "fibre",
+    "fruit",
+    "sodium",
+    "salt",
+    "legume",
+    "front-of-pack",
+    "food reformulation"
+  ],
+  "role": "Risk-factor modifier",
+  "scenario_parameter_changes_relative_to_baseline": [
+    {
+      "changed_parameter_count": 2,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Target Coverage Fiber Reformulation",
+          "scenario_value": 0.95
+        },
+        {
+          "baseline_value": 2,
+          "parameter": "Scale-Up Final Year Fiber Reformulation",
+          "scenario_value": 3
+        }
+      ],
+      "label": "U1 - Food reformulation to reduce salt and nutrients",
+      "scenario_id": "diabetes-u1"
+    },
+    {
+      "changed_parameter_count": 2,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Target Coverage Fiber Procurement",
+          "scenario_value": 0.95
+        },
+        {
+          "baseline_value": 2,
+          "parameter": "Scale-Up Final Year Fiber Procurement",
+          "scenario_value": 3
+        }
+      ],
+      "label": "U2 - Supportive environment in public institutions",
+      "scenario_id": "diabetes-u2"
+    },
+    {
+      "changed_parameter_count": 2,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Target Coverage Fiber Relabelling",
+          "scenario_value": 0.95
+        },
+        {
+          "baseline_value": 2,
+          "parameter": "Scale-Up Final Year Fiber Relabelling",
+          "scenario_value": 3
+        }
+      ],
+      "label": "U4 - Front-of-pack labelling",
+      "scenario_id": "diabetes-u4"
+    }
+  ],
+  "scenario_parameter_presence": [
+    {
+      "label": "Diabetes - Baseline Scenario",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-baseline"
+    },
+    {
+      "label": "Appendix 3 - D1 Scenario",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-d1"
+    },
+    {
+      "label": "Appendix 3 - D2 Scenario",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-d2"
+    },
+    {
+      "label": "Appendix 3 - D3 Scenario",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-d3"
+    },
+    {
+      "label": "Appendix 3 - D5 Scenario",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-d5"
+    },
+    {
+      "label": "Clinical Intervention - Diabetes Foot Care",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-foot-care"
+    },
+    {
+      "label": "Clinical Intervention - Diabetic Nephropathy Screening",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-nephropathy-screening"
+    },
+    {
+      "label": "Clinical Intervention - Diabetic Retinopathy Screening",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-retinopathy-screening"
+    },
+    {
+      "label": "Clinical Intervention - Standard Glycaemic Control",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-glycaemic-control-standard"
+    },
+    {
+      "label": "Clinical Intervention - Intensive Glycaemic Control",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-glycaemic-control-intense"
+    },
+    {
+      "label": "Appendix 3 - Physical Inactivity P1 Scenario",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-physical-inactivity-p1"
+    },
+    {
+      "label": "Appendix 3 - Physical Inactivity P2 Scenario",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-physical-inactivity-p2"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "01K2GJSH8CYYNK25PBDAMFWH8W"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-tobacco-t2"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 3 - Enforcing tobacco advertising, promotion and sponsorship bans",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-tobacco-t3"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 4 - Protecting people from tobacco smoke",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-tobacco-t4"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 5 - Effective Mass Media Campaigns",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-tobacco-t5"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 6 - Quitting tobacco",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-tobacco-t6"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 7 - Effective pharmacological intervention",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-tobacco-t7"
+    },
+    {
+      "label": "U1 - Food reformulation to reduce salt and nutrients",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-u1"
+    },
+    {
+      "label": "U2 - Supportive environment in public institutions",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-u2"
+    },
+    {
+      "label": "U4 - Front-of-pack labelling",
+      "matched_parameter_count": 12,
+      "matched_parameters_sample": [
+        "Baseline Coverage Fiber Procurement",
+        "Target Coverage Fiber Procurement",
+        "Scale-Up Start Year Fiber Procurement",
+        "Scale-Up Final Year Fiber Procurement",
+        "Baseline Coverage Fiber Reformulation",
+        "Target Coverage Fiber Reformulation",
+        "Scale-Up Start Year Fiber Reformulation",
+        "Scale-Up Final Year Fiber Reformulation"
+      ],
+      "scenario_id": "diabetes-u4"
+    }
+  ],
+  "schema": "ncd-module-component.v1",
+  "source_model": "public/models/ncd-diabetes/model.json",
+  "source_model_sha256": "cccc445e13b4da72fbfdb94afe3f28701a923925e5f9d83a15f648cdbbf8b935"
+}
