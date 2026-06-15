@@ -1,5 +1,5 @@
 {
-  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "boundary_note": "Risk-factor calculation module that publishes risk-factor state or modifiers consumed by disease or metric modules.",
   "component_id": "tobacco-risk-factor",
   "declared_inputs": [],
   "internal_link_ids": [
@@ -159,7 +159,7 @@
       "value_to_target_operator": "multiply"
     }
   ],
-  "module_type": "generated_first_pass_boundary",
+  "module_type": "risk_factor_calculation",
   "nodes": [
     {
       "flush": true,

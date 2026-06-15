@@ -1,5 +1,5 @@
 {
-  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "boundary_note": "Demographic substrate module used by the disease model for population state and population-linked flows.",
   "component_id": "demographic-substrate",
   "declared_inputs": [],
   "internal_link_ids": [
@@ -46,7 +46,7 @@
       "value_to_target_operator": "add"
     }
   ],
-  "module_type": "generated_first_pass_boundary",
+  "module_type": "demographic_substrate",
   "nodes": [
     {
       "balance_type": "array",

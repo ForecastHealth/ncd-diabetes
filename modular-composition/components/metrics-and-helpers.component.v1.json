@@ -1,5 +1,5 @@
 {
-  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "boundary_note": "Shared helper nodes retained for recomposition where they do not yet belong to a more specific module.",
   "component_id": "metrics-and-helpers",
   "declared_inputs": [],
   "internal_link_ids": [
@@ -65,7 +65,7 @@
       "value_to_target_operator": "add"
     }
   ],
-  "module_type": "generated_first_pass_boundary",
+  "module_type": "model_helpers",
   "nodes": [
     {
       "ageing": true,

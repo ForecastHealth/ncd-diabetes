@@ -11,6 +11,7 @@
     {
       "component_id": "alcohol-risk-factor",
       "internal_links": 28,
+      "module_type": "risk_factor_calculation",
       "nodes": 27,
       "path": "components/alcohol-risk-factor.component.v1.json",
       "runtime_role": "link_then_inject_bundle"
@@ -18,6 +19,7 @@
     {
       "component_id": "burden-metrics",
       "internal_links": 38,
+      "module_type": "burden_metrics",
       "nodes": 31,
       "path": "components/burden-metrics.component.v1.json",
       "runtime_role": "downstream_handoff"
@@ -25,6 +27,7 @@
     {
       "component_id": "demographic-substrate",
       "internal_links": 2,
+      "module_type": "demographic_substrate",
       "nodes": 2,
       "path": "components/demographic-substrate.component.v1.json",
       "runtime_role": "compiled_together"
@@ -32,6 +35,7 @@
     {
       "component_id": "diet-or-metabolic-risk-factor",
       "internal_links": 3,
+      "module_type": "risk_factor_calculation",
       "nodes": 4,
       "path": "components/diet-or-metabolic-risk-factor.component.v1.json",
       "runtime_role": "link_then_inject_bundle"
@@ -39,6 +43,7 @@
     {
       "component_id": "economic-metrics",
       "internal_links": 2,
+      "module_type": "economic_metrics",
       "nodes": 3,
       "path": "components/economic-metrics.component.v1.json",
       "runtime_role": "downstream_handoff"
@@ -46,6 +51,7 @@
     {
       "component_id": "epidemiology-core",
       "internal_links": 28,
+      "module_type": "epidemiology_core",
       "nodes": 24,
       "path": "components/epidemiology-core.component.v1.json",
       "runtime_role": "compiled_together"
@@ -53,6 +59,7 @@
     {
       "component_id": "intervention-intsvglyccontrol",
       "internal_links": 15,
+      "module_type": "clinical_intervention",
       "nodes": 12,
       "path": "components/intervention-intsvglyccontrol.component.v1.json",
       "runtime_role": "compiled_together"
@@ -60,6 +67,7 @@
     {
       "component_id": "intervention-nephropathyscr",
       "internal_links": 9,
+      "module_type": "clinical_intervention",
       "nodes": 8,
       "path": "components/intervention-nephropathyscr.component.v1.json",
       "runtime_role": "compiled_together"
@@ -67,6 +75,7 @@
     {
       "component_id": "intervention-neuropathyscr",
       "internal_links": 9,
+      "module_type": "clinical_intervention",
       "nodes": 8,
       "path": "components/intervention-neuropathyscr.component.v1.json",
       "runtime_role": "compiled_together"
@@ -74,6 +83,7 @@
     {
       "component_id": "intervention-retinopathyscrn",
       "internal_links": 9,
+      "module_type": "clinical_intervention",
       "nodes": 8,
       "path": "components/intervention-retinopathyscrn.component.v1.json",
       "runtime_role": "compiled_together"
@@ -81,7 +91,9 @@
     {
       "acts_on_module": "physical-inactivity-risk-factor",
       "component_id": "intervention-risk-factor-nc-rfphysicalactivityadvice-ncd-diabetes-diabetes-physical-inactivity-p2",
+      "family": "physical_inactivity",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rfphysicalactivityadvice-ncd-diabetes-diabetes-physical-inactivity-p2.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -91,7 +103,9 @@
     {
       "acts_on_module": "physical-inactivity-risk-factor",
       "component_id": "intervention-risk-factor-nc-rfphysicalactivityawreness-ncd-diabetes-diabetes-physical-inactivity-p1",
+      "family": "physical_inactivity",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rfphysicalactivityawreness-ncd-diabetes-diabetes-physical-inactivity-p1.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -101,7 +115,9 @@
     {
       "acts_on_module": "diet-or-metabolic-risk-factor",
       "component_id": "intervention-risk-factor-nc-rfsodiumenvsaltreduct-ncd-diabetes-diabetes-u2",
+      "family": "sodium",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rfsodiumenvsaltreduct-ncd-diabetes-diabetes-u2.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -111,7 +127,9 @@
     {
       "acts_on_module": "diet-or-metabolic-risk-factor",
       "component_id": "intervention-risk-factor-nc-rfsodiumpacklabelling-ncd-diabetes-diabetes-u4",
+      "family": "sodium",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rfsodiumpacklabelling-ncd-diabetes-diabetes-u4.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -121,7 +139,9 @@
     {
       "acts_on_module": "diet-or-metabolic-risk-factor",
       "component_id": "intervention-risk-factor-nc-rfsodiumreformulation-ncd-diabetes-diabetes-u1",
+      "family": "sodium",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rfsodiumreformulation-ncd-diabetes-diabetes-u1.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -131,7 +151,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccoban-ncd-diabetes-diabetes-tobacco-t3",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccoban-ncd-diabetes-diabetes-tobacco-t3.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -141,7 +163,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccoprotect-ncd-diabetes-diabetes-tobacco-t4",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccoprotect-ncd-diabetes-diabetes-tobacco-t4.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -151,7 +175,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccoquitbrief-ncd-diabetes-diabetes-tobacco-t7",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccoquitbrief-ncd-diabetes-diabetes-tobacco-t7.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -161,7 +187,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-diabetes-diabetes-tobacco-t6",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-diabetes-diabetes-tobacco-t6.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -171,7 +199,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccotax-ncd-diabetes-01k2gjsh8cyynk25pbdamfwh8w",
+      "family": "tobacco",
       "internal_links": 1,
+      "module_type": "risk_factor_intervention",
       "nodes": 2,
       "path": "components/intervention-risk-factor-nc-rftobaccotax-ncd-diabetes-01k2gjsh8cyynk25pbdamfwh8w.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -181,7 +211,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccowarnlabel-ncd-diabetes-diabetes-tobacco-t2",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccowarnlabel-ncd-diabetes-diabetes-tobacco-t2.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -191,7 +223,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccowarnmassmedia-ncd-diabetes-diabetes-tobacco-t5",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccowarnmassmedia-ncd-diabetes-diabetes-tobacco-t5.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -201,6 +235,7 @@
     {
       "component_id": "intervention-stdglyccontrol",
       "internal_links": 15,
+      "module_type": "clinical_intervention",
       "nodes": 12,
       "path": "components/intervention-stdglyccontrol.component.v1.json",
       "runtime_role": "compiled_together"
@@ -210,6 +245,7 @@
       "component_id": "intervention-tobacco-cessation-brief-advice",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.brief_advice",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-brief-advice.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -221,6 +257,7 @@
       "component_id": "intervention-tobacco-cessation-bupropion",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.bupropion",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-bupropion.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -232,6 +269,7 @@
       "component_id": "intervention-tobacco-cessation-mcessation",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.mcessation",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-mcessation.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -243,6 +281,7 @@
       "component_id": "intervention-tobacco-cessation-nicotine-replacement-therapy",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.nicotine_replacement_therapy",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-nicotine-replacement-therapy.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -254,6 +293,7 @@
       "component_id": "intervention-tobacco-cessation-quitline",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.quitline",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-quitline.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -265,6 +305,7 @@
       "component_id": "intervention-tobacco-cessation-varenicline",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.varenicline",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-varenicline.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -274,6 +315,7 @@
     {
       "component_id": "metrics-and-helpers",
       "internal_links": 3,
+      "module_type": "model_helpers",
       "nodes": 7,
       "path": "components/metrics-and-helpers.component.v1.json",
       "runtime_role": "compiled_together"
@@ -281,6 +323,7 @@
     {
       "component_id": "physical-inactivity-risk-factor",
       "internal_links": 10,
+      "module_type": "risk_factor_calculation",
       "nodes": 9,
       "path": "components/physical-inactivity-risk-factor.component.v1.json",
       "runtime_role": "link_then_inject_bundle"
@@ -288,6 +331,7 @@
     {
       "component_id": "tobacco-risk-factor",
       "internal_links": 10,
+      "module_type": "risk_factor_calculation",
       "nodes": 9,
       "path": "components/tobacco-risk-factor.component.v1.json",
       "runtime_role": "link_then_inject_bundle"
@@ -2718,5 +2762,6 @@
   },
   "schema": "forecast-health.generated-modular-composition.v1",
   "source_model": "model.json",
-  "source_repository": "/Users/rory/Models/ncd-diabetes"
+  "source_repository": "/Users/rory/Models/ncd-diabetes",
+  "updated_at": "2026-06-15T08:41:41+00:00"
 }
