@@ -1,0 +1,1060 @@
+{
+  "metadata": {
+    "name": "D3. Standard glycaemic control for people with diabetes resource graph",
+    "source_workbook": "Spec5/ModData/IC/ICModData.xlsx",
+    "source_sheet": "Treatment Inputs rows 2275-2286; Drug and Supply Prices rows 341 and 598-603",
+    "conversion": "scripts/build_clinical_resource_sidecars.py",
+    "notes": "Diabetes intervention-level resource package from Spec5 ICModData standard glycaemic-control rows. D3 scenario totals aggregate this block with the intensive glycaemic-control package."
+  },
+  "nodes": [
+    {
+      "id": "ResourcePopulationReached_StdGlycControl",
+      "label": "ResourcePopulationReached-StdGlycControl",
+      "type": "pin",
+      "node_type": "pin",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080",
+      "is_projection_entry": true
+    },
+    {
+      "id": "visit-outpatient-visit",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+    },
+    {
+      "id": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+    },
+    {
+      "id": "workforce-nurse",
+      "label": "Nurse Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-nurse",
+      "label": "Nurse Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "workforce-specialist",
+      "label": "Specialist Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-specialist",
+      "label": "Specialist Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "pin-supply-insulin-100-iu-ml",
+      "label": "Receiving Insulin, 100 IU/ml",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-insulin-100-iu-ml",
+      "label": "Units of Insulin, 100 IU/ml",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-insulin-100-iu-ml",
+      "label": "Insulin, 100 IU/ml Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-home-glucose-monitoring-2",
+      "label": "Receiving Home glucose monitoring 2",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-home-glucose-monitoring-2",
+      "label": "Units of Home glucose monitoring 2",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-home-glucose-monitoring-2",
+      "label": "Home glucose monitoring 2 Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-glibenclamide-5-mg-tablet",
+      "label": "Receiving Glibenclamide, 5 mg tablet",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-glibenclamide-5-mg-tablet",
+      "label": "Units of Glibenclamide, 5 mg tablet",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-glibenclamide-5-mg-tablet",
+      "label": "Glibenclamide, 5 mg tablet Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-metformin-850-mg-tablet",
+      "label": "Receiving Metformin, 850 mg tablet",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-metformin-850-mg-tablet",
+      "label": "Units of Metformin, 850 mg tablet",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-metformin-850-mg-tablet",
+      "label": "Metformin, 850 mg tablet Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-home-glucose-monitoring-5",
+      "label": "Receiving Home glucose monitoring 5",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-home-glucose-monitoring-5",
+      "label": "Units of Home glucose monitoring 5",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-home-glucose-monitoring-5",
+      "label": "Home glucose monitoring 5 Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-hba1c-test",
+      "label": "Receiving HbA1c test",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-hba1c-test",
+      "label": "Units of HbA1c test",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-hba1c-test",
+      "label": "HbA1c test Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-fasting-lipid-profile-blood-test",
+      "label": "Receiving Fasting lipid profile blood test",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-fasting-lipid-profile-blood-test",
+      "label": "Units of Fasting lipid profile blood test",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-fasting-lipid-profile-blood-test",
+      "label": "Fasting lipid profile blood test Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-urine-albumin-to-creatinine-ratio-test",
+      "label": "Receiving Urine albumin-to-creatinine ratio test",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-urine-albumin-to-creatinine-ratio-test",
+      "label": "Units of Urine albumin-to-creatinine ratio test",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-urine-albumin-to-creatinine-ratio-test",
+      "label": "Urine albumin-to-creatinine ratio test Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    }
+  ],
+  "links": [
+    {
+      "id": "to-visit-outpatient-visit",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "visit-outpatient-visit",
+      "label": "ResourcePopulationReached-StdGlycControl -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0,
+          "number-of-visits": 4.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-visit-outpatient-visit",
+      "source": "visit-outpatient-visit",
+      "target": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "cost-per-day": 52.160000000000004
+        }
+      }
+    },
+    {
+      "id": "to-workforce-nurse",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "workforce-nurse",
+      "label": "ResourcePopulationReached-StdGlycControl -> Nurse Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0,
+          "number-of-minutes": 40.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-nurse",
+      "source": "workforce-nurse",
+      "target": "cost-workforce-nurse",
+      "label": "Nurse Minutes -> Nurse Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 0.8778666666666666
+        }
+      }
+    },
+    {
+      "id": "to-workforce-generalist-primary-care-doctor",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "workforce-generalist-primary-care-doctor",
+      "label": "ResourcePopulationReached-StdGlycControl -> Generalist/Primary care doctor Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0,
+          "number-of-minutes": 10.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-generalist-primary-care-doctor",
+      "source": "workforce-generalist-primary-care-doctor",
+      "target": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes -> Generalist/Primary care doctor Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 1.0773833333333334
+        }
+      }
+    },
+    {
+      "id": "to-workforce-specialist",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "workforce-specialist",
+      "label": "ResourcePopulationReached-StdGlycControl -> Specialist Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.1,
+          "number-of-minutes": 10.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-specialist",
+      "source": "workforce-specialist",
+      "target": "cost-workforce-specialist",
+      "label": "Specialist Minutes -> Specialist Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 1.616075
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-insulin-100-iu-ml",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "pin-supply-insulin-100-iu-ml",
+      "label": "ResourcePopulationReached-StdGlycControl -> Receiving Insulin, 100 IU/ml",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.33
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-insulin-100-iu-ml",
+      "source": "pin-supply-insulin-100-iu-ml",
+      "target": "units-supply-insulin-100-iu-ml",
+      "label": "Receiving Insulin, 100 IU/ml -> Units of Insulin, 100 IU/ml",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 0.3,
+          "number-of-days": 365.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-insulin-100-iu-ml",
+      "source": "units-supply-insulin-100-iu-ml",
+      "target": "cost-supply-insulin-100-iu-ml",
+      "label": "Units of Insulin, 100 IU/ml -> Insulin, 100 IU/ml Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.88
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-home-glucose-monitoring-2",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "pin-supply-home-glucose-monitoring-2",
+      "label": "ResourcePopulationReached-StdGlycControl -> Receiving Home glucose monitoring 2",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.33
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-home-glucose-monitoring-2",
+      "source": "pin-supply-home-glucose-monitoring-2",
+      "target": "units-supply-home-glucose-monitoring-2",
+      "label": "Receiving Home glucose monitoring 2 -> Units of Home glucose monitoring 2",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 4.0,
+          "number-of-days": 365.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-home-glucose-monitoring-2",
+      "source": "units-supply-home-glucose-monitoring-2",
+      "target": "cost-supply-home-glucose-monitoring-2",
+      "label": "Units of Home glucose monitoring 2 -> Home glucose monitoring 2 Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.21
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-glibenclamide-5-mg-tablet",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "pin-supply-glibenclamide-5-mg-tablet",
+      "label": "ResourcePopulationReached-StdGlycControl -> Receiving Glibenclamide, 5 mg tablet",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.56
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-glibenclamide-5-mg-tablet",
+      "source": "pin-supply-glibenclamide-5-mg-tablet",
+      "target": "units-supply-glibenclamide-5-mg-tablet",
+      "label": "Receiving Glibenclamide, 5 mg tablet -> Units of Glibenclamide, 5 mg tablet",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 4.0,
+          "number-of-days": 365.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-glibenclamide-5-mg-tablet",
+      "source": "units-supply-glibenclamide-5-mg-tablet",
+      "target": "cost-supply-glibenclamide-5-mg-tablet",
+      "label": "Units of Glibenclamide, 5 mg tablet -> Glibenclamide, 5 mg tablet Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.0067
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-metformin-850-mg-tablet",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "pin-supply-metformin-850-mg-tablet",
+      "label": "ResourcePopulationReached-StdGlycControl -> Receiving Metformin, 850 mg tablet",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.6
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-metformin-850-mg-tablet",
+      "source": "pin-supply-metformin-850-mg-tablet",
+      "target": "units-supply-metformin-850-mg-tablet",
+      "label": "Receiving Metformin, 850 mg tablet -> Units of Metformin, 850 mg tablet",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 3.0,
+          "number-of-days": 365.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-metformin-850-mg-tablet",
+      "source": "units-supply-metformin-850-mg-tablet",
+      "target": "cost-supply-metformin-850-mg-tablet",
+      "label": "Units of Metformin, 850 mg tablet -> Metformin, 850 mg tablet Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.02
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-home-glucose-monitoring-5",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "pin-supply-home-glucose-monitoring-5",
+      "label": "ResourcePopulationReached-StdGlycControl -> Receiving Home glucose monitoring 5",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.9
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-home-glucose-monitoring-5",
+      "source": "pin-supply-home-glucose-monitoring-5",
+      "target": "units-supply-home-glucose-monitoring-5",
+      "label": "Receiving Home glucose monitoring 5 -> Units of Home glucose monitoring 5",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1.0,
+          "number-of-days": 12.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-home-glucose-monitoring-5",
+      "source": "units-supply-home-glucose-monitoring-5",
+      "target": "cost-supply-home-glucose-monitoring-5",
+      "label": "Units of Home glucose monitoring 5 -> Home glucose monitoring 5 Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.21
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-hba1c-test",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "pin-supply-hba1c-test",
+      "label": "ResourcePopulationReached-StdGlycControl -> Receiving HbA1c test",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-hba1c-test",
+      "source": "pin-supply-hba1c-test",
+      "target": "units-supply-hba1c-test",
+      "label": "Receiving HbA1c test -> Units of HbA1c test",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1.0,
+          "number-of-days": 2.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-hba1c-test",
+      "source": "units-supply-hba1c-test",
+      "target": "cost-supply-hba1c-test",
+      "label": "Units of HbA1c test -> HbA1c test Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 8.92
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-fasting-lipid-profile-blood-test",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "pin-supply-fasting-lipid-profile-blood-test",
+      "label": "ResourcePopulationReached-StdGlycControl -> Receiving Fasting lipid profile blood test",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-fasting-lipid-profile-blood-test",
+      "source": "pin-supply-fasting-lipid-profile-blood-test",
+      "target": "units-supply-fasting-lipid-profile-blood-test",
+      "label": "Receiving Fasting lipid profile blood test -> Units of Fasting lipid profile blood test",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1.0,
+          "number-of-days": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-fasting-lipid-profile-blood-test",
+      "source": "units-supply-fasting-lipid-profile-blood-test",
+      "target": "cost-supply-fasting-lipid-profile-blood-test",
+      "label": "Units of Fasting lipid profile blood test -> Fasting lipid profile blood test Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 11.35
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-urine-albumin-to-creatinine-ratio-test",
+      "source": "ResourcePopulationReached_StdGlycControl",
+      "target": "pin-supply-urine-albumin-to-creatinine-ratio-test",
+      "label": "ResourcePopulationReached-StdGlycControl -> Receiving Urine albumin-to-creatinine ratio test",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-urine-albumin-to-creatinine-ratio-test",
+      "source": "pin-supply-urine-albumin-to-creatinine-ratio-test",
+      "target": "units-supply-urine-albumin-to-creatinine-ratio-test",
+      "label": "Receiving Urine albumin-to-creatinine ratio test -> Units of Urine albumin-to-creatinine ratio test",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1.0,
+          "number-of-days": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-urine-albumin-to-creatinine-ratio-test",
+      "source": "units-supply-urine-albumin-to-creatinine-ratio-test",
+      "target": "cost-supply-urine-albumin-to-creatinine-ratio-test",
+      "label": "Units of Urine albumin-to-creatinine ratio test -> Urine albumin-to-creatinine ratio test Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 9.73
+        }
+      }
+    }
+  ]
+}

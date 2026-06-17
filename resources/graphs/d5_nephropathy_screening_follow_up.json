@@ -1,0 +1,899 @@
+{
+  "metadata": {
+    "name": "D5. Diabetic nephropathy screening and renal-protection follow-up resource graph",
+    "source_workbook": "Model_Costing_V3-Diabetes.xlsx",
+    "source_sheet": "D4 / SETUP-DS / SETUP-HR / SETUP-VISITS",
+    "conversion": "scripts/build_clinical_resource_sidecars.py",
+    "notes": "The diabetes model D5 scenario exposes nephropathy screening as the covered-population stream. This package therefore uses the nephropathy screening and renal-protection rows from the diabetes costing workbook, rather than applying blood-pressure-control costs to the nephropathy-screening population."
+  },
+  "nodes": [
+    {
+      "id": "q6foBZs3",
+      "label": "ResourcePopulationReached-NephropathyScr",
+      "type": "pin",
+      "node_type": "pin",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080",
+      "is_projection_entry": true
+    },
+    {
+      "id": "visit-outpatient-visit",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+    },
+    {
+      "id": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+    },
+    {
+      "id": "visit-outpatient-visit-2",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+    },
+    {
+      "id": "cost-visit-outpatient-visit-2",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+    },
+    {
+      "id": "visit-outpatient-visit-3",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+    },
+    {
+      "id": "cost-visit-outpatient-visit-3",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+    },
+    {
+      "id": "workforce-specialist-1",
+      "label": "Specialist 1 Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-specialist-1",
+      "label": "Specialist 1 Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "workforce-specialist-2",
+      "label": "Specialist 2 Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-specialist-2",
+      "label": "Specialist 2 Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "workforce-specialist-3",
+      "label": "Specialist 3 Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-specialist-3",
+      "label": "Specialist 3 Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "pin-supply-enalapril-10mg",
+      "label": "Receiving Enalapril 10mg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-enalapril-10mg",
+      "label": "Units of Enalapril 10mg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-enalapril-10mg",
+      "label": "Enalapril 10mg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-losartan-50mg",
+      "label": "Receiving Losartan 50mg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-losartan-50mg",
+      "label": "Units of Losartan 50mg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-losartan-50mg",
+      "label": "Losartan 50mg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "label": "Receiving Albumin/creatinine ratio in spot urine sample test",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "label": "Units of Albumin/creatinine ratio in spot urine sample test",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "label": "Albumin/creatinine ratio in spot urine sample test Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-serum-creatinine-test",
+      "label": "Receiving Serum creatinine test",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-serum-creatinine-test",
+      "label": "Units of Serum creatinine test",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-serum-creatinine-test",
+      "label": "Serum creatinine test Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-serum-potassium-test",
+      "label": "Receiving Serum potassium test",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-serum-potassium-test",
+      "label": "Units of Serum potassium test",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-serum-potassium-test",
+      "label": "Serum potassium test Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    }
+  ],
+  "links": [
+    {
+      "id": "to-visit-outpatient-visit",
+      "source": "q6foBZs3",
+      "target": "visit-outpatient-visit",
+      "label": "ResourcePopulationReached-NephropathyScr -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0,
+          "number-of-visits": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-visit-outpatient-visit",
+      "source": "visit-outpatient-visit",
+      "target": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "cost-per-day": 52.160000000000004
+        }
+      }
+    },
+    {
+      "id": "to-visit-outpatient-visit-2",
+      "source": "q6foBZs3",
+      "target": "visit-outpatient-visit-2",
+      "label": "ResourcePopulationReached-NephropathyScr -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.2,
+          "number-of-visits": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-visit-outpatient-visit-2",
+      "source": "visit-outpatient-visit-2",
+      "target": "cost-visit-outpatient-visit-2",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "cost-per-day": 52.160000000000004
+        }
+      }
+    },
+    {
+      "id": "to-visit-outpatient-visit-3",
+      "source": "q6foBZs3",
+      "target": "visit-outpatient-visit-3",
+      "label": "ResourcePopulationReached-NephropathyScr -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.2,
+          "number-of-visits": 2.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-visit-outpatient-visit-3",
+      "source": "visit-outpatient-visit-3",
+      "target": "cost-visit-outpatient-visit-3",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "cost-per-day": 52.160000000000004
+        }
+      }
+    },
+    {
+      "id": "to-workforce-specialist-1",
+      "source": "q6foBZs3",
+      "target": "workforce-specialist-1",
+      "label": "ResourcePopulationReached-NephropathyScr -> Specialist 1 Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0,
+          "number-of-minutes": 20.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-specialist-1",
+      "source": "workforce-specialist-1",
+      "target": "cost-workforce-specialist-1",
+      "label": "Specialist 1 Minutes -> Specialist 1 Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 1.616075
+        }
+      }
+    },
+    {
+      "id": "to-workforce-specialist-2",
+      "source": "q6foBZs3",
+      "target": "workforce-specialist-2",
+      "label": "ResourcePopulationReached-NephropathyScr -> Specialist 2 Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.2,
+          "number-of-minutes": 20.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-specialist-2",
+      "source": "workforce-specialist-2",
+      "target": "cost-workforce-specialist-2",
+      "label": "Specialist 2 Minutes -> Specialist 2 Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 1.616075
+        }
+      }
+    },
+    {
+      "id": "to-workforce-specialist-3",
+      "source": "q6foBZs3",
+      "target": "workforce-specialist-3",
+      "label": "ResourcePopulationReached-NephropathyScr -> Specialist 3 Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.2,
+          "number-of-minutes": 40.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-specialist-3",
+      "source": "workforce-specialist-3",
+      "target": "cost-workforce-specialist-3",
+      "label": "Specialist 3 Minutes -> Specialist 3 Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 1.616075
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-enalapril-10mg",
+      "source": "q6foBZs3",
+      "target": "pin-supply-enalapril-10mg",
+      "label": "ResourcePopulationReached-NephropathyScr -> Receiving Enalapril 10mg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.15
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-enalapril-10mg",
+      "source": "pin-supply-enalapril-10mg",
+      "target": "units-supply-enalapril-10mg",
+      "label": "Receiving Enalapril 10mg -> Units of Enalapril 10mg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1.0,
+          "number-of-days": 365.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-enalapril-10mg",
+      "source": "units-supply-enalapril-10mg",
+      "target": "cost-supply-enalapril-10mg",
+      "label": "Units of Enalapril 10mg -> Enalapril 10mg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.04
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-losartan-50mg",
+      "source": "q6foBZs3",
+      "target": "pin-supply-losartan-50mg",
+      "label": "ResourcePopulationReached-NephropathyScr -> Receiving Losartan 50mg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.05
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-losartan-50mg",
+      "source": "pin-supply-losartan-50mg",
+      "target": "units-supply-losartan-50mg",
+      "label": "Receiving Losartan 50mg -> Units of Losartan 50mg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1.0,
+          "number-of-days": 365.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-losartan-50mg",
+      "source": "units-supply-losartan-50mg",
+      "target": "cost-supply-losartan-50mg",
+      "label": "Units of Losartan 50mg -> Losartan 50mg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.04
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "source": "q6foBZs3",
+      "target": "pin-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "label": "ResourcePopulationReached-NephropathyScr -> Receiving Albumin/creatinine ratio in spot urine sample test",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "source": "pin-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "target": "units-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "label": "Receiving Albumin/creatinine ratio in spot urine sample test -> Units of Albumin/creatinine ratio in spot urine sample test",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1.0,
+          "number-of-days": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "source": "units-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "target": "cost-supply-albumin-creatinine-ratio-in-spot-urine-sample-test",
+      "label": "Units of Albumin/creatinine ratio in spot urine sample test -> Albumin/creatinine ratio in spot urine sample test Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 41.84
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-serum-creatinine-test",
+      "source": "q6foBZs3",
+      "target": "pin-supply-serum-creatinine-test",
+      "label": "ResourcePopulationReached-NephropathyScr -> Receiving Serum creatinine test",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-serum-creatinine-test",
+      "source": "pin-supply-serum-creatinine-test",
+      "target": "units-supply-serum-creatinine-test",
+      "label": "Receiving Serum creatinine test -> Units of Serum creatinine test",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 2.0,
+          "number-of-days": 2.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-serum-creatinine-test",
+      "source": "units-supply-serum-creatinine-test",
+      "target": "cost-supply-serum-creatinine-test",
+      "label": "Units of Serum creatinine test -> Serum creatinine test Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 41.84
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-serum-potassium-test",
+      "source": "q6foBZs3",
+      "target": "pin-supply-serum-potassium-test",
+      "label": "ResourcePopulationReached-NephropathyScr -> Receiving Serum potassium test",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-serum-potassium-test",
+      "source": "pin-supply-serum-potassium-test",
+      "target": "units-supply-serum-potassium-test",
+      "label": "Receiving Serum potassium test -> Units of Serum potassium test",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1.0,
+          "number-of-days": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-serum-potassium-test",
+      "source": "units-supply-serum-potassium-test",
+      "target": "cost-supply-serum-potassium-test",
+      "label": "Units of Serum potassium test -> Serum potassium test Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 41.84
+        }
+      }
+    }
+  ]
+}

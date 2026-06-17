@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "name": "Diabetes D1 Foot Care resource graph",
+    "source_workbook": "Model_Costing_V3-Diabetes.xlsx",
+    "source_sheet": "D1 / SETUP-DS / SETUP-HR / SETUP-VISITS"
+  },
+  "nodes": [
+    {
+      "id": "979lBOrq",
+      "label": "PopReached-NeuropathyScr",
+      "type": "pin",
+      "node_type": "pin",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080",
+      "is_projection_entry": true
+    },
+    {
+      "id": "visit-initial",
+      "label": "Initial specialist assessment",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+    },
+    {
+      "id": "visit-followup",
+      "label": "Follow-up specialist visits",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+    },
+    {
+      "id": "specialist-minutes-initial",
+      "label": "Specialist Minutes (Initial)",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "specialist-minutes-followup",
+      "label": "Specialist Minutes (Follow-up)",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "pin-foot-exam-kit",
+      "label": "Receiving Comprehensive foot examination kit",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "pin-therapeutic-footwear",
+      "label": "Receiving Therapeutic footwear",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-foot-exam-kit",
+      "label": "Units of Comprehensive foot examination kit",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "units-therapeutic-footwear",
+      "label": "Units of Therapeutic footwear",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-initial",
+      "label": "Specialist Minutes Cost (Initial)",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "cost-workforce-followup",
+      "label": "Specialist Minutes Cost (Follow-up)",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "cost-visit-initial",
+      "label": "Initial specialist assessment Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+    },
+    {
+      "id": "cost-visit-followup",
+      "label": "Follow-up specialist visits Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+    },
+    {
+      "id": "cost-foot-exam-kit",
+      "label": "Comprehensive foot examination kit Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "cost-therapeutic-footwear",
+      "label": "Therapeutic footwear Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    }
+  ],
+  "links": [
+    {
+      "id": "to-visit-initial",
+      "source": "979lBOrq",
+      "target": "visit-initial",
+      "label": "PopReached-NeuropathyScr -> Initial specialist assessment",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.04,
+          "number-of-visits": 1
+        }
+      }
+    },
+    {
+      "id": "to-visit-followup",
+      "source": "979lBOrq",
+      "target": "visit-followup",
+      "label": "PopReached-NeuropathyScr -> Follow-up specialist visits",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.15,
+          "number-of-visits": 3
+        }
+      }
+    },
+    {
+      "id": "to-workforce-initial",
+      "source": "visit-initial",
+      "target": "specialist-minutes-initial",
+      "label": "Initial specialist assessment -> Specialist Minutes (Initial)",
+      "edge_type": "visit -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1,
+          "number-of-minutes": 20
+        }
+      }
+    },
+    {
+      "id": "to-workforce-followup",
+      "source": "visit-followup",
+      "target": "specialist-minutes-followup",
+      "label": "Follow-up specialist visits -> Specialist Minutes (Follow-up)",
+      "edge_type": "visit -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1,
+          "number-of-minutes": 20
+        }
+      }
+    },
+    {
+      "id": "to-pin-foot-exam-kit",
+      "source": "979lBOrq",
+      "target": "pin-foot-exam-kit",
+      "label": "PopReached-NeuropathyScr -> Receiving Comprehensive foot examination kit",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1
+        }
+      }
+    },
+    {
+      "id": "to-pin-therapeutic-footwear",
+      "source": "979lBOrq",
+      "target": "pin-therapeutic-footwear",
+      "label": "PopReached-NeuropathyScr -> Receiving Therapeutic footwear",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 0.15
+        }
+      }
+    },
+    {
+      "id": "to-units-foot-exam-kit",
+      "source": "pin-foot-exam-kit",
+      "target": "units-foot-exam-kit",
+      "label": "Receiving Comprehensive foot examination kit -> Units of Comprehensive foot examination kit",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1,
+          "number-of-days": 1
+        }
+      }
+    },
+    {
+      "id": "to-units-therapeutic-footwear",
+      "source": "pin-therapeutic-footwear",
+      "target": "units-therapeutic-footwear",
+      "label": "Receiving Therapeutic footwear -> Units of Therapeutic footwear",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 1,
+          "number-of-days": 1
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-initial",
+      "source": "specialist-minutes-initial",
+      "target": "cost-workforce-initial",
+      "label": "Specialist Minutes (Initial) -> Specialist Minutes Cost (Initial)",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 1.616075
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-followup",
+      "source": "specialist-minutes-followup",
+      "target": "cost-workforce-followup",
+      "label": "Specialist Minutes (Follow-up) -> Specialist Minutes Cost (Follow-up)",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 1.616075
+        }
+      }
+    },
+    {
+      "id": "to-cost-visit-initial",
+      "source": "visit-initial",
+      "target": "cost-visit-initial",
+      "label": "Initial specialist assessment -> Initial specialist assessment Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "cost-per-day": 52.16
+        }
+      }
+    },
+    {
+      "id": "to-cost-visit-followup",
+      "source": "visit-followup",
+      "target": "cost-visit-followup",
+      "label": "Follow-up specialist visits -> Follow-up specialist visits Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "cost-per-day": 52.16
+        }
+      }
+    },
+    {
+      "id": "to-cost-foot-exam-kit",
+      "source": "units-foot-exam-kit",
+      "target": "cost-foot-exam-kit",
+      "label": "Units of Comprehensive foot examination kit -> Comprehensive foot examination kit Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 4.56
+        }
+      }
+    },
+    {
+      "id": "to-cost-therapeutic-footwear",
+      "source": "units-therapeutic-footwear",
+      "target": "cost-therapeutic-footwear",
+      "label": "Units of Therapeutic footwear -> Therapeutic footwear Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 709.57
+        }
+      }
+    }
+  ]
+}
