@@ -1,10 +1,17 @@
 {
   "component_counts": {
+    "boundary_links": 37,
     "burden_metrics": 1,
     "clinical_intervention": 5,
+    "compiled_internal_links": 123,
+    "components": 9,
     "economic_metrics": 1,
     "epidemiology_core": 1,
-    "model_helpers": 1
+    "internal_links": 123,
+    "model_helpers": 1,
+    "nodes": 113,
+    "subroutines": 28,
+    "upstream_intervention_internal_links": 0
   },
   "components": [
     {
@@ -25,7 +32,7 @@
     },
     {
       "component_id": "epidemiology-core",
-      "internal_links": 28,
+      "internal_links": 25,
       "module_type": "epidemiology_core",
       "nodes": 24,
       "path": "components/epidemiology-core.component.v1.json",
@@ -73,7 +80,7 @@
     },
     {
       "component_id": "metrics-and-helpers",
-      "internal_links": 3,
+      "internal_links": 1,
       "module_type": "model_helpers",
       "nodes": 7,
       "path": "components/metrics-and-helpers.component.v1.json",

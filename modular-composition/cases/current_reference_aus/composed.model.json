@@ -1844,39 +1844,6 @@
           ]
         }
       },
-      "id": "IK1eQmR6",
-      "remove_value_from_source": false,
-      "source": "Deceased",
-      "target": "gZ18mp9u",
-      "trigger": {
-        "method": "inflow",
-        "parameters": {
-          "value_to_use": "inflow"
-        }
-      },
-      "value_to_target_operator": "add"
-    },
-    {
-      "generate_array": {
-        "method": "subset",
-        "parameters": {
-          "fill_value": 0,
-          "method": "single_value",
-          "parameters": {
-            "value": 1
-          },
-          "slice_indices": [
-            [
-              0,
-              2
-            ],
-            [
-              0,
-              80
-            ]
-          ]
-        }
-      },
       "id": "k9NpYYol",
       "remove_value_from_source": false,
       "source": "T9GTSaTy",
@@ -2612,21 +2579,6 @@
       ],
       "x": 199.68,
       "y": 90.47
-    },
-    {
-      "balance_type": "array",
-      "color": "#FB6375",
-      "description": "The state of being dead",
-      "flush": true,
-      "id": "Deceased",
-      "label": "Deceased-DsFreeSus",
-      "node_type": "STATE",
-      "order": 3,
-      "tags": [
-        "state"
-      ],
-      "x": 214.71,
-      "y": 144.91
     },
     {
       "ageing": true,
@@ -4745,7 +4697,6 @@
       "batch": false,
       "included_source_nodes": [
         "Disability",
-        "Deceased",
         "i7ihZagV",
         "T9GTSaTy",
         "lSONL0qA",

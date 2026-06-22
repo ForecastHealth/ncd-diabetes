@@ -1844,39 +1844,6 @@
           ]
         }
       },
-      "id": "IK1eQmR6",
-      "remove_value_from_source": false,
-      "source": "Deceased",
-      "target": "gZ18mp9u",
-      "trigger": {
-        "method": "inflow",
-        "parameters": {
-          "value_to_use": "inflow"
-        }
-      },
-      "value_to_target_operator": "add"
-    },
-    {
-      "generate_array": {
-        "method": "subset",
-        "parameters": {
-          "fill_value": 0,
-          "method": "single_value",
-          "parameters": {
-            "value": 1
-          },
-          "slice_indices": [
-            [
-              0,
-              2
-            ],
-            [
-              0,
-              80
-            ]
-          ]
-        }
-      },
       "id": "k9NpYYol",
       "remove_value_from_source": false,
       "source": "T9GTSaTy",
@@ -2612,21 +2579,6 @@
       ],
       "x": 199.68,
       "y": 90.47
-    },
-    {
-      "balance_type": "array",
-      "color": "#FB6375",
-      "description": "The state of being dead",
-      "flush": true,
-      "id": "Deceased",
-      "label": "Deceased-DsFreeSus",
-      "node_type": "STATE",
-      "order": 3,
-      "tags": [
-        "state"
-      ],
-      "x": 214.71,
-      "y": 144.91
     },
     {
       "ageing": true,
@@ -4342,130 +4294,10 @@
       "included_source_nodes": [
         "BXOLckIN",
         "oGP2Nze1",
-        "PjHF9FHh",
-        "PHkSXNg6",
-        "taFGx45n",
-        "aB6HR9Ch",
-        "lFMuQmak",
-        "pc8FMpeL",
-        "j49wkbET",
-        "2NvTp1ts",
-        "BTDc3bch",
-        "xgkwNWij",
-        "aHJ3leKB",
-        "INwkW1hM",
-        "SQ8QiYIL",
-        "DplMThQJ",
-        "76s478a2",
-        "Tg0PGTaG",
-        "Sbd9fFmO",
-        "yKzcagOd",
-        "u41KMeWM",
-        "fcZDbz8L",
-        "XTBoUkSf",
-        "ILzbuslt",
-        "W8uQCHAK",
-        "68vDhHXG",
-        "Uu8guMnj",
-        "dgt44mD3",
-        "nIGyJ0pe",
-        "hfl7hAGJ",
-        "H6EQ9tfK",
-        "CAHLkSim",
-        "QoBznARk",
-        "fEGkyt5N",
-        "hGvKsaFP",
-        "1GU76cbG",
-        "nPcxUlVC",
-        "rG8AOcCF",
-        "Rmsk6u9E",
-        "N3IpyYxL",
-        "mJI1reH5",
-        "uWrJdiMl",
-        "AeLUxTf0",
-        "fGcZ1dnm",
-        "kwyPGIwc",
-        "7VzYqajD",
-        "t8lz9w7i",
-        "tcyh6Bs3",
-        "fpLyIBzn",
-        "lloBBuMr",
-        "dCKyKjfS",
-        "VLpXGaI0",
-        "g2JGwgeT",
-        "czWvtnDL",
-        "Wahz7EG9",
-        "HR07O7ph",
-        "wWHm9LFg",
-        "htGMUhIy",
-        "soH1ZUd6",
-        "JzmaPeHT",
-        "lEaWTYcQ",
-        "hepBlenQ",
-        "uwIPNEpQ",
-        "ASzqcNQ1",
-        "vUlB4rV4",
-        "RhJC3E7k",
-        "wJQMHl9P",
-        "EaJl4m31",
-        "gWLyk2UW",
-        "vHvja5wX",
-        "4E1LBoyy",
-        "Gkx6f7za",
-        "qdeZvhM1",
-        "PakBMkiK",
-        "2un93ssd"
+        "PjHF9FHh"
       ],
       "method": "generate_balance",
       "narration": "All Constants and Functions are initialised"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "modify prevalence t by interventions"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Subtract 1 from relative risks for excess risk"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Scale excess risk by prevalence"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Add excess risk to denominators"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Calculate PAFs"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Calculate delta PAFs"
-    },
-    {
-      "batch": false,
-      "included_source_nodes": [],
-      "method": "generate_balance",
-      "narration": "Generate the population"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Allocate prevalence"
     },
     {
       "batch": false,
@@ -4498,15 +4330,6 @@
     {
       "batch": false,
       "included_source_nodes": [
-        "G8anldCz",
-        "5AuylAuU"
-      ],
-      "method": "generate_balance",
-      "narration": "Generate the balance of the risk_factors"
-    },
-    {
-      "batch": false,
-      "included_source_nodes": [
         "lrst0woc",
         "ls9tmkpe",
         "ls9ttf2m",
@@ -4533,8 +4356,6 @@
         "8t0hevNa",
         "NHHJ4xJa",
         "jNnbhWqn",
-        "Fn2s5aKN",
-        "1l1509Yi",
         "DXhAVyOP"
       ],
       "method": "generate_balance",
@@ -4580,10 +4401,6 @@
         "ls9t13d8",
         "ls9t1x51",
         "nLErvery",
-        "5ImkATud",
-        "mTQ02SYi",
-        "51SfCRmJ",
-        "EtNVQaq5",
         "HaYRxeQQ",
         "mrGezI4c"
       ],
@@ -4729,12 +4546,6 @@
       "narration": "Push CFRs to Mortality Surrogates"
     },
     {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Record births into the birth node"
-    },
-    {
       "batch": true,
       "included_edges": [
         "qwfuA7jx",
@@ -4804,12 +4615,6 @@
     },
     {
       "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Migration of Populations"
-    },
-    {
-      "batch": false,
       "included_source_nodes": [
         "AsthmaEpsd",
         "ls9qw5uh",
@@ -4818,12 +4623,6 @@
       ],
       "method": "age",
       "narration": "Ageing the populations"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Women give birth"
     },
     {
       "batch": false,
@@ -4898,8 +4697,6 @@
       "batch": false,
       "included_source_nodes": [
         "Disability",
-        "RXJmhwXv",
-        "Deceased",
         "i7ihZagV",
         "T9GTSaTy",
         "lSONL0qA",

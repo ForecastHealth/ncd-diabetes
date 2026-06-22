@@ -1,9 +1,19 @@
 {
-  "component_counts": {},
+  "component_counts": {
+    "boundary_links": 37,
+    "compiled_internal_links": 123,
+    "components": 9,
+    "generated_first_pass_boundary": 9,
+    "internal_links": 123,
+    "nodes": 113,
+    "subroutines": 28,
+    "upstream_intervention_internal_links": 0
+  },
   "components": [
     {
       "component_id": "burden-metrics",
       "internal_links": 38,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 31,
       "path": "components/burden-metrics.component.v1.json",
       "runtime_role": "downstream_handoff"
@@ -11,13 +21,15 @@
     {
       "component_id": "economic-metrics",
       "internal_links": 2,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 3,
       "path": "components/economic-metrics.component.v1.json",
       "runtime_role": "downstream_handoff"
     },
     {
       "component_id": "epidemiology-core",
-      "internal_links": 28,
+      "internal_links": 25,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 24,
       "path": "components/epidemiology-core.component.v1.json",
       "runtime_role": "compiled_together"
@@ -25,6 +37,7 @@
     {
       "component_id": "intervention-intsvglyccontrol",
       "internal_links": 15,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 12,
       "path": "components/intervention-intsvglyccontrol.component.v1.json",
       "runtime_role": "compiled_together"
@@ -32,6 +45,7 @@
     {
       "component_id": "intervention-nephropathyscr",
       "internal_links": 9,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 8,
       "path": "components/intervention-nephropathyscr.component.v1.json",
       "runtime_role": "compiled_together"
@@ -39,6 +53,7 @@
     {
       "component_id": "intervention-neuropathyscr",
       "internal_links": 9,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 8,
       "path": "components/intervention-neuropathyscr.component.v1.json",
       "runtime_role": "compiled_together"
@@ -46,6 +61,7 @@
     {
       "component_id": "intervention-retinopathyscrn",
       "internal_links": 9,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 8,
       "path": "components/intervention-retinopathyscrn.component.v1.json",
       "runtime_role": "compiled_together"
@@ -53,13 +69,15 @@
     {
       "component_id": "intervention-stdglyccontrol",
       "internal_links": 15,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 12,
       "path": "components/intervention-stdglyccontrol.component.v1.json",
       "runtime_role": "compiled_together"
     },
     {
       "component_id": "metrics-and-helpers",
-      "internal_links": 3,
+      "internal_links": 1,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 7,
       "path": "components/metrics-and-helpers.component.v1.json",
       "runtime_role": "compiled_together"
