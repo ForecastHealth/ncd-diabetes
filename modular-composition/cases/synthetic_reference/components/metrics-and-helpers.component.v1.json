@@ -3,49 +3,9 @@
   "component_id": "metrics-and-helpers",
   "declared_inputs": [],
   "internal_link_ids": [
-    "P0YMn6Zi",
-    "iB5A8VDc",
     "STz4wrnX"
   ],
   "links": [
-    {
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "id": "P0YMn6Zi",
-      "label": "LowerExtrmAmpt -> LowerExtrmAmpt",
-      "order": 0,
-      "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "ls9qwy35",
-      "target": "ls9qwy35",
-      "value_to_target_operator": "add"
-    },
-    {
-      "description": "Project the number of births using the population and ASFR",
-      "edge_type": "projection",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "fertility",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "id": "iB5A8VDc",
-      "label": "LowerExtrmAmpt -> Births",
-      "order": 1,
-      "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "ls9qwy35",
-      "target": "Births",
-      "value_to_target_operator": "add"
-    },
     {
       "description": "Background Mortality",
       "edge_type": "transition",

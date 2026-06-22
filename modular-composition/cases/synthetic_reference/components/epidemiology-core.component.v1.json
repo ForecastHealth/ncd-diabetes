@@ -3,7 +3,6 @@
   "component_id": "epidemiology-core",
   "declared_inputs": [],
   "internal_link_ids": [
-    "Sr9wD5iX",
     "QNP1gYuf",
     "XKtgbA5d",
     "QDm89Xb6",
@@ -23,8 +22,6 @@
     "CBO3f2cM",
     "Ridysv4o",
     "2AG3i3pr",
-    "Qo1iIBKh",
-    "oDZJAqIc",
     "OyW7kOSM",
     "9lHjCUmt",
     "tJOW1hhc",
@@ -33,25 +30,6 @@
     "vK2oNfec"
   ],
   "links": [
-    {
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "id": "Sr9wD5iX",
-      "label": "DiabetesEpsd -> DiabetesEpsd",
-      "order": 0,
-      "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "AsthmaEpsd",
-      "target": "AsthmaEpsd",
-      "value_to_target_operator": "add"
-    },
     {
       "edge_type": "projection",
       "generate_array": {
@@ -325,44 +303,6 @@
       "source": "ls9t522j",
       "target": "ls9r0u95",
       "value_to_target_operator": "multiply"
-    },
-    {
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "id": "Qo1iIBKh",
-      "label": "DiabeticRetinopathy -> DiabeticRetinopathy",
-      "order": 0,
-      "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "ls9qw5uh",
-      "target": "ls9qw5uh",
-      "value_to_target_operator": "add"
-    },
-    {
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "id": "oDZJAqIc",
-      "label": "DiabeticNephropathy -> DiabeticNephropathy",
-      "order": 0,
-      "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "ls9qwy72",
-      "target": "ls9qwy72",
-      "value_to_target_operator": "add"
     },
     {
       "edge_type": "transition",
