@@ -1,6 +1,6 @@
 {
   "acts_on_module": "tobacco-risk-factor",
-  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Non-lung disease models use a component-specific tobacco health-impact path; lung cancer uses the current incidence-modifier proxy boundary.",
+  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Disease modules consume the changed tobacco exposure state through explicit module handoff contracts.",
   "component_id": "intervention-tobacco-cessation-varenicline",
   "costing": {
     "appendix3_tag": "T7",
@@ -31,9 +31,9 @@
   },
   "health_effect_path": "tobacco_cessation_varenicline",
   "internal_link_ids": [
-    "tcCessVareniclineBaseDelta",
-    "tcCessVareniclineTargetDelta",
-    "tcCessVareniclineDeltaEffect"
+    "intervention-tobacco-cessation-varenicline--baseline-to-changed",
+    "intervention-tobacco-cessation-varenicline--coverage-to-changed",
+    "intervention-tobacco-cessation-varenicline--effect-to-changed"
   ],
   "intervention_component_id": "tobacco_cessation.varenicline",
   "label": "Tobacco cessation - Varenicline",
@@ -46,12 +46,12 @@
           "value": 1
         }
       },
-      "id": "tcCessVareniclineBaseDelta",
-      "label": "baseline-coverage-tobacco_cessation_varenicline -> delta-coverage-tobacco_cessation_varenicline",
+      "id": "intervention-tobacco-cessation-varenicline--baseline-to-changed",
+      "label": "baseline tobacco state -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessVareniclineBase",
-      "target": "tcCessVareniclineDelta",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-varenicline--baseline-tobacco-state",
+      "target": "intervention-tobacco-cessation-varenicline--changed-tobacco-state",
       "value_to_target_operator": "add"
     },
     {
@@ -62,26 +62,28 @@
           "value": 1
         }
       },
-      "id": "tcCessVareniclineTargetDelta",
-      "label": "target-coverage-tobacco_cessation_varenicline -> delta-coverage-tobacco_cessation_varenicline",
+      "id": "intervention-tobacco-cessation-varenicline--coverage-to-changed",
+      "label": "coverage -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessVareniclineTarget",
-      "target": "tcCessVareniclineDelta",
-      "value_to_target_operator": "add"
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-varenicline--coverage",
+      "target": "intervention-tobacco-cessation-varenicline--changed-tobacco-state",
+      "value_to_target_operator": "multiply"
     },
     {
+      "edge_type": "projection",
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 1
+          "value": -1
         }
       },
-      "id": "tcCessVareniclineDeltaEffect",
-      "label": "delta-coverage-tobacco_cessation_varenicline -> effect-size-tobacco_cessation_varenicline",
+      "id": "intervention-tobacco-cessation-varenicline--effect-to-changed",
+      "label": "effect size -> changed tobacco state",
       "remove_value_from_source": false,
-      "source": "tcCessVareniclineDelta",
-      "target": "tcCessVareniclineEffect",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-varenicline--effect-size",
+      "target": "intervention-tobacco-cessation-varenicline--changed-tobacco-state",
       "value_to_target_operator": "multiply"
     }
   ],
@@ -99,79 +101,56 @@
   "module_type": "tobacco_cessation_intervention",
   "nodes": [
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0.05
-        },
-        "postprocessing": {
-          "negative": true
+          "value": 1
         }
       },
-      "id": "tcCessVareniclineBase",
-      "label": "baseline-coverage-tobacco_cessation_varenicline",
-      "node_type": "CONSTANT",
-      "x": -83.12,
-      "y": -201.4
+      "id": "intervention-tobacco-cessation-varenicline--baseline-tobacco-state",
+      "label": "Tobacco cessation - Varenicline baseline tobacco state",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
-      "generate_array": {
-        "method": "linear_with_arbitrary_length",
-        "parameters": {
-          "end_index": 2,
-          "end_value": 0.05,
-          "fill_after": 0.05,
-          "fill_before": 0.05,
-          "start_index": 1,
-          "start_value": 0.05
-        }
-      },
-      "id": "tcCessVareniclineTarget",
-      "label": "target-coverage-tobacco_cessation_varenicline",
-      "node_type": "CONSTANT",
-      "x": -85.86,
-      "y": -192.61
-    },
-    {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0
+          "value": 0.95
         }
       },
-      "id": "tcCessVareniclineDelta",
-      "label": "delta-coverage-tobacco_cessation_varenicline",
-      "node_type": "FUNCTION",
-      "x": -85.7,
-      "y": -184.52
+      "id": "intervention-tobacco-cessation-varenicline--coverage",
+      "label": "Tobacco cessation - Varenicline coverage",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
           "value": 0.15
         }
       },
-      "id": "tcCessVareniclineEffect",
-      "label": "effect-size-tobacco_cessation_varenicline",
-      "node_type": "CONSTANT",
-      "x": -94.07,
-      "y": -173.84
+      "id": "intervention-tobacco-cessation-varenicline--effect-size",
+      "label": "Tobacco cessation - Varenicline effect size",
+      "node_type": "CONSTANT"
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "intervention-tobacco-cessation-varenicline--changed-tobacco-state",
+      "label": "Tobacco cessation - Varenicline changed tobacco state",
+      "node_type": "FUNCTION"
     }
   ],
   "owned_node_ids": [
-    "tcCessVareniclineBase",
-    "tcCessVareniclineTarget",
-    "tcCessVareniclineDelta",
-    "tcCessVareniclineEffect"
+    "intervention-tobacco-cessation-varenicline--baseline-tobacco-state",
+    "intervention-tobacco-cessation-varenicline--coverage",
+    "intervention-tobacco-cessation-varenicline--effect-size",
+    "intervention-tobacco-cessation-varenicline--changed-tobacco-state"
   ],
   "parameters": {
     "Baseline Coverage Fiber Procurement": {
@@ -910,7 +889,7 @@
   "scenario_id": "diabetes-tobacco-cessation-varenicline",
   "scenario_path": "/models/ncd-diabetes/scenarios/tobacco_cessation_varenicline.json",
   "schema": "forecast-health.tobacco-cessation-intervention-module.v1",
-  "signature_sha256": "aabb78c993e5c8a2faf329ebf605c8eab5bdae37dd4564d238f67b946ed0413e",
+  "signature_sha256": "f8c1398f6e8c44fc0943a0da2250277d3b62f92a0ed550d827bfdac96818a2bb",
   "source_registry": "state/undp-tobacco-cessation-registry.v1.json",
   "source_row_counts": {
     "resource_mapping_rows": 1,

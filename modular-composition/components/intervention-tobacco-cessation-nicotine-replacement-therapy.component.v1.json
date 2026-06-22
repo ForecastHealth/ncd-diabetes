@@ -1,6 +1,6 @@
 {
   "acts_on_module": "tobacco-risk-factor",
-  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Non-lung disease models use a component-specific tobacco health-impact path; lung cancer uses the current incidence-modifier proxy boundary.",
+  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Disease modules consume the changed tobacco exposure state through explicit module handoff contracts.",
   "component_id": "intervention-tobacco-cessation-nicotine-replacement-therapy",
   "costing": {
     "appendix3_tag": "T7",
@@ -31,9 +31,9 @@
   },
   "health_effect_path": "tobacco_cessation_nicotine_replacement_therapy",
   "internal_link_ids": [
-    "tcCessNicotineReplacementTherapyBaseDelta",
-    "tcCessNicotineReplacementTherapyTargetDelta",
-    "tcCessNicotineReplacementTherapyDeltaEffect"
+    "intervention-tobacco-cessation-nicotine-replacement-therapy--baseline-to-changed",
+    "intervention-tobacco-cessation-nicotine-replacement-therapy--coverage-to-changed",
+    "intervention-tobacco-cessation-nicotine-replacement-therapy--effect-to-changed"
   ],
   "intervention_component_id": "tobacco_cessation.nicotine_replacement_therapy",
   "label": "Tobacco cessation - Nicotine replacement therapy",
@@ -46,12 +46,12 @@
           "value": 1
         }
       },
-      "id": "tcCessNicotineReplacementTherapyBaseDelta",
-      "label": "baseline-coverage-tobacco_cessation_nicotine_replacement_therapy -> delta-coverage-tobacco_cessation_nicotine_replacement_therapy",
+      "id": "intervention-tobacco-cessation-nicotine-replacement-therapy--baseline-to-changed",
+      "label": "baseline tobacco state -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessNicotineReplacementTherapyBase",
-      "target": "tcCessNicotineReplacementTherapyDelta",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-nicotine-replacement-therapy--baseline-tobacco-state",
+      "target": "intervention-tobacco-cessation-nicotine-replacement-therapy--changed-tobacco-state",
       "value_to_target_operator": "add"
     },
     {
@@ -62,26 +62,28 @@
           "value": 1
         }
       },
-      "id": "tcCessNicotineReplacementTherapyTargetDelta",
-      "label": "target-coverage-tobacco_cessation_nicotine_replacement_therapy -> delta-coverage-tobacco_cessation_nicotine_replacement_therapy",
+      "id": "intervention-tobacco-cessation-nicotine-replacement-therapy--coverage-to-changed",
+      "label": "coverage -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessNicotineReplacementTherapyTarget",
-      "target": "tcCessNicotineReplacementTherapyDelta",
-      "value_to_target_operator": "add"
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-nicotine-replacement-therapy--coverage",
+      "target": "intervention-tobacco-cessation-nicotine-replacement-therapy--changed-tobacco-state",
+      "value_to_target_operator": "multiply"
     },
     {
+      "edge_type": "projection",
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 1
+          "value": -1
         }
       },
-      "id": "tcCessNicotineReplacementTherapyDeltaEffect",
-      "label": "delta-coverage-tobacco_cessation_nicotine_replacement_therapy -> effect-size-tobacco_cessation_nicotine_replacement_therapy",
+      "id": "intervention-tobacco-cessation-nicotine-replacement-therapy--effect-to-changed",
+      "label": "effect size -> changed tobacco state",
       "remove_value_from_source": false,
-      "source": "tcCessNicotineReplacementTherapyDelta",
-      "target": "tcCessNicotineReplacementTherapyEffect",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-nicotine-replacement-therapy--effect-size",
+      "target": "intervention-tobacco-cessation-nicotine-replacement-therapy--changed-tobacco-state",
       "value_to_target_operator": "multiply"
     }
   ],
@@ -99,79 +101,56 @@
   "module_type": "tobacco_cessation_intervention",
   "nodes": [
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0.05
-        },
-        "postprocessing": {
-          "negative": true
+          "value": 1
         }
       },
-      "id": "tcCessNicotineReplacementTherapyBase",
-      "label": "baseline-coverage-tobacco_cessation_nicotine_replacement_therapy",
-      "node_type": "CONSTANT",
-      "x": -83.12,
-      "y": -201.4
+      "id": "intervention-tobacco-cessation-nicotine-replacement-therapy--baseline-tobacco-state",
+      "label": "Tobacco cessation - Nicotine replacement therapy baseline tobacco state",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
-      "generate_array": {
-        "method": "linear_with_arbitrary_length",
-        "parameters": {
-          "end_index": 2,
-          "end_value": 0.05,
-          "fill_after": 0.05,
-          "fill_before": 0.05,
-          "start_index": 1,
-          "start_value": 0.05
-        }
-      },
-      "id": "tcCessNicotineReplacementTherapyTarget",
-      "label": "target-coverage-tobacco_cessation_nicotine_replacement_therapy",
-      "node_type": "CONSTANT",
-      "x": -85.86,
-      "y": -192.61
-    },
-    {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0
+          "value": 0.95
         }
       },
-      "id": "tcCessNicotineReplacementTherapyDelta",
-      "label": "delta-coverage-tobacco_cessation_nicotine_replacement_therapy",
-      "node_type": "FUNCTION",
-      "x": -85.7,
-      "y": -184.52
+      "id": "intervention-tobacco-cessation-nicotine-replacement-therapy--coverage",
+      "label": "Tobacco cessation - Nicotine replacement therapy coverage",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
           "value": 0.06
         }
       },
-      "id": "tcCessNicotineReplacementTherapyEffect",
-      "label": "effect-size-tobacco_cessation_nicotine_replacement_therapy",
-      "node_type": "CONSTANT",
-      "x": -94.07,
-      "y": -173.84
+      "id": "intervention-tobacco-cessation-nicotine-replacement-therapy--effect-size",
+      "label": "Tobacco cessation - Nicotine replacement therapy effect size",
+      "node_type": "CONSTANT"
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "intervention-tobacco-cessation-nicotine-replacement-therapy--changed-tobacco-state",
+      "label": "Tobacco cessation - Nicotine replacement therapy changed tobacco state",
+      "node_type": "FUNCTION"
     }
   ],
   "owned_node_ids": [
-    "tcCessNicotineReplacementTherapyBase",
-    "tcCessNicotineReplacementTherapyTarget",
-    "tcCessNicotineReplacementTherapyDelta",
-    "tcCessNicotineReplacementTherapyEffect"
+    "intervention-tobacco-cessation-nicotine-replacement-therapy--baseline-tobacco-state",
+    "intervention-tobacco-cessation-nicotine-replacement-therapy--coverage",
+    "intervention-tobacco-cessation-nicotine-replacement-therapy--effect-size",
+    "intervention-tobacco-cessation-nicotine-replacement-therapy--changed-tobacco-state"
   ],
   "parameters": {
     "Baseline Coverage Fiber Procurement": {
@@ -910,7 +889,7 @@
   "scenario_id": "diabetes-tobacco-cessation-nicotine-replacement-therapy",
   "scenario_path": "/models/ncd-diabetes/scenarios/tobacco_cessation_nicotine_replacement_therapy.json",
   "schema": "forecast-health.tobacco-cessation-intervention-module.v1",
-  "signature_sha256": "5e8feb9dce25c2761ceca6c94929bc38f4f030477f40050b974253023993198a",
+  "signature_sha256": "785c27ceaf43f06fe1ec4f2b19e888099ffe8ba7cedcd51ab122d08f35118d87",
   "source_registry": "state/undp-tobacco-cessation-registry.v1.json",
   "source_row_counts": {
     "resource_mapping_rows": 3,

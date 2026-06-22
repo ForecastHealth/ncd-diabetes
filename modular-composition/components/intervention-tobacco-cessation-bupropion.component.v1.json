@@ -1,6 +1,6 @@
 {
   "acts_on_module": "tobacco-risk-factor",
-  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Non-lung disease models use a component-specific tobacco health-impact path; lung cancer uses the current incidence-modifier proxy boundary.",
+  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Disease modules consume the changed tobacco exposure state through explicit module handoff contracts.",
   "component_id": "intervention-tobacco-cessation-bupropion",
   "costing": {
     "appendix3_tag": "T7",
@@ -31,9 +31,9 @@
   },
   "health_effect_path": "tobacco_cessation_bupropion",
   "internal_link_ids": [
-    "tcCessBupropionBaseDelta",
-    "tcCessBupropionTargetDelta",
-    "tcCessBupropionDeltaEffect"
+    "intervention-tobacco-cessation-bupropion--baseline-to-changed",
+    "intervention-tobacco-cessation-bupropion--coverage-to-changed",
+    "intervention-tobacco-cessation-bupropion--effect-to-changed"
   ],
   "intervention_component_id": "tobacco_cessation.bupropion",
   "label": "Tobacco cessation - Bupropion",
@@ -46,12 +46,12 @@
           "value": 1
         }
       },
-      "id": "tcCessBupropionBaseDelta",
-      "label": "baseline-coverage-tobacco_cessation_bupropion -> delta-coverage-tobacco_cessation_bupropion",
+      "id": "intervention-tobacco-cessation-bupropion--baseline-to-changed",
+      "label": "baseline tobacco state -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessBupropionBase",
-      "target": "tcCessBupropionDelta",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-bupropion--baseline-tobacco-state",
+      "target": "intervention-tobacco-cessation-bupropion--changed-tobacco-state",
       "value_to_target_operator": "add"
     },
     {
@@ -62,26 +62,28 @@
           "value": 1
         }
       },
-      "id": "tcCessBupropionTargetDelta",
-      "label": "target-coverage-tobacco_cessation_bupropion -> delta-coverage-tobacco_cessation_bupropion",
+      "id": "intervention-tobacco-cessation-bupropion--coverage-to-changed",
+      "label": "coverage -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessBupropionTarget",
-      "target": "tcCessBupropionDelta",
-      "value_to_target_operator": "add"
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-bupropion--coverage",
+      "target": "intervention-tobacco-cessation-bupropion--changed-tobacco-state",
+      "value_to_target_operator": "multiply"
     },
     {
+      "edge_type": "projection",
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 1
+          "value": -1
         }
       },
-      "id": "tcCessBupropionDeltaEffect",
-      "label": "delta-coverage-tobacco_cessation_bupropion -> effect-size-tobacco_cessation_bupropion",
+      "id": "intervention-tobacco-cessation-bupropion--effect-to-changed",
+      "label": "effect size -> changed tobacco state",
       "remove_value_from_source": false,
-      "source": "tcCessBupropionDelta",
-      "target": "tcCessBupropionEffect",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-bupropion--effect-size",
+      "target": "intervention-tobacco-cessation-bupropion--changed-tobacco-state",
       "value_to_target_operator": "multiply"
     }
   ],
@@ -99,79 +101,56 @@
   "module_type": "tobacco_cessation_intervention",
   "nodes": [
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0.05
-        },
-        "postprocessing": {
-          "negative": true
+          "value": 1
         }
       },
-      "id": "tcCessBupropionBase",
-      "label": "baseline-coverage-tobacco_cessation_bupropion",
-      "node_type": "CONSTANT",
-      "x": -83.12,
-      "y": -201.4
+      "id": "intervention-tobacco-cessation-bupropion--baseline-tobacco-state",
+      "label": "Tobacco cessation - Bupropion baseline tobacco state",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
-      "generate_array": {
-        "method": "linear_with_arbitrary_length",
-        "parameters": {
-          "end_index": 2,
-          "end_value": 0.05,
-          "fill_after": 0.05,
-          "fill_before": 0.05,
-          "start_index": 1,
-          "start_value": 0.05
-        }
-      },
-      "id": "tcCessBupropionTarget",
-      "label": "target-coverage-tobacco_cessation_bupropion",
-      "node_type": "CONSTANT",
-      "x": -85.86,
-      "y": -192.61
-    },
-    {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0
+          "value": 0.95
         }
       },
-      "id": "tcCessBupropionDelta",
-      "label": "delta-coverage-tobacco_cessation_bupropion",
-      "node_type": "FUNCTION",
-      "x": -85.7,
-      "y": -184.52
+      "id": "intervention-tobacco-cessation-bupropion--coverage",
+      "label": "Tobacco cessation - Bupropion coverage",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
           "value": 0.07
         }
       },
-      "id": "tcCessBupropionEffect",
-      "label": "effect-size-tobacco_cessation_bupropion",
-      "node_type": "CONSTANT",
-      "x": -94.07,
-      "y": -173.84
+      "id": "intervention-tobacco-cessation-bupropion--effect-size",
+      "label": "Tobacco cessation - Bupropion effect size",
+      "node_type": "CONSTANT"
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "intervention-tobacco-cessation-bupropion--changed-tobacco-state",
+      "label": "Tobacco cessation - Bupropion changed tobacco state",
+      "node_type": "FUNCTION"
     }
   ],
   "owned_node_ids": [
-    "tcCessBupropionBase",
-    "tcCessBupropionTarget",
-    "tcCessBupropionDelta",
-    "tcCessBupropionEffect"
+    "intervention-tobacco-cessation-bupropion--baseline-tobacco-state",
+    "intervention-tobacco-cessation-bupropion--coverage",
+    "intervention-tobacco-cessation-bupropion--effect-size",
+    "intervention-tobacco-cessation-bupropion--changed-tobacco-state"
   ],
   "parameters": {
     "Baseline Coverage Fiber Procurement": {
@@ -910,7 +889,7 @@
   "scenario_id": "diabetes-tobacco-cessation-bupropion",
   "scenario_path": "/models/ncd-diabetes/scenarios/tobacco_cessation_bupropion.json",
   "schema": "forecast-health.tobacco-cessation-intervention-module.v1",
-  "signature_sha256": "1ee96e2c12e5f817cb2398a3a76d7f470d1dfe858999a4f9c4819d430864050e",
+  "signature_sha256": "e207219ca358cb6b0c4ba5e1d761db579f2544dbdc7f66f78caed8bb8144898c",
   "source_registry": "state/undp-tobacco-cessation-registry.v1.json",
   "source_row_counts": {
     "resource_mapping_rows": 1,

@@ -1,6 +1,6 @@
 {
   "acts_on_module": "tobacco-risk-factor",
-  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Non-lung disease models use a component-specific tobacco health-impact path; lung cancer uses the current incidence-modifier proxy boundary.",
+  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Disease modules consume the changed tobacco exposure state through explicit module handoff contracts.",
   "component_id": "intervention-tobacco-cessation-brief-advice",
   "costing": {
     "appendix3_tag": "T6",
@@ -31,9 +31,9 @@
   },
   "health_effect_path": "tobacco_cessation_brief_advice",
   "internal_link_ids": [
-    "tcCessBriefAdviceBaseDelta",
-    "tcCessBriefAdviceTargetDelta",
-    "tcCessBriefAdviceDeltaEffect"
+    "intervention-tobacco-cessation-brief-advice--baseline-to-changed",
+    "intervention-tobacco-cessation-brief-advice--coverage-to-changed",
+    "intervention-tobacco-cessation-brief-advice--effect-to-changed"
   ],
   "intervention_component_id": "tobacco_cessation.brief_advice",
   "label": "Tobacco cessation - Brief tobacco-cessation advice",
@@ -46,12 +46,12 @@
           "value": 1
         }
       },
-      "id": "tcCessBriefAdviceBaseDelta",
-      "label": "baseline-coverage-tobacco_cessation_brief_advice -> delta-coverage-tobacco_cessation_brief_advice",
+      "id": "intervention-tobacco-cessation-brief-advice--baseline-to-changed",
+      "label": "baseline tobacco state -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessBriefAdviceBase",
-      "target": "tcCessBriefAdviceDelta",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-brief-advice--baseline-tobacco-state",
+      "target": "intervention-tobacco-cessation-brief-advice--changed-tobacco-state",
       "value_to_target_operator": "add"
     },
     {
@@ -62,26 +62,28 @@
           "value": 1
         }
       },
-      "id": "tcCessBriefAdviceTargetDelta",
-      "label": "target-coverage-tobacco_cessation_brief_advice -> delta-coverage-tobacco_cessation_brief_advice",
+      "id": "intervention-tobacco-cessation-brief-advice--coverage-to-changed",
+      "label": "coverage -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessBriefAdviceTarget",
-      "target": "tcCessBriefAdviceDelta",
-      "value_to_target_operator": "add"
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-brief-advice--coverage",
+      "target": "intervention-tobacco-cessation-brief-advice--changed-tobacco-state",
+      "value_to_target_operator": "multiply"
     },
     {
+      "edge_type": "projection",
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 1
+          "value": -1
         }
       },
-      "id": "tcCessBriefAdviceDeltaEffect",
-      "label": "delta-coverage-tobacco_cessation_brief_advice -> effect-size-tobacco_cessation_brief_advice",
+      "id": "intervention-tobacco-cessation-brief-advice--effect-to-changed",
+      "label": "effect size -> changed tobacco state",
       "remove_value_from_source": false,
-      "source": "tcCessBriefAdviceDelta",
-      "target": "tcCessBriefAdviceEffect",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-brief-advice--effect-size",
+      "target": "intervention-tobacco-cessation-brief-advice--changed-tobacco-state",
       "value_to_target_operator": "multiply"
     }
   ],
@@ -99,79 +101,56 @@
   "module_type": "tobacco_cessation_intervention",
   "nodes": [
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0.05
-        },
-        "postprocessing": {
-          "negative": true
+          "value": 1
         }
       },
-      "id": "tcCessBriefAdviceBase",
-      "label": "baseline-coverage-tobacco_cessation_brief_advice",
-      "node_type": "CONSTANT",
-      "x": -160.67,
-      "y": -200.47
+      "id": "intervention-tobacco-cessation-brief-advice--baseline-tobacco-state",
+      "label": "Tobacco cessation - Brief tobacco-cessation advice baseline tobacco state",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
-      "generate_array": {
-        "method": "linear_with_arbitrary_length",
-        "parameters": {
-          "end_index": 2,
-          "end_value": 0.05,
-          "fill_after": 0.05,
-          "fill_before": 0.05,
-          "start_index": 1,
-          "start_value": 0.05
-        }
-      },
-      "id": "tcCessBriefAdviceTarget",
-      "label": "target-coverage-tobacco_cessation_brief_advice",
-      "node_type": "CONSTANT",
-      "x": -160.29,
-      "y": -192.62
-    },
-    {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0
+          "value": 0.95
         }
       },
-      "id": "tcCessBriefAdviceDelta",
-      "label": "delta-coverage-tobacco_cessation_brief_advice",
-      "node_type": "FUNCTION",
-      "x": -161.45,
-      "y": -183.47
+      "id": "intervention-tobacco-cessation-brief-advice--coverage",
+      "label": "Tobacco cessation - Brief tobacco-cessation advice coverage",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
           "value": 0.02
         }
       },
-      "id": "tcCessBriefAdviceEffect",
-      "label": "effect-size-tobacco_cessation_brief_advice",
-      "node_type": "CONSTANT",
-      "x": -164.94,
-      "y": -174.01
+      "id": "intervention-tobacco-cessation-brief-advice--effect-size",
+      "label": "Tobacco cessation - Brief tobacco-cessation advice effect size",
+      "node_type": "CONSTANT"
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "intervention-tobacco-cessation-brief-advice--changed-tobacco-state",
+      "label": "Tobacco cessation - Brief tobacco-cessation advice changed tobacco state",
+      "node_type": "FUNCTION"
     }
   ],
   "owned_node_ids": [
-    "tcCessBriefAdviceBase",
-    "tcCessBriefAdviceTarget",
-    "tcCessBriefAdviceDelta",
-    "tcCessBriefAdviceEffect"
+    "intervention-tobacco-cessation-brief-advice--baseline-tobacco-state",
+    "intervention-tobacco-cessation-brief-advice--coverage",
+    "intervention-tobacco-cessation-brief-advice--effect-size",
+    "intervention-tobacco-cessation-brief-advice--changed-tobacco-state"
   ],
   "parameters": {
     "Baseline Coverage Fiber Procurement": {
@@ -910,7 +889,7 @@
   "scenario_id": "diabetes-tobacco-cessation-brief-advice",
   "scenario_path": "/models/ncd-diabetes/scenarios/tobacco_cessation_brief_advice.json",
   "schema": "forecast-health.tobacco-cessation-intervention-module.v1",
-  "signature_sha256": "f238c62b57279e8cd82ea644259ae864b78c32a7cb38a38254e3361afbfcf796",
+  "signature_sha256": "66d00910c80b51c34524d9204a813d5631ae7db7d404423b623f87e09306dafe",
   "source_registry": "state/undp-tobacco-cessation-registry.v1.json",
   "source_row_counts": {
     "resource_mapping_rows": 1,
