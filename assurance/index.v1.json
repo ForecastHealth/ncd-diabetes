@@ -1,7 +1,0 @@
-{
-  "artefact_groups": {},
-  "generated_at": "2026-06-22T08:47:38.498124+00:00",
-  "model": "ncd-diabetes",
-  "schema": "forecast-health.model-repo-assurance-index.v1",
-  "source": "current repo-owned assurance files after module-boundary cleanup"
-}

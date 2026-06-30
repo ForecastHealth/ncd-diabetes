@@ -1,1 +1,0 @@
-# This file makes the validation_suite directory a Python package.

@@ -1,0 +1,39 @@
+{
+  "schema": "botech.scenario-template.v1",
+  "module_id": "diabetes_epidemiology_core",
+  "owner": {
+    "repo_id": "ncd-diabetes",
+    "repo_ref": "/Users/rory/Models/ncd-diabetes",
+    "module_contract_ref": "interface/diabetes-epidemiology-core.module.contract.v1.json"
+  },
+  "version": "v1",
+  "parameter_registry_ref": "parameters/registry.v1.json",
+  "provenance": {
+    "source_refs": [
+      "parameters/registry.v1.json"
+    ],
+    "assumption_refs": []
+  },
+  "validation_rules": [
+    "all_parameter_ids_must_resolve_in_parameter_registry_ref",
+    "template_module_id_must_match_parameter_registry_module_id",
+    "template_owner_repo_id_must_match_parameter_registry_owner_repo_id",
+    "template_must_not_set_link_owned_parameters_unless_the_registry_declares_them_module_owned"
+  ],
+  "template_id": "diabetes_d1",
+  "label": "Diabetes D1",
+  "description": "Comparison preset for comprehensive foot care. It raises foot care target coverage to 95 percent and reaches that target at timestep index 1.",
+  "template_role": "comparison",
+  "parameter_values": [
+    {
+      "parameter_id": "foot_care_target_coverage",
+      "value": 0.95,
+      "meaning": "Raise foot care target coverage for the comparison run."
+    },
+    {
+      "parameter_id": "foot_care_scale_up_end_index",
+      "value": 1,
+      "meaning": "Reach foot care target coverage at timestep index 1."
+    }
+  ]
+}

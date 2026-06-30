@@ -327,7 +327,7 @@
       "node_type": "FUNCTION"
     },
     {
-      "id": "AsthmaEpsd",
+      "id": "DiabetesEpsd",
       "x": 15.69,
       "y": 76.92,
       "label": "DiabetesEpsd",
@@ -1501,45 +1501,6 @@
       "flush": true
     },
     {
-      "id": "BXOLckIN",
-      "x": 217.91,
-      "y": -121.03,
-      "label": "paf-denom-t",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "oGP2Nze1",
-      "x": -159.09,
-      "y": -125.07,
-      "label": "paf-denom-0",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "PjHF9FHh",
-      "x": -7.5,
-      "y": -66.09,
-      "label": "rf-all",
-      "flush": true,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
       "id": "5HaLc0YJ",
       "x": 123.07,
       "y": 262.97,
@@ -1688,85 +1649,6 @@
       "flush": true
     },
     {
-      "id": "5p5rIiTd",
-      "x": 1.94,
-      "y": 200.43,
-      "color": "#FFB255",
-      "label": "PopReached-RetinopathyScrn"
-    },
-    {
-      "id": "979lBOrq",
-      "x": 2.64,
-      "y": 213.33,
-      "color": "#FFB255",
-      "label": "PopReached-NeuropathyScr"
-    },
-    {
-      "id": "q6foBZs3",
-      "x": 2.87,
-      "y": 222.91,
-      "color": "#FFB255",
-      "label": "PopReached-NephropathyScr"
-    },
-    {
-      "id": "Jj9sztq7",
-      "x": 5.58,
-      "y": 234.88,
-      "color": "#FFB255",
-      "label": "PopReached-IntsvGlycControl"
-    },
-    {
-      "id": "B4SjgqET",
-      "x": 3.1,
-      "y": 245.75,
-      "color": "#FFB255",
-      "label": "PopReached-StdGlycControl"
-    },
-    {
-      "id": "DXhAVyOP",
-      "x": -59.83,
-      "y": 33.36,
-      "label": "Economic Value",
-      "color": "#FFB255",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 0
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "HaYRxeQQ",
-      "x": -77.56,
-      "y": 13.91,
-      "label": "GDP Per Capita",
-      "color": "#06B4E1",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "wb_gdp_per_capita",
-        "parameters": {
-          "country": "AFG"
-        },
-        "fetch_once": true
-      }
-    },
-    {
-      "id": "mrGezI4c",
-      "x": -84.55,
-      "y": 23.53,
-      "label": "Labour Force Participation",
-      "color": "#06B4E1",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "ilo_labour_force_participation_rate",
-        "parameters": {
-          "country": "AFG"
-        },
-        "fetch_once": true
-      }
-    },
-    {
       "id": "ResourcePopulationReached_NeuropathyScr",
       "x": 30.64,
       "y": 241.33,
@@ -1905,7 +1787,7 @@
     },
     {
       "id": "4LTJKWna",
-      "source": "AsthmaEpsd",
+      "source": "DiabetesEpsd",
       "target": "lrwzsau5",
       "edge_type": "transition",
       "set_by_surrogate": true,
@@ -1946,7 +1828,7 @@
     },
     {
       "id": "qwfuA7jx",
-      "source": "AsthmaEpsd",
+      "source": "DiabetesEpsd",
       "target": "ls9r0u95",
       "edge_type": "transition",
       "set_by_surrogate": true,
@@ -1957,7 +1839,7 @@
     },
     {
       "id": "nyZHiO9K",
-      "source": "AsthmaEpsd",
+      "source": "DiabetesEpsd",
       "target": "ls9r1ind",
       "edge_type": "transition",
       "set_by_surrogate": true,
@@ -1968,7 +1850,7 @@
     },
     {
       "id": "91C8HO8E",
-      "source": "AsthmaEpsd",
+      "source": "DiabetesEpsd",
       "target": "ls9r1is1",
       "edge_type": "transition",
       "set_by_surrogate": true,
@@ -3023,7 +2905,7 @@
     },
     {
       "id": "OyW7kOSM",
-      "source": "AsthmaEpsd",
+      "source": "DiabetesEpsd",
       "target": "lrstce6u",
       "edge_type": "transition",
       "set_by_surrogate": true,
@@ -3334,21 +3216,19 @@
     },
     {
       "id": "9lHjCUmt",
-      "source": "AsthmaEpsd",
+      "source": "DiabetesEpsd",
       "target": "i7ihZagV",
       "description": "Background Mortality",
       "edge_type": "transition",
       "requires_source_balance": true,
       "remove_value_from_source": true,
       "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "mortality",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "DiabetesEpsd -> Deceased"
+      "label": "DiabetesEpsd -> Deceased",
+      "compiler_binding": {
+        "kind": "declared_input",
+        "channel_id": "background_mortality_rate",
+        "note": "Compiler lowers demographic background_mortality_rate onto the diabetes episode state."
+      }
     },
     {
       "id": "tJOW1hhc",
@@ -3359,14 +3239,12 @@
       "requires_source_balance": true,
       "remove_value_from_source": true,
       "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "mortality",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "DiabeticRetinopathy -> Deceased"
+      "label": "DiabeticRetinopathy -> Deceased",
+      "compiler_binding": {
+        "kind": "declared_input",
+        "channel_id": "background_mortality_rate",
+        "note": "Compiler lowers demographic background_mortality_rate onto the diabetic retinopathy state."
+      }
     },
     {
       "id": "STz4wrnX",
@@ -3377,14 +3255,12 @@
       "requires_source_balance": true,
       "remove_value_from_source": true,
       "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "mortality",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "LowerExtrmAmpt -> Deceased"
+      "label": "LowerExtrmAmpt -> Deceased",
+      "compiler_binding": {
+        "kind": "declared_input",
+        "channel_id": "background_mortality_rate",
+        "note": "Compiler lowers demographic background_mortality_rate onto the lower-extremity amputation state."
+      }
     },
     {
       "id": "BJGaPBZg",
@@ -3395,14 +3271,12 @@
       "requires_source_balance": true,
       "remove_value_from_source": true,
       "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "mortality",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "DiabeticNephropathy -> Deceased"
+      "label": "DiabeticNephropathy -> Deceased",
+      "compiler_binding": {
+        "kind": "declared_input",
+        "channel_id": "background_mortality_rate",
+        "note": "Compiler lowers demographic background_mortality_rate onto the diabetic nephropathy state."
+      }
     },
     {
       "id": "eYyocGwO",
@@ -3418,12 +3292,17 @@
           "value": 1
         }
       },
-      "label": "DiabetesEpsd_Incidence_Rate -> DiabetesEpsd Incidence"
+      "label": "DiabetesEpsd_Incidence_Rate -> DiabetesEpsd Incidence",
+      "compiler_binding": {
+        "kind": "declared_input",
+        "channel_id": "incidence_modifier",
+        "note": "Optional source-owned risk-factor relationships can lower an incidence modifier onto this diabetes incidence-rate-to-incidence surrogate link."
+      }
     },
     {
       "id": "vK2oNfec",
       "source": "4J5E1Abn",
-      "target": "AsthmaEpsd",
+      "target": "DiabetesEpsd",
       "requires_source_balance": true,
       "remove_value_from_source": false,
       "value_to_target_operator": "add",
@@ -3434,20 +3313,6 @@
         }
       },
       "label": "DiabetesEpsd Incidence -> DiabetesEpsd"
-    },
-    {
-      "id": "8g0Xnawu",
-      "source": "PjHF9FHh",
-      "target": "4J5E1Abn",
-      "value_to_target_operator": "multiply",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "label": "rf-all -> DiabetesEpsd Incidence"
     },
     {
       "id": "vsGev2e1",
@@ -3791,7 +3656,7 @@
     },
     {
       "id": "ZhJ6viGG",
-      "source": "AsthmaEpsd",
+      "source": "DiabetesEpsd",
       "target": "DgmlYgBJ",
       "value_to_target_operator": "add",
       "remove_value_from_source": false,
@@ -3819,245 +3684,6 @@
       "id": "Uqzmzv8q",
       "source": "ls9qwy72",
       "target": "0X7SrCXK",
-      "value_to_target_operator": "add",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "fRvRk0tM",
-      "source": "lrst0woc",
-      "target": "5p5rIiTd",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "IMG55bhT",
-      "source": "ls9txte5",
-      "target": "979lBOrq",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "VamKLxW0",
-      "source": "ls9u4iq6",
-      "target": "q6foBZs3",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "H574ZWSU",
-      "source": "ls9tmkpe",
-      "target": "Jj9sztq7",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "1fb6koAd",
-      "source": "ls9ttf2m",
-      "target": "B4SjgqET",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "bprU6NZs",
-      "source": "ls9tsvuf",
-      "target": "5p5rIiTd",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "dR816Ar5",
-      "source": "lrsnavq2",
-      "target": "B4SjgqET",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "xOxfySRX",
-      "source": "ls9txmx1",
-      "target": "979lBOrq",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "5QX3ZDiA",
-      "source": "ls9tlsbv",
-      "target": "Jj9sztq7",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "TGrVOiZl",
-      "source": "ls9u41gm",
-      "target": "q6foBZs3",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "zVEcObR2",
-      "source": "4J5E1Abn",
-      "target": "5p5rIiTd",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "zkeXqPc4",
-      "source": "4J5E1Abn",
-      "target": "B4SjgqET",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "jefAPzPJ",
-      "source": "4J5E1Abn",
-      "target": "Jj9sztq7",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "DCnu2pax",
-      "source": "4J5E1Abn",
-      "target": "q6foBZs3",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "LvEbfVOi",
-      "source": "4J5E1Abn",
-      "target": "979lBOrq",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "pfDEgvPv",
-      "source": "HaYRxeQQ",
-      "target": "DXhAVyOP",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "B48YPJzw",
-      "source": "mrGezI4c",
-      "target": "DXhAVyOP",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "DbLhgNYh",
-      "source": "Disability",
-      "target": "DXhAVyOP",
       "value_to_target_operator": "add",
       "remove_value_from_source": false,
       "generate_array": {
@@ -4287,16 +3913,6 @@
     {
       "method": "generate_balance",
       "batch": false,
-      "narration": "All Constants and Functions are initialised",
-      "included_source_nodes": [
-        "BXOLckIN",
-        "oGP2Nze1",
-        "PjHF9FHh"
-      ]
-    },
-    {
-      "method": "generate_balance",
-      "batch": false,
       "narration": "Generate the base values of the surrogate nodes",
       "included_source_nodes": [
         "ls9rc6e6",
@@ -4312,14 +3928,6 @@
         "ls9r0u95",
         "lrste7nj",
         "4J5E1Abn"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "batch": false,
-      "narration": "Modify surrogate",
-      "included_edges": [
-        "8g0Xnawu"
       ]
     },
     {
@@ -4352,8 +3960,7 @@
         "33IvsrBr",
         "8t0hevNa",
         "NHHJ4xJa",
-        "jNnbhWqn",
-        "DXhAVyOP"
+        "jNnbhWqn"
       ]
     },
     {
@@ -4397,9 +4004,7 @@
         "ls9t0ml2",
         "ls9t13d8",
         "ls9t1x51",
-        "nLErvery",
-        "HaYRxeQQ",
-        "mrGezI4c"
+        "nLErvery"
       ]
     },
     {
@@ -4478,6 +4083,14 @@
         "CBO3f2cM",
         "Ridysv4o",
         "eYyocGwO"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Add diabetes incidence to episode state",
+      "included_edges": [
+        "vK2oNfec"
       ]
     },
     {
@@ -4568,23 +4181,6 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
-      "narration": "Multiply PopReached by Coverage and PIN",
-      "included_edges": [
-        "fRvRk0tM",
-        "bprU6NZs",
-        "IMG55bhT",
-        "xOxfySRX",
-        "VamKLxW0",
-        "TGrVOiZl",
-        "H574ZWSU",
-        "5QX3ZDiA",
-        "1fb6koAd",
-        "dR816Ar5"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "batch": false,
       "narration": "Record HYL",
       "included_edges": [
         "4LTJKWna",
@@ -4594,26 +4190,11 @@
       ]
     },
     {
-      "method": "push_balance_to_edges",
-      "narration": "Initialise Economic Value with HYL",
-      "included_edges": [
-        "DbLhgNYh"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "narration": "Scale Economic Value by GDP per capita and LFP rate",
-      "included_edges": [
-        "pfDEgvPv",
-        "B48YPJzw"
-      ]
-    },
-    {
       "method": "age",
       "batch": false,
       "narration": "Ageing the populations",
       "included_source_nodes": [
-        "AsthmaEpsd",
+        "DiabetesEpsd",
         "ls9qw5uh",
         "ls9qwy35",
         "ls9qwy72"
@@ -4709,12 +4290,6 @@
         "y8CnO3tw",
         "9MuKrWrv",
         "zntB8xaS",
-        "5p5rIiTd",
-        "979lBOrq",
-        "q6foBZs3",
-        "Jj9sztq7",
-        "B4SjgqET",
-        "DXhAVyOP",
         "ResourcePopulationReached_NeuropathyScr",
         "ResourcePopulationReached_RetinopathyScrn",
         "ResourcePopulationReached_StdGlycControl",

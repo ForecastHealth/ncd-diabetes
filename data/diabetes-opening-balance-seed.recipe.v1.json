@@ -1,0 +1,30 @@
+{
+  "schema": "forecast-health.component-seeding-recipe.v1",
+  "module_id": "diabetes_epidemiology_core",
+  "owner": {
+    "repo_id": "ncd-diabetes"
+  },
+  "purpose": "Describe how a compiler should seed diabetes opening balances from demographic population and diabetes prevalence.",
+  "inputs": [
+    {
+      "input_id": "population_at_risk_opening",
+      "owner_module_id": "demographic_substrate",
+      "shape": "2x101"
+    },
+    {
+      "input_id": "diabetes_prevalence",
+      "owner_module_id": "diabetes_epidemiology_core",
+      "shape": "2x101"
+    }
+  ],
+  "outputs": [
+    {
+      "target": "DiabetesEpsd",
+      "rule": "population_at_risk_opening * diabetes_prevalence"
+    }
+  ],
+  "notes": [
+    "The demographic module owns the upstream population substrate.",
+    "The compiler lowers this recipe into an init-only prevalence allocation before the first timestep."
+  ]
+}

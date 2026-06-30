@@ -1,1 +1,0 @@
-# This file makes the analytics directory a Python package.
