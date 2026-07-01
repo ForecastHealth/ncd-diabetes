@@ -1,0 +1,133 @@
+{
+  "schema": "ncd-monolith-reference-provenance.v1",
+  "disease_slug": "ncd-diabetes",
+  "target_repo_path": "/Users/rory/Models/ncd-diabetes",
+  "artifact_role": "legacy_reference_specimen_for_audit_and_parity_work",
+  "active_surface_warning": "This recovered model is a legacy monolithic reference specimen. It is not an active module surface, not a recommended architecture, and not evidence that demography, risk factors, economic metrics, resources, or client-side scenario logic should live inside the current diabetes module.",
+  "recovered_model": {
+    "target_path": "monolith-reference/model.json",
+    "sha256": "eba8be2be0895a58c8b48c2ec0e2ea4f210ba5f90dfc5889a16579d3eb4f2169",
+    "source_repo_path": "/Users/rory/Models/ncd-diabetes",
+    "source_commit": "d9bc894c86e0d7433bd5dd39497cdff4c37833d4",
+    "source_commit_date": "2026-06-17T11:16:21+10:00",
+    "source_branch_context": "origin/investment-case branch tip before local diabetes module-cleanup commits; the current local investment-case branch is ahead after cleanup.",
+    "source_path": "model.json",
+    "source_commit_subject": "Add clinical resource module",
+    "top_level_keys": [
+      "links",
+      "metadata",
+      "nodes",
+      "runtime",
+      "subroutines"
+    ],
+    "runtime": {
+      "startYear": 2025,
+      "endYear": 2046,
+      "synchronous_iterations": 10
+    },
+    "node_count": 210,
+    "link_count": 294,
+    "subroutine_count": 56,
+    "metadata": {
+      "name": "Diabetes",
+      "author": "Avenir, Roglic, Bertram, Watts, et al.",
+      "description": "The Diabetes Base Model created by Avenir Health and WHO",
+      "version": "2.5",
+      "file_id": "diabetes"
+    }
+  },
+  "why_this_is_defensible": [
+    "The selected file is the last upstream pre-cleanup diabetes model on origin/investment-case. The subsequent local commits 09c32ba, 102e6dd, and fd51b08 are cleanup commits that deliberately replaced the old monolithic surface with the current module-contract surface.",
+    "The file is a complete executable-style botech model with runtime, nodes, links, and subroutines. It has 210 nodes, 294 links, 56 subroutines, runtime 2025-2046, and synchronous_iterations 10.",
+    "The graph contains the old monolithic wiring families that cleanup needed to preserve for audit, including diabetes disease states, population/demographic mechanics, tobacco, alcohol, physical-inactivity and fiber risk-factor paths, DALY/YLD/YLL and economic output paths, clinical diabetes interventions, and resource/population-reached nodes.",
+    "The same bytes also appear at diabetes commit 1628ec449295038ec6fbdc873b58ed8b0e20d663, so d9bc894 is not a one-off generated variant; it preserves the June 2026 transition-system monolith at the pre-cleanup branch tip."
+  ],
+  "diabetes_repo_output_evidence": [
+    {
+      "repo_path": "/Users/rory/Models/ncd-diabetes",
+      "commit": "c69ae2b6261bcbcd56883838f799caac818a540a",
+      "commit_date": "2025-09-02T11:13:18+08:00",
+      "path": "results/analytics_results_20250902_111239.csv",
+      "evidence": "This diabetes repository commit added the analytics result file later referenced by the upload repository SOURCE_FILES config."
+    }
+  ],
+  "upload_repository_evidence": {
+    "repo_path": "/Users/rory/Documents/who-global-ncd-investment-case-uploads",
+    "strength": "moderate",
+    "summary": "The upload repository links diabetes outputs to the investment-case result-stitching workflow, but it does not contain the exact phrase Saving Lives, Spending Less in reachable git history and does not prove byte-for-byte that the selected June 2026 monolith produced the September 2025 CSV. It does prove that this diabetes model family fed the stitched upload outputs.",
+    "evidence": [
+      {
+        "commit": "ef3c83121d3384a19891807bb1dd0271dca0e3d4",
+        "commit_date": "2025-08-21T21:08:42+08:00",
+        "path": "process_csv_files.py",
+        "lines_or_behavior": "Reads SOURCE_FILES, copies each listed CSV, loads it with pandas, concatenates model outputs, filters scenarios/countries/time horizon, and writes all_results_<timestamp>.csv.",
+        "supports": "This is the result-stitching command surface for combining disease-model output CSVs into upload-ready result files."
+      },
+      {
+        "commit": "17a817a4d8b17e3790790da00f4059bf39298738",
+        "commit_date": "2025-09-02T12:11:34+08:00",
+        "path": "SOURCE_FILES",
+        "lines_or_behavior": "Line 3 points to /home/rory/Models/ncd-diabetes/results/analytics_results_20250902_111239.csv.",
+        "supports": "The upload workflow explicitly includes diabetes repository outputs as an input source."
+      },
+      {
+        "commit": "9c38587631d085f3774dc7beac378e0ac480e23c",
+        "commit_date": "2025-09-03T16:29:15+08:00",
+        "path": "all_results_20250903_162424.csv",
+        "lines_or_behavior": "CSV inspection found 348,183 rows total, including 56,100 rows with source=diabetes across 10 diabetes scenarios.",
+        "supports": "The stitched upload output retained diabetes rows from the model-output family."
+      },
+      {
+        "commit": "014fbe1dac3b0fb9c48a3ba1cd587b47be4ee767",
+        "commit_date": "2025-09-03T13:33:25+08:00",
+        "path": "INSTRUCTIONS_FOR_TOBACCO_CANCER_CALCULATIONS.md",
+        "lines_or_behavior": "Describes this repository as collecting results from systems-dynamics models from CVD, Diabetes, Asthma, and COPD repositories through SOURCE_FILES, with process_csv_files.py aggregating results and filtering the time horizon and country set.",
+        "supports": "This explicitly describes the model-output family and stitching workflow that included diabetes."
+      }
+    ]
+  },
+  "model_assurance_evidence": {
+    "used_as_primary_evidence": false,
+    "summary": "The optional model-assurance repository is on a working branch with a large untracked assurance tree, so it is not used as primary provenance. It does provide low-weight corroboration that June 2026 assurance material referred to ncd-diabetes component boundaries, model cards, run certificates, and Appendix 3 diabetes scenarios.",
+    "read_paths": [
+      "modules/ncd-diabetes/index.v1.json",
+      "assurance-registry/ncd-diabetes/model-card.v1.json",
+      "assurance-registry/ncd-diabetes/run-certificate.v1.json",
+      "source-registry/client-source-registry.v1.json"
+    ]
+  },
+  "rejected_alternatives": [
+    {
+      "commit": "19a9f7adf482a72e382e1ccd6ebce9139956cbe4",
+      "reason_rejected": "A plausible September 2025 investment-case-era monolith near the upload results, but it predates the 2025 runtime horizon, population bridge, transition-system method, and June 2026 pre-cleanup branch-tip state. It is less useful as the reference for behavior potentially lost during the June 2026 cleanup."
+    },
+    {
+      "commit": "034328a",
+      "reason_rejected": "Includes the 2025-2046 runtime horizon but predates later absolute population/resource bridge and transition-system changes; the graph is smaller at 205 nodes, 279 links, and 54 subroutines."
+    },
+    {
+      "commit": "9b3be15",
+      "reason_rejected": "Tagged early risk-factor implementation with a smaller, older graph and no burden/economic output family; useful history but not the fullest legacy monolith needed for cleanup parity."
+    },
+    {
+      "path": "modular-composition/**/composed.model.json at d9bc894",
+      "reason_rejected": "Those files are generated modular-composition artifacts, not the single legacy monolithic source model requested for this reference specimen."
+    }
+  ],
+  "uncertainty": [
+    "The upload repository evidence is moderate rather than exact: it links diabetes repository outputs and systems-dynamics model results to the stitching workflow, but does not contain the exact Saving Lives, Spending Less phrase in reachable git history.",
+    "The selected June 2026 monolith is later than the September 2025 result CSV referenced by the upload repository. It is selected because the requested cleanup-parity specimen is best represented by the last pre-cleanup monolithic diabetes model, not because the upload repository proves exact byte-for-byte production of that CSV.",
+    "The legacy graph contains cross-domain internals by design. That is recorded for audit only and must be re-expressed through current module contracts and compiler-owned composition if any behavior is still required."
+  ],
+  "self_adversarial_check": {
+    "is_monolithic_botech_model": true,
+    "monolithic_shape_evidence": "The recovered JSON has runtime, nodes, links, and subroutines with 210 nodes, 294 links, and 56 subroutines.",
+    "provenance_supports_choice": true,
+    "support_limit": "Upload evidence supports the diabetes result-output family and stitching workflow, not an exact publication-title string or exact byte-for-byte production lineage.",
+    "only_allowed_files_added": [
+      "monolith-reference/model.json",
+      "monolith-reference/provenance.json"
+    ],
+    "overstatement_check": "The provenance labels upload evidence as moderate and states the exact uncertainty."
+  }
+}
