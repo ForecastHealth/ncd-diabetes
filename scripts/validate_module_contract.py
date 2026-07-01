@@ -50,7 +50,7 @@ STALE_SCRIPT_NAMES = {
     "verify_components.py",
     "check_results_status.py",
 }
-STALE_MODEL_NODE_IDS = {"AsthmaEpsd", "BXOLckIN", "oGP2Nze1", "PjHF9FHh", "DXhAVyOP", "HaYRxeQQ", "mrGezI4c"}
+STALE_MODEL_NODE_IDS = {"AsthmaEpsd", "Births", "BXOLckIN", "oGP2Nze1", "PjHF9FHh", "DXhAVyOP", "HaYRxeQQ", "mrGezI4c"}
 STALE_MODEL_LINK_IDS = {"8g0Xnawu", "pfDEgvPv", "B48YPJzw", "DbLhgNYh"}
 BACKGROUND_MORTALITY_LINK_IDS = {"9lHjCUmt", "tJOW1hhc", "STz4wrnX", "BJGaPBZg"}
 STALE_POP_REACHED_NODE_IDS = {"5p5rIiTd", "979lBOrq", "q6foBZs3", "Jj9sztq7", "B4SjgqET"}

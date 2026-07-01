@@ -9,12 +9,14 @@
     {
       "input_id": "population_at_risk_opening",
       "owner_module_id": "demographic_substrate",
-      "shape": "2x101"
+      "shape": "2x101",
+      "units": "people"
     },
     {
       "input_id": "diabetes_prevalence",
       "owner_module_id": "diabetes_epidemiology_core",
-      "shape": "2x101"
+      "shape": "2x101",
+      "units": "prevalence"
     }
   ],
   "outputs": [

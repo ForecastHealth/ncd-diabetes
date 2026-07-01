@@ -312,21 +312,6 @@
       ]
     },
     {
-      "id": "Births",
-      "x": 7.98,
-      "y": 47.09,
-      "label": "Births",
-      "description": "Store of the number of births in the population",
-      "balance_type": "array",
-      "order": 2,
-      "flush": true,
-      "color": "#EB7FEF",
-      "tags": [
-        "state"
-      ],
-      "node_type": "FUNCTION"
-    },
-    {
       "id": "DiabetesEpsd",
       "x": 15.69,
       "y": 76.92,
