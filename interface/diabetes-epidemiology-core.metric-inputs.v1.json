@@ -1,0 +1,838 @@
+{
+  "compiler_context": {
+    "disease_free_population": "DsFreeSus is supplied by compiler demographic lowering where it is no longer owned by the cleaned disease graph.",
+    "runtime_rows": "The compiler/runtime must expose the referenced state, death and weight rows before old metric graph machinery can be removed."
+  },
+  "legacy_machinery_status": "current_graph_still_contains_metric_calculation_nodes_pending_parity_removal",
+  "metric_modules": {
+    "metric-health-burden": {
+      "inputs": {
+        "daly": [
+          {
+            "output_label": "DALYs",
+            "output_node_id": "zntB8xaS",
+            "yld_yll_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "vsGev2e1",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLD-DsFreeSus",
+                "source_node_id": "5HaLc0YJ",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "hKVlckjy",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLL-LowerExtrmAmpt",
+                "source_node_id": "y8CnO3tw",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "akr4yatx",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLL-DiabeticRetinopathy",
+                "source_node_id": "BsFbESJ7",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "1VFaOz2P",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLL-DsFreeSus",
+                "source_node_id": "gZ18mp9u",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "s9L3UN12",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLL-DiabetesEpsd",
+                "source_node_id": "bC5AM0sN",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "LSrTyzPM",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLD-DiabetesEpsd",
+                "source_node_id": "DgmlYgBJ",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "rpfK8YkN",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLD-DiabeticRetinopathy",
+                "source_node_id": "yTN2TadA",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "arYpAaNN",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLD-LowerExtrmAmpt",
+                "source_node_id": "MVkktvoD",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "6plqybP6",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLL-DiabeticNephropathy",
+                "source_node_id": "9MuKrWrv",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "JCq1Ss6m",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLD-DiabeticNephropathy",
+                "source_node_id": "0X7SrCXK",
+                "subroutines": [
+                  {
+                    "index": 20,
+                    "method": "push_balance_to_edges",
+                    "narration": "Record DALYs from YLL, YLD"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "zntB8xaS"
+              }
+            ]
+          }
+        ],
+        "yld": [
+          {
+            "disability_weight_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "0KwQNYZy",
+                "operator": "multiply",
+                "postprocessing": null,
+                "source_label": "Healthy_Disability_Weight",
+                "source_node_id": "lrso71jf",
+                "subroutines": [
+                  {
+                    "index": 19,
+                    "method": "push_balance_to_edges",
+                    "narration": "Multiply YLDs by Disability Weights"
+                  }
+                ],
+                "target_label": "YLD-DsFreeSus",
+                "target_node_id": "5HaLc0YJ"
+              }
+            ],
+            "output_label": "YLD-DsFreeSus",
+            "output_node_id": "5HaLc0YJ",
+            "state_inputs": [
+              {
+                "generator_kind": "compiler_generated_demographic_residual_population",
+                "label": "Disease-free population context supplied by compiler lowering",
+                "link_id": "compiler::<disease>::disease_free_population_context",
+                "operator": "context_input",
+                "postprocessing": null,
+                "source_label": "DsFreeSus",
+                "source_node_id": "DsFreeSus",
+                "subroutines": [],
+                "target_label": "YLD-DsFreeSus",
+                "target_node_id": null
+              }
+            ]
+          },
+          {
+            "disability_weight_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "YnJZyQOq",
+                "operator": "multiply",
+                "postprocessing": null,
+                "source_label": "DiabetesEpsd_Disability_Weight",
+                "source_node_id": "lrso7mga",
+                "subroutines": [
+                  {
+                    "index": 19,
+                    "method": "push_balance_to_edges",
+                    "narration": "Multiply YLDs by Disability Weights"
+                  }
+                ],
+                "target_label": "YLD-DiabetesEpsd",
+                "target_node_id": "DgmlYgBJ"
+              }
+            ],
+            "output_label": "YLD-DiabetesEpsd",
+            "output_node_id": "DgmlYgBJ",
+            "state_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "ZhJ6viGG",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "DiabetesEpsd",
+                "source_node_id": "DiabetesEpsd",
+                "subroutines": [
+                  {
+                    "index": 18,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add Prevalence to YLDs"
+                  }
+                ],
+                "target_label": "YLD-DiabetesEpsd",
+                "target_node_id": "DgmlYgBJ"
+              }
+            ]
+          },
+          {
+            "disability_weight_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "RNMLC6DY",
+                "operator": "multiply",
+                "postprocessing": null,
+                "source_label": "DiabeticRetinopathy_Disability_Weight",
+                "source_node_id": "ls9rs1ih",
+                "subroutines": [
+                  {
+                    "index": 19,
+                    "method": "push_balance_to_edges",
+                    "narration": "Multiply YLDs by Disability Weights"
+                  }
+                ],
+                "target_label": "YLD-DiabeticRetinopathy",
+                "target_node_id": "yTN2TadA"
+              }
+            ],
+            "output_label": "YLD-DiabeticRetinopathy",
+            "output_node_id": "yTN2TadA",
+            "state_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "WQ9p8CLR",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "DiabeticRetinopathy",
+                "source_node_id": "ls9qw5uh",
+                "subroutines": [
+                  {
+                    "index": 18,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add Prevalence to YLDs"
+                  }
+                ],
+                "target_label": "YLD-DiabeticRetinopathy",
+                "target_node_id": "yTN2TadA"
+              }
+            ]
+          },
+          {
+            "disability_weight_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "ViUkaLXY",
+                "operator": "multiply",
+                "postprocessing": null,
+                "source_label": "LowerExtrmAmpt_Disability_Weight",
+                "source_node_id": "ls9rvbes",
+                "subroutines": [
+                  {
+                    "index": 19,
+                    "method": "push_balance_to_edges",
+                    "narration": "Multiply YLDs by Disability Weights"
+                  }
+                ],
+                "target_label": "YLD-LowerExtrmAmpt",
+                "target_node_id": "MVkktvoD"
+              }
+            ],
+            "output_label": "YLD-LowerExtrmAmpt",
+            "output_node_id": "MVkktvoD",
+            "state_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "xNY01gKp",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "LowerExtrmAmpt",
+                "source_node_id": "ls9qwy35",
+                "subroutines": [
+                  {
+                    "index": 18,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add Prevalence to YLDs"
+                  }
+                ],
+                "target_label": "YLD-LowerExtrmAmpt",
+                "target_node_id": "MVkktvoD"
+              }
+            ]
+          },
+          {
+            "disability_weight_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "Y5uPuBf2",
+                "operator": "multiply",
+                "postprocessing": null,
+                "source_label": "DiabeticNephropathy_Disability_Weight",
+                "source_node_id": "ls9y3aia",
+                "subroutines": [
+                  {
+                    "index": 19,
+                    "method": "push_balance_to_edges",
+                    "narration": "Multiply YLDs by Disability Weights"
+                  }
+                ],
+                "target_label": "YLD-DiabeticNephropathy",
+                "target_node_id": "0X7SrCXK"
+              }
+            ],
+            "output_label": "YLD-DiabeticNephropathy",
+            "output_node_id": "0X7SrCXK",
+            "state_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "Uqzmzv8q",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "DiabeticNephropathy",
+                "source_node_id": "ls9qwy72",
+                "subroutines": [
+                  {
+                    "index": 18,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add Prevalence to YLDs"
+                  }
+                ],
+                "target_label": "YLD-DiabeticNephropathy",
+                "target_node_id": "0X7SrCXK"
+              }
+            ]
+          }
+        ],
+        "yll": [
+          {
+            "death_inputs": [],
+            "life_lost_weight_rule": [],
+            "output_label": "YLL-DsFreeSus",
+            "output_node_id": "gZ18mp9u"
+          },
+          {
+            "death_inputs": [
+              {
+                "generator_kind": "generator:subset",
+                "label": null,
+                "link_id": "nNwW4CQS",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "Deceased-DiabetesEpsd",
+                "source_node_id": "i7ihZagV",
+                "subroutines": [],
+                "target_label": "YLL-DiabetesEpsd",
+                "target_node_id": "bC5AM0sN"
+              }
+            ],
+            "life_lost_weight_rule": [
+              {
+                "generator": {
+                  "method": "subset",
+                  "parameters": {
+                    "fill_value": 0,
+                    "method": "single_value",
+                    "parameters": {
+                      "value": 1
+                    },
+                    "slice_indices": [
+                      [
+                        0,
+                        2
+                      ],
+                      [
+                        0,
+                        80
+                      ]
+                    ]
+                  }
+                },
+                "generator_kind": "generator:subset",
+                "link_id": "nNwW4CQS"
+              }
+            ],
+            "output_label": "YLL-DiabetesEpsd",
+            "output_node_id": "bC5AM0sN"
+          },
+          {
+            "death_inputs": [
+              {
+                "generator_kind": "generator:subset",
+                "label": null,
+                "link_id": "k9NpYYol",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "Deceased-DiabeticRetinopathy",
+                "source_node_id": "T9GTSaTy",
+                "subroutines": [],
+                "target_label": "YLL-DiabeticRetinopathy",
+                "target_node_id": "BsFbESJ7"
+              }
+            ],
+            "life_lost_weight_rule": [
+              {
+                "generator": {
+                  "method": "subset",
+                  "parameters": {
+                    "fill_value": 0,
+                    "method": "single_value",
+                    "parameters": {
+                      "value": 1
+                    },
+                    "slice_indices": [
+                      [
+                        0,
+                        2
+                      ],
+                      [
+                        0,
+                        80
+                      ]
+                    ]
+                  }
+                },
+                "generator_kind": "generator:subset",
+                "link_id": "k9NpYYol"
+              }
+            ],
+            "output_label": "YLL-DiabeticRetinopathy",
+            "output_node_id": "BsFbESJ7"
+          },
+          {
+            "death_inputs": [
+              {
+                "generator_kind": "generator:subset",
+                "label": null,
+                "link_id": "13L1Jqrn",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "Deceased-LowerExtrmAmpt",
+                "source_node_id": "lSONL0qA",
+                "subroutines": [],
+                "target_label": "YLL-LowerExtrmAmpt",
+                "target_node_id": "y8CnO3tw"
+              }
+            ],
+            "life_lost_weight_rule": [
+              {
+                "generator": {
+                  "method": "subset",
+                  "parameters": {
+                    "fill_value": 0,
+                    "method": "single_value",
+                    "parameters": {
+                      "value": 1
+                    },
+                    "slice_indices": [
+                      [
+                        0,
+                        2
+                      ],
+                      [
+                        0,
+                        80
+                      ]
+                    ]
+                  }
+                },
+                "generator_kind": "generator:subset",
+                "link_id": "13L1Jqrn"
+              }
+            ],
+            "output_label": "YLL-LowerExtrmAmpt",
+            "output_node_id": "y8CnO3tw"
+          },
+          {
+            "death_inputs": [
+              {
+                "generator_kind": "generator:subset",
+                "label": null,
+                "link_id": "Vew01LGX",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "Deceased-DiabeticNephropathy",
+                "source_node_id": "e6CA3j9O",
+                "subroutines": [],
+                "target_label": "YLL-DiabeticNephropathy",
+                "target_node_id": "9MuKrWrv"
+              }
+            ],
+            "life_lost_weight_rule": [
+              {
+                "generator": {
+                  "method": "subset",
+                  "parameters": {
+                    "fill_value": 0,
+                    "method": "single_value",
+                    "parameters": {
+                      "value": 1
+                    },
+                    "slice_indices": [
+                      [
+                        0,
+                        2
+                      ],
+                      [
+                        0,
+                        80
+                      ]
+                    ]
+                  }
+                },
+                "generator_kind": "generator:subset",
+                "link_id": "Vew01LGX"
+              }
+            ],
+            "output_label": "YLL-DiabeticNephropathy",
+            "output_node_id": "9MuKrWrv"
+          }
+        ]
+      },
+      "method_boundary": "The metric module calculates YLD, YLL and DALY from raw state, death and weight inputs rather than consuming existing DALY graph nodes as final truth.",
+      "method_id": "health_burden_yll_yld_daly"
+    },
+    "metric-healthy-years-lived": {
+      "inputs": [
+        {
+          "contribution_label": "DsFreeSus HYL",
+          "contribution_node_id": "lrste7nj",
+          "current_graph_output": "state-level HYL contribution row",
+          "health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_HYL -> DsFreeSus HYL",
+              "link_id": "LzXYrpyL",
+              "operator": "multiply",
+              "postprocessing": null,
+              "source_label": "Healthy_HYL",
+              "source_node_id": "UZumScoj",
+              "subroutines": [
+                {
+                  "index": 12,
+                  "method": "push_balance_to_edges",
+                  "narration": "Calculate Disability Surrogates"
+                }
+              ],
+              "target_label": "DsFreeSus HYL",
+              "target_node_id": "lrste7nj"
+            }
+          ],
+          "method": "avenir_blended_health_weight",
+          "state_inputs": [
+            {
+              "generator_kind": "compiler_generated_demographic_residual_population",
+              "label": "Disease-free population context supplied by compiler lowering",
+              "link_id": "compiler::<disease>::disease_free_population_context",
+              "operator": "context_input",
+              "postprocessing": null,
+              "source_label": "DsFreeSus",
+              "source_node_id": "DsFreeSus",
+              "subroutines": [],
+              "target_label": "DsFreeSus HYL",
+              "target_node_id": null
+            }
+          ]
+        },
+        {
+          "contribution_label": "DiabetesEpsd HYL",
+          "contribution_node_id": "lrwzsau5",
+          "current_graph_output": "state-level HYL contribution row",
+          "health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Combined_HYL -> DiabetesEpsd HYL",
+              "link_id": "fKUbIdOO",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "Combined_HYL",
+              "source_node_id": "jNnbhWqn",
+              "subroutines": [
+                {
+                  "index": 12,
+                  "method": "push_balance_to_edges",
+                  "narration": "Calculate Disability Surrogates"
+                }
+              ],
+              "target_label": "DiabetesEpsd HYL",
+              "target_node_id": "lrwzsau5"
+            }
+          ],
+          "method": "avenir_blended_health_weight",
+          "state_inputs": [
+            {
+              "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
+              "label": "DiabetesEpsd -> DiabetesEpsd HYL",
+              "link_id": "4LTJKWna",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "DiabetesEpsd",
+              "source_node_id": "DiabetesEpsd",
+              "subroutines": [
+                {
+                  "index": 16,
+                  "method": "push_balance_to_edges",
+                  "narration": "Record HYL"
+                }
+              ],
+              "target_label": "DiabetesEpsd HYL",
+              "target_node_id": "lrwzsau5"
+            }
+          ]
+        },
+        {
+          "contribution_label": "DiabeticRetinopathy HYL",
+          "contribution_node_id": "ls9rdcin",
+          "current_graph_output": "state-level HYL contribution row",
+          "health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Combined_HYL -> DiabeticRetinopathy HYL",
+              "link_id": "Iot6gtQ5",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "Combined_HYL",
+              "source_node_id": "NHHJ4xJa",
+              "subroutines": [
+                {
+                  "index": 12,
+                  "method": "push_balance_to_edges",
+                  "narration": "Calculate Disability Surrogates"
+                }
+              ],
+              "target_label": "DiabeticRetinopathy HYL",
+              "target_node_id": "ls9rdcin"
+            }
+          ],
+          "method": "avenir_blended_health_weight",
+          "state_inputs": [
+            {
+              "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
+              "label": "DiabeticRetinopathy -> DiabeticRetinopathy HYL",
+              "link_id": "bWI3nekk",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "DiabeticRetinopathy",
+              "source_node_id": "ls9qw5uh",
+              "subroutines": [
+                {
+                  "index": 16,
+                  "method": "push_balance_to_edges",
+                  "narration": "Record HYL"
+                }
+              ],
+              "target_label": "DiabeticRetinopathy HYL",
+              "target_node_id": "ls9rdcin"
+            }
+          ]
+        },
+        {
+          "contribution_label": "LowerExtrmAmpt HYL",
+          "contribution_node_id": "ls9re0t3",
+          "current_graph_output": "state-level HYL contribution row",
+          "health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Combined_HYL -> LowerExtrmAmpt HYL",
+              "link_id": "AZRSbuz1",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "Combined_HYL",
+              "source_node_id": "33IvsrBr",
+              "subroutines": [
+                {
+                  "index": 12,
+                  "method": "push_balance_to_edges",
+                  "narration": "Calculate Disability Surrogates"
+                }
+              ],
+              "target_label": "LowerExtrmAmpt HYL",
+              "target_node_id": "ls9re0t3"
+            }
+          ],
+          "method": "avenir_blended_health_weight",
+          "state_inputs": [
+            {
+              "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
+              "label": "LowerExtrmAmpt -> LowerExtrmAmpt HYL",
+              "link_id": "bJws4SbB",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "LowerExtrmAmpt",
+              "source_node_id": "ls9qwy35",
+              "subroutines": [
+                {
+                  "index": 16,
+                  "method": "push_balance_to_edges",
+                  "narration": "Record HYL"
+                }
+              ],
+              "target_label": "LowerExtrmAmpt HYL",
+              "target_node_id": "ls9re0t3"
+            }
+          ]
+        },
+        {
+          "contribution_label": "DiabeticNephropathy HYL",
+          "contribution_node_id": "ls9reknk",
+          "current_graph_output": "state-level HYL contribution row",
+          "health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Combined_HYL -> DiabeticNephropathy HYL",
+              "link_id": "NlBimlu7",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "Combined_HYL",
+              "source_node_id": "8t0hevNa",
+              "subroutines": [
+                {
+                  "index": 12,
+                  "method": "push_balance_to_edges",
+                  "narration": "Calculate Disability Surrogates"
+                }
+              ],
+              "target_label": "DiabeticNephropathy HYL",
+              "target_node_id": "ls9reknk"
+            }
+          ],
+          "method": "avenir_blended_health_weight",
+          "state_inputs": [
+            {
+              "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
+              "label": "DiabeticNephropathy -> DiabeticNephropathy HYL",
+              "link_id": "LFelEnpu",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "DiabeticNephropathy",
+              "source_node_id": "ls9qwy72",
+              "subroutines": [
+                {
+                  "index": 16,
+                  "method": "push_balance_to_edges",
+                  "narration": "Record HYL"
+                }
+              ],
+              "target_label": "DiabeticNephropathy HYL",
+              "target_node_id": "ls9reknk"
+            }
+          ]
+        }
+      ],
+      "method_boundary": "The metric module calculates HYL from state population and health-weight inputs. Disease graphs still contain legacy contribution machinery until parity-driven removal is complete.",
+      "method_id": "healthy_years_lived"
+    }
+  },
+  "module_id": "diabetes_epidemiology_core",
+  "purpose": "Declare the disease-run outputs and weights consumed by downstream metric modules after one botech scenario run.",
+  "scenario_agnostic": true,
+  "schema": "forecast-health.disease-metric-inputs.v1",
+  "source_model_slug": "ncd-diabetes"
+}
