@@ -599,7 +599,7 @@
       "method_boundary": "The metric module calculates YLD, YLL and DALY from raw state, death and weight inputs rather than consuming existing DALY graph nodes as final truth.",
       "method_id": "health_burden_yll_yld_daly"
     },
-    "metric-healthy-years-lived": {
+    "metric-hyl": {
       "inputs": [
         {
           "contribution_label": "DsFreeSus HYL",
