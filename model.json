@@ -146,20 +146,6 @@
       "node_type": "STATE"
     },
     {
-      "id": "Disability",
-      "x": 110.08,
-      "y": -1.23,
-      "label": "Healthy Years Lived",
-      "description": "A store of disability adjusted life years",
-      "node_type": "STATE",
-      "balance_type": "array",
-      "color": "#FFB255",
-      "flush": true,
-      "tags": [
-        "state"
-      ]
-    },
-    {
       "id": "ls9reknk",
       "x": 55.71,
       "y": -23.52,
@@ -1756,21 +1742,6 @@
       "label": "DiabeticNephropathy_Transform -> DiabeticNephropathy Incidence"
     },
     {
-      "id": "S2Dkmt7a",
-      "source": "lrste7nj",
-      "target": "Disability",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "DsFreeSus HYL -> Healthy Years Lived"
-    },
-    {
       "id": "4LTJKWna",
       "source": "DiabetesEpsd",
       "target": "lrwzsau5",
@@ -1780,21 +1751,6 @@
       "remove_value_from_source": false,
       "value_to_target_operator": "add",
       "label": "DiabetesEpsd -> DiabetesEpsd HYL"
-    },
-    {
-      "id": "qdo9097P",
-      "source": "lrwzsau5",
-      "target": "Disability",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "DiabetesEpsd HYL -> Healthy Years Lived"
     },
     {
       "id": "QDm89Xb6",
@@ -1979,21 +1935,6 @@
       "label": "DiabeticRetinopathy -> DiabeticRetinopathy HYL"
     },
     {
-      "id": "zRxdTWxm",
-      "source": "ls9rdcin",
-      "target": "Disability",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "DiabeticRetinopathy HYL -> Healthy Years Lived"
-    },
-    {
       "id": "bJws4SbB",
       "source": "ls9qwy35",
       "target": "ls9re0t3",
@@ -2005,21 +1946,6 @@
       "label": "LowerExtrmAmpt -> LowerExtrmAmpt HYL"
     },
     {
-      "id": "fW8x2B3C",
-      "source": "ls9re0t3",
-      "target": "Disability",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "LowerExtrmAmpt HYL -> Healthy Years Lived"
-    },
-    {
       "id": "LFelEnpu",
       "source": "ls9qwy72",
       "target": "ls9reknk",
@@ -2029,21 +1955,6 @@
       "remove_value_from_source": false,
       "value_to_target_operator": "add",
       "label": "DiabeticNephropathy -> DiabeticNephropathy HYL"
-    },
-    {
-      "id": "LZfmJlni",
-      "source": "ls9reknk",
-      "target": "Disability",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "DiabeticNephropathy HYL -> Healthy Years Lived"
     },
     {
       "id": "mnnbDhXX",
@@ -4259,7 +4170,6 @@
       "batch": false,
       "narration": "Record ECHO values",
       "included_source_nodes": [
-        "Disability",
         "i7ihZagV",
         "T9GTSaTy",
         "lSONL0qA",
