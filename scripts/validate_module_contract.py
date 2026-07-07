@@ -54,6 +54,25 @@ STALE_MODEL_NODE_IDS = {"AsthmaEpsd", "Births", "BXOLckIN", "oGP2Nze1", "PjHF9FH
 STALE_MODEL_LINK_IDS = {"8g0Xnawu", "pfDEgvPv", "B48YPJzw", "DbLhgNYh"}
 BACKGROUND_MORTALITY_LINK_IDS = {"9lHjCUmt", "tJOW1hhc", "STz4wrnX", "BJGaPBZg"}
 STALE_POP_REACHED_NODE_IDS = {"5p5rIiTd", "979lBOrq", "q6foBZs3", "Jj9sztq7", "B4SjgqET"}
+INTERVENTION_NODE_IDS = {
+    "lrst79uc", "lrst0woc", "lrsnjkmt", "lrsnalk2", "lrso22do", "lrsnavq2",
+    "ls9tdixs", "ls9tdxgx", "ls9tftfr", "ls9tgf2u", "ls9tli5c", "ls9tllxv",
+    "ls9tloqj", "ls9tlsbv", "ls9tlxvf", "ls9tm2qi", "ls9tm6nt", "ls9tmepe",
+    "ls9tmgwr", "ls9tmkpe", "ls9tsmp3", "ls9tsrav", "ls9tsvuf", "ls9ttf2m",
+    "ls9ttil2", "ls9ttm0m", "ls9tx5l9", "ls9txa8s", "ls9txmx1", "ls9txte5",
+    "ls9txz8o", "ls9ty2u5", "ls9u3agu", "ls9u3pq6", "ls9u41gm", "ls9u4cw6",
+    "ls9u4iq6", "ls9u9aty", "ResourcePopulationReached_NeuropathyScr",
+    "ResourcePopulationReached_RetinopathyScrn", "ResourcePopulationReached_StdGlycControl",
+    "ResourcePopulationReached_IntsvGlycControl", "ResourcePopulationReached_NephropathyScr",
+}
+INTERVENTION_PARAMETER_PREFIXES = (
+    "foot_care_",
+    "retinopathy_screening_",
+    "standard_glycaemic_control_",
+    "intensive_glycaemic_control_",
+    "nephropathy_screening_",
+)
+INTERVENTION_TEMPLATE_IDS = {"diabetes_d1", "diabetes_d2", "diabetes_d3", "diabetes_d5"}
 PASSIVE_REPORTING_LINK_IDS = {"S2Dkmt7a", "k9NpYYol", "13L1Jqrn", "Vew01LGX", "nNwW4CQS"}
 JSON_PATH_RE = re.compile(r"^\$\.(nodes|links)\[\?\(@\.id=='([^']+)'\)\]\.(.+)$")
 
@@ -146,9 +165,9 @@ def validate() -> list[str]:
     link_set = set(link_ids)
     node_by_id = {node.get("id"): node for node in model.get("nodes", [])}
     link_by_id = {link.get("id"): link for link in model.get("links", [])}
-    stale_nodes = (STALE_MODEL_NODE_IDS | STALE_POP_REACHED_NODE_IDS) & node_set
+    stale_nodes = (STALE_MODEL_NODE_IDS | STALE_POP_REACHED_NODE_IDS | INTERVENTION_NODE_IDS) & node_set
     if stale_nodes:
-        fail(errors, f"model.json still contains stale risk-factor/economic/asthma nodes: {sorted(stale_nodes)}")
+        fail(errors, f"model.json still contains stale risk-factor/economic/asthma/intervention nodes: {sorted(stale_nodes)}")
     stale_links = STALE_MODEL_LINK_IDS & link_set
     if stale_links:
         fail(errors, f"model.json still contains stale risk-factor/economic links: {sorted(stale_links)}")
@@ -166,6 +185,21 @@ def validate() -> list[str]:
         fail(errors, f"Subroutine references missing link {edge_id}")
     for node_id in sorted(subroutine_node_refs - node_set):
         fail(errors, f"Subroutine references missing node {node_id}")
+    required_extension_slots = {
+        "Calculate Coverage",
+        "Calculate Incidence Effects",
+        "Remove Incidence Effects from 1.0",
+        "Push disease populations to absolute resource population reached",
+        "Modify absolute resource population reached by PIN and coverage",
+    }
+    existing_extension_slots = {
+        item.get("narration")
+        for item in model.get("subroutines", [])
+        if item.get("compiler_extension_slot") == "diabetes_intervention_components"
+    }
+    missing_extension_slots = required_extension_slots - existing_extension_slots
+    if missing_extension_slots:
+        fail(errors, f"Missing diabetes intervention compiler extension slots: {sorted(missing_extension_slots)}")
     surrogate_fanout_edges = set()
     for edge_id in subroutine_edge_refs & link_set:
         edge = link_by_id[edge_id]
@@ -297,6 +331,42 @@ def validate() -> list[str]:
         fail(errors, "Diabetes registry contains cross-module risk-factor parameter ids")
     if any(parameter_id in {"country", "start_year", "end_year"} for parameter_id in registry_set):
         fail(errors, "Runtime context appears as scenario-editable registry parameters")
+    stale_intervention_parameters = [
+        parameter_id for parameter_id in registry_set
+        if any(str(parameter_id).startswith(prefix) for prefix in INTERVENTION_PARAMETER_PREFIXES)
+    ]
+    if stale_intervention_parameters:
+        fail(errors, f"Diabetes registry still owns intervention parameters: {sorted(stale_intervention_parameters)}")
+    stale_intervention_parameters = [
+        parameter_id for parameter_id in registry_set
+        if any(str(parameter_id).startswith(prefix) for prefix in INTERVENTION_PARAMETER_PREFIXES)
+    ]
+    if stale_intervention_parameters:
+        fail(errors, f"Diabetes registry still owns intervention parameters: {sorted(stale_intervention_parameters)}")
+    stale_intervention_parameters = [
+        parameter_id for parameter_id in registry_set
+        if any(str(parameter_id).startswith(prefix) for prefix in INTERVENTION_PARAMETER_PREFIXES)
+    ]
+    if stale_intervention_parameters:
+        fail(errors, f"Diabetes registry still owns intervention parameters: {sorted(stale_intervention_parameters)}")
+    stale_intervention_parameters = [
+        parameter_id for parameter_id in registry_set
+        if any(str(parameter_id).startswith(prefix) for prefix in INTERVENTION_PARAMETER_PREFIXES)
+    ]
+    if stale_intervention_parameters:
+        fail(errors, f"Diabetes registry still owns intervention parameters: {sorted(stale_intervention_parameters)}")
+    stale_intervention_parameters = [
+        parameter_id for parameter_id in registry_set
+        if any(str(parameter_id).startswith(prefix) for prefix in INTERVENTION_PARAMETER_PREFIXES)
+    ]
+    if stale_intervention_parameters:
+        fail(errors, f"Diabetes registry still owns intervention parameters: {sorted(stale_intervention_parameters)}")
+    stale_intervention_parameters = [
+        parameter_id for parameter_id in registry_set
+        if any(str(parameter_id).startswith(prefix) for prefix in INTERVENTION_PARAMETER_PREFIXES)
+    ]
+    if stale_intervention_parameters:
+        fail(errors, f"Diabetes registry still owns intervention parameters: {sorted(stale_intervention_parameters)}")
     for text in strings_in(registry):
         if any(token in text for token in ("build/", "scenarios/", "scenario-templates", "modular-composition")):
             fail(errors, f"Parameter registry still references removed source: {text}")
@@ -310,7 +380,7 @@ def validate() -> list[str]:
 
     template_root = REPO_ROOT / "parameters" / "templates"
     template_files = sorted(template_root.glob("*.template.v1.json"))
-    required_templates = {"diabetes_baseline", "diabetes_d1", "diabetes_d2", "diabetes_d3", "diabetes_d5"}
+    required_templates = {"diabetes_baseline"}
     template_ids = set()
     if not template_files:
         fail(errors, "Missing parameters/templates/*.template.v1.json")
@@ -326,6 +396,18 @@ def validate() -> list[str]:
             fail(errors, f"{template_file} owner repo_id does not match registry")
         if template.get("parameter_registry_ref") != "parameters/registry.v1.json":
             fail(errors, f"{template_file} does not point to parameters/registry.v1.json")
+        if template_id in INTERVENTION_TEMPLATE_IDS:
+            fail(errors, f"{template_file} is an intervention template that should live in an intervention contract")
+        if template_id in INTERVENTION_TEMPLATE_IDS:
+            fail(errors, f"{template_file} is an intervention template that should live in an intervention contract")
+        if template_id in INTERVENTION_TEMPLATE_IDS:
+            fail(errors, f"{template_file} is an intervention template that should live in an intervention contract")
+        if template_id in INTERVENTION_TEMPLATE_IDS:
+            fail(errors, f"{template_file} is an intervention template that should live in an intervention contract")
+        if template_id in INTERVENTION_TEMPLATE_IDS:
+            fail(errors, f"{template_file} is an intervention template that should live in an intervention contract")
+        if template_id in INTERVENTION_TEMPLATE_IDS:
+            fail(errors, f"{template_file} is an intervention template that should live in an intervention contract")
         for text in strings_in(template):
             if any(token in text for token in ("build/", "scenarios/", "scenario-templates", "tobacco", "physical_inactivity", "sodium", "diet", "alcohol")):
                 fail(errors, f"{template_file} contains stale or cross-module reference: {text}")
@@ -370,7 +452,7 @@ def validate() -> list[str]:
                     str(command_script),
                     "materialize",
                     "--template-id",
-                    "diabetes_d5",
+                    "diabetes_baseline",
                     "--country",
                     "ETH",
                     "--start-year",

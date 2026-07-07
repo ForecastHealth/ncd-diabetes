@@ -22,7 +22,7 @@
   ],
   "template_id": "diabetes_baseline",
   "label": "Diabetes baseline",
-  "description": "Baseline diabetes template. It applies no overrides; baseline values come from the diabetes parameter registry and current module graph.",
+  "description": "Baseline diabetes epidemiology template. It applies no intervention overrides; clinical intervention presets live in sibling intervention repos.",
   "template_role": "baseline",
   "parameter_values": []
 }

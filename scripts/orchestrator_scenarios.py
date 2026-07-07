@@ -19,10 +19,6 @@ DEFAULT_TEMPLATE_ID = "diabetes_baseline"
 TEMPLATE_ALIASES = {
     "baseline": "diabetes_baseline",
     "default": "diabetes_baseline",
-    "d1": "diabetes_d1",
-    "d2": "diabetes_d2",
-    "d3": "diabetes_d3",
-    "d5": "diabetes_d5",
 }
 JSON_PATH_RE = re.compile(r"^\$\.(nodes|links)\[\?\(@\.id=='([^']+)'\)\]\.(.+)$")
 
@@ -246,7 +242,7 @@ def materialize_template(*, template_id: str, scenario_id: str | None, country: 
         "template_id": resolved_template_id,
         "requested_template_id": template_id,
         "template_kind": template_kind(template),
-        "materializer": {"repo_root": str(REPO_ROOT), "script": str(Path(__file__).resolve()), "source": "parameters/registry.v1.json plus parameters/templates"},
+        "materializer": {"repo_root": str(REPO_ROOT), "script": str(Path(__file__).resolve()), "source": "parameters/registry.v1.json plus baseline template"},
         "materialized_input": {
             "kind": "template_applied_module_model_requires_compiler_lowering",
             "model_ref": str(model_path),
