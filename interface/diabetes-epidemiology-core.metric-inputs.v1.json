@@ -608,24 +608,20 @@
           "health_weight_inputs": [
             {
               "generator_kind": "generator:single_value",
-              "label": "Healthy_HYL -> DsFreeSus HYL",
-              "link_id": "LzXYrpyL",
-              "operator": "multiply",
-              "postprocessing": null,
-              "source_label": "Healthy_HYL",
-              "source_node_id": "UZumScoj",
-              "subroutines": [
-                {
-                  "index": 12,
-                  "method": "push_balance_to_edges",
-                  "narration": "Calculate Disability Surrogates"
-                }
-              ],
-              "target_label": "DsFreeSus HYL",
-              "target_node_id": "lrste7nj"
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
             }
           ],
           "method": "avenir_blended_health_weight",
+          "simple_health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            }
+          ],
           "state_inputs": [
             {
               "generator_kind": "compiler_generated_demographic_residual_population",
@@ -648,24 +644,32 @@
           "health_weight_inputs": [
             {
               "generator_kind": "generator:single_value",
-              "label": "Combined_HYL -> DiabetesEpsd HYL",
-              "link_id": "fKUbIdOO",
-              "operator": "add",
-              "postprocessing": null,
-              "source_label": "Combined_HYL",
-              "source_node_id": "jNnbhWqn",
-              "subroutines": [
-                {
-                  "index": 12,
-                  "method": "push_balance_to_edges",
-                  "narration": "Calculate Disability Surrogates"
-                }
-              ],
-              "target_label": "DiabetesEpsd HYL",
-              "target_node_id": "lrwzsau5"
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "DiabetesEpsd_Disability_Weight",
+              "source_label": "DiabetesEpsd_Disability_Weight",
+              "source_node_id": "lrso7mga"
             }
           ],
           "method": "avenir_blended_health_weight",
+          "simple_health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "DiabetesEpsd_Disability_Weight",
+              "source_label": "DiabetesEpsd_Disability_Weight",
+              "source_node_id": "lrso7mga"
+            }
+          ],
           "state_inputs": [
             {
               "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
@@ -694,24 +698,32 @@
           "health_weight_inputs": [
             {
               "generator_kind": "generator:single_value",
-              "label": "Combined_HYL -> DiabeticRetinopathy HYL",
-              "link_id": "Iot6gtQ5",
-              "operator": "add",
-              "postprocessing": null,
-              "source_label": "Combined_HYL",
-              "source_node_id": "NHHJ4xJa",
-              "subroutines": [
-                {
-                  "index": 12,
-                  "method": "push_balance_to_edges",
-                  "narration": "Calculate Disability Surrogates"
-                }
-              ],
-              "target_label": "DiabeticRetinopathy HYL",
-              "target_node_id": "ls9rdcin"
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "DiabeticRetinopathy_Disability_Weight",
+              "source_label": "DiabeticRetinopathy_Disability_Weight",
+              "source_node_id": "ls9rs1ih"
             }
           ],
           "method": "avenir_blended_health_weight",
+          "simple_health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "DiabeticRetinopathy_Disability_Weight",
+              "source_label": "DiabeticRetinopathy_Disability_Weight",
+              "source_node_id": "ls9rs1ih"
+            }
+          ],
           "state_inputs": [
             {
               "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
@@ -740,24 +752,32 @@
           "health_weight_inputs": [
             {
               "generator_kind": "generator:single_value",
-              "label": "Combined_HYL -> LowerExtrmAmpt HYL",
-              "link_id": "AZRSbuz1",
-              "operator": "add",
-              "postprocessing": null,
-              "source_label": "Combined_HYL",
-              "source_node_id": "33IvsrBr",
-              "subroutines": [
-                {
-                  "index": 12,
-                  "method": "push_balance_to_edges",
-                  "narration": "Calculate Disability Surrogates"
-                }
-              ],
-              "target_label": "LowerExtrmAmpt HYL",
-              "target_node_id": "ls9re0t3"
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "LowerExtrmAmpt_Disability_Weight",
+              "source_label": "LowerExtrmAmpt_Disability_Weight",
+              "source_node_id": "ls9rvbes"
             }
           ],
           "method": "avenir_blended_health_weight",
+          "simple_health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "LowerExtrmAmpt_Disability_Weight",
+              "source_label": "LowerExtrmAmpt_Disability_Weight",
+              "source_node_id": "ls9rvbes"
+            }
+          ],
           "state_inputs": [
             {
               "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
@@ -786,24 +806,32 @@
           "health_weight_inputs": [
             {
               "generator_kind": "generator:single_value",
-              "label": "Combined_HYL -> DiabeticNephropathy HYL",
-              "link_id": "NlBimlu7",
-              "operator": "add",
-              "postprocessing": null,
-              "source_label": "Combined_HYL",
-              "source_node_id": "8t0hevNa",
-              "subroutines": [
-                {
-                  "index": 12,
-                  "method": "push_balance_to_edges",
-                  "narration": "Calculate Disability Surrogates"
-                }
-              ],
-              "target_label": "DiabeticNephropathy HYL",
-              "target_node_id": "ls9reknk"
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "DiabeticNephropathy_Disability_Weight",
+              "source_label": "DiabeticNephropathy_Disability_Weight",
+              "source_node_id": "ls9y3aia"
             }
           ],
           "method": "avenir_blended_health_weight",
+          "simple_health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_Disability_Weight",
+              "source_label": "Healthy_Disability_Weight",
+              "source_node_id": "lrso71jf"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "DiabeticNephropathy_Disability_Weight",
+              "source_label": "DiabeticNephropathy_Disability_Weight",
+              "source_node_id": "ls9y3aia"
+            }
+          ],
           "state_inputs": [
             {
               "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
@@ -826,7 +854,7 @@
           ]
         }
       ],
-      "method_boundary": "The metric module calculates HYL from state population and health-weight inputs. Disease graphs still contain legacy contribution machinery until parity-driven removal is complete.",
+      "method_boundary": "The metric module calculates HYL from state population and raw disability-weight inputs. Simple HYL uses raw disability weights; Avenir clinical-effect triples are still pending explicit declarations where interventions alter disability.",
       "method_id": "healthy_years_lived"
     }
   },
