@@ -105,16 +105,6 @@
       "binding": {
         "node_id": "ls9qwy72"
       }
-    },
-    {
-      "channel_id": "diabetes_dalys",
-      "meaning": "Diabetes disability-adjusted life years metric.",
-      "shape": "yearly_scalar_or_2x101",
-      "units": "years",
-      "required": false,
-      "binding": {
-        "node_id": "zntB8xaS"
-      }
     }
   ],
   "state_initialization": {
@@ -270,5 +260,8 @@
       "units": "proportion",
       "meaning": "Disease-owned neutral transform socket for intervention components that reduce diabetic retinopathy incidence."
     }
+  ],
+  "implementation_notes": [
+    "HYL, YLL, YLD and DALY calculations are owned by metric modules, not by this disease graph. This disease module publishes raw disease rows needed by those metric modules."
   ]
 }
