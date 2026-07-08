@@ -21,9 +21,14 @@
             ],
             "disability_weight_inputs": [
               {
-                "source_label": "Healthy_Disability_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "lrso71jf"
+                "generator_kind": "generator:constant",
+                "generator": {
+                  "parameters": {
+                    "value": 0
+                  }
+                },
+                "label": "Zero attributable disability for the disease-free state",
+                "note": "Disease-free population contributes no disease-specific YLD; healthy residual weight belongs to HYL, not health burden."
               }
             ]
           },
