@@ -413,8 +413,46 @@
         ],
         "yll": [
           {
-            "death_inputs": [],
-            "life_lost_weight_rule": [],
+            "death_inputs": [
+              {
+                "generator_kind": "generator:subset",
+                "label": null,
+                "link_id": "IK1eQmR6",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "Deceased-DsFreeSus",
+                "source_node_id": "Deceased",
+                "subroutines": [],
+                "target_label": "YLL-DsFreeSus",
+                "target_node_id": "gZ18mp9u"
+              }
+            ],
+            "life_lost_weight_rule": [
+              {
+                "generator": {
+                  "method": "subset",
+                  "parameters": {
+                    "fill_value": 0,
+                    "method": "single_value",
+                    "parameters": {
+                      "value": 1
+                    },
+                    "slice_indices": [
+                      [
+                        0,
+                        2
+                      ],
+                      [
+                        0,
+                        80
+                      ]
+                    ]
+                  }
+                },
+                "generator_kind": "generator:subset",
+                "link_id": "IK1eQmR6"
+              }
+            ],
             "output_label": "YLL-DsFreeSus",
             "output_node_id": "gZ18mp9u"
           },
