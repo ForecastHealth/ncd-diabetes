@@ -197,6 +197,13 @@
         "country": "ISO3"
       },
       "owner": "diabetes"
+    },
+    {
+      "data_type": "yll_weights",
+      "parameters": {},
+      "required_for": [
+        "years_of_life_lost"
+      ]
     }
   ],
   "validation": {
