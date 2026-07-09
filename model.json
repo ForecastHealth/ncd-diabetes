@@ -576,6 +576,24 @@
         "state"
       ],
       "flush": true
+    },
+    {
+      "id": "YLL_Weight",
+      "x": -97.38,
+      "y": 7.960000000000001,
+      "label": "YLL_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "fhdb",
+        "method": "yll_weights",
+        "parameters": {}
+      },
+      "tags": [
+        "function"
+      ],
+      "node_type": "CONSTANT",
+      "flush": true
     }
   ],
   "links": [
