@@ -180,7 +180,7 @@
     },
     "metric-hyl": {
       "method_id": "healthy_years_lived",
-      "method_boundary": "The metric module calculates HYL from raw state population and disability-weight rows. The disease graph no longer contains HYL contribution or final HYL calculation nodes.",
+      "method_boundary": "The metric module calculates HYL from raw state population and disease disability-weight rows. Disease-free states use disability weight zero.",
       "inputs": [
         {
           "output_label": "DsFreeSus",
@@ -191,18 +191,7 @@
               "generator_kind": "runtime_output"
             }
           ],
-          "simple_health_weight_inputs": [
-            {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
-            },
-            {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
-            }
-          ]
+          "simple_health_weight_inputs": []
         },
         {
           "output_label": "DiabetesEpsd",
@@ -215,11 +204,6 @@
             }
           ],
           "simple_health_weight_inputs": [
-            {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
-            },
             {
               "source_label": "DiabetesEpsd_Disability_Weight",
               "generator_kind": "runtime_output",
@@ -239,11 +223,6 @@
           ],
           "simple_health_weight_inputs": [
             {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
-            },
-            {
               "source_label": "DiabeticRetinopathy_Disability_Weight",
               "generator_kind": "runtime_output",
               "source_node_id": "ls9rs1ih"
@@ -262,11 +241,6 @@
           ],
           "simple_health_weight_inputs": [
             {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
-            },
-            {
               "source_label": "LowerExtrmAmpt_Disability_Weight",
               "generator_kind": "runtime_output",
               "source_node_id": "ls9rvbes"
@@ -284,11 +258,6 @@
             }
           ],
           "simple_health_weight_inputs": [
-            {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
-            },
             {
               "source_label": "DiabeticNephropathy_Disability_Weight",
               "generator_kind": "runtime_output",
