@@ -43,9 +43,12 @@
             ],
             "disability_weight_inputs": [
               {
-                "source_label": "DiabetesEpsd_Disability_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "lrso7mga"
+                "generator_kind": "generator:constant",
+                "generator": {
+                  "parameters": {
+                    "value": 0.031
+                  }
+                }
               }
             ]
           },
@@ -60,9 +63,12 @@
             ],
             "disability_weight_inputs": [
               {
-                "source_label": "DiabeticRetinopathy_Disability_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "ls9rs1ih"
+                "generator_kind": "generator:constant",
+                "generator": {
+                  "parameters": {
+                    "value": 0.338
+                  }
+                }
               }
             ]
           },
@@ -77,9 +83,12 @@
             ],
             "disability_weight_inputs": [
               {
-                "source_label": "LowerExtrmAmpt_Disability_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "ls9rvbes"
+                "generator_kind": "generator:constant",
+                "generator": {
+                  "parameters": {
+                    "value": 0.164
+                  }
+                }
               }
             ]
           },
@@ -94,9 +103,12 @@
             ],
             "disability_weight_inputs": [
               {
-                "source_label": "DiabeticNephropathy_Disability_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "ls9y3aia"
+                "generator_kind": "generator:constant",
+                "generator": {
+                  "parameters": {
+                    "value": 0.338
+                  }
+                }
               }
             ]
           }
@@ -205,14 +217,21 @@
           ],
           "simple_health_weight_inputs": [
             {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
+              "generator_kind": "data_fetcher:fhdb.healthy_disability",
+              "generator": {
+                "data_fetcher_label": "fhdb",
+                "method": "healthy_disability",
+                "parameters": {}
+              }
             },
             {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
+              "generator_kind": "generator:constant",
+              "generator": {
+                "parameters": {
+                  "value": 0
+                }
+              },
+              "label": "Zero disease disability for disease-free HYL row"
             }
           ]
         },
@@ -228,14 +247,20 @@
           ],
           "simple_health_weight_inputs": [
             {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
+              "generator_kind": "data_fetcher:fhdb.healthy_disability",
+              "generator": {
+                "data_fetcher_label": "fhdb",
+                "method": "healthy_disability",
+                "parameters": {}
+              }
             },
             {
-              "source_label": "DiabetesEpsd_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso7mga"
+              "generator_kind": "generator:constant",
+              "generator": {
+                "parameters": {
+                  "value": 0.031
+                }
+              }
             }
           ]
         },
@@ -251,14 +276,20 @@
           ],
           "simple_health_weight_inputs": [
             {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
+              "generator_kind": "data_fetcher:fhdb.healthy_disability",
+              "generator": {
+                "data_fetcher_label": "fhdb",
+                "method": "healthy_disability",
+                "parameters": {}
+              }
             },
             {
-              "source_label": "DiabeticRetinopathy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "ls9rs1ih"
+              "generator_kind": "generator:constant",
+              "generator": {
+                "parameters": {
+                  "value": 0.338
+                }
+              }
             }
           ]
         },
@@ -274,14 +305,20 @@
           ],
           "simple_health_weight_inputs": [
             {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
+              "generator_kind": "data_fetcher:fhdb.healthy_disability",
+              "generator": {
+                "data_fetcher_label": "fhdb",
+                "method": "healthy_disability",
+                "parameters": {}
+              }
             },
             {
-              "source_label": "LowerExtrmAmpt_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "ls9rvbes"
+              "generator_kind": "generator:constant",
+              "generator": {
+                "parameters": {
+                  "value": 0.164
+                }
+              }
             }
           ]
         },
@@ -297,14 +334,20 @@
           ],
           "simple_health_weight_inputs": [
             {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "lrso71jf"
+              "generator_kind": "data_fetcher:fhdb.healthy_disability",
+              "generator": {
+                "data_fetcher_label": "fhdb",
+                "method": "healthy_disability",
+                "parameters": {}
+              }
             },
             {
-              "source_label": "DiabeticNephropathy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "ls9y3aia"
+              "generator_kind": "generator:constant",
+              "generator": {
+                "parameters": {
+                  "value": 0.338
+                }
+              }
             }
           ]
         }

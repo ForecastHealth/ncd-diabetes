@@ -152,13 +152,6 @@
       "owner": "fhdb"
     },
     {
-      "data_type": "healthy_disability",
-      "parameters": {
-        "country": "ISO3"
-      },
-      "owner": "fhdb"
-    },
-    {
       "data_type": "diabetes.get_observation",
       "parameters": {
         "observation": "LowerExtrmAmpt -> Deceased",
