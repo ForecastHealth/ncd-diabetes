@@ -216,6 +216,25 @@
       "node_type": "STATE"
     },
     {
+      "id": "lrso71jf",
+      "x": -107.38,
+      "y": 17.96,
+      "label": "Healthy_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "fhdb",
+        "method": "healthy_disability",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "tags": [
+        "function"
+      ],
+      "node_type": "CONSTANT"
+    },
+    {
       "id": "lrwz1ikj",
       "x": -39.84,
       "y": 156.18,
@@ -233,6 +252,24 @@
         "function"
       ],
       "node_type": "FUNCTION"
+    },
+    {
+      "id": "lrso7mga",
+      "x": -112.99,
+      "y": 2.37,
+      "label": "DiabetesEpsd_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.031
+        }
+      },
+      "tags": [
+        "function"
+      ],
+      "node_type": "CONSTANT"
     },
     {
       "id": "ls9rkzfi",
@@ -293,6 +330,42 @@
         "function"
       ],
       "flush": true,
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "ls9rs1ih",
+      "x": -119.58,
+      "y": -7.32,
+      "label": "DiabeticRetinopathy_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.338
+        }
+      },
+      "tags": [
+        "function"
+      ],
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "ls9rvbes",
+      "x": -115.6,
+      "y": -17.45,
+      "label": "LowerExtrmAmpt_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.164
+        }
+      },
+      "tags": [
+        "function"
+      ],
       "node_type": "CONSTANT"
     },
     {
@@ -392,6 +465,24 @@
         "function"
       ],
       "node_type": "FUNCTION"
+    },
+    {
+      "id": "ls9y3aia",
+      "x": -118.81,
+      "y": -27.2,
+      "label": "DiabeticNephropathy_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.338
+        }
+      },
+      "tags": [
+        "function"
+      ],
+      "node_type": "CONSTANT"
     },
     {
       "id": "nLErvery",
@@ -964,6 +1055,11 @@
       "batch": false,
       "narration": "Generate the balance of the constants",
       "included_source_nodes": [
+        "lrso71jf",
+        "lrso7mga",
+        "ls9rs1ih",
+        "ls9rvbes",
+        "ls9y3aia",
         "lrso81aw",
         "ls9rkzfi",
         "ls9rlprb",
