@@ -118,9 +118,12 @@
             ],
             "life_lost_weight_rule": [
               {
-                "source_label": "YLL_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "YLL_Weight"
+                "generator_kind": "data_fetcher:fhdb.yll_weights",
+                "generator": {
+                  "data_fetcher_label": "fhdb",
+                  "method": "yll_weights",
+                  "parameters": {}
+                }
               }
             ]
           },
@@ -135,9 +138,12 @@
             ],
             "life_lost_weight_rule": [
               {
-                "source_label": "YLL_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "YLL_Weight"
+                "generator_kind": "data_fetcher:fhdb.yll_weights",
+                "generator": {
+                  "data_fetcher_label": "fhdb",
+                  "method": "yll_weights",
+                  "parameters": {}
+                }
               }
             ]
           },
@@ -152,9 +158,12 @@
             ],
             "life_lost_weight_rule": [
               {
-                "source_label": "YLL_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "YLL_Weight"
+                "generator_kind": "data_fetcher:fhdb.yll_weights",
+                "generator": {
+                  "data_fetcher_label": "fhdb",
+                  "method": "yll_weights",
+                  "parameters": {}
+                }
               }
             ]
           },
@@ -169,9 +178,12 @@
             ],
             "life_lost_weight_rule": [
               {
-                "source_label": "YLL_Weight",
-                "generator_kind": "runtime_output",
-                "source_node_id": "YLL_Weight"
+                "generator_kind": "data_fetcher:fhdb.yll_weights",
+                "generator": {
+                  "data_fetcher_label": "fhdb",
+                  "method": "yll_weights",
+                  "parameters": {}
+                }
               }
             ]
           }

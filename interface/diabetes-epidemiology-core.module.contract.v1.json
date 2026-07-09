@@ -159,11 +159,6 @@
       "owner": "fhdb"
     },
     {
-      "data_type": "yll_weights",
-      "parameters": {},
-      "owner": "fhdb"
-    },
-    {
       "data_type": "diabetes.get_observation",
       "parameters": {
         "observation": "LowerExtrmAmpt -> Deceased",
