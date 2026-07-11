@@ -232,6 +232,7 @@
   ],
   "compiler_composition": {
     "schema": "forecast-health.botech-disease-composition.v1",
+    "target_key": "diabetes",
     "model_slug": "ncd-diabetes",
     "label": "Diabetes",
     "baseline_template_id": "diabetes_baseline",
