@@ -73,7 +73,12 @@
       "units": "people",
       "required": true,
       "binding": {
-        "node_id": "lrstce6u"
+        "node_ids": [
+          "lrstce6u",
+          "ls9rae7a",
+          "ls9rbfxn",
+          "ls9rc6e6"
+        ]
       }
     },
     {
@@ -107,6 +112,25 @@
       }
     }
   ],
+  "marginal_disease_process": {
+    "schema": "forecast-health.marginal-disease-process.v1",
+    "population_semantics": "non_additive_marginal_estimate",
+    "main_population_owner_module_id": "demographic_substrate",
+    "cause_specific_mortality": {
+      "excludes_demographic_background_mortality": true,
+      "output_node_ids": [
+        "lrstce6u",
+        "ls9rae7a",
+        "ls9rbfxn",
+        "ls9rc6e6"
+      ],
+      "units": "deaths"
+    },
+    "morbidity": {
+      "metric_input_contract_ref": "interface/diabetes-epidemiology-core.metric-inputs.v1.json",
+      "aggregation_semantics": "comparison_minus_baseline_yld_rate"
+    }
+  },
   "state_initialization": {
     "mode": "solver_required",
     "recipe_ref": "data/diabetes-opening-balance-seed.recipe.v1.json",
