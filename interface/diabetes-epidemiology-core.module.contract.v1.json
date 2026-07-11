@@ -230,6 +230,74 @@
       ]
     }
   ],
+  "compiler_composition": {
+    "schema": "forecast-health.botech-disease-composition.v1",
+    "model_slug": "ncd-diabetes",
+    "label": "Diabetes",
+    "baseline_template_id": "diabetes_baseline",
+    "permitted_comparison_template_ids": [
+      "diabetes_baseline"
+    ],
+    "materializer": {
+      "command_ref": "scripts/orchestrator_scenarios.py",
+      "model_output_ref": "model.json"
+    },
+    "lowering_profile": "partitioned_disease_v1",
+    "lowering": {
+      "data_fetcher_label": "diabetes",
+      "prevalence_inputs": {
+        "diabetes_prevalence": {
+          "data_fetcher_label": "fhdb",
+          "method": "epidemiology",
+          "parameters": {
+            "disease": "Diabetes",
+            "measure": "prevalence"
+          }
+        }
+      },
+      "incidence_edges": [
+        {
+          "id": "compiler::diabetes::incidence_from_disease_free_population",
+          "label": "Diabetes incidence from disease-free population",
+          "target_surrogate": "4J5E1Abn",
+          "target_state": "DiabetesEpsd"
+        }
+      ],
+      "disable_subroutine_edges": [
+        "vK2oNfec"
+      ],
+      "background_mortality_edges": [
+        "tJOW1hhc",
+        "STz4wrnX",
+        "9lHjCUmt",
+        "BJGaPBZg"
+      ],
+      "age_states": [
+        "DiabetesEpsd",
+        "ls9qw5uh",
+        "ls9qwy35",
+        "ls9qwy72"
+      ],
+      "birth_sources": [
+        "DsFreeSus",
+        "DiabetesEpsd",
+        "ls9qw5uh",
+        "ls9qwy35",
+        "ls9qwy72"
+      ],
+      "living_state_nodes": [
+        "DsFreeSus",
+        "DiabetesEpsd",
+        "ls9qw5uh",
+        "ls9qwy35",
+        "ls9qwy72"
+      ],
+      "headline_nodes": {
+        "Disease-free population": "DsFreeSus",
+        "Diabetes episode population": "DiabetesEpsd"
+      }
+    }
+  },
   "validation": {
     "internal_validity_tests": [
       "python scripts/validate_module_contract.py",
