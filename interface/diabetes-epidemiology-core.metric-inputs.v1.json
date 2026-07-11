@@ -15,7 +15,8 @@
             "output_label": "YLD-DsFreeSus",
             "state_inputs": [
               {
-                "source_label": "DsFreeSus",
+          "source_label": "DsFreeSus",
+          "source_node_id": "DsFreeSus",
                 "generator_kind": "runtime_output"
               }
             ],
@@ -187,7 +188,8 @@
           "method": "state_population_times_health_weight",
           "state_inputs": [
             {
-              "source_label": "DsFreeSus",
+          "source_label": "DsFreeSus",
+          "source_node_id": "DsFreeSus",
               "generator_kind": "runtime_output"
             }
           ],
