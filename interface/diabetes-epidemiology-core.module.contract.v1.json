@@ -118,13 +118,14 @@
     "main_population_owner_module_id": "demographic_substrate",
     "cause_specific_mortality": {
       "excludes_demographic_background_mortality": true,
-      "output_node_ids": [
-        "lrstce6u",
-        "ls9rae7a",
-        "ls9rbfxn",
-        "ls9rc6e6"
+      "units": "deaths",
+      "output_link_ids": [
+        "OyW7kOSM",
+        "nU0Snw08",
+        "cdXO88Jz",
+        "SOdrw9IV"
       ],
-      "units": "deaths"
+      "output_semantics": "Values emitted by the Botech EDGE_VALUES_CALCULATED events for these links are actual cause-specific death flows. Case-fatality helper nodes are not mortality outputs."
     },
     "morbidity": {
       "metric_input_contract_ref": "interface/diabetes-epidemiology-core.metric-inputs.v1.json",
