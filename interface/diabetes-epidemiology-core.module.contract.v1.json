@@ -286,7 +286,8 @@
           "id": "compiler::diabetes::incidence_from_disease_free_population",
           "label": "Diabetes incidence from disease-free population",
           "target_surrogate": "4J5E1Abn",
-          "target_state": "DiabetesEpsd"
+          "target_state": "DiabetesEpsd",
+          "target_transition_edge_id": "vK2oNfec"
         }
       ],
       "disable_subroutine_edges": [
