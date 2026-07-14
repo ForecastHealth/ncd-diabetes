@@ -125,7 +125,14 @@
         "ls9qwy35",
         "ls9qwy72"
       ],
-      "residual_state_node_id": "DsFreeSus"
+      "residual_state_node_id": "DsFreeSus",
+      "residual_state_semantics": {
+        "classification": "derived_marginal_residual",
+        "authoritative_population": false,
+        "meaning": "People in the canonical population who are not in any declared diabetes or diabetes-complication state in this marginal disease process.",
+        "opening_calculation": "canonical_population_minus_declared_non_residual_states",
+        "annual_calculation": "carried as the diabetes incidence source inside the marginal process, then rebased with all living diabetes states to canonical survivors"
+      }
     },
     "cause_specific_mortality": {
       "excludes_demographic_background_mortality": true,
