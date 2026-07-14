@@ -294,14 +294,30 @@ def validate() -> list[str]:
         recipe = load(REPO_ROOT / recipe_ref)
         if recipe.get("module_id") != module_id:
             fail(errors, "State initialization recipe module_id does not match module contract")
-        recipe_inputs = {item.get("input_id"): item for item in recipe.get("inputs", [])}
-        if recipe_inputs.get("population_at_risk_opening", {}).get("owner_module_id") != "demographic_substrate":
-            fail(errors, "State initialization recipe does not consume demographic population_at_risk_opening")
-        if recipe_inputs.get("diabetes_prevalence", {}).get("owner_module_id") != module_id:
-            fail(errors, "State initialization recipe does not declare diabetes-owned prevalence input")
-        recipe_targets = {item.get("target") for item in recipe.get("outputs", [])}
+        population_source = recipe.get("population_source", {})
+        if population_source.get("data_type") != "fhdb.population":
+            fail(errors, "State initialization recipe does not consume the canonical population source")
+        durable_states = recipe.get("durable_states", [])
+        prevalence_sources = [item.get("prevalence_source", {}) for item in durable_states]
+        if not any(
+            source.get("data_type") == "fhdb.epidemiology"
+            and source.get("parameters", {}).get("disease") == "Diabetes"
+            and source.get("parameters", {}).get("measure") == "prevalence"
+            for source in prevalence_sources
+        ):
+            fail(errors, "State initialization recipe does not declare diabetes prevalence")
+        recipe_targets = {
+            item.get("target_node_id")
+            for group in ("durable_states", "transient_states", "zero_states")
+            for item in recipe.get(group, [])
+        }
+        recipe_targets.add(recipe.get("residual_state", {}).get("target_node_id"))
+        recipe_targets.discard(None)
+        if recipe_targets != set(module.get("state_initialization", {}).get("targets", [])):
+            fail(errors, "State initialization recipe targets do not match the module contract")
+        residual_target = recipe.get("residual_state", {}).get("target_node_id")
         for target in recipe_targets:
-            if target not in node_set:
+            if target not in node_set and target != residual_target:
                 fail(errors, f"State initialization recipe targets missing model node {target}")
         epidemiology_requirements = {
             ((item.get("parameters", {}) or {}).get("disease"), (item.get("parameters", {}) or {}).get("measure"))

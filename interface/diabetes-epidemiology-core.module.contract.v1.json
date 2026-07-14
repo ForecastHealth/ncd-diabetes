@@ -116,6 +116,17 @@
     "schema": "forecast-health.marginal-disease-process.v1",
     "population_semantics": "non_additive_marginal_estimate",
     "main_population_owner_module_id": "demographic_substrate",
+    "population_partition": {
+      "semantics": "mutually_exclusive_exhaustive",
+      "living_state_node_ids": [
+        "DsFreeSus",
+        "DiabetesEpsd",
+        "ls9qw5uh",
+        "ls9qwy35",
+        "ls9qwy72"
+      ],
+      "residual_state_node_id": "DsFreeSus"
+    },
     "cause_specific_mortality": {
       "excludes_demographic_background_mortality": true,
       "units": "deaths",
@@ -133,10 +144,16 @@
     }
   },
   "state_initialization": {
-    "mode": "solver_required",
+    "mode": "opening_state_reconciliation_required",
+    "reconciliation_module_id": "opening-state-reconciliation",
     "recipe_ref": "data/diabetes-opening-balance-seed.recipe.v1.json",
+    "scenario_policy": "one_baseline_only_artifact_shared_by_baseline_and_comparison",
     "targets": [
-      "DiabetesEpsd"
+      "DsFreeSus",
+      "DiabetesEpsd",
+      "ls9qw5uh",
+      "ls9qwy35",
+      "ls9qwy72"
     ]
   },
   "runtime_data_requirements": [

@@ -1,32 +1,67 @@
 {
-  "schema": "forecast-health.component-seeding-recipe.v1",
+  "schema": "forecast-health.disease-opening-state-recipe.v1",
   "module_id": "diabetes_epidemiology_core",
   "owner": {
     "repo_id": "ncd-diabetes"
   },
-  "purpose": "Describe how a compiler should seed diabetes opening balances from demographic population and diabetes prevalence.",
-  "inputs": [
+  "version": "v2",
+  "method": "observed_durable_prevalence_with_balanced_transient_states",
+  "compiler_disease_key": "diabetes",
+  "reconciliation_module_id": "opening-state-reconciliation",
+  "purpose": "Allocate observed opening diabetes prevalence to the diabetes state, initialise unobserved complication states to zero, and calculate the disease-free residual before the first model year.",
+  "population_source": {
+    "data_type": "fhdb.population",
+    "parameters": {
+      "country": "$country"
+    }
+  },
+  "residual_state": {
+    "target_node_id": "DsFreeSus",
+    "meaning": "People outside the diabetes states in this marginal disease partition."
+  },
+  "durable_states": [
     {
-      "input_id": "population_at_risk_opening",
-      "owner_module_id": "demographic_substrate",
-      "shape": "2x101",
-      "units": "people"
+      "target_node_id": "DiabetesEpsd",
+      "meaning": "Opening diabetes episode population.",
+      "prevalence_source": {
+        "data_type": "fhdb.epidemiology",
+        "parameters": {
+          "country": "$country",
+          "disease": "Diabetes",
+          "measure": "prevalence"
+        }
+      }
+    }
+  ],
+  "zero_states": [
+    {
+      "target_node_id": "ls9qw5uh",
+      "meaning": "Diabetic retinopathy has no separate observed opening prevalence input."
     },
     {
-      "input_id": "diabetes_prevalence",
-      "owner_module_id": "diabetes_epidemiology_core",
-      "shape": "2x101",
-      "units": "prevalence"
-    }
-  ],
-  "outputs": [
+      "target_node_id": "ls9qwy35",
+      "meaning": "Lower-extremity amputation has no separate observed opening prevalence input."
+    },
     {
-      "target": "DiabetesEpsd",
-      "rule": "population_at_risk_opening * diabetes_prevalence"
+      "target_node_id": "ls9qwy72",
+      "meaning": "Diabetic nephropathy has no separate observed opening prevalence input."
     }
   ],
-  "notes": [
-    "The demographic module owns the upstream population substrate.",
-    "The compiler lowers this recipe into an init-only prevalence allocation before the first timestep."
-  ]
+  "transient_states": [],
+  "scenario_policy": {
+    "inputs": "baseline_only",
+    "comparison_intervention_inputs_allowed": false,
+    "artifact_reuse": "same_content_hash_for_baseline_and_all_comparisons"
+  },
+  "method_boundaries": [
+    "Observed diabetes prevalence is authoritative for the opening diabetes stock.",
+    "The three complication states begin at zero because the source module declares no separate observed opening prevalence for them.",
+    "No disease rate is changed by this opening-state method.",
+    "The disease-free residual and diabetes states conserve the demographic population in every age-sex cell."
+  ],
+  "lowering": {
+    "mode": "botech_initialization_overwrite",
+    "remove_scheduled_opening_seed_edges": true,
+    "runtime_application": "once_before_first_timestep"
+  }
 }
