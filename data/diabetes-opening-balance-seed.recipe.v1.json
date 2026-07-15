@@ -8,6 +8,11 @@
   "method": "observed_durable_prevalence_with_balanced_transient_states",
   "compiler_disease_key": "diabetes",
   "reconciliation_module_id": "opening-state-reconciliation",
+  "rate_consistency": {
+    "status": "not_established",
+    "reason": "The source provides observed total diabetes prevalence but no jointly estimated opening complication prevalences and transition rates.",
+    "runtime_policy": "Preserve observed total diabetes prevalence, initialise undeclared complication prevalences as documented, leave transition rates unchanged, and report any early runtime movement."
+  },
   "purpose": "Allocate observed opening diabetes prevalence to the diabetes state, initialise unobserved complication states to zero, and calculate the disease-free residual before the first model year.",
   "population_source": {
     "data_type": "fhdb.population",
