@@ -4,7 +4,7 @@
   "module_type": "disease_epidemiology",
   "owner": {
     "repo_id": "ncd-diabetes",
-    "repo_ref": "/Users/rory/Models/ncd-diabetes"
+    "repo_ref": "ncd-diabetes"
   },
   "version": "v1",
   "runtime_role": "compiled_together",

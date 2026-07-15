@@ -3,7 +3,7 @@
   "module_id": "diabetes_epidemiology_core",
   "owner": {
     "repo_id": "ncd-diabetes",
-    "repo_ref": "/Users/rory/Models/ncd-diabetes",
+    "repo_ref": "ncd-diabetes",
     "module_contract_ref": "interface/diabetes-epidemiology-core.module.contract.v1.json"
   },
   "version": "v1",
