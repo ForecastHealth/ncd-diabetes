@@ -366,7 +366,12 @@
       "endpoint_role": "target",
       "shape": "scalar",
       "units": "proportion",
-      "meaning": "Disease-owned neutral transform socket for intervention components that reduce diabetic nephropathy incidence."
+      "meaning": "Disease-owned neutral transform socket for intervention components that reduce diabetic nephropathy incidence.",
+      "composition_semantics": {
+        "combination_rule": "additive_incidence_reduction_contributions",
+        "neutral_value": 1,
+        "selection_guard": "Only explicitly selected diabetes intervention components contribute to this transform."
+      }
     },
     {
       "channel_id": "lower_extremity_amputation_incidence_transform",
@@ -375,7 +380,12 @@
       "endpoint_role": "target",
       "shape": "scalar",
       "units": "proportion",
-      "meaning": "Disease-owned neutral transform socket for intervention components that reduce lower-extremity amputation incidence."
+      "meaning": "Disease-owned neutral transform socket for intervention components that reduce lower-extremity amputation incidence.",
+      "composition_semantics": {
+        "combination_rule": "additive_incidence_reduction_contributions",
+        "neutral_value": 1,
+        "selection_guard": "Only explicitly selected diabetes intervention components contribute to this transform."
+      }
     },
     {
       "channel_id": "diabetic_retinopathy_incidence_transform",
@@ -384,7 +394,12 @@
       "endpoint_role": "target",
       "shape": "scalar",
       "units": "proportion",
-      "meaning": "Disease-owned neutral transform socket for intervention components that reduce diabetic retinopathy incidence."
+      "meaning": "Disease-owned neutral transform socket for intervention components that reduce diabetic retinopathy incidence.",
+      "composition_semantics": {
+        "combination_rule": "additive_incidence_reduction_contributions",
+        "neutral_value": 1,
+        "selection_guard": "Only explicitly selected diabetes intervention components contribute to this transform."
+      }
     }
   ],
   "implementation_notes": [
