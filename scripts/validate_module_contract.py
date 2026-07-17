@@ -254,6 +254,20 @@ def validate() -> list[str]:
         if required_input not in declared_inputs:
             fail(errors, f"Module contract is missing declared input {required_input}")
     published_bindings = []
+    published_outputs = {
+        item.get("channel_id"): item
+        for item in module.get("published_outputs", [])
+    }
+    incidence_output = published_outputs.get("diabetes_incidence_flow", {})
+    if incidence_output.get("units") != "people":
+        fail(errors, "diabetes_incidence_flow must be published in people")
+    if incidence_output.get("binding") != {
+        "edge_id": "compiler::diabetes::incidence_from_disease_free_population"
+    }:
+        fail(
+            errors,
+            "diabetes_incidence_flow must bind the compiler-generated disease-free-population-to-incidence edge",
+        )
     for output in module.get("published_outputs", []):
         binding = output.get("binding", {})
         if "node_id" in binding:

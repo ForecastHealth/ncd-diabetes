@@ -63,7 +63,7 @@
       "units": "people",
       "required": true,
       "binding": {
-        "node_id": "4J5E1Abn"
+        "edge_id": "compiler::diabetes::incidence_from_disease_free_population"
       }
     },
     {
