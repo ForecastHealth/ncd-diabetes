@@ -73,11 +73,11 @@
       "units": "people",
       "required": true,
       "binding": {
-        "node_ids": [
-          "lrstce6u",
-          "ls9rae7a",
-          "ls9rbfxn",
-          "ls9rc6e6"
+        "edge_ids": [
+          "OyW7kOSM",
+          "nU0Snw08",
+          "cdXO88Jz",
+          "SOdrw9IV"
         ]
       }
     },

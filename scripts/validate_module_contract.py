@@ -268,6 +268,13 @@ def validate() -> list[str]:
             errors,
             "diabetes_incidence_flow must bind the compiler-generated disease-free-population-to-incidence edge",
         )
+    mortality_output = published_outputs.get("diabetes_mortality_flow", {})
+    if mortality_output.get("units") != "people":
+        fail(errors, "diabetes_mortality_flow must be published in people")
+    if mortality_output.get("binding") != {
+        "edge_ids": ["OyW7kOSM", "nU0Snw08", "cdXO88Jz", "SOdrw9IV"]
+    }:
+        fail(errors, "diabetes_mortality_flow must bind the four disease-specific mortality transition edges")
     for output in module.get("published_outputs", []):
         binding = output.get("binding", {})
         if "node_id" in binding:
