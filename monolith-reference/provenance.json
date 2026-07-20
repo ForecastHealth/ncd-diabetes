@@ -1,13 +1,13 @@
 {
   "schema": "ncd-monolith-reference-provenance.v1",
   "disease_slug": "ncd-diabetes",
-  "target_repo_path": "/Users/rory/Models/ncd-diabetes",
+  "target_repo_path": "/Users/rory/Botech/library/ncd-diabetes",
   "artifact_role": "legacy_reference_specimen_for_audit_and_parity_work",
   "active_surface_warning": "This recovered model is a legacy monolithic reference specimen. It is not an active module surface, not a recommended architecture, and not evidence that demography, risk factors, economic metrics, resources, or client-side scenario logic should live inside the current diabetes module.",
   "recovered_model": {
     "target_path": "monolith-reference/model.json",
     "sha256": "eba8be2be0895a58c8b48c2ec0e2ea4f210ba5f90dfc5889a16579d3eb4f2169",
-    "source_repo_path": "/Users/rory/Models/ncd-diabetes",
+    "source_repo_path": "/Users/rory/Botech/library/ncd-diabetes",
     "source_commit": "d9bc894c86e0d7433bd5dd39497cdff4c37833d4",
     "source_commit_date": "2026-06-17T11:16:21+10:00",
     "source_branch_context": "origin/investment-case branch tip before local diabetes module-cleanup commits; the current local investment-case branch is ahead after cleanup.",
@@ -44,7 +44,7 @@
   ],
   "diabetes_repo_output_evidence": [
     {
-      "repo_path": "/Users/rory/Models/ncd-diabetes",
+      "repo_path": "/Users/rory/Botech/library/ncd-diabetes",
       "commit": "c69ae2b6261bcbcd56883838f799caac818a540a",
       "commit_date": "2025-09-02T11:13:18+08:00",
       "path": "results/analytics_results_20250902_111239.csv",
