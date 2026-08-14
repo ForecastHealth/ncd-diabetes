@@ -23,6 +23,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0
+        },
+        "display": {
+          "label": "Diabetic nephropathy mortality",
+          "units": "annual probability",
+          "source": "Module calculation"
         }
       },
       "tags": [
@@ -42,6 +47,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0
+        },
+        "display": {
+          "label": "Diabetes episode mortality",
+          "units": "annual probability",
+          "source": "Module calculation"
         }
       },
       "tags": [
@@ -61,6 +71,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0
+        },
+        "display": {
+          "label": "Lower-extremity amputation mortality",
+          "units": "annual probability",
+          "source": "Module calculation"
         }
       },
       "tags": [
@@ -82,6 +97,11 @@
           "country": "AFG",
           "disease": "Diabetes",
           "measure": "deaths"
+        },
+        "display": {
+          "label": "Diabetes episode case-fatality probability",
+          "units": "annual probability",
+          "source": "Global Burden of Disease via Spectrum/OneHealth NCD defaults"
         }
       },
       "tags": [
@@ -101,6 +121,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0
+        },
+        "display": {
+          "label": "Diabetic retinopathy mortality",
+          "units": "annual probability",
+          "source": "Module calculation"
         }
       },
       "tags": [
@@ -156,6 +181,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0
+        },
+        "display": {
+          "label": "Diabetic nephropathy incidence",
+          "units": "people per year",
+          "source": "Module calculation"
         }
       },
       "flush": true,
@@ -175,6 +205,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0
+        },
+        "display": {
+          "label": "Lower-extremity amputation incidence",
+          "units": "people per year",
+          "source": "Module calculation"
         }
       },
       "flush": true,
@@ -194,6 +229,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0
+        },
+        "display": {
+          "label": "Diabetic retinopathy incidence",
+          "units": "people per year",
+          "source": "Module calculation"
         }
       },
       "flush": true,
@@ -227,6 +267,11 @@
         "method": "healthy_disability",
         "parameters": {
           "country": "AFG"
+        },
+        "display": {
+          "label": "Background disability weight",
+          "units": "disability weight",
+          "source": "Spectrum/GBD disability-weight defaults"
         }
       },
       "tags": [
@@ -246,6 +291,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic nephropathy adjustment",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "tags": [
@@ -264,6 +314,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0.031
+        },
+        "display": {
+          "label": "Diabetes episode disability weight",
+          "units": "disability weight",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -284,6 +339,11 @@
           "country": "AFG",
           "disease": "CKD",
           "measure": "deaths"
+        },
+        "display": {
+          "label": "Diabetic nephropathy case-fatality probability",
+          "units": "annual probability",
+          "source": "Global Burden of Disease via Spectrum/OneHealth NCD defaults"
         }
       },
       "tags": [
@@ -304,6 +364,11 @@
         "parameters": {
           "country": "AFG",
           "observation": "LowerExtrmAmpt -> Deceased"
+        },
+        "display": {
+          "label": "Lower-extremity amputation case-fatality probability",
+          "units": "annual probability",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -324,6 +389,11 @@
         "parameters": {
           "country": "AFG",
           "observation": "DiabeticRetinopathy -> Deceased"
+        },
+        "display": {
+          "label": "Diabetic retinopathy case-fatality probability",
+          "units": "annual probability",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -343,6 +413,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0.338
+        },
+        "display": {
+          "label": "Diabetic retinopathy disability weight",
+          "units": "disability weight",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -361,6 +436,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0.164
+        },
+        "display": {
+          "label": "Lower-extremity amputation disability weight",
+          "units": "disability weight",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -381,6 +461,11 @@
         "parameters": {
           "country": "AFG",
           "observation": "Diabetes -> DiabeticNephropathy"
+        },
+        "display": {
+          "label": "Diabetic nephropathy incidence rate",
+          "units": "annual probability",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -401,6 +486,11 @@
         "parameters": {
           "country": "AFG",
           "observation": "Diabetes -> LowerExtrmAmpt"
+        },
+        "display": {
+          "label": "Lower-extremity amputation incidence rate",
+          "units": "annual probability",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -421,6 +511,11 @@
         "parameters": {
           "country": "AFG",
           "observation": "Diabetes -> DiabeticRetinopathy"
+        },
+        "display": {
+          "label": "Diabetic retinopathy incidence rate",
+          "units": "annual probability",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -440,6 +535,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Lower-extremity amputation adjustment",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "tags": [
@@ -459,6 +559,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic retinopathy adjustment",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "tags": [
@@ -477,6 +582,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0.338
+        },
+        "display": {
+          "label": "Diabetic nephropathy disability weight",
+          "units": "disability weight",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "tags": [
@@ -498,6 +608,11 @@
           "country": "AFG",
           "disease": "Diabetes",
           "measure": "incidence"
+        },
+        "display": {
+          "label": "Diabetes episode incidence rate",
+          "units": "cases per person per year",
+          "source": "Global Burden of Disease via Spectrum/OneHealth NCD defaults"
         }
       },
       "flush": true
@@ -513,6 +628,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetes episode incidence",
+          "units": "people per year",
+          "source": "Module calculation"
         }
       },
       "flush": true
@@ -589,7 +709,12 @@
         "parameters": {
           "country": "AFG"
         },
-        "generate_once": true
+        "generate_once": true,
+        "display": {
+          "label": "Years of life lost by age",
+          "units": "years",
+          "source": "Platform calculation using an 80-year life-expectancy limit"
+        }
       },
       "tags": [
         "function"
@@ -611,6 +736,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetes episode case-fatality probability to Diabetes episode mortality",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabetesEpsd_CFR -> DiabetesEpsd Mortality"
@@ -627,6 +757,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic nephropathy adjustment to diabetic nephropathy incidence",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticNephropathy_Transform -> DiabeticNephropathy Incidence"
@@ -642,6 +777,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetes episode mortality to Deceased",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabetesEpsd Mortality -> Deceased"
@@ -690,6 +830,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic retinopathy incidence to diabetic retinopathy",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticRetinopathy Incidence -> DiabeticRetinopathy"
@@ -705,6 +850,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Lower-extremity amputation incidence to lower-extremity amputation",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "LowerExtrmAmpt Incidence -> LowerExtrmAmpt"
@@ -720,6 +870,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic nephropathy incidence to diabetic nephropathy",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticNephropathy Incidence -> DiabeticNephropathy"
@@ -746,6 +901,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic retinopathy mortality to Deceased",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticRetinopathy Mortality -> Deceased"
@@ -772,6 +932,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Lower-extremity amputation mortality to Deceased",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "LowerExtrmAmpt Mortality -> Deceased"
@@ -798,6 +963,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic nephropathy mortality to Deceased",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticNephropathy Mortality -> Deceased"
@@ -814,6 +984,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic nephropathy case-fatality probability to diabetic nephropathy mortality",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticNephropathy_CFR -> DiabeticNephropathy Mortality"
@@ -830,6 +1005,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Lower-extremity amputation case-fatality probability to lower-extremity amputation mortality",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "LowerExtrmAmpt_CFR -> LowerExtrmAmpt Mortality"
@@ -846,6 +1026,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic retinopathy case-fatality probability to diabetic retinopathy mortality",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticRetinopathy_CFR -> DiabeticRetinopathy Mortality"
@@ -862,6 +1047,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic nephropathy incidence rate to diabetic nephropathy incidence",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticNephropathy_Incidence_Rate -> DiabeticNephropathy Incidence"
@@ -878,6 +1068,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Lower-extremity amputation incidence rate to lower-extremity amputation incidence",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "LowerExtrmAmpt_Incidence_Rate -> LowerExtrmAmpt Incidence"
@@ -894,6 +1089,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic retinopathy incidence rate to diabetic retinopathy incidence",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticRetinopathy_Incidence_Rate -> DiabeticRetinopathy Incidence"
@@ -910,6 +1110,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Lower-extremity amputation adjustment to lower-extremity amputation incidence",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "LowerExtrmAmpt_Transform -> LowerExtrmAmpt Incidence"
@@ -926,6 +1131,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetic retinopathy adjustment to diabetic retinopathy incidence",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabeticRetinopathy_Transform -> DiabeticRetinopathy Incidence"
@@ -1014,6 +1224,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetes episode incidence rate to Diabetes episode incidence",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabetesEpsd_Incidence_Rate -> DiabetesEpsd Incidence",
@@ -1034,6 +1249,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Diabetes episode incidence to Diabetes episode",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "DiabetesEpsd Incidence -> DiabetesEpsd"
