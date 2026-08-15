@@ -2,7 +2,7 @@
 title: Diabetes epidemiology
 module_identifier: ncd-diabetes
 owner: Forecast Health
-last_updated: 2026-07-19
+last_updated: 2026-08-15
 status: Executable source module
 ---
 
@@ -45,10 +45,12 @@ The source module exposes only `diabetes_baseline`. The disease parameter regist
 
 The demographic module supplies canonical population and background mortality. `opening-state-reconciliation` initializes the disease partition. Separate repositories own standard and intensive glycaemic control, retinopathy screening, nephropathy screening and blood-pressure control, and comprehensive foot care.
 
+The routine-care declaration uses the preserved Spectrum/OneHealth-derived resource structures for standard glycaemic control, retinopathy screening, nephropathy screening and follow-up, and comprehensive foot care. These services are applied to the full living diabetes-state partition without changing disease transitions.
+
 ## Assumptions and limitations
 
 The disease-free state is a local residual, not an additional population. The model is a marginal diabetes estimate and must remain reconciled to the canonical population. Intervention graph slices modify complication incidence but do not model detailed screening, diagnosis, adherence, or treatment pathways.
 
 ## Status
 
-The disease graph, compiler contract, baseline template, opening-state recipe, and intervention extension points are implemented. The source graph requires compiler lowering and is not a standalone national model.
+The disease graph, compiler contract, baseline template, opening-state recipe, intervention extension points, and routine-care declarations are implemented. The source graph requires compiler lowering and is not a standalone national model.
