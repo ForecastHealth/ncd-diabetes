@@ -1,0 +1,36 @@
+{
+  "schema": "forecast-health.impact-view.v1",
+  "module_id": "ncd-diabetes",
+  "scope": "disease",
+  "scope_id": "ncd-diabetes",
+  "label": "Diabetes",
+  "show_headline": true,
+  "charts": [
+    {
+      "id": "diabetes-population",
+      "series_id": "ncd-health-states-over-time",
+      "title": "People living with diabetes",
+      "description": "People living with diabetes in each year.",
+      "element_ids": ["DiabetesEpsd"]
+    },
+    {
+      "id": "diabetes-complications",
+      "series_id": "ncd-health-states-over-time",
+      "title": "People living with diabetes complications",
+      "description": "People living with diabetic nephropathy, retinopathy, or lower-extremity amputation in each year.",
+      "element_ids": ["ls9qwy72", "ls9qw5uh", "ls9qwy35"]
+    },
+    {
+      "id": "diabetes-deaths",
+      "series_id": "ncd-mortality-over-time",
+      "title": "Deaths from diabetes and its complications",
+      "description": "Deaths from diabetes and its modelled complications in each year."
+    },
+    {
+      "id": "diabetes-healthy-years",
+      "series_id": "ncd-result-query-hyl-simple-over-time",
+      "title": "Healthy years lived after accounting for diabetes disability",
+      "description": "Healthy years lived after accounting for disability from diabetes and its modelled complications in each year."
+    }
+  ]
+}
