@@ -41,7 +41,8 @@
       "units": "multiplier",
       "required": false,
       "binding": {
-        "legacy_lowering_ref": "$.links[?(@.id=='eYyocGwO')].compiler_binding"
+        "legacy_lowering_ref": "$.links[?(@.id=='eYyocGwO')].compiler_binding",
+        "target_link_id": "eYyocGwO"
       }
     }
   ],
@@ -261,7 +262,7 @@
     "phases": [
       {
         "phase_id": "main_disease_transitions",
-        "subroutine_narration": "Main routine",
+        "subroutine_id": "main-routine",
         "allocation_basis": "phase_opening_balance",
         "method": "continuous_hazard_transition_system",
         "source_removing_link_ids": [
@@ -276,7 +277,7 @@
       },
       {
         "phase_id": "background_mortality",
-        "subroutine_narration": "Background mortality",
+        "subroutine_id": "background-mortality",
         "allocation_basis": "current_balance_after_prior_phases",
         "method": "sequential_transfer",
         "source_removing_link_ids": [

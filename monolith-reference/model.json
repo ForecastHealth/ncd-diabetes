@@ -4,7 +4,10 @@
     "author": "Avenir, Roglic, Bertram, Watts, et al.",
     "description": "The Diabetes Base Model created by Avenir Health and WHO",
     "version": "2.5",
-    "file_id": "diabetes"
+    "file_id": "diabetes",
+    "module_id": "ncd-diabetes-monolith-reference",
+    "artifact_type": "monolith_reference_snapshot",
+    "superseded_by": "ncd-diabetes"
   },
   "runtime": {
     "startYear": 2025,

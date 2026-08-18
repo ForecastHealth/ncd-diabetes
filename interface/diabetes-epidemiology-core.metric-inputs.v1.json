@@ -121,7 +121,8 @@
               {
                 "source_label": "YLL_Weight",
                 "generator_kind": "runtime_output",
-                "source_node_id": "YLL_Weight"
+                "source_node_id": "YLL_Weight",
+                "requires_generation": true
               }
             ]
           },
@@ -138,7 +139,8 @@
               {
                 "source_label": "YLL_Weight",
                 "generator_kind": "runtime_output",
-                "source_node_id": "YLL_Weight"
+                "source_node_id": "YLL_Weight",
+                "requires_generation": true
               }
             ]
           },
@@ -155,7 +157,8 @@
               {
                 "source_label": "YLL_Weight",
                 "generator_kind": "runtime_output",
-                "source_node_id": "YLL_Weight"
+                "source_node_id": "YLL_Weight",
+                "requires_generation": true
               }
             ]
           },
@@ -172,7 +175,8 @@
               {
                 "source_label": "YLL_Weight",
                 "generator_kind": "runtime_output",
-                "source_node_id": "YLL_Weight"
+                "source_node_id": "YLL_Weight",
+                "requires_generation": true
               }
             ]
           }

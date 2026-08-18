@@ -4,7 +4,8 @@
     "author": "Avenir, Roglic, Bertram, Watts, et al.",
     "description": "The Diabetes Base Model created by Avenir Health and WHO",
     "version": "2.5",
-    "file_id": "diabetes"
+    "file_id": "diabetes",
+    "module_id": "ncd-diabetes"
   },
   "runtime": {
     "startYear": 2025,
@@ -1263,11 +1264,13 @@
     {
       "method": "flush",
       "batch": false,
+      "subroutine_id": "nodes-are-flushed",
       "narration": "Nodes are flushed"
     },
     {
       "method": "generate_balance",
       "batch": false,
+      "subroutine_id": "generate-the-base-values-of-the-surrogate-nodes",
       "narration": "Generate the base values of the surrogate nodes",
       "included_source_nodes": [
         "ls9rc6e6",
@@ -1283,6 +1286,7 @@
     {
       "method": "generate_balance",
       "batch": false,
+      "subroutine_id": "generate-the-base-values-of-the-function-nodes-for-constants",
       "narration": "Generate the base values of the function nodes for constants",
       "included_source_nodes": [
         "lrwz1ikj",
@@ -1293,6 +1297,7 @@
     {
       "method": "generate_balance",
       "batch": false,
+      "subroutine_id": "generate-the-balance-of-the-constants",
       "narration": "Generate the balance of the constants",
       "included_source_nodes": [
         "lrso71jf",
@@ -1313,6 +1318,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "calculate-coverage",
       "narration": "Calculate Coverage",
       "included_edges": [],
       "compiler_extension_slot": "diabetes_intervention_components"
@@ -1320,6 +1326,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "calculate-incidence-effects",
       "narration": "Calculate Incidence Effects",
       "included_edges": [],
       "compiler_extension_slot": "diabetes_intervention_components"
@@ -1327,6 +1334,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "remove-incidence-effects-from-1-0",
       "narration": "Remove Incidence Effects from 1.0",
       "included_edges": [],
       "compiler_extension_slot": "diabetes_intervention_components"
@@ -1334,6 +1342,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "add-incidence-rate-constants-to-surrogate",
       "narration": "Add Incidence Rate constants to surrogate",
       "included_edges": [
         "YIz69wxx",
@@ -1345,6 +1354,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "add-diabetes-incidence-to-episode-state",
       "narration": "Add diabetes incidence to episode state",
       "included_edges": [
         "vK2oNfec"
@@ -1353,6 +1363,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "modify-incidence-rate-with-intervention-effects",
       "narration": "Modify incidence rate with intervention effects",
       "included_edges": [
         "XKtgbA5d",
@@ -1363,12 +1374,14 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "calculate-disability-surrogates",
       "narration": "Calculate Disability Surrogates",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "push-cfrs-to-mortality-surrogates",
       "narration": "Push CFRs to Mortality Surrogates",
       "included_edges": [
         "QNP1gYuf",
@@ -1380,6 +1393,7 @@
     {
       "method": "transition_system",
       "batch": true,
+      "subroutine_id": "main-routine",
       "narration": "Main routine",
       "included_edges": [
         "qwfuA7jx",
@@ -1394,6 +1408,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "background-mortality",
       "narration": "Background mortality",
       "included_edges": [
         "tJOW1hhc",
@@ -1405,6 +1420,7 @@
     {
       "method": "age",
       "batch": false,
+      "subroutine_id": "ageing-the-populations",
       "narration": "Ageing the populations",
       "included_source_nodes": [
         "DiabetesEpsd",
@@ -1416,6 +1432,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "push-disease-populations-to-absolute-resource-population-reached",
       "narration": "Push disease populations to absolute resource population reached",
       "included_edges": [],
       "compiler_extension_slot": "diabetes_intervention_components"
@@ -1423,6 +1440,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "modify-absolute-resource-population-reached-by-pin-and-coverage",
       "narration": "Modify absolute resource population reached by PIN and coverage",
       "included_edges": [],
       "compiler_extension_slot": "diabetes_intervention_components"
@@ -1430,6 +1448,7 @@
     {
       "method": "echo",
       "batch": false,
+      "subroutine_id": "record-echo-values",
       "narration": "Record ECHO values",
       "included_source_nodes": [
         "i7ihZagV",
