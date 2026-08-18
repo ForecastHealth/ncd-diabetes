@@ -25,7 +25,7 @@ This module models diabetes incidence, the diabetes episode state, diabetic reti
 
 ## Method
 
-Diabetes is a marginal disease process. Its living-state partition contains a derived disease-free residual, the diabetes episode state, and three complication states. Observed prevalence informs the opening disease state. During each model year, incidence and complication transitions compete in a continuous-hazard phase based on the phase-opening balances. Background mortality is then applied sequentially to survivors.
+Diabetes is a marginal disease process. Its living-state partition contains a derived disease-free residual, the diabetes episode state and three complication states. At each model-year opening, the coordinator sets the residual to the canonical population minus the declared diabetes and complication states, by age and sex. During the year, incidence and complication transitions compete in a continuous-hazard phase based on the phase-opening balances. Background mortality then applies to the disease states.
 
 Risk-factor modules can modify diabetes incidence. Clinical components can reduce the incidence of retinopathy, nephropathy, and lower-extremity amputation through disease-owned extension points. Post-run metric modules calculate healthy years and disease burden from the raw state and mortality outputs.
 

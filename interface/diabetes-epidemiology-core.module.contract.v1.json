@@ -12,7 +12,7 @@
   "declared_inputs": [
     {
       "channel_id": "population_at_risk_opening",
-      "meaning": "Opening diabetes-local population at risk, seeded from the demographic substrate and diabetes prevalence.",
+      "meaning": "Diabetes-local population at risk derived at each model-year opening from the canonical population and the declared diabetes states.",
       "shape": "2x101",
       "units": "people",
       "required": true,
@@ -127,11 +127,11 @@
       ],
       "residual_state_node_id": "DsFreeSus",
       "residual_state_semantics": {
-        "classification": "derived_marginal_residual",
+        "classification": "derived_population_at_risk",
         "authoritative_population": false,
         "meaning": "People in the canonical population who are not in any declared diabetes or diabetes-complication state in this marginal disease process.",
         "opening_calculation": "canonical_population_minus_declared_non_residual_states",
-        "annual_calculation": "carried as the diabetes incidence source inside the marginal process, then rebased with all living diabetes states to canonical survivors"
+        "annual_calculation": "At each model-year opening, canonical population minus the declared non-residual diabetes states, by age and sex"
       }
     },
     "cause_specific_mortality": {
@@ -343,8 +343,7 @@
         "ls9qwy35",
         "ls9qwy72"
       ],
-      "birth_sources": [
-        "DsFreeSus",
+      "migration_state_node_ids": [
         "DiabetesEpsd",
         "ls9qw5uh",
         "ls9qwy35",
