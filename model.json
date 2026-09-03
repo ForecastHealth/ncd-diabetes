@@ -707,14 +707,12 @@
       "generate_array": {
         "data_fetcher_label": "fhdb",
         "method": "yll_weights",
-        "parameters": {
-          "country": "AFG"
-        },
+        "parameters": {},
         "generate_once": true,
         "display": {
           "label": "Years of life lost by age",
           "units": "years",
-          "source": "Platform calculation using an 80-year life-expectancy limit"
+          "source": "GBD reference life table (IHME), remaining life expectancy at each age, the same for both sexes; 2019 values, from the platform database"
         }
       },
       "tags": [
