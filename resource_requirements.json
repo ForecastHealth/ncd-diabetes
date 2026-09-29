@@ -68,8 +68,10 @@
           "key": "Nurse: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-nurse.salary-per-minute",
-            "label": "Nurse salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-3",
+            "label": "Skill level 3 staff (technicians and officers, nurses, therapists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -78,8 +80,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 3
-          }
+            "cadre": 3,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Generalist/Primary care doctor: Share",
@@ -103,8 +107,10 @@
           "key": "Generalist/Primary care doctor: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-generalist-primary-care-doctor.salary-per-minute",
-            "label": "Generalist/Primary care doctor salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -113,8 +119,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Specialist: Share",
@@ -138,8 +146,10 @@
           "key": "Specialist: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -148,8 +158,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Insulin, 100 IU/ml: Share",
@@ -697,8 +709,10 @@
           "key": "Specialist 1: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -707,8 +721,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Specialist 2: Share",
@@ -732,8 +748,10 @@
           "key": "Specialist 2: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -742,8 +760,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Specialist 3: Share",
@@ -767,8 +787,10 @@
           "key": "Specialist 3: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -777,8 +799,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Specialist 4: Share",
@@ -802,8 +826,10 @@
           "key": "Specialist 4: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -812,8 +838,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Retinal examination module: Share",
@@ -1205,8 +1233,10 @@
           "key": "Specialist 1: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -1215,8 +1245,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Specialist 2: Share",
@@ -1240,8 +1272,10 @@
           "key": "Specialist 2: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -1250,8 +1284,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Specialist 3: Share",
@@ -1275,8 +1311,10 @@
           "key": "Specialist 3: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -1285,8 +1323,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Enalapril 10mg: Share",
@@ -1606,8 +1646,10 @@
           "key": "Specialist salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -1616,15 +1658,19 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Specialist salary per minute (follow-up)",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist.salary-per-minute",
-            "label": "Specialist salary per minute"
+            "id": "cost-item.workforce-salary.skill-level-4",
+            "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+            "unit": "FTE-year",
+            "minutes_per_unit": 126720
           },
           "target": {
             "type": "edge_parameter",
@@ -1633,8 +1679,10 @@
           },
           "country_cost_lookup": {
             "category": "workforce",
-            "cadre": 4
-          }
+            "cadre": 4,
+            "value": "annual_salary"
+          },
+          "cost_item_conversion": "per_minute"
         },
         {
           "key": "Outpatient visit cost per day",
