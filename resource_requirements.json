@@ -222,8 +222,8 @@
           "key": "Home glucose monitoring 2: Unit cost",
           "category": "Unit Cost",
           "cost_item": {
-            "id": "cost-item.home-glucose-monitoring-2.unit-cost",
-            "label": "Home glucose monitoring 2"
+            "id": "cost-item.home-glucose-monitoring.unit-cost",
+            "label": "Home glucose monitoring"
           },
           "target": {
             "type": "edge_parameter",
@@ -342,8 +342,8 @@
           "key": "Home glucose monitoring 5: Unit cost",
           "category": "Unit Cost",
           "cost_item": {
-            "id": "cost-item.home-glucose-monitoring-5.unit-cost",
-            "label": "Home glucose monitoring 5"
+            "id": "cost-item.home-glucose-monitoring.unit-cost",
+            "label": "Home glucose monitoring"
           },
           "target": {
             "type": "edge_parameter",
@@ -697,8 +697,8 @@
           "key": "Specialist 1: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist-1.salary-per-minute",
-            "label": "Specialist 1 salary per minute"
+            "id": "cost-item.workforce-specialist.salary-per-minute",
+            "label": "Specialist salary per minute"
           },
           "target": {
             "type": "edge_parameter",
@@ -732,8 +732,8 @@
           "key": "Specialist 2: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist-2.salary-per-minute",
-            "label": "Specialist 2 salary per minute"
+            "id": "cost-item.workforce-specialist.salary-per-minute",
+            "label": "Specialist salary per minute"
           },
           "target": {
             "type": "edge_parameter",
@@ -767,8 +767,8 @@
           "key": "Specialist 3: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist-3.salary-per-minute",
-            "label": "Specialist 3 salary per minute"
+            "id": "cost-item.workforce-specialist.salary-per-minute",
+            "label": "Specialist salary per minute"
           },
           "target": {
             "type": "edge_parameter",
@@ -802,8 +802,8 @@
           "key": "Specialist 4: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist-4.salary-per-minute",
-            "label": "Specialist 4 salary per minute"
+            "id": "cost-item.workforce-specialist.salary-per-minute",
+            "label": "Specialist salary per minute"
           },
           "target": {
             "type": "edge_parameter",
@@ -1205,8 +1205,8 @@
           "key": "Specialist 1: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist-1.salary-per-minute",
-            "label": "Specialist 1 salary per minute"
+            "id": "cost-item.workforce-specialist.salary-per-minute",
+            "label": "Specialist salary per minute"
           },
           "target": {
             "type": "edge_parameter",
@@ -1240,8 +1240,8 @@
           "key": "Specialist 2: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist-2.salary-per-minute",
-            "label": "Specialist 2 salary per minute"
+            "id": "cost-item.workforce-specialist.salary-per-minute",
+            "label": "Specialist salary per minute"
           },
           "target": {
             "type": "edge_parameter",
@@ -1275,8 +1275,8 @@
           "key": "Specialist 3: Salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-specialist-3.salary-per-minute",
-            "label": "Specialist 3 salary per minute"
+            "id": "cost-item.workforce-specialist.salary-per-minute",
+            "label": "Specialist salary per minute"
           },
           "target": {
             "type": "edge_parameter",
@@ -1399,8 +1399,8 @@
           "key": "Albumin/creatinine ratio in spot urine sample test: Unit cost",
           "category": "Unit Cost",
           "cost_item": {
-            "id": "cost-item.albumin-creatinine-ratio-in-spot-urine-sample-test.unit-cost",
-            "label": "Albumin/creatinine ratio in spot urine sample test"
+            "id": "cost-item.urine-albumin-to-creatinine-ratio-test.unit-cost",
+            "label": "Urine albumin-to-creatinine ratio test"
           },
           "target": {
             "type": "edge_parameter",
@@ -1606,7 +1606,7 @@
           "key": "Specialist salary per minute",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-initial.salary-per-minute",
+            "id": "cost-item.workforce-specialist.salary-per-minute",
             "label": "Specialist salary per minute"
           },
           "target": {
@@ -1623,8 +1623,8 @@
           "key": "Specialist salary per minute (follow-up)",
           "category": "Workforce Cost",
           "cost_item": {
-            "id": "cost-item.workforce-followup.salary-per-minute",
-            "label": "Specialist salary per minute (follow-up)"
+            "id": "cost-item.workforce-specialist.salary-per-minute",
+            "label": "Specialist salary per minute"
           },
           "target": {
             "type": "edge_parameter",

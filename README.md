@@ -2,7 +2,7 @@
 title: Diabetes epidemiology
 module_identifier: ncd-diabetes
 owner: Forecast Health
-last_updated: 2026-08-15
+last_updated: 2026-09-29
 status: Executable source module
 ---
 
@@ -40,6 +40,8 @@ The source module exposes only `diabetes_baseline`. The disease parameter regist
 ## Data and evidence
 
 [`model.json`](model.json) is the executable graph. The [module contract](interface/diabetes-epidemiology-core.module.contract.v1.json) defines composition and runtime semantics. The opening-state recipe defines baseline initialization. The contract identifies Spectrum/OneHealth diabetes material and the current module cleanup as default provenance.
+
+The routine-care resource blocks in [`resource_requirements.json`](resource_requirements.json) use the same cost item identities as the diabetes intervention modules. Every specialist minute (D2 and D5 specialists 1 to 4, and D1 initial and follow-up visits) is `cost-item.workforce-specialist.salary-per-minute`. Both D3 home glucose monitoring lines are `cost-item.home-glucose-monitoring.unit-cost`. The D5 albumin-to-creatinine ratio test is `cost-item.urine-albumin-to-creatinine-ratio-test.unit-cost`, the D3 test. The D5 graph prices serum creatinine at 2.15 US dollars (OneHealth `IC_DS_SerumCreatinine`), and the albumin-to-creatinine ratio and serum potassium tests at 9.73 US dollars. The earlier 41.84 was a Malaysian ringgit price from the UNDP costing workbook.
 
 ## Relationships
 
