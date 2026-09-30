@@ -2,7 +2,7 @@
 title: Diabetes epidemiology
 module_identifier: ncd-diabetes
 owner: Forecast Health
-last_updated: 2026-09-29
+last_updated: 2026-09-30
 status: Executable source module
 ---
 
@@ -41,7 +41,7 @@ The source module exposes only `diabetes_baseline`. The disease parameter regist
 
 [`model.json`](model.json) is the executable graph. The [module contract](interface/diabetes-epidemiology-core.module.contract.v1.json) defines composition and runtime semantics. The opening-state recipe defines baseline initialization. The contract identifies Spectrum/OneHealth diabetes material and the current module cleanup as default provenance.
 
-The routine-care resource blocks in [`resource_requirements.json`](resource_requirements.json) use the same cost item identities as the diabetes intervention modules. Every specialist minute (D2 and D5 specialists 1 to 4, and D1 initial and follow-up visits) is priced from the skill level 4 salary item, `cost-item.workforce-salary.skill-level-4`. Both D3 home glucose monitoring lines are `cost-item.home-glucose-monitoring.unit-cost`. The D5 albumin-to-creatinine ratio test is `cost-item.urine-albumin-to-creatinine-ratio-test.unit-cost`, the D3 test. The D5 graph prices serum creatinine at 2.15 US dollars (OneHealth `IC_DS_SerumCreatinine`), and the albumin-to-creatinine ratio and serum potassium tests at 9.73 US dollars. The earlier 41.84 was a Malaysian ringgit price from the UNDP costing workbook.
+Routine care is declared in [`resource_requirements.json`](resource_requirements.json) as `routine_care_services`: each entry names a service by the module and block that declare it, `ncd-diabetes-stdglyccontrol` (`d3-standard-glycaemic-control`), `ncd-diabetes-retinopathyscrn` (`d2-retinopathy-screening`), `ncd-diabetes-nephropathyscr` (`d5-nephropathy-screening-follow-up`) and `ncd-diabetes-neuropathyscr` (`d1-foot-care`), with the disease states it is delivered to. This module does not copy the services' resources. The compiler takes the quantities, cost items, population in need and baseline coverage from each service's own declaration and costs the service at its baseline coverage in both scenarios. When the owning intervention is selected, its block also costs the service for the population the intervention reaches, at baseline coverage in the baseline scenario and at the target coverage in the comparison; routine care of the disease states continues beside it from the same declaration.
 
 Staff time is priced from one shared salary item per staff type, `cost-item.workforce-salary.<type>`: `nurse`, `generalist-primary-care-doctor`, `specialist`, `therapist` and `counsellor`. A type is the same item in every module that uses it, so a generalist minute costs the same everywhere, and each type can be edited on its own: a specialist can be paid differently from a generalist doctor. The item is an annual salary. Its default is the country's WHO-CHOICE annual salary from the data service for the type's cadre (skill level 4 for doctors and specialists, 3 for nurses and therapists, 2 for counsellors); the cadre is the default source, not the item. A staff minute costs that salary divided by 126,720 working minutes a year (8 hours, 22 days a month, 12 months). The data service uses this convention for its WHO-CHOICE cost per minute, and every clinical staff cost has used it. The per-minute values in the resource graphs are defaults for use without a country. Tobacco policy programme roles are separate staff types, since none is the same job as a clinical one.
 
@@ -49,7 +49,7 @@ Staff time is priced from one shared salary item per staff type, `cost-item.work
 
 The demographic module supplies canonical population and background mortality. `opening-state-reconciliation` initializes the disease partition. Separate repositories own standard and intensive glycaemic control, retinopathy screening, nephropathy screening and blood-pressure control, and comprehensive foot care.
 
-The routine-care declaration uses the preserved Spectrum/OneHealth-derived resource structures for standard glycaemic control, retinopathy screening, nephropathy screening and follow-up, and comprehensive foot care. These services are applied to the full living diabetes-state partition without changing disease transitions.
+Routine care references the standard glycaemic control, retinopathy screening, nephropathy screening and follow-up, and comprehensive foot care services declared by those repositories. The services are applied to the diabetes episode and complication states without changing disease transitions. The intervention graph slices count their reached population from new diabetes cases, while routine care counts people in the diabetes states.
 
 ## Assumptions and limitations
 
