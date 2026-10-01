@@ -49,7 +49,7 @@ Staff time is priced from one shared salary item per staff type, `cost-item.work
 
 The demographic module supplies canonical population and background mortality. `opening-state-reconciliation` initializes the disease partition. Separate repositories own standard and intensive glycaemic control, retinopathy screening, nephropathy screening and blood-pressure control, and comprehensive foot care.
 
-Routine care references the standard glycaemic control, retinopathy screening, nephropathy screening and follow-up, and comprehensive foot care services declared by those repositories. The services are applied to the diabetes episode and complication states without changing disease transitions. The intervention graph slices count their reached population from new diabetes cases, while routine care counts people in the diabetes states.
+Routine care references the standard glycaemic control, retinopathy screening, nephropathy screening and follow-up, and comprehensive foot care services declared by those repositories. The services are applied to the diabetes episode and complication states without changing disease transitions. The intervention graph slices count their reached population from the diabetes episode state, the population whose complication transitions their effects reduce, while routine care counts people in the diabetes episode and complication states.
 
 ## Assumptions and limitations
 
