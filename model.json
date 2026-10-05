@@ -436,7 +436,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.213
+          "value": 0.225
         },
         "display": {
           "label": "Lower-extremity amputation disability weight",

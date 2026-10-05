@@ -65,14 +65,14 @@
     {
       "parameter_id": "lower_extremity_amputation_disability_weight",
       "label": "Lower-extremity amputation disability weight",
-      "meaning": "GBD diabetic neuropathy with amputation: 1 - (1 - 0.133)(1 - amputation weight), with treated (0.021, combined 0.151) and untreated (0.164, combined 0.275) amputation given equal shares.",
+      "meaning": "GBD sequelae diabetic neuropathy with treated amputation (0.17) and with untreated amputation (0.28), given equal shares because GBD splits them by health-system access and publishes no split.",
       "ownership_scope": "module_owned",
       "value_type": "number",
       "editable_in_scenario": false,
       "shape": "scalar",
       "units": "disability weight",
       "default": {
-        "value": 0.213,
+        "value": 0.225,
         "source_ref": "source:gbd-2019-disability-weights"
       },
       "allowed_range": {
