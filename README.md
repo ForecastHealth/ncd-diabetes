@@ -64,7 +64,7 @@ Until October 2026 the module used 0.031 for diabetes, 0.338 for retinopathy, 0.
 
 ### Onset age
 
-This is a type 2 diabetes model. Its GBD input covers all diabetes, so values below 15 (2e-5 to 3e-4 a year) are mostly type 1. Diabetes incidence and opening prevalence are 0 below 15: the incidence node (`nLErvery`) and the opening-prevalence source ask the data service for `min_age` 15, and the registry declares it as `minimum_onset_age`. The complication states start empty.
+This is a type 2 diabetes model. Its GBD input covers all diabetes, so values below 15 (2e-5 to 3e-4 a year) are mostly type 1. Diabetes incidence and opening prevalence are 0 below 15: the incidence node (`nLErvery`) and the opening-prevalence source ask the data service for `min_age` 15, and the registry declares it as `minimum_onset_age`. The opening-year calibration (`data/diabetes-opening-state.contract.v3.json`) reads the same incidence and prevalence. The complication states start empty.
 
 The living states are mutually exclusive: retinopathy, nephropathy and amputation are entered by transitions that remove people from the diabetes episode state, so a person carries one disability weight. A person in a complication state does not also carry the episode weight (0.080).
 

@@ -34,7 +34,8 @@
           "parameters": {
             "country": "$country",
             "disease": "Diabetes",
-            "measure": "incidence"
+            "measure": "incidence",
+            "min_age": 15
           }
         },
         "unit": "population_rate",
@@ -235,7 +236,8 @@
               "parameters": {
                 "country": "$country",
                 "disease": "Diabetes",
-                "measure": "prevalence"
+                "measure": "prevalence",
+                "min_age": 15
               }
             }
           ]
