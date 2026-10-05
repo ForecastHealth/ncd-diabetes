@@ -1,0 +1,275 @@
+{
+  "schema": "forecast-health.disease-opening-state-contract.v3",
+  "contract_id": "ncd-diabetes-opening-state",
+  "module_id": "diabetes_epidemiology_core",
+  "version": "v3",
+  "reconciliation_module_id": "opening-state-reconciliation",
+  "purpose": "Declare the diabetes rate calibration and cohort-consistent opening complication shares applied by the shared opening-state reconciliation.",
+  "scenario_policy": {
+    "inputs": "baseline_only",
+    "comparison_intervention_inputs_allowed": false,
+    "artifact_reuse": "same_content_hash_for_baseline_and_all_comparisons"
+  },
+  "rate_calibration": {
+    "schema": "forecast-health.disease-rate-calibration.v1",
+    "method_id": "attributed_cause_specific_death_fit.v1",
+    "authorization": {
+      "status": "authorized",
+      "recorded_date": "2026-10-05",
+      "authority": "Rory Watts and Robert Totanes (WHO) approved disease-model calibration. Rory delegated the method decisions of 5 October 2026 to the team lead, who adopted WHO GHE 2021 cause-specific deaths as the death target, a 28-day per-episode reading of acute case fatality with acute deaths capped at half of target deaths, and cohort-consistent opening complication shares.",
+      "scope": "Opening-year attributed deaths only. Prevalence after the opening year is not a target of this method version."
+    },
+    "states": [
+      "DsFreeSus",
+      "DiabetesEpsd",
+      "ls9qw5uh",
+      "ls9qwy35",
+      "ls9qwy72"
+    ],
+    "residual_state": "DsFreeSus",
+    "rates": {
+      "diabetes_incidence": {
+        "source": {
+          "data_type": "fhdb.epidemiology",
+          "parameters": {
+            "country": "$country",
+            "disease": "Diabetes",
+            "measure": "incidence"
+          }
+        },
+        "unit": "population_rate",
+        "apply": "susceptible_incidence_scale"
+      },
+      "retinopathy_incidence": {
+        "source": {
+          "data_type": "diabetes.get_observation",
+          "parameters": {
+            "country": "$country",
+            "observation": "Diabetes -> DiabeticRetinopathy"
+          }
+        },
+        "unit": "annual_hazard"
+      },
+      "amputation_incidence": {
+        "source": {
+          "data_type": "diabetes.get_observation",
+          "parameters": {
+            "country": "$country",
+            "observation": "Diabetes -> LowerExtrmAmpt"
+          }
+        },
+        "unit": "annual_hazard"
+      },
+      "nephropathy_incidence": {
+        "source": {
+          "data_type": "diabetes.get_observation",
+          "parameters": {
+            "country": "$country",
+            "observation": "Diabetes -> DiabeticNephropathy"
+          }
+        },
+        "unit": "annual_hazard"
+      },
+      "diabetes_fatality": {
+        "source": {
+          "data_type": "fhdb.epidemiology",
+          "parameters": {
+            "country": "$country",
+            "disease": "Diabetes",
+            "measure": "deaths"
+          }
+        },
+        "unit": "annual_hazard",
+        "upper_bound": 3.0,
+        "runtime_binding": {
+          "source_node_id": "lrso81aw"
+        }
+      },
+      "retinopathy_fatality": {
+        "source": {
+          "data_type": "diabetes.get_observation",
+          "parameters": {
+            "country": "$country",
+            "observation": "DiabeticRetinopathy -> Deceased"
+          }
+        },
+        "unit": "annual_hazard",
+        "upper_bound": 3.0,
+        "runtime_binding": {
+          "source_node_id": "ls9rmh3c"
+        }
+      },
+      "amputation_fatality": {
+        "source": {
+          "data_type": "diabetes.get_observation",
+          "parameters": {
+            "country": "$country",
+            "observation": "LowerExtrmAmpt -> Deceased"
+          }
+        },
+        "unit": "annual_hazard",
+        "upper_bound": 3.0,
+        "runtime_binding": {
+          "source_node_id": "ls9rlprb"
+        }
+      },
+      "nephropathy_fatality": {
+        "source": {
+          "data_type": "fhdb.epidemiology",
+          "parameters": {
+            "country": "$country",
+            "disease": "CKD",
+            "measure": "deaths"
+          }
+        },
+        "unit": "annual_hazard",
+        "upper_bound": 3.0,
+        "runtime_binding": {
+          "source_node_id": "ls9rkzfi"
+        }
+      }
+    },
+    "transitions": [
+      {
+        "from": "DsFreeSus",
+        "to": "DiabetesEpsd",
+        "rate": "diabetes_incidence"
+      },
+      {
+        "from": "DiabetesEpsd",
+        "to": "ls9qw5uh",
+        "rate": "retinopathy_incidence"
+      },
+      {
+        "from": "DiabetesEpsd",
+        "to": "ls9qwy35",
+        "rate": "amputation_incidence"
+      },
+      {
+        "from": "DiabetesEpsd",
+        "to": "ls9qwy72",
+        "rate": "nephropathy_incidence"
+      },
+      {
+        "from": "DiabetesEpsd",
+        "to": null,
+        "rate": "diabetes_fatality",
+        "death_edge_id": "OyW7kOSM"
+      },
+      {
+        "from": "ls9qw5uh",
+        "to": null,
+        "rate": "retinopathy_fatality",
+        "death_edge_id": "nU0Snw08"
+      },
+      {
+        "from": "ls9qwy35",
+        "to": null,
+        "rate": "amputation_fatality",
+        "death_edge_id": "cdXO88Jz"
+      },
+      {
+        "from": "ls9qwy72",
+        "to": null,
+        "rate": "nephropathy_fatality",
+        "death_edge_id": "SOdrw9IV"
+      }
+    ],
+    "causes": [
+      {
+        "cause_id": "diabetes",
+        "target": {
+          "source": {
+            "data_type": "who_ghe.cause_death_rate",
+            "parameters": {
+              "country": "$country",
+              "cause": "diabetes",
+              "release": "GHE 2021"
+            }
+          },
+          "unit": "deaths_per_person_repeated_over_band_ages",
+          "age_bands": [
+            [
+              0,
+              4
+            ],
+            [
+              5,
+              14
+            ],
+            [
+              15,
+              29
+            ],
+            [
+              30,
+              49
+            ],
+            [
+              50,
+              59
+            ],
+            [
+              60,
+              69
+            ],
+            [
+              70,
+              100
+            ]
+          ],
+          "meaning": "WHO Global Health Estimates 2021 cause-specific deaths divided by population, by sex and GHE age band, applied to the opening population."
+        },
+        "age_shape": {
+          "product_of": [
+            {
+              "data_type": "fhdb.epidemiology",
+              "parameters": {
+                "country": "$country",
+                "disease": "Diabetes",
+                "measure": "deaths"
+              }
+            },
+            {
+              "data_type": "fhdb.epidemiology",
+              "parameters": {
+                "country": "$country",
+                "disease": "Diabetes",
+                "measure": "prevalence"
+              }
+            }
+          ]
+        },
+        "attributed_death_rates": {
+          "diabetes_fatality": 1,
+          "retinopathy_fatality": 1,
+          "amputation_fatality": 1,
+          "nephropathy_fatality": 1
+        },
+        "fitted_rates": [
+          "diabetes_fatality",
+          "retinopathy_fatality",
+          "amputation_fatality",
+          "nephropathy_fatality"
+        ]
+      }
+    ],
+    "opening_composition": {
+      "method": "cohort_integration",
+      "states": [
+        "DiabetesEpsd",
+        "ls9qw5uh",
+        "ls9qwy35",
+        "ls9qwy72"
+      ],
+      "entry_state": "DiabetesEpsd",
+      "incidence_rate": "diabetes_incidence",
+      "meaning": "Observed total diabetes prevalence is divided among uncomplicated diabetes and the three complication states in the shares a cohort reaches at each age under the fitted rates."
+    },
+    "assumptions": [
+      "All four diabetes-state fatality inputs are scaled by one common factor by sex and age, so the source ordering of complication fatality is kept.",
+      "Deaths in the nephropathy state count as diabetes deaths, matching their attribution in the module.",
+      "Other-cause mortality is the demographic all-cause rate less modelled disease deaths, applied at the annual rebase."
+    ]
+  }
+}

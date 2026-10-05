@@ -29,6 +29,10 @@ Diabetes is a marginal disease process. Its living-state partition contains a de
 
 Risk-factor modules can modify diabetes incidence. Clinical components can reduce the incidence of retinopathy, nephropathy, and lower-extremity amputation through disease-owned extension points. Post-run metric modules calculate healthy years and disease burden from the raw state and mortality outputs.
 
+### Calibration to observed deaths
+
+The [opening-state contract](data/diabetes-opening-state.contract.v3.json) declares a rate calibration that the shared `opening-state-reconciliation` preflight applies before the first model year, with one result for baseline and every comparison. The four diabetes-state fatality inputs (diabetes, retinopathy, lower-extremity amputation and nephropathy) are scaled by one common factor by sex and single age so that the opening year's deaths in the diabetes states equal WHO Global Health Estimates 2021 diabetes death rates applied to the opening population, distributed within each GHE age band by the GBD age pattern of diabetes deaths. Observed total diabetes prevalence is divided among uncomplicated diabetes and the three complication states in the shares a cohort reaches at each age under the fitted rates, instead of opening the complication states at zero. Deaths in the nephropathy state count as diabetes deaths.
+
 ## Inputs and outputs
 
 Required inputs are the reconciled opening population at risk and background mortality rates. An incidence modifier is optional. The module publishes diabetes episode population, diabetes incidence, diabetes-specific mortality, and populations with retinopathy, nephropathy, and lower-extremity amputation.
