@@ -170,7 +170,8 @@
       "parameters": {
         "disease": "Diabetes",
         "measure": "incidence",
-        "country": "ISO3"
+        "country": "ISO3",
+        "min_age": 15
       },
       "owner": "fhdb"
     },
@@ -188,7 +189,8 @@
       "parameters": {
         "disease": "Diabetes",
         "measure": "prevalence",
-        "country": "ISO3"
+        "country": "ISO3",
+        "min_age": 15
       },
       "owner": "fhdb"
     },
@@ -316,7 +318,8 @@
           "method": "epidemiology",
           "parameters": {
             "disease": "Diabetes",
-            "measure": "prevalence"
+            "measure": "prevalence",
+            "min_age": 15
           }
         }
       },

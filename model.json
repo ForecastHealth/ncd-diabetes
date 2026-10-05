@@ -608,7 +608,8 @@
         "parameters": {
           "country": "AFG",
           "disease": "Diabetes",
-          "measure": "incidence"
+          "measure": "incidence",
+          "min_age": 15
         },
         "display": {
           "label": "Diabetes episode incidence rate",

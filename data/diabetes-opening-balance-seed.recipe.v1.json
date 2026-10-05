@@ -33,7 +33,8 @@
         "parameters": {
           "country": "$country",
           "disease": "Diabetes",
-          "measure": "prevalence"
+          "measure": "prevalence",
+          "min_age": 15
         }
       }
     }

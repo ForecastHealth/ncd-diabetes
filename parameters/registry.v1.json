@@ -115,6 +115,33 @@
       "provenance_refs": [
         "source:gbd-2019-disability-weights"
       ]
+    },
+    {
+      "parameter_id": "minimum_onset_age",
+      "label": "Minimum onset age",
+      "meaning": "First age of type 2 diabetes in this module. The GBD input is all diabetes, so values below 15 are mostly type 1, which this type 2 model and its interventions do not represent. Ages below are 0 in the incidence fetch and the opening prevalence.",
+      "ownership_scope": "module_owned",
+      "value_type": "integer",
+      "editable_in_scenario": false,
+      "shape": "scalar",
+      "units": "years",
+      "default": {
+        "value": 15,
+        "source_ref": "decision 2026-10-05 (team lead for Rory)"
+      },
+      "allowed_range": {
+        "min": 0,
+        "max": 100
+      },
+      "placement_refs": [
+        {
+          "kind": "json_path",
+          "ref": "$.nodes[?(@.id=='nLErvery')].generate_array.parameters.min_age"
+        }
+      ],
+      "provenance_refs": [
+        "source:module-method"
+      ]
     }
   ],
   "provenance": {
