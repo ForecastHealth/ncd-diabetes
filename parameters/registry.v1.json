@@ -7,10 +7,120 @@
     "module_contract_ref": "interface/diabetes-epidemiology-core.module.contract.v1.json"
   },
   "version": "v1",
-  "parameters": [],
+  "parameters": [
+    {
+      "parameter_id": "diabetes_disability_weight",
+      "label": "Diabetes disability weight",
+      "meaning": "Diabetes without a modelled complication (uncomplicated 0.049, neuropathy 0.133, foot ulcer and other sequelae) at the GBD 2019 global average for type 2 diabetes: 35.15 million YLDs over 437.9 million cases.",
+      "ownership_scope": "module_owned",
+      "value_type": "number",
+      "editable_in_scenario": false,
+      "shape": "scalar",
+      "units": "disability weight",
+      "default": {
+        "value": 0.08,
+        "source_ref": "source:gbd-2019-disability-weights"
+      },
+      "allowed_range": {
+        "min": 0,
+        "max": 1
+      },
+      "placement_refs": [
+        {
+          "kind": "json_path",
+          "ref": "$.nodes[?(@.id=='lrso7mga')].generate_array.parameters.value"
+        }
+      ],
+      "provenance_refs": [
+        "source:gbd-2019-disability-weights"
+      ]
+    },
+    {
+      "parameter_id": "diabetic_retinopathy_disability_weight",
+      "label": "Diabetic retinopathy disability weight",
+      "meaning": "Vision loss due to diabetes: GBD moderate 0.031, severe 0.184 and blindness 0.187, given equal shares because GBD publishes no global severity split for diabetic vision loss.",
+      "ownership_scope": "module_owned",
+      "value_type": "number",
+      "editable_in_scenario": false,
+      "shape": "scalar",
+      "units": "disability weight",
+      "default": {
+        "value": 0.134,
+        "source_ref": "source:gbd-2019-disability-weights"
+      },
+      "allowed_range": {
+        "min": 0,
+        "max": 1
+      },
+      "placement_refs": [
+        {
+          "kind": "json_path",
+          "ref": "$.nodes[?(@.id=='ls9rs1ih')].generate_array.parameters.value"
+        }
+      ],
+      "provenance_refs": [
+        "source:gbd-2019-disability-weights"
+      ]
+    },
+    {
+      "parameter_id": "lower_extremity_amputation_disability_weight",
+      "label": "Lower-extremity amputation disability weight",
+      "meaning": "GBD diabetic neuropathy with amputation: 1 - (1 - 0.133)(1 - amputation weight), with treated (0.021, combined 0.151) and untreated (0.164, combined 0.275) amputation given equal shares.",
+      "ownership_scope": "module_owned",
+      "value_type": "number",
+      "editable_in_scenario": false,
+      "shape": "scalar",
+      "units": "disability weight",
+      "default": {
+        "value": 0.213,
+        "source_ref": "source:gbd-2019-disability-weights"
+      },
+      "allowed_range": {
+        "min": 0,
+        "max": 1
+      },
+      "placement_refs": [
+        {
+          "kind": "json_path",
+          "ref": "$.nodes[?(@.id=='ls9rvbes')].generate_array.parameters.value"
+        }
+      ],
+      "provenance_refs": [
+        "source:gbd-2019-disability-weights"
+      ]
+    },
+    {
+      "parameter_id": "diabetic_nephropathy_disability_weight",
+      "label": "Diabetic nephropathy disability weight",
+      "meaning": "Chronic kidney disease due to type 2 diabetes (stage III 0 to 0.149 with anaemia, stage IV 0.104, stage V 0.569, dialysis 0.571) at the GBD 2019 global average: 1.69 million YLDs over 129.6 million cases.",
+      "ownership_scope": "module_owned",
+      "value_type": "number",
+      "editable_in_scenario": false,
+      "shape": "scalar",
+      "units": "disability weight",
+      "default": {
+        "value": 0.013,
+        "source_ref": "source:gbd-2019-disability-weights"
+      },
+      "allowed_range": {
+        "min": 0,
+        "max": 1
+      },
+      "placement_refs": [
+        {
+          "kind": "json_path",
+          "ref": "$.nodes[?(@.id=='ls9y3aia')].generate_array.parameters.value"
+        }
+      ],
+      "provenance_refs": [
+        "source:gbd-2019-disability-weights"
+      ]
+    }
+  ],
   "provenance": {
     "source_refs": [
-      "model.json"
+      "model.json",
+      "source:gbd-2019-disability-weights"
     ],
     "assumption_refs": [
       "Current diabetes intervention parameters moved to sibling intervention repos during intervention-module migration."

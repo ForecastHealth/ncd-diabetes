@@ -314,12 +314,12 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.031
+          "value": 0.08
         },
         "display": {
           "label": "Diabetes episode disability weight",
           "units": "disability weight",
-          "source": "Spectrum/OneHealth disease association file"
+          "source": "GBD 2019 disability weights (IHME); mapping in README"
         }
       },
       "tags": [
@@ -413,12 +413,12 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.338
+          "value": 0.134
         },
         "display": {
           "label": "Diabetic retinopathy disability weight",
           "units": "disability weight",
-          "source": "Spectrum/OneHealth disease association file"
+          "source": "GBD 2019 disability weights (IHME); mapping in README"
         }
       },
       "tags": [
@@ -436,12 +436,12 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.164
+          "value": 0.213
         },
         "display": {
           "label": "Lower-extremity amputation disability weight",
           "units": "disability weight",
-          "source": "Spectrum/OneHealth disease association file"
+          "source": "GBD 2019 disability weights (IHME); mapping in README"
         }
       },
       "tags": [
@@ -582,12 +582,12 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.338
+          "value": 0.013
         },
         "display": {
           "label": "Diabetic nephropathy disability weight",
           "units": "disability weight",
-          "source": "Spectrum/OneHealth disease association file"
+          "source": "GBD 2019 disability weights (IHME); mapping in README"
         }
       },
       "tags": [
