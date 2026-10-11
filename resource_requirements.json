@@ -11,7 +11,8 @@
         {
           "nodeId": "DiabetesEpsd",
           "label": "DiabetesEpsd",
-          "eventType": "ECHO"
+          "eventType": "ECHO",
+          "population_channel_id": "diabetes_episode_population"
         },
         {
           "nodeId": "ls9qw5uh",
@@ -37,7 +38,8 @@
         {
           "nodeId": "DiabetesEpsd",
           "label": "DiabetesEpsd",
-          "eventType": "ECHO"
+          "eventType": "ECHO",
+          "population_channel_id": "diabetes_episode_population"
         },
         {
           "nodeId": "ls9qw5uh",
@@ -63,7 +65,8 @@
         {
           "nodeId": "DiabetesEpsd",
           "label": "DiabetesEpsd",
-          "eventType": "ECHO"
+          "eventType": "ECHO",
+          "population_channel_id": "diabetes_episode_population"
         },
         {
           "nodeId": "ls9qw5uh",
@@ -89,7 +92,8 @@
         {
           "nodeId": "DiabetesEpsd",
           "label": "DiabetesEpsd",
-          "eventType": "ECHO"
+          "eventType": "ECHO",
+          "population_channel_id": "diabetes_episode_population"
         },
         {
           "nodeId": "ls9qw5uh",

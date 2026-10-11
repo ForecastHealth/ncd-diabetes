@@ -2,7 +2,7 @@
 title: Diabetes epidemiology
 module_identifier: ncd-diabetes
 owner: Forecast Health
-last_updated: 2026-10-10
+last_updated: 2026-10-11
 status: Executable disease module, calibrated to WHO deaths and run through the client's normal analysis path
 ---
 
@@ -160,7 +160,7 @@ Routine care is the care people with diabetes already receive. It is costed in b
 | Nephropathy screening and renal-protection follow-up | `ncd-diabetes-nephropathyscr` | `d5-nephropathy-screening-follow-up` |
 | Foot care | `ncd-diabetes-neuropathyscr` | `d1-foot-care` |
 
-This module does not copy the services' resources. For each service the compiler, the part of the platform that assembles the selected modules into one model, takes the quantities, cost items, population in need and current coverage from the declaring module. It costs the people in the four diabetes states times the population in need times the current coverage. Intensive glycaemic control is not routine care. It is costed only when D3 is selected. When an intervention is selected, its own block is also costed for the people it reaches, at current coverage in the baseline and at target coverage in the comparison. Routine care of the disease states continues beside it from the same declaration.
+This module does not copy the services' resources. For each service the compiler, the part of the platform that assembles the selected modules into one model, takes the quantities, cost items, population in need and current coverage from the declaring module. It costs the people in the four diabetes states times the population in need times the current coverage. Intensive glycaemic control is not routine care. It is costed only when D3 is selected. When an intervention is selected, its own block is costed for everyone it reaches, at current coverage in the baseline and at target coverage in the comparison, including the people routine care would treat. The intervention components read the episode state only. Each entry therefore names the episode state's population as `diabetes_episode_population` (`population_channel_id`), and the compiler leaves that state out of the service's routine care while the intervention is selected, so each scenario counts those people once. Routine care of the three complication states continues beside it from the same declaration.
 
 Staff time is priced from one shared salary item per staff type, `cost-item.workforce-salary.<type>`, where the type is `nurse`, `generalist-primary-care-doctor`, `specialist`, `therapist` or `counsellor`. A type is the same item in every module that uses it and can be edited on its own. The item is an annual salary whose default is the country's WHO-CHOICE annual salary for the type's skill level: 4 for doctors and specialists, 3 for nurses and therapists, 2 for counsellors. WHO-CHOICE (CHOosing Interventions that are Cost-Effective) is the WHO programme that publishes country unit costs. The cost of one staff minute is
 
